@@ -27,7 +27,7 @@ comments: false
     </center>
 
     <div align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=isshikihugh&show_icons=true&count_private=true&hide_border=true&theme=tokyonight" align="center" />
+    <img src="https://github-readme-stats.vercel.app/api?username=xuer04&show_icons=true&count_private=true&hide_border=true&theme=tokyonight" align="center" />
     </div> 
 
     <center>
