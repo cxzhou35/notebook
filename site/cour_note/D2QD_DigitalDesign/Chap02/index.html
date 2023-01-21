@@ -7,8 +7,6 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Zicx" name="author"/>
 <link href="https://zicx.top/notebook/cour_note/D2QD_DigitalDesign/Chap02/" rel="canonical"/>
-<link href="../Chap01/" rel="prev"/>
-<link href="../Chap03/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Chap 2 Combinational Logic Circuits - Zicx の Notebook</title>
@@ -35,7 +33,7 @@
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="deep-orange" data-md-color-primary="brown" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="deep-orange" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -127,21 +125,6 @@
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../tech_accu/">
         📚 技术积累
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
-        🗒 课程笔记
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../pape_read/">
-        📝 论文阅读
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../others/">
-        📦 杂项专题
       </a>
 </li>
 <li class="md-tabs__item">
@@ -279,445 +262,17 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../tech_accu/ai/">人工智能</a>
-<label for="__nav_2_4">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-label="人工智能" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_4">
-<span class="md-nav__icon md-icon"></span>
-          人工智能
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../tech_accu/ai/pytorch/">
-        PyTorch
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../">🗒 课程笔记</a>
-<label for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-label="🗒 课程笔记" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
-          🗒 课程笔记
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D1QD_CXiaoCheng/">
-        [大一秋冬] C小程 琐碎知识点整理
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D1CX_ProbabilityAndStatistics/">
-        [大一春夏] 概率论与数理统计
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D1SJ_cs231n/">
-        [大一暑假] Deep Learning for Computer Vision | CS231N
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D1SJ_Intro2CS/">
-        [大一暑假] 计算机系统概论 | Introduction to Computing Systems
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../">[大二秋冬] 数字逻辑设计 | Digital Design</a>
-<label for="__nav_3_6">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-label="[大二秋冬] 数字逻辑设计 | Digital Design" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_6">
-<span class="md-nav__icon md-icon"></span>
-          [大二秋冬] 数字逻辑设计 | Digital Design
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Chap01/">
-        Chap 1 Digital Systems and Information
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Chap 2 Combinational Logic Circuits
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-        Chap 2 Combinational Logic Circuits
-      </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    逻辑运算
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    逻辑门
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    布尔代数
-  </a>
-<nav aria-label="布尔代数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    运算律
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
-    运算律推广
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
-    对偶法则
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7">
-    互补函数
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_8">
-    替代法则
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_9">
-    一致性定理
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_10">
-    标准形式与规范形式
-  </a>
-<nav aria-label="标准形式与规范形式" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#som">
-    最小项之和 SOM
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#pom">
-    最大项之积 POM
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_11">
-    练习
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_12">
-    电路实现与优化
-  </a>
-<nav aria-label="电路实现与优化" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_13">
-    成本标准
-  </a>
-<nav aria-label="成本标准" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_14">
-    按照字面量字面量计
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_15">
-    按门输入计
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_16">
-    卡诺图
-  </a>
-<nav aria-label="卡诺图" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_17">
-    卡诺图的思想
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_18">
-    卡诺图的局限性
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_19">
-    卡诺图的结构
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_20">
-    使用卡诺图优化
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_21">
-    不定项
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_22">
-    蕴含项、主蕴含项与基本主蕴含项
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_23">
-    经典组合电路
-  </a>
-<nav aria-label="经典组合电路" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_24">
-    三态门
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_25">
-    复杂门
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Chap03/">
-        Chap 3 Combinational Logic Design
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Chap04/">
-        Chap 4 Sequential Circuits
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Chap05/">
-        Chap 5 Digital Hardware Implementation
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Chap06/">
-        Chap 6 Registers &amp; Register Transfers
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Chap07/">
-        Chap 7 Memory Basics
-      </a>
-</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" id="__nav_3_7" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../D2QD_Intro2CV/">[大二秋冬] 计算机视觉导论 | I2CV</a>
-<label for="__nav_3_7">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-label="[大二秋冬] 计算机视觉导论 | I2CV" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_7">
-<span class="md-nav__icon md-icon"></span>
-          [大二秋冬] 计算机视觉导论 | I2CV
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec01/">
-        Lecture 1 | Introduction
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec02/">
-        Lecture 2 | Image Formation
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec03/">
-        Lecture 3 | Image Processing
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec04/">
-        Lecture 4 | Model Fitting and Optimization
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec05/">
-        Lecture 5 | Feature Matching and Motion Estimation
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec06/">
-        Lecture 6 | Image Alignment and Stitching
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec07/">
-        Lecture 7 | Structure From Motion
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec08/">
-        Lecture 8 | Depth Estimation
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec09/">
-        Lecture 9 | 3D Reconstruction
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec10/">
-        Lecture 10 | Deep Learning
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec11/">
-        Lecture 11 | Recognition
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec12/">
-        Lecture 12 | Computational Photography 1
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../D2QD_Intro2CV/Lec13/">
-        Lecture 13 | Computational Photography 2
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" id="__nav_3_8" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../D2CX_ComputerOrganization/">[大二春夏] 计算机组成 | Computer Organization</a>
-</div>
-<nav aria-label="[大二春夏] 计算机组成 | Computer Organization" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_8">
-<span class="md-nav__icon md-icon"></span>
-          [大二春夏] 计算机组成 | Computer Organization
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../pape_read/">📝 论文阅读</a>
-<label for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-label="📝 论文阅读" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-          📝 论文阅读
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../pape_read/arXiv%3A2003.08934/">
-        NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../pape_read/arXiv%3A2104.05670/">
-        Action-Conditioned 3D Human Motion Synthesis with Transformer VAE
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../others/">📦 杂项专题</a>
-<label for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-label="📦 杂项专题" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
-          📦 杂项专题
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../others/reveal-md2Slides/">
-        使用 reveal-md 来写 Slides
-      </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label aria-expanded="false" class="md-nav__link" for="__nav_6" tabindex="0">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_3" tabindex="0">
           🚧 施工中...
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-label="🚧 施工中..." class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
+<label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           🚧 施工中...
         </label>
@@ -1353,7 +908,7 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 </input></input></div>
 </div>
 <div class="admonition note">
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">题面</label><label for="__tabbed_5_2">答案</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">题面</label><label for="__tabbed_5_2">答案</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>计算 <span class="arithmatex">\(F=BD+A\overline{B}C+A\overline{B}\,\overline{D}+AB\overline{C}\)</span> 的 <span class="arithmatex">\(L\)</span>、<span class="arithmatex">\(G\)</span>、<span class="arithmatex">\(GN\)</span>。</p>
@@ -1367,10 +922,10 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 <p>这里同样需要注意，出现了重复的被非了的字面量，不要重复计算！</p>
 </div>
 </div>
-</input></input></div>
+</input></div>
 </div>
 <div class="admonition note">
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">题面</label><label for="__tabbed_6_2">答案</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">题面</label><label for="__tabbed_6_2">答案</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>计算 <span class="arithmatex">\(F=\overline{A}\,\overline{C}(B+\overline{D})+AC(B+\overline{D})\)</span> 的 <span class="arithmatex">\(L\)</span>、<span class="arithmatex">\(G\)</span>、<span class="arithmatex">\(GN\)</span>。</p>
@@ -1384,7 +939,7 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 <p>这里同样需要注意，出现了比较复杂的逻辑运算，以 <span class="arithmatex">\(\overline{A}\,\overline{C}(B+\overline{D})\)</span> 为例，自顶向下是：⓵三输入与门，⓶二输入或门；所以应该是 <span class="arithmatex">\(1^{\overline{A}} + 1^{\overline{C}} + 1^{B} + 1^{\overline{D}} + 1^{B+\overline{D}} + 1^{\overline{A}\,\overline{C}(B+\overline{D})}\)</span>，即 6。</p>
 </div>
 </div>
-</input></input></div>
+</div>
 </div>
 <h3 id="_16">卡诺图<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
 <hr/>
@@ -1503,7 +1058,7 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 <p>在得到这些划分后，我们就可以很方便地将这些项拎出来，写出它们的表达式。</p>
 <p>而至于如何拎出来——不难发现，如果一个方框中，某一个字面量的值既可以是 <code>0</code>，又可以是 <code>1</code> 时（这里指的是输入的值，并非输出结果），在这个优化项的结果中就可以不用写出这个字面量；反之，如果这个字面量 <span class="arithmatex">\(X\)</span> 的值都是 <code>0</code>，则结果中会包含 <span class="arithmatex">\(\overline{X}\)</span>，如果都是 <code>1</code>，则结果中会包含 <span class="arithmatex">\(X\)</span>。</p>
 <div class="admonition note">
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">题面</label><label for="__tabbed_7_2">答案</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">题面</label><label for="__tabbed_7_2">答案</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>利用卡诺图优化 <span class="arithmatex">\(F(X,Y,Z) = \sum m(0,1,2,4,6,7)\)</span> 的结果。</p>
@@ -1531,7 +1086,7 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 <p>综上所述，优化结果是 <span class="arithmatex">\(F = \overline{X}\,\overline{Y} + \overline{Z} + XY\)</span></p>
 </div>
 </div>
-</input></input></div>
+</div>
 </div>
 <hr/>
 <h4 id="_21">不定项<a class="headerlink" href="#_21" title="Permanent link">¶</a></h4>
