@@ -33,7 +33,7 @@
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="" data-md-color-primary="Blue-Grey" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -70,12 +70,14 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="Blue-Grey" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-hidden="true" class="md-option" data-md-color-accent="Deep-Purple" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_3" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_4" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_3" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
 </form>
@@ -936,7 +938,7 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 </input></input></div>
 </div>
 <div class="admonition note">
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">题面</label><label for="__tabbed_6_2">答案</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">题面</label><label for="__tabbed_6_2">答案</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>计算 <span class="arithmatex">\(F=\overline{A}\,\overline{C}(B+\overline{D})+AC(B+\overline{D})\)</span> 的 <span class="arithmatex">\(L\)</span>、<span class="arithmatex">\(G\)</span>、<span class="arithmatex">\(GN\)</span>。</p>
@@ -950,7 +952,7 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 <p>这里同样需要注意，出现了比较复杂的逻辑运算，以 <span class="arithmatex">\(\overline{A}\,\overline{C}(B+\overline{D})\)</span> 为例，自顶向下是：⓵三输入与门，⓶二输入或门；所以应该是 <span class="arithmatex">\(1^{\overline{A}} + 1^{\overline{C}} + 1^{B} + 1^{\overline{D}} + 1^{B+\overline{D}} + 1^{\overline{A}\,\overline{C}(B+\overline{D})}\)</span>，即 6。</p>
 </div>
 </div>
-</input></div>
+</input></input></div>
 </div>
 <h3 id="_16">卡诺图<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
 <hr/>
@@ -1069,7 +1071,7 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 <p>在得到这些划分后，我们就可以很方便地将这些项拎出来，写出它们的表达式。</p>
 <p>而至于如何拎出来——不难发现，如果一个方框中，某一个字面量的值既可以是 <code>0</code>，又可以是 <code>1</code> 时（这里指的是输入的值，并非输出结果），在这个优化项的结果中就可以不用写出这个字面量；反之，如果这个字面量 <span class="arithmatex">\(X\)</span> 的值都是 <code>0</code>，则结果中会包含 <span class="arithmatex">\(\overline{X}\)</span>，如果都是 <code>1</code>，则结果中会包含 <span class="arithmatex">\(X\)</span>。</p>
 <div class="admonition note">
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">题面</label><label for="__tabbed_7_2">答案</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">题面</label><label for="__tabbed_7_2">答案</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>利用卡诺图优化 <span class="arithmatex">\(F(X,Y,Z) = \sum m(0,1,2,4,6,7)\)</span> 的结果。</p>
@@ -1097,7 +1099,7 @@ XY+\overline{X}Z+YZ=XY+\overline{X}Z
 <p>综上所述，优化结果是 <span class="arithmatex">\(F = \overline{X}\,\overline{Y} + \overline{Z} + XY\)</span></p>
 </div>
 </div>
-</div>
+</input></div>
 </div>
 <hr/>
 <h4 id="_21">不定项<a class="headerlink" href="#_21" title="Permanent link">¶</a></h4>
