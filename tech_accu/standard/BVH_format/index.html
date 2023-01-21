@@ -40,7 +40,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#bvh-格式详解">
+<a class="md-skip" href="#bvh">
           跳转至
         </a>
 </div>
@@ -573,12 +573,12 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#简介">
+<a class="md-nav__link" href="#_1">
     简介
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#文件解析">
+<a class="md-nav__link" href="#_2">
     文件解析
   </a>
 <nav aria-label="文件解析" class="md-nav">
@@ -597,12 +597,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#理解">
+<a class="md-nav__link" href="#_3">
     理解
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#参考资料">
+<a class="md-nav__link" href="#_4">
     参考资料
   </a>
 </li>
@@ -613,12 +613,12 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="bvh-格式详解">BVH 格式详解<a class="headerlink" href="#bvh-格式详解" title="Permanent link">¶</a></h1>
-<h2 id="简介">简介<a class="headerlink" href="#简介" title="Permanent link">¶</a></h2>
+<h1 id="bvh">BVH 格式详解<a class="headerlink" href="#bvh" title="Permanent link">¶</a></h1>
+<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>BVH 表示 Biovision Hierarchy Data，是 Biovision 动捕设备的数据输出格式，是 BVA 格式的改进，广泛应用于动画制作软件。而该格式以文本形式储存，所以便于开发。
 从需求的角度来讲，为了优雅地解决动画制作问题，它被分为了“蒙皮”和“骨骼”两个部分。而 BVH 就负责存储 <strong>骨骼架结构</strong> 和 <strong>动作信息</strong>。
 BVH 格式总体来说比较优秀，但是缺乏对运动时的骨架姿势的完整解释。因为 BVH 是通过 <strong>偏移(Offset)</strong> 来描述运动的，即保存的是每一帧关键节点对于父节点的相对位移。</p>
-<h2 id="文件解析">文件解析<a class="headerlink" href="#文件解析" title="Permanent link">¶</a></h2>
+<h2 id="_2">文件解析<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>A BVH file has two parts, a header section which describes the hierarchy and initial pose of the skeleton; and a data section which contains the motion data. </p>
 </blockquote>
@@ -790,12 +790,12 @@ vM= vM_{child}M_{parent}M_{grandparent}...
 <h3 id="data-section">data section<a class="headerlink" href="#data-section" title="Permanent link">¶</a></h3>
 <p><code>MOTION</code>关键字标识<code>data section</code>的开始，之后两行分别是<code>Frames</code>和<code>Frame Time</code>，表示 <strong>帧数</strong> 和 <strong>帧数长度</strong>（即帧率倒数，0.033333就是30帧）。
 而再之后，则是真正的动画数据，根据<code>header section</code>给出的通道定义依次来给出每一帧的相对变化数据。 </p>
-<h2 id="理解">理解<a class="headerlink" href="#理解" title="Permanent link">¶</a></h2>
+<h2 id="_3">理解<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>根据我的个人理解，<code>header section</code>类似于将一根根棒焊接在能够自由旋转的节点上，并规定数据的组织顺序，即解决了骨架“长什么样”的问题，并指导如何描述骨架“怎么动”；
 而<code>data section</code>则类似于按照<code>header section</code>给出的定义，具体该如何改变各个节点的状态。
 除了发送给<code>ROOT</code>的位置坐标来表示骨架的位移（平移矩阵），之后的一系列数据都表示该节点该如何旋转（旋转矩阵），那么理所当然的，这个节点的所有子节点都会以这个节点为中心进行相应的旋转；每次递归都重复这样的操作，最终指挥整个骨架的变换。
 那么，实际上，每一个节点相对于根节点的变化就可以通过这些变换矩阵按照顺序累乘得到。</p>
-<h2 id="参考资料">参考资料<a class="headerlink" href="#参考资料" title="Permanent link">¶</a></h2>
+<h2 id="_4">参考资料<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Biovision_Hierarchy">https://en.wikipedia.org/wiki/Biovision_Hierarchy</a></li>
 <li><a href="https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html"><strong>https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html</strong></a></li>
