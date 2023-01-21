@@ -10,7 +10,6 @@ theme:
   name: material
   language: zh
   icon: 
-    # logo: material/pac-man
     logo: octicons/paper-airplane-16
     repo: fontawesome/brands/github-alt
     admonition:
@@ -31,7 +30,7 @@ theme:
     code: JetBrains Mono
   palette:
     scheme: default
-    primary: brown
+    primary: purple
     accent: deep orange
   features:
     - content.code.annotate
@@ -58,7 +57,6 @@ plugins:
         - comming.md
         - link.md
         - tech_accu/index.md
-        - cour_note/index.md
 
 markdown_extensions:
   - toc:
@@ -139,47 +137,5 @@ nav:
       - tech_accu/tool/Colab/index.md
     - "标准 | 格式 | 规范":
       - tech_accu/standard/BVH_format/index.md
-    - "人工智能":
-      - tech_accu/ai/index.md
-      - tech_accu/ai/pytorch/index.md
-  - "🗒 课程笔记":
-    - cour_note/index.md
-    - cour_note/D1QD_CXiaoCheng/index.md
-    - cour_note/D1CX_ProbabilityAndStatistics/index.md
-    - cour_note/D1SJ_cs231n/index.md
-    - cour_note/D1SJ_Intro2CS/index.md
-    - "[大二秋冬] 数字逻辑设计 | Digital Design": 
-      - cour_note/D2QD_DigitalDesign/index.md
-      - cour_note/D2QD_DigitalDesign/Chap01.md
-      - cour_note/D2QD_DigitalDesign/Chap02.md
-      - cour_note/D2QD_DigitalDesign/Chap03.md
-      - cour_note/D2QD_DigitalDesign/Chap04.md
-      - cour_note/D2QD_DigitalDesign/Chap05.md
-      - cour_note/D2QD_DigitalDesign/Chap06.md
-      - cour_note/D2QD_DigitalDesign/Chap07.md
-    - "[大二秋冬] 计算机视觉导论 | I2CV":
-      - cour_note/D2QD_Intro2CV/index.md
-      - cour_note/D2QD_Intro2CV/Lec01.md
-      - cour_note/D2QD_Intro2CV/Lec02.md
-      - cour_note/D2QD_Intro2CV/Lec03.md
-      - cour_note/D2QD_Intro2CV/Lec04.md
-      - cour_note/D2QD_Intro2CV/Lec05.md
-      - cour_note/D2QD_Intro2CV/Lec06.md
-      - cour_note/D2QD_Intro2CV/Lec07.md
-      - cour_note/D2QD_Intro2CV/Lec08.md
-      - cour_note/D2QD_Intro2CV/Lec09.md
-      - cour_note/D2QD_Intro2CV/Lec10.md
-      - cour_note/D2QD_Intro2CV/Lec11.md
-      - cour_note/D2QD_Intro2CV/Lec12.md
-      - cour_note/D2QD_Intro2CV/Lec13.md
-    - "[大二春夏] 计算机组成 | Computer Organization":
-      - cour_note/D2CX_ComputerOrganization/index.md
-  - "📝 论文阅读":
-    - pape_read/index.md
-    - pape_read/arXiv:2003.08934/index.md
-    - pape_read/arXiv:2104.05670/index.md
-  - "📦 杂项专题":
-    - others/index.md
-    - others/reveal-md2Slides/index.md
   - "🚧 施工中...":
     - comming.md
