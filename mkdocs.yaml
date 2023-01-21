@@ -30,6 +30,8 @@ theme:
     code: JetBrains Mono
   palette:
     # Palette toggle for light mode
+    - primary: 'Blue Grey'
+    - accent: 'Deep Purple'
     - scheme: default
       toggle:
         icon: material/brightness-7 

@@ -18,9 +18,9 @@ comments: false
     </div>
     <br><br><br>
 
-- [个人主页](https://isshikihugh.github.io/homepageSrc/)
+- [My homepage](https://zicx.top/home/)
 
-??? summary "<center>@Isshiki修</center>" 
+??? summary "<center>@Zicx</center>" 
     
     <center>
         **|** 21 级 CS 本科生 **|** 22届 求是潮 产品研发中心技术中管 **|** xlab 软件组成员 **|**
@@ -37,12 +37,6 @@ comments: false
     ![](static/wechatPayQRCode.png){ width="200px" }
     <figure>
 
-
-
-
-??? info "<center>这是哪里</center>"
-    - 高中写博客的经历和大一在语雀写笔记的经历让我多次认识到，整理笔记对我来说是一个相对来说比较舒适的学习方式。但是由于某些原因，我放弃了使用语雀，而选择使用 `mkdocs` 搭建这样一个个人笔记本。
-    - 大一在语雀的笔记除了技术类的， 还有很多通识课程的笔记，但在这个笔记本，内容会更有倾向性。希望能通过这样一种形式，在这里打造出我自己的技术栈宫殿。
 
 ??? tip "<center>一些遗迹</center>"
     - [高中时代的博客](https://isshiki_hugh.gitee.io/blog/about/)
