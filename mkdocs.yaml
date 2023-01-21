@@ -1,0 +1,186 @@
+site_name: Isshiki修's Notebook
+site_author: Isshiki修
+site_url: 'https://note.isshikih.top'
+
+repo_name: 'IsshikiHugh/notebook'
+repo_url: 'https://github.com/IsshikiHugh/notebook'
+edit_uri: blob/main/docs
+
+theme: 
+  name: material
+  language: zh
+  icon: 
+    # logo: material/pac-man
+    logo: octicons/paper-airplane-16
+    repo: fontawesome/brands/github-alt
+    admonition:
+      info: fontawesome/solid/anchor
+      note: fontawesome/solid/pen-nib
+      abstract: fontawesome/solid/list
+      tip: fontawesome/solid/lightbulb
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: material/alien
+      danger: fontawesome/solid/virus
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+  font:
+    text: Share Tech
+    code: JetBrains Mono
+  palette:
+    scheme: default
+    primary: brown
+    accent: deep orange
+  features:
+    - content.code.annotate
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+  custom_dir: overrides
+
+plugins:
+  - glightbox
+  - search
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      exclude:
+        - index.md
+        - comming.md
+        - link.md
+        - tech_accu/index.md
+        - cour_note/index.md
+
+markdown_extensions:
+  - toc:
+      permalink: true # link for each title
+      slugify: !!python/name:pymdownx.slugs.uslugify # enable Unicode link
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - mdx_math
+
+copyright: 'Copyright &copy 2022 Isshiki修'
+
+extra:
+  analytics:
+    provider: google
+    property: G-4P08GMSPJM
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/IsshikiHugh
+      name: Github
+
+extra_css:
+  - _css/extra.css
+  - _css/flink.css
+
+extra_javascript: 
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - _js/extra.js
+
+
+
+
+nav:
+  - "💠 封面": 
+    - "💠 封面": index.md
+    - "💬 交流区": link.md
+  - "📚 技术积累":
+    - tech_accu/index.md
+    - "常用工具":
+      - tech_accu/tool/index.md
+      - "Git Something":
+        - tech_accu/tool/Git/index.md
+        - tech_accu/tool/Git/Workflow/index.md
+        - tech_accu/tool/Git/Commands/index.md
+      - tech_accu/tool/Shell/index.md
+      - tech_accu/tool/Colab/index.md
+    - "标准 | 格式 | 规范":
+      - tech_accu/standard/BVH_format/index.md
+    - "人工智能":
+      - tech_accu/ai/index.md
+      - tech_accu/ai/pytorch/index.md
+  - "🗒 课程笔记":
+    - cour_note/index.md
+    - cour_note/D1QD_CXiaoCheng/index.md
+    - cour_note/D1CX_ProbabilityAndStatistics/index.md
+    - cour_note/D1SJ_cs231n/index.md
+    - cour_note/D1SJ_Intro2CS/index.md
+    - "[大二秋冬] 数字逻辑设计 | Digital Design": 
+      - cour_note/D2QD_DigitalDesign/index.md
+      - cour_note/D2QD_DigitalDesign/Chap01.md
+      - cour_note/D2QD_DigitalDesign/Chap02.md
+      - cour_note/D2QD_DigitalDesign/Chap03.md
+      - cour_note/D2QD_DigitalDesign/Chap04.md
+      - cour_note/D2QD_DigitalDesign/Chap05.md
+      - cour_note/D2QD_DigitalDesign/Chap06.md
+      - cour_note/D2QD_DigitalDesign/Chap07.md
+    - "[大二秋冬] 计算机视觉导论 | I2CV":
+      - cour_note/D2QD_Intro2CV/index.md
+      - cour_note/D2QD_Intro2CV/Lec01.md
+      - cour_note/D2QD_Intro2CV/Lec02.md
+      - cour_note/D2QD_Intro2CV/Lec03.md
+      - cour_note/D2QD_Intro2CV/Lec04.md
+      - cour_note/D2QD_Intro2CV/Lec05.md
+      - cour_note/D2QD_Intro2CV/Lec06.md
+      - cour_note/D2QD_Intro2CV/Lec07.md
+      - cour_note/D2QD_Intro2CV/Lec08.md
+      - cour_note/D2QD_Intro2CV/Lec09.md
+      - cour_note/D2QD_Intro2CV/Lec10.md
+      - cour_note/D2QD_Intro2CV/Lec11.md
+      - cour_note/D2QD_Intro2CV/Lec12.md
+      - cour_note/D2QD_Intro2CV/Lec13.md
+    - "[大二春夏] 计算机组成 | Computer Organization":
+      - cour_note/D2CX_ComputerOrganization/index.md
+  - "📝 论文阅读":
+    - pape_read/index.md
+    - pape_read/arXiv:2003.08934/index.md
+    - pape_read/arXiv:2104.05670/index.md
+  - "📦 杂项专题":
+    - others/index.md
+    - others/reveal-md2Slides/index.md
+  - "🚧 施工中...":
+    - comming.md
