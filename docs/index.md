@@ -7,24 +7,24 @@ comments: false
 
 !!! note "" 
     <br><br>
-    <div align="center" style="font-size:32px;font-weight:bold">
-        ~『その時を待つよ』~
+    <div align="center" style="font-size:28px;font-weight:bold">
+        『 守得云开见月明 』
     </div>
-    <div align="center" style="font-size:12px">
-        我们登上高塔，看到的却只有黑夜。  ——安德烈·纪德《地粮》
+
+    <div align="center" style="font-size:15px;font-weight:bold">
+        
     </div>
     <br><br><br>
 
-- [My homepage](https://zicx.top/home/)
-
-??? summary "<center>@Xuer04</center>"
+??? info inline "统计！"
+    <center>页面数：{{pages}} </center>
     
-
-    <div align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=xuer04&show_icons=true&count_private=true&hide_border=true&theme=tokyonight" align="center" />
-    </div> 
+    <center>总字数：{{words}} </center>
 
 
-??? tip "<center>一些遗迹</center>"
-    - [高中时代的博客](https://isshiki_hugh.gitee.io/blog/about/)
-    - [大一时在语雀的主页](https://www.yuque.com/isshikixiu)
+??? abstract "<center>Contact Me</center>"
+    - Homepage: :octocat:
+    - Github: [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/Xuer04)
+    - Telegram: [![Telegram](https://img.shields.io/badge/-Telegram-022?style=flat&logo=Telegram&logoColor=white)](https://telegram.me/Xuer04)
+    - Gmail: [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:zjajzcx3566@gmail.com)
+
