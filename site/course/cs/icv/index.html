@@ -499,42 +499,40 @@
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年1月21日 20:26:24</span>
 </small>
 </div>
-<div id="__comments">
+<h2 id="__comments">评论</h2>
+<!-- Insert generated snippet here -->
 <script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOI0PNYc4CTvN5" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-mapping="pathname" data-reactions-enabled="1" data-repo="xuer04/notebook" data-repo-id="R_kgDOI0PNYQ" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
-
-updateScheme();
-
 </script>
 <!-- Synchronize Giscus theme with palette -->
 <script>
-  var giscus = document.querySelector("script[src*=giscus]")
+    var giscus = document.querySelector("script[src*=giscus]")
 
-  /* Set palette on initial load */
-  <!-- var palette = __md_get("__palette") -->
-  <!-- if (palette && typeof palette.color === "object") { -->
-  <!--   var theme = "light" -->
-  <!--   giscus.setAttribute("data-theme", theme)  -->
-  <!-- } -->
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
 
-  /* Register event handlers after documented loaded */
-  <!-- document.addEventListener("DOMContentLoaded", function() { -->
-  <!--   var ref = document.querySelector("[data-md-component=palette]") -->
-  <!--   ref.addEventListener("change", function() { -->
-  <!--     var palette = __md_get("__palette") -->
-  <!--     if (palette && typeof palette.color === "object") { -->
-  <!--       var theme = "light" -->
-  <!---->
-  <!--       /* Instruct Giscus to change theme */ -->
-  <!--       var frame = document.querySelector(".giscus-frame") -->
-  <!--       frame.contentWindow.postMessage( -->
-  <!--         { giscus: { setConfig: { theme } } }, -->
-  <!--         "https://giscus.app" -->
-  <!--       ) -->
-  <!--     } -->
-  <!--   }) -->
-  <!-- }) -->
-</script>
-</div></article>
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+</article>
 </div>
 </div>
 <a class="md-top md-icon" data-md-component="top" hidden="" href="#">
@@ -577,7 +575,6 @@ updateScheme();
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
-<script src="../../../_js/extra.js"></script>
 <script src="../../../_js/mathjax.js"></script>
 <script src="../../../_js/tablesort.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
