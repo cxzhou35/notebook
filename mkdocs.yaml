@@ -10,7 +10,7 @@ theme:
   name: material
   language: zh
   icon:
-    logo: 'https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif'
+    logo: _icon/giphy.gif
     repo: fontawesome/brands/github-alt
     admonition:
       info: fontawesome/solid/anchor
