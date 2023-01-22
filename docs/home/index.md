@@ -1,6 +1,6 @@
 ---
 comments: false
-+statistics: true
+statistics: true
 ---
 
 # Welcome to my notebook :)
