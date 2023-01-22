@@ -1,5 +1,6 @@
 ---
 comments: false
++statistics: true
 ---
 
 # Welcome to my notebook :)
@@ -12,7 +13,7 @@ comments: false
     </div>
     <br><br><br>
 
-??? info inline "统计！"
+??? info inline "<center>Statistics</center>"
     <center>页面数：{{pages}} </center>
     
     <center>总字数：{{words}} </center>

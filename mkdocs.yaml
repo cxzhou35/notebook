@@ -56,6 +56,7 @@ theme:
 plugins:
   - glightbox
   - search
+  - statistics
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Shanghai
@@ -63,9 +64,8 @@ plugins:
       enable_creation_date: true
       exclude:
         - index.md
-        - comming.md
-        - link.md
-        - tech_accu/index.md
+        - update.md
+        - diss.md
 
 markdown_extensions:
   - toc:
@@ -121,6 +121,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Xuer04
       name: Github
+    - icon: fontawesome/brands/telegram
+      link: https://telegram.me/Xuer04
+      name: Telegram
 
 extra_css:
   - _css/flink.css
