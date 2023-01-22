@@ -1,12 +1,12 @@
 site_name: Zicx の Notebook
 site_author: Zicx
-site_url: 'https://zicx.top/notebook'
+site_url: "https://zicx.top/notebook"
 
 repo_name: xuer04/notebook
 repo_url: https://github.com/xuer04/notebook
 edit_uri: blob/main/docs
 
-theme: 
+theme:
   name: material
   language: zh
   favicon: paw.svg
@@ -32,7 +32,7 @@ theme:
   palette:
     - scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
@@ -100,7 +100,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -111,7 +111,7 @@ markdown_extensions:
   - pymdownx.tilde
   - mdx_math
 
-copyright: 'Copyright &copy 2022 Zicx'
+copyright: "Copyright &copy 2022 Zicx"
 
 extra:
   analytics:
@@ -126,7 +126,7 @@ extra_css:
   - _css/flink.css
   - _css/extra.css
 
-extra_javascript: 
+extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -135,31 +135,30 @@ extra_javascript:
   - _js/mathjax.js
   - _js/tablesort.js
 
-
 nav:
-  - "Home": 
-    - "Welcome": index.md
-    - "Discussion": diss.md
-    - "Update": update.md
+  - "Home":
+      - "Welcome": home/index.md
+      - "Discussion": home/diss.md
+      - "Update": home/update.md
   - "Course":
-    - course/index.md
-    - "OPT":
-      - course/opt/index.md
-    - "CS":
-      - course/cs/index.md
-    - "Math":
-      - course/math/index.md
+      - course/index.md
+      - "OPT":
+          - course/opt/index.md
+      - "CS":
+          - course/cs/index.md
+      - "Math":
+          - course/math/index.md
   - "Memo":
-    - memo/index.md
-    - "Tool":
-      - memo/tool/index.md
-      - "Git":
-        - memo/tool/git/index.md
-      - "Shell":
-        - memo/tool/shell/index.md
-      - "Cmake":
-        - memo/tool/cmake/index.md
-      - "Docker":
-        - memo/tool/docker/index.md
-      - "LaTeX":
-        - memo/tool/latex/index.md
+      - memo/index.md
+      - "Tool":
+          - memo/tool/index.md
+          - "Git":
+              - memo/tool/git/index.md
+          - "Shell":
+              - memo/tool/shell/index.md
+          - "Cmake":
+              - memo/tool/cmake/index.md
+          - "Docker":
+              - memo/tool/docker/index.md
+          - "LaTeX":
+              - memo/tool/latex/index.md
