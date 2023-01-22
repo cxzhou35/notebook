@@ -9,7 +9,7 @@
 
     <div class="flink-list-item">
             <div class="flink-item-icon">
-                ![](../_assets/avatars/xyx.png)
+                ![](./_assets/avatars/xyx.png)
             </div>
         <a href="https://xuan-insr.github.io/" title="咸鱼暄 的 代码空间" target="_blank">
             <div class="flink-item-name">咸鱼暄 的 代码空间</div>
