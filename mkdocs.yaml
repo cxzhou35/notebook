@@ -29,19 +29,17 @@ theme:
     text: Share Tech
     code: JetBrains Mono
   palette:
+    - accent: teal
+    - primary: deep purple
     # Palette toggle for light mode
     - scheme: default
       toggle:
-        accent: teal
-        primary: deep purple
         icon: material/weather-night
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
       toggle:
-        accent: deep origin
-        primary: indigo
         icon: material/weather-sunny
         name: Switch to light mode
   features:
