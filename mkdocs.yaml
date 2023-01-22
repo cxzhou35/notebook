@@ -27,7 +27,7 @@ theme:
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
   font:
-    text: Share Tech
+    text: Roboto
     code: JetBrains Mono
   palette:
     - scheme: default
@@ -140,8 +140,7 @@ extra_javascript:
 
 nav:
   - "Home": 
-    - "Home":
-      - index.md
+    - index.md
     - "Discussion":
       - diss.md
     - "Update":
@@ -149,22 +148,22 @@ nav:
   - "Course":
     - course/index.md
     - "OPT":
-      - course/opt/index.md
+      - opt/index.md
     - "CS":
-      - course/cs/index.md
+      - cs/index.md
     - "Math":
-      - course/math/index.md
+      - math/index.md
   - "Memo":
     - memo/index.md
     - "Tool":
-      - memo/tool/index.md
+      - tool/index.md
       - "Git":
-        - memo/tool/git/index.md
+        - git/index.md
       - "Shell":
-        - memo/tool/shell/index.md
+        - shell/index.md
       - "Cmake":
-        - memo/tool/cmake/index.md
+        - cmake/index.md
       - "Docker":
-        - memo/tool/docker/index.md
+        - docker/index.md
       - "LaTeX":
-        - memo/tool/latex/index.md
+        - latex/index.md
