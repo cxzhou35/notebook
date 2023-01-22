@@ -10,7 +10,7 @@ theme:
   name: material
   language: zh
   icon:
-    logo: octicons/cloud-16
+    logo: octicons/cloud-24
     repo: fontawesome/brands/github-alt
     admonition:
       info: fontawesome/solid/anchor
