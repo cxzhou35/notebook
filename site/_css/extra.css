@@ -107,13 +107,13 @@ li {
     --md-typeset-kbd-border-color: #b8b8b8;
     --md-typeset-table-color: rgba(0,0,0,.12);
     --md-admonition-fg-color: var(--md-default-fg-color);
-    --md-admonition-bg-color: #caddd5;
+    --md-admonition-bg-color: #edeadc;
     --md-footer-fg-color: #fff;
     --md-footer-fg-color--light: hsla(0,0%,100%,.7);
     --md-footer-fg-color--lighter: hsla(0,0%,100%,.3);
     --md-footer-bg-color: rgba(0,0,0,.87);
     --md-footer-bg-color--dark: rgba(0,0,0,.32);
-    --md-shadow-z1: 1px 1px 3px #caddd5,1px 1px 5px #e1d0c5;
-    --md-shadow-z2: 1px 1px 3px #caddd5,2px 2px 7px #cebeb3;
-    --md-shadow-z3: 1px 1px 3px #caddd5,2px 2px 9px #cebeb3;
+    --md-shadow-z1: 1px 1px 3px #edeadc,1px 1px 5px #e1d0c5;
+    --md-shadow-z2: 1px 1px 3px #edeadc,2px 2px 7px #cebeb3;
+    --md-shadow-z3: 1px 1px 3px #edeadc,2px 2px 9px #cebeb3;
 }
