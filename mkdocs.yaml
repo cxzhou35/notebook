@@ -50,6 +50,7 @@ theme:
     - navigation.top
     - search.highlight
     - search.share
+    - toc.follow
   custom_dir: overrides
 
 plugins:
@@ -127,7 +128,12 @@ extra_css:
 
 extra_javascript: 
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - _js/extra.js
+  - _js/mathjax.js
+  - _js/tablesort.js
 
 
 
