@@ -139,18 +139,32 @@ extra_javascript:
 
 
 nav:
-  - "主页": 
-    - "主页": index.md
-    - "讨论区": link.md
-  - "备忘录":
-    - tech_accu/index.md
-    - "常用工具":
-      - tech_accu/tool/index.md
-      - "Git Something":
-        - tech_accu/tool/Git/index.md
-        - tech_accu/tool/Git/Workflow/index.md
-        - tech_accu/tool/Git/Commands/index.md
-      - tech_accu/tool/Shell/index.md
-      - tech_accu/tool/Colab/index.md
-    - "标准 | 格式 | 规范":
-      - tech_accu/standard/BVH_format/index.md
+  - "Home": 
+    - "Home":
+      - index.md
+    - "Discussion":
+      - diss.md
+    - "Update":
+      - update.md
+  - "Course":
+    - course/index.md
+    - "OPT":
+      - course/opt/index.md
+    - "CS":
+      - course/cs/index.md
+    - "Math":
+      - course/math/index.md
+  - "Memo":
+    - memo/index.md
+    - "Tool":
+      - memo/tool/index.md
+      - "Git":
+        - memo/tool/git/index.md
+      - "Shell":
+        - memo/tool/shell/index.md
+      - "Cmake":
+        - memo/tool/cmake/index.md
+      - "Docker":
+        - memo/tool/docker/index.md
+      - "LaTeX":
+        - memo/tool/latex/index.md
