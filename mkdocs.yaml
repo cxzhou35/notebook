@@ -130,10 +130,10 @@ extra_javascript:
 
 
 nav:
-  - "💠 封面": 
-    - "💠 封面": index.md
-    - "💬 交流区": link.md
-  - "📚 技术积累":
+  - "主页": 
+    - "主页": index.md
+    - "讨论区": link.md
+  - "备忘录":
     - tech_accu/index.md
     - "常用工具":
       - tech_accu/tool/index.md
@@ -145,5 +145,3 @@ nav:
       - tech_accu/tool/Colab/index.md
     - "标准 | 格式 | 规范":
       - tech_accu/standard/BVH_format/index.md
-  - "🚧 施工中...":
-    - comming.md
