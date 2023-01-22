@@ -16,37 +16,6 @@
             <div class="flink-item-desc">臭光头，暴揍xyx！</div>
         </a>
     </div>
-
-    <div class="flink-list-item">
-            <div class="flink-item-icon">
-                ![](../_assets/avatars/hxwl.jpeg)
-            </div>
-        <a href="https://note.tonycrane.cc/" title="鹤翔万里 的 笔记本" target="_blank">
-            <div class="flink-item-name">鹤翔万里 的 笔记本</div>
-            <div class="flink-item-desc"> 🤤 xg 教死我！</div>
-        </a>
-    </div>
-
-    <div class="flink-list-item">
-            <div class="flink-item-icon">
-                ![](../_assets/avatars/sakuratsuyu.jpeg)
-            </div>
-        <a href="https://sakuratsuyu.github.io/Note/" title="sakuratsuyu 的 笔记本" target="_blank">
-            <div class="flink-item-name">sakuratsuyu 的 笔记本</div>
-            <div class="flink-item-desc"> 🤤 无敌麦哥带带我！</div>
-        </a>
-    </div>
-
-    <div class="flink-list-item">
-            <div class="flink-item-icon">
-                ![](../_assets/avatars/bowling.svg)
-            </div>
-        <a href="https://tiandians.github.io/TechStack/" title="Bowling 的 笔记本" target="_blank">
-            <div class="flink-item-name">Bowling 的 笔记本</div>
-            <div class="flink-item-desc"> 被神仙学弟薄纱 orz </div>
-        </a>
-    </div>
-
     </div>
 
 ??? tip "🔗 有意思的链接" 
