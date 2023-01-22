@@ -2,6 +2,7 @@
 
 # get current direction
 curDir=`pwd`
+
 # get shell direction
 workDir=$(cd "$(dirname "$0")";pwd)
 
