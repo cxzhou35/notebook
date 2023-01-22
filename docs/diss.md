@@ -1,10 +1,9 @@
-# 你好！
+# Welcome to the forum !
 
-!!! info "📜 介绍"
-    嗨！我想为这个小网站赋予一些社交价值，想认识更多厉害的人也想了解更多的知识！欢迎大家在这里聊天！
-    
+!!! info "Introduction"
+    由于一直找不到比较好用的跨平台笔记软件，最后还是选择了用 Mkdocs 来搭建在线笔记本。同时希望可以和更多人一起分享知识！可以在评论区留下你的足迹哦 👣👣
 
-!!! summary "🔗 友链"
+!!! summary "Friends"
     <div class="flink-list">
 
     <div class="flink-list-item">
@@ -13,12 +12,11 @@
             </div>
         <a href="https://xuan-insr.github.io/" title="咸鱼暄 的 代码空间" target="_blank">
             <div class="flink-item-name">咸鱼暄 的 代码空间</div>
-            <div class="flink-item-desc">臭光头，暴揍xyx！</div>
         </a>
     </div>
     </div>
 
-??? tip "🔗 有意思的链接" 
-    在这里收集一些有意思的链接！
+??? tip "Useful links" 
+    收集了一些有意思的网站和工具。
 
     - https://quickref.me/
