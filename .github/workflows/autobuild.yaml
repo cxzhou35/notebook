@@ -19,6 +19,7 @@ jobs:
       - run: pip install jieba
       - run: pip install rich
       - run: pip install python-markdown-math
+      - run: pip install yapf
       - run: pip install mkdocs-glightbox
       - run: git clone https://github.com/TonyCrane/mkdocs-toolchain.git && cd mkdocs-toolchain/mkdocs-statistics-plugin && pip install .
       - run: mkdocs gh-deploy --force
