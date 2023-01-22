@@ -148,22 +148,22 @@ nav:
   - "Course":
     - course/index.md
     - "OPT":
-      - opt/index.md
+      - course/opt/index.md
     - "CS":
-      - cs/index.md
+      - course/cs/index.md
     - "Math":
-      - math/index.md
+      - course/math/index.md
   - "Memo":
     - memo/index.md
     - "Tool":
-      - tool/index.md
+      - memo/tool/index.md
       - "Git":
-        - git/index.md
+        - memo/tool/git/index.md
       - "Shell":
-        - shell/index.md
+        - memo/tool/shell/index.md
       - "Cmake":
-        - cmake/index.md
+        - memo/tool/cmake/index.md
       - "Docker":
-        - docker/index.md
+        - memo/tool/docker/index.md
       - "LaTeX":
-        - latex/index.md
+        - memo/tool/latex/index.md
