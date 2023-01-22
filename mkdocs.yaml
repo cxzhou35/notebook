@@ -34,7 +34,7 @@ theme:
       toggle:
         accent: teal
         primary: deep purple
-        icon: material/weather-sunny
+        icon: material/weather-night
         name: Switch to dark mode
 
     # Palette toggle for dark mode
@@ -42,7 +42,7 @@ theme:
       toggle:
         accent: deep origin
         primary: indigo
-        icon: material/weather-night
+        icon: material/weather-sunny
         name: Switch to light mode
   features:
     - content.code.annotate
