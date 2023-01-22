@@ -18,6 +18,8 @@ statistics: true
     
     <center>总字数：{{words}} </center>
 
+    <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="80"></h2>
+
 
 ??? abstract "<center>Contact Me</center>"
     - Home Page: [<img src="./house-heart.svg"/>](https://zicx.top/home)
