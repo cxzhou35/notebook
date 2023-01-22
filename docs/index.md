@@ -2,11 +2,8 @@
 comments: false
 ---
 
-# 欢迎！
+# Welcome to my notebook :)
 
-<center>
-内容还在迁移过程中，最近更新可能比较频繁。
-</center>
 
 !!! note "" 
     <br><br>
@@ -20,22 +17,12 @@ comments: false
 
 - [My homepage](https://zicx.top/home/)
 
-??? summary "<center>@Zicx</center>" 
+??? summary "<center>@Xuer04</center>"
     
-    <center>
-        **|** 21 级 CS 本科生 **|** 22届 求是潮 产品研发中心技术中管 **|** xlab 软件组成员 **|**
-    </center>
 
     <div align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=xuer04&show_icons=true&count_private=true&hide_border=true&theme=tokyonight" align="center" />
     </div> 
-
-    <center>
-        **🥺 不抱希望地放一个打赏通道在这里 🥺**
-    </center>
-    <figure markdown align="center">
-    ![](static/wechatPayQRCode.png){ width="200px" }
-    <figure>
 
 
 ??? tip "<center>一些遗迹</center>"
