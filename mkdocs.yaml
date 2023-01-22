@@ -9,8 +9,8 @@ edit_uri: blob/main/docs
 theme: 
   name: material
   language: zh
-  icon: 
-    logo: octicons/paper-airplane-16
+  icon:
+    logo: https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif
     repo: fontawesome/brands/github-alt
     admonition:
       info: fontawesome/solid/anchor
