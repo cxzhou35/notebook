@@ -30,17 +30,19 @@ theme:
     code: JetBrains Mono
   palette:
     # Palette toggle for light mode
-    - primary: 'Blue Grey'
-    - accent: 'Deep Purple'
     - scheme: default
       toggle:
-        icon: material/brightness-7 
+        accent: teal
+        primary: deep purple
+        icon: material/weather-sunny
         name: Switch to dark mode
 
     # Palette toggle for dark mode
     - scheme: slate
       toggle:
-        icon: material/brightness-4
+        accent: deep origin
+        primary: indigo
+        icon: material/weather-night
         name: Switch to light mode
   features:
     - content.code.annotate
