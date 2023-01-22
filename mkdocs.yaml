@@ -145,8 +145,6 @@ nav:
       - "Update": update.md
   - "Course":
       - course/index.md
-      - "OPT":
-          - course/opt/index.md
       - "CS":
           - course/cs/index.md
           - "cs106L":
@@ -165,6 +163,8 @@ nav:
             - course/cs/oop/index.md
           - "os":
             - course/cs/os/index.md
+      - "OPT":
+          - course/opt/index.md
       - "Math":
           - course/math/index.md
   - "Memo":
