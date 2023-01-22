@@ -29,6 +29,7 @@ theme:
     text: Share Tech
     code: JetBrains Mono
   palette:
+    scheme: default
     accent: teal
     primary: deep purple
   features:
@@ -110,7 +111,6 @@ extra:
       name: Github
 
 extra_css:
-  - _css/extra.css
   - _css/flink.css
 
 extra_javascript: 
