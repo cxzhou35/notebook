@@ -12,11 +12,11 @@
 }
 
 .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5 {
-    font-weight: 400;
+    font-weight: 500;
 }
 
 body, input {
-    font-family: 'Lexend', 'Noto Sans SC', 'Source Code Pro', 'Noto Serif SC', sans-serif, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: 'Noto Serif SC', 'Noto Sans SC', 'Lexend', 'Source Code Pro';
 }
 
 center, p, li {
@@ -64,6 +64,8 @@ li {
 }
 
 :root, [data-md-color-scheme=default] {
+    --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+    --md-code-font: "JetBrains Mono";
     --md-default-fg-color: rgba(72, 52, 52, .78);
     --md-default-fg-color--light: rgba(72, 52, 52,.54);
     --md-default-fg-color--lighter: rgba(72, 52, 52,.32);
