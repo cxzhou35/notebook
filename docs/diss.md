@@ -6,15 +6,27 @@
 ???+ summary "Friends"
     <div class="flink-list">
 
-    <div class="flink-list-item">
+      <div class="flink-list-item">
+        <a href="https://note.isshikih.top/" title="Isshiki修's Notebook" target="_blank">
             <div class="flink-item-icon">
-                ![](./_assets/avatars/xyx.png)
+                <img src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301231507354.png" alt="Isshiki修">
             </div>
+            <div class="flink-item-name heti-skip">Isshiki修's Notebook</div>
+        </a>
+      </div>
+
+      <div class="flink-list-item">
         <a href="https://xuan-insr.github.io/" title="咸鱼暄的代码空间" target="_blank">
+            <div class="flink-item-icon">
+                <img src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301231506160.png" alt="咸鱼暄">
+            </div>
             <div class="flink-item-name">咸鱼暄的代码空间</div>
         </a>
+      </div>
+
+
     </div>
-    </div>
+
 
 ??? tip "Links" 
     **收集了一些有意思的网站和工具**
