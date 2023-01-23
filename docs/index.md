@@ -12,11 +12,10 @@ statistics: true
     </center>
 
 ???+ info inline "<center>Statistics</center>"
-    <div style="font-size:12px;font-weight:bold"><center>Pages：{{pages}} </center> </div>
-    
-    <div style="font-size:12px;font-weight:bold"><center>Words：{{words}} </center></div>
+    <div style="font-size:10px;font-weight:bold"><center>Pages：{{pages}} </center></div>
+    <div style="font-size:10px;font-weight:bold"><center>Words：{{words}} </center></div>
 
-    <center><img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="80"></h2>
+    <center><img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="90"></center>
 
 
 ???+ abstract "<center>Contact Me</center>"
