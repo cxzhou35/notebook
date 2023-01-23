@@ -147,22 +147,22 @@ nav:
       - course/index.md
       - "CS":
           - course/cs/index.md
-          - "cs106L":
-            - course/cs/cs106L/index.md
-          - "cs231n":
-            - course/cs/cs231n/index.md
-          - "dlsys":
-            - course/cs/dlsys/index.md
-          - "ds":
-            - course/cs/ds/index.md
-          - "icv":
-            - course/cs/icv/index.md
-          - "na":
-            - course/cs/na/index.md
-          - "oop":
-            - course/cs/oop/index.md
-          - "os":
-            - course/cs/os/index.md
+          - "CS106L":
+              - course/cs/cs106L/index.md
+          - "CS231n":
+              - course/cs/cs231n/index.md
+          - "Deep Learning System":
+              - course/cs/dlsys/index.md
+          - "Data Structure":
+              - course/cs/ds/index.md
+          - "Introduction to Computer Vision":
+              - course/cs/icv/index.md
+          - "Numerical Analysis":
+              - course/cs/na/index.md
+          - "Object-Oriented Programming":
+              - course/cs/oop/index.md
+          - "Operating System":
+              - course/cs/os/index.md
       - "OPT":
           - course/opt/index.md
       - "Math":
