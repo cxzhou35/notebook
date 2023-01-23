@@ -5,7 +5,7 @@
 
 !!! note ""
     <br>
-    
+
     $$
     \begin{aligned}
         & \nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_0} \\
