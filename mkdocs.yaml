@@ -155,16 +155,18 @@ nav:
               - course/cs/dlsys/index.md
           - "Data Structure":
               - course/cs/ds/index.md
-          - "Introduction to Computer Vision":
+          - "计算机视觉导论":
               - course/cs/icv/index.md
-          - "Numerical Analysis":
+          - "数值分析":
               - course/cs/na/index.md
-          - "Object-Oriented Programming":
+          - "面向对象编程":
               - course/cs/oop/index.md
-          - "Operating System":
+          - "操作系统":
               - course/cs/os/index.md
       - "OPT":
           - course/opt/index.md
+          - "光电子学":
+              - course/opt/optolec/index.md
       - "Math":
           - course/math/index.md
   - "Memo":
