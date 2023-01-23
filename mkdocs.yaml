@@ -48,6 +48,7 @@ theme:
     # - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
+    - navigation.footer
     - search.highlight
     - search.share
     - toc.follow
