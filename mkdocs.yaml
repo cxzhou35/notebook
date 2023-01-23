@@ -166,7 +166,7 @@ nav:
       - "OPT":
           - course/opt/index.md
           - "光电子学":
-              - course/opt/optolec/index.md
+              - course/opt/optoelec/index.md
       - "Math":
           - course/math/index.md
   - "Memo":
