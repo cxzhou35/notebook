@@ -12,7 +12,7 @@
 }
 
 .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5 {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 body, input {
@@ -24,7 +24,7 @@ center, p, li {
 }
 
 li {
-    line-height: 1.2;
+    line-height: 1.0;
 }
 
 .md-nav__link {
@@ -47,7 +47,7 @@ li {
 
 .md-tabs__link--active, .md-tabs__link:is(:focus,:hover) {
     color: inherit;
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .md-typeset details:not([open]) {
@@ -60,7 +60,7 @@ li {
 
 .md-typeset img, .md-typeset video {
     box-shadow: var(--md-shadow-z1);
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 :root, [data-md-color-scheme=default] {
