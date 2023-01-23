@@ -1,11 +1,11 @@
 # Optics
 
 !!! abstract "Abstract" 
-    **光电相关课程的笔记都放在这里，对这个专业的感觉说不上来。**
+    **光电相关课程的笔记都放在这里，感觉这个专业学的有点杂。**
 
 !!! note ""
-    <br>
-
+    <p align="center">  </p>
+    
     $$
     \large
     \begin{aligned}
@@ -20,5 +20,3 @@
     <div align="right" style="font-size:18px;">
         [*—— James Clerk Maxwell*](https://en.wikipedia.org/wiki/James_Clerk_Maxwell)
     </div>
-
-    <br>
