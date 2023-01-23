@@ -5,7 +5,7 @@
 
 !!! note ""
     <br>
-
+    
     $$
     \begin{aligned}
         & \nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_0} \\
@@ -14,6 +14,7 @@
         & \nabla \times \mathbf{B}=\mu_0 \mathbf{J}+\mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
     \end{aligned}
     $$
+    
 
     <div align="right" style="font-size:18px;">
         [*—— James Clerk Maxwell*](https://en.wikipedia.org/wiki/James_Clerk_Maxwell)
