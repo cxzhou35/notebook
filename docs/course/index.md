@@ -19,8 +19,8 @@
 
     <div style="text-align: center" markdown="1">
 
-    |课程名称|开课学校|类别|难度|资料情况|
-    |:--|:--|:--|:---:|:---:|
+    |课程名称|开课学校|类别|难度|状态|
+    |:--|:--|:--|:--:|:--|
     |**[CS106L](cs/cs106L/)**|Stanford|CS|★★★☆☆|📶|
     |**[CS231n](cs/cs231n/)**|Stanford|CS|☆☆☆☆☆|❎|
     |**[DL Systems](cs/dlsys/)**|CMU|CS|★★★★☆|📶|
