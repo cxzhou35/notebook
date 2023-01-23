@@ -1,2 +1,4 @@
 .obsidian/*
 .obvimrc
+.DS_Store
+notebook.code-workspace
