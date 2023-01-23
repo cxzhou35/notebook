@@ -183,3 +183,8 @@ nav:
               - memo/tool/docker/index.md
           - "LaTeX":
               - memo/tool/latex/index.md
+  - "Life":
+    - life/index.md
+  - "Others":
+    - others/index.md
+
