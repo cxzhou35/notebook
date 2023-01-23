@@ -8,7 +8,7 @@
 
 .md-ellipsis, h1, .headerlink{
     font-size: larger;
-    font-family: 'ZCOOL XiaoWei', serif;
+    font-family: 'ZCOOL XiaoWei', 'Serif';
 }
 
 .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5 {
