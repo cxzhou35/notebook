@@ -68,7 +68,7 @@ li {
     --md-default-fg-color--light: rgba(72, 52, 52,.54);
     --md-default-fg-color--lighter: rgba(72, 52, 52,.32);
     --md-default-fg-color--lightest: rgba(72, 52, 52,.27);
-    --md-default-bg-color: #f3f9f1;
+    --md-default-bg-color: #fffffc;
     --md-default-bg-color--light: hsla(0,0%,100%,.7);
     --md-default-bg-color--lighter: hsla(0,0%,100%,.3);
     --md-default-bg-color--lightest: hsla(0,0%,100%,.12);
@@ -80,7 +80,7 @@ li {
     --md-accent-fg-color: #3c5e91;
     --md-accent-fg-color--light: #a381ba;
     --md-accent-fg-color--transparent: rgba(82,108,254,.1);
-    --md-accent-bg-color: #fff;
+    --md-accent-bg-color: #fffffc;
     --md-accent-bg-color--light: hsla(0,0%,100%,.7);
     --md-code-fg-color: #66806A;
     --md-code-bg-color: #FFF3E4;
@@ -107,7 +107,7 @@ li {
     --md-typeset-kbd-border-color: #b8b8b8;
     --md-typeset-table-color: rgba(0,0,0,.12);
     --md-admonition-fg-color: var(--md-default-fg-color);
-    --md-admonition-bg-color: #f8fbf8;
+    --md-admonition-bg-color: #fbfaf5;
     --md-footer-fg-color: #fff;
     --md-footer-fg-color--light: hsla(0,0%,100%,.7);
     --md-footer-fg-color--lighter: hsla(0,0%,100%,.3);
