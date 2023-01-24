@@ -9,7 +9,7 @@
       <div class="flink-list-item">
         <a href="https://note.isshikih.top/" title="Isshiki修's Notebook" target="_blank">
             <div class="flink-item-icon">
-                <img src="./_assets/avatars/isshiki.png" alt="Isshiki修">
+                <img src="../_assets/avatars/isshiki.png" alt="Isshiki修">
             </div>
             <div class="flink-item-name heti-skip">Isshiki修's Notebook</div>
         </a>
@@ -18,7 +18,7 @@
       <div class="flink-list-item">
         <a href="https://xuan-insr.github.io/" title="咸鱼暄的代码空间" target="_blank">
             <div class="flink-item-icon">
-                <img src="./_assets/avatars/xyx.png" alt="咸鱼暄">
+                <img src="../_assets/avatars/xyx.png" alt="咸鱼暄">
             </div>
             <div class="flink-item-name">咸鱼暄的代码空间</div>
         </a>

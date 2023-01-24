@@ -152,7 +152,7 @@ nav:
               - course/cs/cs106L/index.md
           - "CS231n":
               - course/cs/cs231n/index.md
-          - "Deep Learning System":
+          - "Deep Learning Systems":
               - course/cs/dlsys/index.md
           - "Data Structure":
               - course/cs/ds/index.md
