@@ -5,11 +5,9 @@ statistics: true
 
 # Hi 👋, I'm Zicx !
 
-
-!!! note "" 
-    <center>
-    <img src="./home/wallpaper.png" width="510"/>
-    </center>
+<center>
+<img src="./home/wallpaper.png" width="800"/>
+</center>
 
 ???+ info inline "<center>Statistics</center>"
     <div style="font-size:10px;font-weight:bold"><center>Pages：{{pages}} </center></div>
