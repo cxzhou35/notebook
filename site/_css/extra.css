@@ -63,6 +63,10 @@ li {
     border-radius: 3px;
 }
 
+.md-typeset div.arithmatex {
+    overflow-y: hidden;
+}
+
 :root, [data-md-color-scheme=default] {
     --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
     --md-code-font: "JetBrains Mono";
