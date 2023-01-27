@@ -184,6 +184,14 @@ nav:
               - memo/tool/docker/index.md
           - "LaTeX":
               - memo/tool/latex/index.md
+      - "Configuration":
+          - memo/config/index.md
+          - "Windows":
+              - memo/config/win/index.md
+          - "Mac":
+              - memo/config/mac/index.md
+          - "Linux":
+              - memo/config/linux/index.md
   - "Life":
       - life/index.md
   - "Others":
