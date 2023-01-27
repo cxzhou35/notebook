@@ -184,10 +184,14 @@ nav:
               - memo/tool/docker/index.md
           - "LaTeX":
               - memo/tool/latex/index.md
+          - "Markdown":
+              - memo/tool/markdown/index.md
       - "Configuration":
           - memo/config/index.md
           - "Windows":
               - memo/config/win/index.md
+              - "Scoop":
+                  - memo/config/win/scoop/index.md
           - "Mac":
               - memo/config/mac/index.md
           - "Linux":
