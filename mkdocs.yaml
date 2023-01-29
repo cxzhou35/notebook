@@ -192,6 +192,10 @@ nav:
               - memo/tool/numpy/index.md
           - "Vim":
               - memo/tool/vim/index.md
+          - "Matlab":
+              - memo/tool/matlab/index.md
+          - "Conda":
+              - memo/tool/conda/index.md
           - "Markdown":
               - memo/tool/markdown/index.md
       - "Configuration":
