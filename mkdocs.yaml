@@ -184,6 +184,14 @@ nav:
               - memo/tool/docker/index.md
           - "LaTeX":
               - memo/tool/latex/index.md
+          - "Lua":
+              - memo/tool/lua/index.md
+          - "Julia":
+              - memo/tool/julia/index.md
+          - "Numpy":
+              - memo/tool/numpy/index.md
+          - "Vim":
+              - memo/tool/vim/index.md
           - "Markdown":
               - memo/tool/markdown/index.md
       - "Configuration":
@@ -194,6 +202,8 @@ nav:
                   - memo/config/win/scoop/index.md
           - "Mac":
               - memo/config/mac/index.md
+              - "Homebrew":
+                  - memo/config/mac/homebrew/index.md
           - "Linux":
               - memo/config/linux/index.md
   - "Life":
