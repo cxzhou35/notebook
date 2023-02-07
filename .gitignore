@@ -2,3 +2,6 @@
 .obvimrc
 .DS_Store
 notebook.code-workspace
+
+# scripts
+*.sh
