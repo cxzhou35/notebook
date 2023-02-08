@@ -6,7 +6,7 @@
     </center>
 
 !!! info "Info" 
-    这里是 **[备忘录](./)**，记录了 ***常用工具命令(Shell, Git, Cmake etc.)*** 和 ***环境配置(Scoop, Homebrew, Linux etc.)***，如果有问题可以在评论区留言哦，*Thanks♪(･ω･)ﾉ*
+    这里是**[备忘录](./)**，记录了***常用工具命令(Shell, Git, Cmake etc.)***和***环境配置(Scoop, Homebrew, Linux etc.)***，如果有问题可以在评论区留言哦，*Thanks♪(･ω･)ﾉ*
 
 ??? abstract "Overview"
     <div style="font-size:80px;font-weight:bold"><center>***Tools (图标是可以点击的)***</center></div>
