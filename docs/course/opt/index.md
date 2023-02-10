@@ -7,6 +7,7 @@
     <p align="center">  </p>
     
     $$
+    \large
     \begin{aligned}
         & \nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_0} \\
         & \nabla \cdot \mathbf{B}=0 \\
