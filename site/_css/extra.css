@@ -6,69 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;700&display=swap');
 
-.md-ellipsis, h1, .headerlink{
-    font-size: larger;
-    font-family: 'ZCOOL XiaoWei', 'Serif';
-}
-
-.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5 {
-    font-weight: 500;
-}
-
-body, input {
-    font-family: 'Noto Serif SC', 'Noto Sans SC', 'Lexend', 'Source Code Pro';
-}
-
-center, p, li {
-    font-size: medium;
-}
-
-li {
-    line-height: 1.0;
-}
-
-.md-nav__link {
-    font-size: small;
-}
-
-.md-typeset .admonition, .md-typeset details {
-    border: none;
-} 
-
-.md-tabs {
-    background-color: var(--md-primary-fg-color--light);
-}
-
-.md-tabs__link {
-    margin-top: .8rem;
-    opacity: .4;
-    font-family: var(--md-text-font-family);
-}
-
-.md-tabs__link--active, .md-tabs__link:is(:focus,:hover) {
-    color: inherit;
-    opacity: 0.8;
-}
-
-.md-typeset details:not([open]) {
-    box-shadow: var(--md-shadow-z2);
-    padding-bottom: 0;
-}
-.md-typeset .admonition, .md-typeset details {
-    box-shadow: var(--md-shadow-z2);
-}
-
-.md-typeset img, .md-typeset video {
-    box-shadow: var(--md-shadow-z1);
-    border-radius: 5px;
-}
-
-.md-typeset div.arithmatex {
-    overflow-y: hidden;
-}
-
 :root, [data-md-color-scheme=default] {
-    --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+    --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"
     --md-code-font: "JetBrains Mono";
     --md-default-fg-color: rgba(72, 52, 52, .78);
     --md-default-fg-color--light: rgba(72, 52, 52,.54);
@@ -122,4 +61,65 @@ li {
     --md-shadow-z1: 1px 1px 3px #edeadc,1px 1px 5px #e1d0c5;
     --md-shadow-z2: 1px 1px 3px #edeadc,2px 2px 7px #cebeb3;
     --md-shadow-z3: 1px 1px 3px #edeadc,2px 2px 9px #cebeb3;
+}
+
+.md-ellipsis, h1, .headerlink{
+    font-size: larger;
+    font-family: 'ZCOOL XiaoWei', 'Serif';
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5 {
+    font-weight: 500;
+}
+
+/* body, input { */
+/*     font-family: 'Noto Serif SC', 'Noto Sans SC', 'Lexend', 'Source Code Pro'; */
+/* } */
+
+center, p, li {
+    font-size: medium;
+}
+
+li {
+    line-height: 1.0;
+}
+
+.md-nav__link {
+    font-size: small;
+}
+
+.md-typeset .admonition, .md-typeset details {
+    border: none;
+} 
+
+.md-tabs {
+    background-color: var(--md-primary-fg-color--light);
+}
+
+.md-tabs__link {
+    margin-top: .8rem;
+    opacity: .4;
+    font-family: var(--md-text-font-family);
+}
+
+.md-tabs__link--active, .md-tabs__link:is(:focus,:hover) {
+    color: inherit;
+    opacity: 0.8;
+}
+
+.md-typeset details:not([open]) {
+    box-shadow: var(--md-shadow-z2);
+    padding-bottom: 0;
+}
+.md-typeset .admonition, .md-typeset details {
+    box-shadow: var(--md-shadow-z2);
+}
+
+.md-typeset img, .md-typeset video {
+    box-shadow: var(--md-shadow-z1);
+    border-radius: 5px;
+}
+
+.md-typeset div.arithmatex {
+    overflow-y: hidden;
 }
