@@ -11,4 +11,3 @@ comments: false
     - 复习开学考科目
     - 整理本地笔记
     - 阅读 《 Effective modern C++ 》
-    - 自学 [cs231n](http://cs231n.stanford.edu/index.html) 和 [dlsys](https://dlsyscourse.org/)
