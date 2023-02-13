@@ -72,9 +72,9 @@
     font-weight: 500;
 }
 
-body, input {
-    font-family: 'LXGW WenKai Screen', 'Noto Serif SC', 'Noto Sans SC', 'Lexend', 'Source Code Pro';
-}
+/* body, input { */
+/*     font-family: 'LXGW WenKai Screen', 'Noto Serif SC', 'Noto Sans SC', 'Lexend', 'Source Code Pro'; */
+/* } */
 
 center, p, li {
     font-size: medium;

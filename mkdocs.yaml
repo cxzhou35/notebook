@@ -26,9 +26,7 @@ theme:
       bug: fontawesome/solid/robot
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
-  font:
-    text: LXGW WenKai Screen
-    code: JetBrains Mono
+  font: false
   palette:
     - scheme: default
       toggle:
