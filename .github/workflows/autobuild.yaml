@@ -2,7 +2,7 @@ name: autoBuild
 on:
   push:
     branches:
-      - main
+      - master
       - main
 jobs:
   deploy:
@@ -18,8 +18,5 @@ jobs:
       - run: pip install mkdocs-git-revision-date-localized-plugin
       - run: pip install jieba
       - run: pip install rich
-      - run: pip install python-markdown-math
-      - run: pip install yapf
-      - run: pip install mkdocs-glightbox
-      - run: git clone https://github.com/TonyCrane/mkdocs-toolchain.git && cd mkdocs-toolchain/mkdocs-statistics-plugin && pip install .
+      - run: pip install mkdocs-statistics-plugin
       - run: mkdocs gh-deploy --force

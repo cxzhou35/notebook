@@ -1,3 +1,7 @@
+---
+statistics: true
+---
+
 # Welcome to the forum !
 
 !!! info "Introduction"
