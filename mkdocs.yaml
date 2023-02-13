@@ -27,7 +27,7 @@ theme:
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
   font:
-    text: Roboto
+    text: LXGW WenKai Screen
     code: JetBrains Mono
   palette:
     - scheme: default
