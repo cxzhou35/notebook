@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap');
+
 :root {
   --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
   --md-code-font: "JetBrains Mono";
@@ -56,6 +59,11 @@
     --md-shadow-z1: 1px 1px 3px #edeadc,1px 1px 5px #e1d0c5;
     --md-shadow-z2: 1px 1px 3px #edeadc,2px 2px 7px #cebeb3;
     --md-shadow-z3: 1px 1px 3px #edeadc,2px 2px 9px #cebeb3;
+}
+
+.md-ellipsis, h1, .headerlink{
+    font-size: larger;
+    font-family: 'ZCOOL XiaoWei';
 }
 
 .md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5 {

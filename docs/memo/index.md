@@ -10,7 +10,7 @@ statistics: false
     </center>
 
 !!! info "Info" 
-    这里是**[备忘录](./)**，记录了***常用工具命令(Shell, Git, Cmake etc.)***和***环境配置(Scoop, Homebrew, Linux etc.)***，如果有问题可以在评论区留言哦，*Thanks♪(･ω･)ﾉ*
+    这里是**[备忘录](./)**，记录了***常用工具命令(Shell, Git, Cmake etc.)***和***环境配置(Scoop, Homebrew etc.)***，如果有问题可以在评论区留言哦，*Thanks♪(･ω･)ﾉ*
 
 ??? abstract "Overview"
     <div style="font-size:80px;font-weight:bold"><center>***Tools (图标是可以点击的)***</center></div>
@@ -28,7 +28,7 @@ statistics: false
         [<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="45"/>](tool/matlab/index.md) &nbsp;
         [<img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Conda_logo.svg" alt="conda" width="120"/>](tool/conda/index.md) &nbsp;
         [<img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Markdown-mark-half.svg" alt="markdown" width="60"/>](tool/markdown/index.md)
-       
+
     </div>
 
     ---
@@ -41,7 +41,7 @@ statistics: false
 
     ---
 
-    <div style="font-size:80px;font-weight:bold"><center>***图标来源***</center></div>
+    <div style="font-size:80px;font-weight:bold"><center>***Icon Source***</center></div>
 
     - https://www.vectorlogo.zone/
     - https://commons.wikimedia.org/wiki/Main_Page
