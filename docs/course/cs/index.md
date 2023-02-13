@@ -1,3 +1,7 @@
+---
+statistics: false
+---
+
 # Computer Science
 
 !!! abstract "Abstract" 

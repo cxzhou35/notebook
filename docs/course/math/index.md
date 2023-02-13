@@ -1,3 +1,7 @@
+---
+statistics: false
+---
+
 # Mathematics
 
 !!! abstract "Abstract" 

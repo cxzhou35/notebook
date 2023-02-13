@@ -1,5 +1,5 @@
 ---
-statistics: true
+statistics: false
 ---
 
 # Welcome to the forum !

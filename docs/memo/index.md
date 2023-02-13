@@ -1,3 +1,7 @@
+---
+statistics: false
+---
+
 # Memorandum
 
 !!! inline note "" 

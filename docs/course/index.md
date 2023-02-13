@@ -1,3 +1,7 @@
+---
+statistics: false
+---
+
 # Course Catalogue
 
 !!! inline note "" 

@@ -1,3 +1,7 @@
+---
+statistics: false
+---
+
 # Configuration
 
 !!! abstract "Abstract" 

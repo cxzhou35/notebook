@@ -1,3 +1,7 @@
+---
+statistics: false
+---
+
 # Tool
 
 !!! abstract "Abstract" 

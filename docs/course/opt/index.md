@@ -1,3 +1,7 @@
+---
+statistics: false
+---
+
 # Optics
 
 !!! abstract "Abstract" 
