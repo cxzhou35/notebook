@@ -11,4 +11,4 @@ statistics: false
 !!! abstract "近期要做的一些事情"
     - 复习开学考科目
     - 整理本地笔记
-    - 阅读 《 Effective modern C++ 》
+    - 阅读《Effective modern C++》
