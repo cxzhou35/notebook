@@ -55,7 +55,8 @@ theme:
 plugins:
   - glightbox
   - search
-  - statistics
+  - statistics:
+      page_check_metadata: comment
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Shanghai
