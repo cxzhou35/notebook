@@ -1,6 +1,6 @@
 ---
 comments: false
-statistics: true
+statistics: false
 ---
 
 # Hi 👋, I'm Zicx!

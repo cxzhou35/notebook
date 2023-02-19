@@ -9,7 +9,7 @@ statistics: false
 
 !!! note ""
     <br>
-    
+
     <div align="center" style="font-size:22px;">
         ***工欲善其事，必先利其器。***
     </div>

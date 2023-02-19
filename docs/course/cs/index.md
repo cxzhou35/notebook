@@ -9,13 +9,13 @@ statistics: false
 
 !!! note ""
     <br>
-    
+
     <div align="center" style="font-size:22px;">
         ***Sometimes it's the very people who no one imagines anything of who do the things no one can imagine.***
     </div>
 
     <div align="right" style="font-size:18px;">
-        [*—— Alan Turing*](https://en.wikipedia.org/wiki/Alan_Turing)
+        *—— Alan Turing*
     </div>
 
     <br>

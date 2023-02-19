@@ -9,7 +9,7 @@ statistics: false
 
 !!! note ""
     <p align="center">  </p>
-    
+
     $$
     \large
     \begin{aligned}
@@ -19,10 +19,10 @@ statistics: false
         & \nabla \times \mathbf{B}=\mu_0 \mathbf{J}+\mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
     \end{aligned}
     $$
-    
+
 
     <div align="right" style="font-size:18px;">
-        [*—— James Clerk Maxwell*](https://en.wikipedia.org/wiki/James_Clerk_Maxwell)
+        *—— James Clerk Maxwell*
     </div>
 
 > ***公式渲染有误的话可以刷新试试 :)***
