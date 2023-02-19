@@ -117,3 +117,7 @@ li {
 .md-typeset div.arithmatex {
     overflow-y: hidden;
 }
+
+.md-typeset :is(.emojione,.twemoji,.gemoji) {
+  vertical-align: sub;
+}
