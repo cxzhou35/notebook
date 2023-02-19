@@ -131,6 +131,7 @@ extra_css:
   - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
   - _css/flink.css
   - _css/custom.css
+  - _css/giscus.css
   # - _css/extra.css
 
 extra_javascript:
