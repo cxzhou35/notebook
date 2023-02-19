@@ -1,5 +1,6 @@
 ---
 statistics: false
+comments: false
 ---
 
 # Optics

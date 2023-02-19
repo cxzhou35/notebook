@@ -1,5 +1,5 @@
 ---
-comment: false
+comments: false
 statistics: true
 ---
 

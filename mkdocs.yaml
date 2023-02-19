@@ -132,6 +132,7 @@ extra_css:
   - _css/flink.css
   - _css/custom.css
   - _css/giscus.css
+  - _css/fold_toc.css
   # - _css/extra.css
 
 extra_javascript:
