@@ -1,6 +1,6 @@
 ---
 comments: false
-statistics: false
+statistics: true
 ---
 
 # Recent Updates
