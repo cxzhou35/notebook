@@ -70,9 +70,9 @@
     font-weight: 500;
 }
 
-center, p, li {
-    font-size: medium;
-}
+/* center, p, li { */
+/*     font-size: medium; */
+/* } */
 
 li {
     line-height: 1.0;
