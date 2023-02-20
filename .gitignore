@@ -1,11 +1,11 @@
-.obsidian/*
 .obvimrc
 .DS_Store
-
 *.code-workspace
+.obsidian/*
+.vscode/
 
 # web files
-site/*
+site/
 
 # scripts
 *.sh
