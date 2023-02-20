@@ -5,7 +5,7 @@ site_description: Zicx's Notebook.
 
 repo_name: xuer04/notebook
 repo_url: https://github.com/xuer04/notebook
-edit_uri: blob/main/docs
+edit_uri: tree/main/docs
 
 copyright: Copyright &copy; 2022-2023 <a href="https://github.com/Xuer04" target="_blank" rel="noopener">Zicx</a>
 
@@ -57,6 +57,7 @@ theme:
 plugins:
   - glightbox
   - search
+  - rss
   - statistics:
       page_check_metadata: comments
   - git-revision-date-localized:
@@ -74,22 +75,22 @@ markdown_extensions:
       permalink: true # link for each title
       toc_depth: 4
   - admonition
-  - abbr
   - attr_list
   - def_list
+  - sane_lisrs
   - footnotes
   - meta
   - md_in_html
-  - pymdownx.caret
   - pymdownx.critic
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
