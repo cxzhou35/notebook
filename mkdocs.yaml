@@ -124,10 +124,10 @@ extra:
     - icon: fontawesome/brands/telegram
       link: https://telegram.me/Xuer04
       name: Telegram
-    - icon: fontawesome/brands/rss
+    - icon: fontawesome/solid/rss
       link: https://zicx.top/
       name: Blog
-    - icon: fontawesome/brands/home
+    - icon: fontawesome/solid/home
       link: https://zicx.top/home/
       name: Home
 
