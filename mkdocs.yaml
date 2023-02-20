@@ -127,7 +127,7 @@ extra:
     - icon: fontawesome/solid/rss
       link: https://zicx.top/
       name: Blog
-    - icon: fontawesome/solid/home
+    - icon: fontawesome/solid/house
       link: https://zicx.top/home/
       name: Home
 
