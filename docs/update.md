@@ -1,6 +1,7 @@
 ---
 comments: false
 statistics: true
+counter: false
 ---
 
 # Recent Updates

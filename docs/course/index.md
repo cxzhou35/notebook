@@ -1,5 +1,7 @@
 ---
 statistics: false
+counter: true
+comments: true
 ---
 
 # Course Catalogue

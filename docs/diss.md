@@ -1,6 +1,7 @@
 ---
 statistics: true
-comment: true
+comments: true
+counter: false
 ---
 
 # Welcome to the forum !

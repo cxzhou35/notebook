@@ -1,6 +1,7 @@
 ---
 statistics: false
 comments: false
+counter: false
 ---
 
 # Computer Science
