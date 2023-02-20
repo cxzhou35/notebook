@@ -1,14 +1,18 @@
-site_name: Zicx の Notebook
+site_name: Zicx's Notebook
 site_author: Zicx
 site_url: "https://zicx.top/notebook"
+site_description: Zicx's Notebook.
 
 repo_name: xuer04/notebook
 repo_url: https://github.com/xuer04/notebook
 edit_uri: blob/main/docs
 
+copyright: Copyright &copy; 2022-2023 <a href="https://github.com/Xuer04" target="_blank" rel="noopener">Zicx</a>
+
 theme:
   name: material
   language: zh
+  font: false
   favicon: paw.svg
   icon:
     logo: octicons/cloud-24
@@ -26,14 +30,12 @@ theme:
       bug: fontawesome/solid/robot
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
-  font: false
   palette:
     - scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
 
-    # Palette toggle for dark mode
     - scheme: slate
       toggle:
         icon: material/brightness-4
@@ -112,8 +114,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-copyright: "Copyright &copy 2022 Zicx"
-
 extra:
   analytics:
     provider: google
@@ -141,6 +141,7 @@ extra_css:
   - _css/custom.css
   - _css/giscus.css
   - _css/fold_toc.css
+  - _css/counter.css
 
 extra_javascript:
   - https://cdn.tonycrane.cc/utils/katex.min.js
