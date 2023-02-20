@@ -1,7 +1,8 @@
 .obsidian/*
 .obvimrc
 .DS_Store
-notebook.code-workspace
+
+*.code-workspace
 
 # web files
 site/
