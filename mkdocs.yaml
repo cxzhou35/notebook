@@ -57,7 +57,6 @@ theme:
 plugins:
   - glightbox
   - search
-  - rss
   - statistics:
       page_check_metadata: comments
   - git-revision-date-localized:
@@ -77,7 +76,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
-  - sane_lisrs
+  - sane_lists
   - footnotes
   - meta
   - md_in_html
