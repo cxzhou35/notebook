@@ -5,7 +5,7 @@
 *.code-workspace
 
 # web files
-site/
+site/*
 
 # scripts
 *.sh

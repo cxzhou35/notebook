@@ -17,6 +17,7 @@ comments: true
                 <img src="../_assets/avatars/isshiki.png" alt="Isshiki修">
             </div>
             <div class="flink-item-name heti-skip">Isshiki修's Notebook</div>
+            <div class="flink-item-desc"></div>
         </a>
     </div>
 
@@ -26,6 +27,7 @@ comments: true
                 <img src="../_assets/avatars/xyx.png" alt="咸鱼暄">
             </div>
             <div class="flink-item-name">咸鱼暄的代码空间</div>
+            <div class="flink-item-desc"></div>
         </a>
     </div>
 
