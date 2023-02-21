@@ -70,6 +70,11 @@ plugins:
         - course/index.md
         - memo/index.md
         - life/index.md
+        - course/cs/index.md
+        - course/math/index.md
+        - course/opt/index.md
+        - memo/tool/index.md
+        - memo/config/index.md
 
 markdown_extensions:
   - toc:
