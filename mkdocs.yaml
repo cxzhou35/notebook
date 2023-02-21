@@ -9,6 +9,82 @@ edit_uri: tree/main/docs
 
 copyright: Copyright &copy; 2022-2023 <a href="https://github.com/Xuer04" target="_blank" rel="noopener">Zicx</a>
 
+nav:
+  - "Home":
+      - index.md
+      - "Discussion": diss.md
+      - "Update": update.md
+  - "Course":
+      - course/index.md
+      - "CS":
+          - course/cs/index.md
+          - "CS106L":
+              - course/cs/cs106L/index.md
+          - "CS231n":
+              - course/cs/cs231n/index.md
+          - "Deep Learning Systems":
+              - course/cs/dlsys/index.md
+          - "Data Structure":
+              - course/cs/ds/index.md
+          - "计算机视觉导论":
+              - course/cs/icv/index.md
+          - "数值分析":
+              - course/cs/na/index.md
+          - "面向对象编程":
+              - course/cs/oop/index.md
+          - "操作系统":
+              - course/cs/os/index.md
+      - "OPT":
+          - course/opt/index.md
+          - "光电子学":
+              - course/opt/optoelec/index.md
+      - "Math":
+          - course/math/index.md
+  - "Memo":
+      - memo/index.md
+      - "Tool":
+          - memo/tool/index.md
+          - "Git":
+              - memo/tool/git/index.md
+          - "Shell":
+              - memo/tool/shell/index.md
+          - "Cmake":
+              - memo/tool/cmake/index.md
+          - "Docker":
+              - memo/tool/docker/index.md
+          - "LaTeX":
+              - memo/tool/latex/index.md
+          - "Lua":
+              - memo/tool/lua/index.md
+          - "Julia":
+              - memo/tool/julia/index.md
+          - "Numpy":
+              - memo/tool/numpy/index.md
+          - "Vim":
+              - memo/tool/vim/index.md
+          - "Matlab":
+              - memo/tool/matlab/index.md
+          - "Conda":
+              - memo/tool/conda/index.md
+          - "Markdown":
+              - memo/tool/markdown/index.md
+      - "Configuration":
+          - memo/config/index.md
+          - "Windows":
+              - memo/config/win/index.md
+              - "Scoop":
+                  - memo/config/win/scoop/index.md
+          - "Mac":
+              - memo/config/mac/index.md
+              - "Homebrew":
+                  - memo/config/mac/homebrew/index.md
+          - "Linux":
+              - memo/config/linux/index.md
+  - "Life":
+      - life/index.md
+  - "Others":
+      - others/index.md
+
 theme:
   name: material
   language: zh
@@ -17,6 +93,7 @@ theme:
   icon:
     logo: octicons/cloud-24
     repo: fontawesome/brands/github-alt
+    edit: material/pencil
     admonition:
       info: fontawesome/solid/anchor
       note: fontawesome/solid/pen-nib
@@ -143,7 +220,7 @@ extra:
 
 extra_css:
   # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
-  - https://cdn.tonycrane.cc/utils/katex.min.css
+  # - https://cdn.tonycrane.cc/utils/katex.min.css
   - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
   - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
   - _css/flink.css
@@ -153,83 +230,8 @@ extra_css:
   - _css/counter.css
 
 extra_javascript:
-  - https://cdn.tonycrane.cc/utils/katex.min.js
+  # - https://cdn.tonycrane.cc/utils/katex.min.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - _js/katex.js
   - _js/tablesort.js
 
-nav:
-  - "Home":
-      - index.md
-      - "Discussion": diss.md
-      - "Update": update.md
-  - "Course":
-      - course/index.md
-      - "CS":
-          - course/cs/index.md
-          - "CS106L":
-              - course/cs/cs106L/index.md
-          - "CS231n":
-              - course/cs/cs231n/index.md
-          - "Deep Learning Systems":
-              - course/cs/dlsys/index.md
-          - "Data Structure":
-              - course/cs/ds/index.md
-          - "计算机视觉导论":
-              - course/cs/icv/index.md
-          - "数值分析":
-              - course/cs/na/index.md
-          - "面向对象编程":
-              - course/cs/oop/index.md
-          - "操作系统":
-              - course/cs/os/index.md
-      - "OPT":
-          - course/opt/index.md
-          - "光电子学":
-              - course/opt/optoelec/index.md
-      - "Math":
-          - course/math/index.md
-  - "Memo":
-      - memo/index.md
-      - "Tool":
-          - memo/tool/index.md
-          - "Git":
-              - memo/tool/git/index.md
-          - "Shell":
-              - memo/tool/shell/index.md
-          - "Cmake":
-              - memo/tool/cmake/index.md
-          - "Docker":
-              - memo/tool/docker/index.md
-          - "LaTeX":
-              - memo/tool/latex/index.md
-          - "Lua":
-              - memo/tool/lua/index.md
-          - "Julia":
-              - memo/tool/julia/index.md
-          - "Numpy":
-              - memo/tool/numpy/index.md
-          - "Vim":
-              - memo/tool/vim/index.md
-          - "Matlab":
-              - memo/tool/matlab/index.md
-          - "Conda":
-              - memo/tool/conda/index.md
-          - "Markdown":
-              - memo/tool/markdown/index.md
-      - "Configuration":
-          - memo/config/index.md
-          - "Windows":
-              - memo/config/win/index.md
-              - "Scoop":
-                  - memo/config/win/scoop/index.md
-          - "Mac":
-              - memo/config/mac/index.md
-              - "Homebrew":
-                  - memo/config/mac/homebrew/index.md
-          - "Linux":
-              - memo/config/linux/index.md
-  - "Life":
-      - life/index.md
-  - "Others":
-      - others/index.md
