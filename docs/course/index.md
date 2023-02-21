@@ -6,12 +6,12 @@ comments: true
 
 # Course Catalogue
 
-!!! inline note "" 
+!!! inline note ""
     <center>
-    <img src="https://media.giphy.com/media/TdjQAgDIkRsYm1HUbt/giphy.gif" width="86%" height=auto />
+    <img src="https://media.giphy.com/media/TdjQAgDIkRsYm1HUbt/giphy.gif" width="84%" height=auto />
     </center>
 
-!!! info "Info" 
+!!! info "Info"
     这里是**[课程笔记](./)**，主要涵盖了**计算机(代码嘿嘿)，光电(本专业)，数学<del>(感觉学数学的好帅)</del>** 的一些课程。把笔记放在这里和大家分享，希望可以帮助大家一起学习，如果有问题可以在评论区留言哦，*Thanks♪(･ω･)ﾉ*
 
 <style>

@@ -6,12 +6,12 @@ counter: true
 
 # Memorandum
 
-!!! inline note "" 
+!!! inline note ""
     <center>
-    <img src="https://media.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" width="94%" height=auto />
+    <img src="https://media.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" width="90%" height=auto />
     </center>
 
-!!! info "Info" 
+!!! info "Info"
     这里是**[备忘录](./)**，记录了***常用工具命令(Shell, Git, Cmake etc.)***和***环境配置(Scoop, Homebrew etc.)***，如果有问题可以在评论区留言哦，*Thanks♪(･ω･)ﾉ*
 
 ??? abstract "Overview"
