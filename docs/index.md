@@ -3,7 +3,7 @@ comments: false
 statistics: true
 ---
 
-# Hi 👋, I'm Zicx!
+# Hi 👋, I'm Zicx !
 
 <center>
 <img src="./home/wallpaper.png" width="800"/>

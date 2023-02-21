@@ -146,6 +146,7 @@ extra_css:
 extra_javascript:
   - https://cdn.tonycrane.cc/utils/katex.min.js
   - _js/katex.js
+  - _js/tablesort.js
 
 nav:
   - "Home":
