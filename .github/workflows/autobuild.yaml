@@ -14,12 +14,12 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
+      - run: pip install mkdocs
       - run: pip install mkdocs-material
       - run: pip install mkdocs-git-revision-date-localized-plugin
       - run: pip install jieba
       - run: pip install rich
       - run: pip install python-markdown-math
-      - run: pip install yapf
       - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-statistics-plugin
       - run: mkdocs gh-deploy --force
