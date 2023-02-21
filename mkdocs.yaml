@@ -228,6 +228,7 @@ extra_css:
   - _css/giscus.css
   - _css/fold_toc.css
   - _css/counter.css
+  - _css/card.css
 
 extra_javascript:
   - https://cdn.tonycrane.cc/utils/katex.min.js
