@@ -57,7 +57,7 @@
     --md-footer-bg-color: rgba(0,0,0,.87);
     --md-footer-bg-color--dark: rgba(0,0,0,.32);
     --md-shadow-z1: 1px 1px 3px #edeadc,1px 1px 5px #e1d0c5;
-    --md-shadow-z2: 1px 1px 3px #edeadc,2px 2px 7px #cebeb3;
+    --md-shadow-z2: 1px 1px 3px #edeadc,1px 1px 5px #cebeb3;
     --md-shadow-z3: 1px 1px 3px #edeadc,2px 2px 9px #cebeb3;
 }
 
