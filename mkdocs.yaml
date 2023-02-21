@@ -35,7 +35,6 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
     - scheme: slate
       toggle:
         icon: material/brightness-4
@@ -68,6 +67,9 @@ plugins:
         - index.md
         - update.md
         - diss.md
+        - course/index.md
+        - memo/index.md
+        - life/index.md
 
 markdown_extensions:
   - toc:
@@ -83,6 +85,7 @@ markdown_extensions:
   - meta
   - md_in_html
   - pymdownx.critic
+  - pymdownx.caret
   - pymdownx.snippets
   - pymdownx.details
   - pymdownx.inlinehilite
