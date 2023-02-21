@@ -74,8 +74,10 @@ markdown_extensions:
       permalink: true # link for each title
       toc_depth: 4
   - admonition
+  - abbr
   - attr_list
   - def_list
+  - tables
   - sane_lists
   - footnotes
   - meta
