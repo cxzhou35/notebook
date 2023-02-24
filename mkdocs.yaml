@@ -219,8 +219,8 @@ extra:
       name: Home
 
 extra_css:
-  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
-  # - https://cdn.tonycrane.cc/utils/katex.min.css
+  # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+  - https://cdn.tonycrane.cc/utils/katex.min.css
   - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
   - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
   - _css/flink.css
@@ -231,12 +231,12 @@ extra_css:
   - _css/card.css
 
 extra_javascript:
-  # - https://cdn.tonycrane.cc/utils/katex.min.js
+  - https://cdn.tonycrane.cc/utils/katex.min.js
   - _js/katex.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - _js/tablesort.js
-  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
