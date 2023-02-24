@@ -183,9 +183,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-      options:
-        custom_icons:
-          - overrides/.icons
+      # options:
+      #   custom_icons:
+      #     - overrides/.icons
   - pymdownx.magiclink:
       repo_url_shorthand: true
       user: squidfunk
@@ -235,4 +235,3 @@ extra_javascript:
   - _js/katex.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - _js/tablesort.js
-

@@ -17,13 +17,12 @@ statistics: true
 
 
 ???+ abstract "<center>Contact Me</center>"
-    - <div style="font-size:15px;font-weight:bold"><img src="./home/house-heart.svg"/>: [https://zicx.top/home](https://zicx.top/home)</div>
+    - :fontawesome-solid-house:: **[https://zicx.top/home](https://zicx.top/home)**
 
-    - <div style="font-size:15px;font-weight:bold"><img src="./home/chat-dots.svg"/>: [https://zicx.top](https://zicx.top)</div>
+    - :fontawesome-solid-rss:: **[https://zicx.top](https://zicx.top)**
 
-    - <div style="font-size:15px;font-weight:bold"><img src="./home/github.svg"/>: [https://github.com/Xuer04](https://github.com/Xuer04)</div>
+    - :fontawesome-brands-github:: **[https://github.com/Xuer04](https://github.com/Xuer04)**
 
-    - <div style="font-size:15px;font-weight:bold"><img src="./home/telegram.svg"/>: [https://telegram.me/Xuer04](https://telegram.me/Xuer04)</div>
+    - :fontawesome-brands-telegram:: **[https://telegram.me/Xuer04](https://telegram.me/Xuer04)**
 
-    - <div style="font-size:15px;font-weight:bold"><img src="./home/envelope-at.svg"/>: [mailto:zjajzcx3566@gmail.com](mailto:zjajzcx3566@gmail.com)</div>
-
+    - :material-email-multiple:: **[mailto:zjajzcx3566@gmail.com](mailto:zjajzcx3566@gmail.com)**
