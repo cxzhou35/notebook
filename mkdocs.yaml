@@ -133,8 +133,8 @@ theme:
     - navigation.tabs
     # - navigation.tabs.sticky
     - navigation.indexes
-    - navigation.path
     - navigation.top
+    - navigation.prune
     - navigation.footer
     - search.highlight
     - search.share
