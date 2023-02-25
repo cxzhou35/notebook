@@ -56,8 +56,8 @@ nav:
               - memo/tool/latex/index.md
           - "NumPy":
               - memo/tool/numpy/index.md
-          - "Vim":
-              - memo/tool/vim/index.md
+          - "Neoim":
+              - memo/tool/nvim/index.md
           - "MATLAB":
               - memo/tool/matlab/index.md
           - "Conda":
