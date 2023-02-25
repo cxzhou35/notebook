@@ -1,17 +1,21 @@
 ---
 statistics: false
-comments: true
+comments: false
 ---
 
-# Memorandum
+# 备忘录
 
 !!! inline note ""
     <center>
-    <img src="https://media.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" width="90%" height=auto />
+    <img src="https://media.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" width="97%" height=auto />
     </center>
 
 !!! info "Info"
-    这里是**[备忘录](./)**，记录了***常用工具命令(Shell, Git, Cmake etc.)***和***环境配置(Scoop, Homebrew etc.)***，如果有问题可以在评论区留言哦，*Thanks♪(･ω･)ﾉ*
+    这里是**[备忘录](./)**, 包括以下内容:
+
+    - [常用工具](./tool/): Shell/Git/Cmake/...
+    - [编程语言](./pl/): C++/Python/Go/...
+    - [环境搭建](./config/): Mac/Windows/Linux/...
 
 <style>
 .md-typeset table:not([class]) th {
@@ -19,7 +23,7 @@ comments: true
 }
 </style>
 
-???+ abstract "Overview"
+??? abstract "Overview"
     <div style="font-size:70px;font-weight:bold"><center>***实用工具***</center></div>
 
     <div style="text-align: center" markdown="1">
@@ -32,20 +36,21 @@ comments: true
 
     </div>
 
-
-    <div style="font-size:70px;font-weight:bold"><center>***Configurations***</center></div>
-
-    <div style="text-align: center" markdown="1">
-
-    [:fontawesome-brands-windows: Windows](config/win/index.md) &nbsp; [:fontawesome-brands-apple: Mac](config/mac/index.md) &nbsp; [:fontawesome-brands-linux: Linux](config/linux/index.md)
-
-    </div>
-
     <div style="font-size:70px;font-weight:bold"><center>***编程语言***</center></div>
 
     <div style="text-align: center" markdown="1">
 
-    [:simple-julia: Julia](pl/julia/index.md) &nbsp; [:simple-lua: Lua](pl/lua/index.md)
+    | [:simple-cplusplus: C++](pl/cpp/index.md) | [:simple-python: Python](pl/python/index.md) | [:simple-go: Go](pl/go/index.md) |
+    | :---- | :---- | :---- |
+    | [:simple-rust: Rust](pl/rust/index.md) | [:simple-julia: Julia](pl/julia/index.md) | [:simple-lua: Lua](pl/lua/index.md) |
+
+    </div>
+
+    <div style="font-size:70px;font-weight:bold"><center>***环境搭建***</center></div>
+
+    <div style="text-align: center" markdown="1">
+
+    [:fontawesome-brands-windows: Windows](config/win/index.md) &nbsp; [:fontawesome-brands-apple: Mac](config/mac/index.md) &nbsp; [:fontawesome-brands-linux: Linux](config/linux/index.md)
 
     </div>
 

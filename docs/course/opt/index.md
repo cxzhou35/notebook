@@ -6,7 +6,7 @@ comments: false
 # Optics
 
 !!! abstract "Abstract"
-    光电相关课程的笔记都放在这里，感觉这个专业学的有点杂。
+    光电相关课程的笔记都放在这里，感觉这个专业学的有点杂
 
 !!! note ""
     <p align="center">  </p>

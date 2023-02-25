@@ -1,9 +1,9 @@
 ---
 statistics: false
-comments: true
+comments: false
 ---
 
-# Course Catalogue
+# 课程笔记
 
 !!! inline note ""
     <center>
@@ -11,7 +11,7 @@ comments: true
     </center>
 
 !!! info "Info"
-    这里是**[课程笔记](./)**，主要涵盖了**计算机(代码嘿嘿)，光电(本专业)，数学<del>(感觉学数学的好帅)</del>** 的一些课程。把笔记放在这里和大家分享，希望可以帮助大家一起学习，如果有问题可以在评论区留言哦，*Thanks♪(･ω･)ﾉ*
+    这里是**[课程笔记](./)**, 主要涵盖了**计算机(代码嘿嘿), 光电(本专业), 数学<del>(感觉学数学的好帅)</del>** 的一些课程. 把笔记放在这里分享, 希望可以帮助大家一起学习, 有问题的话可以在笔记下面的评论区指出, *Thanks♪(･ω･)ﾉ*.
 
 <style>
 .md-typeset table:not([class]) th {

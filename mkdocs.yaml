@@ -10,11 +10,11 @@ edit_uri: tree/main/docs
 copyright: Copyright &copy; 2022-2023 <a href="https://github.com/Xuer04" target="_blank" rel="noopener">Zicx</a>
 
 nav:
-  - "Home":
+  - "主页":
       - index.md
-      - "Discussion": diss.md
-      - "Update": update.md
-  - "Course":
+      - "讨论区": diss.md
+      - "最近更新": update.md
+  - "课程笔记":
       - course/index.md
       - "计算机科学":
           - course/cs/index.md
@@ -40,9 +40,9 @@ nav:
               - course/opt/optoelec/index.md
       - "数学":
           - course/math/index.md
-  - "Memo":
+  - "备忘录":
       - memo/index.md
-      - "实用工具":
+      - "常用工具":
           - memo/tool/index.md
           - "Git":
               - memo/tool/git/index.md
@@ -64,18 +64,6 @@ nav:
               - memo/tool/conda/index.md
           - "Markdown":
               - memo/tool/markdown/index.md
-      - "环境搭建":
-          - memo/config/index.md
-          - "Windows":
-              - memo/config/win/index.md
-              - "Scoop":
-                  - memo/config/win/scoop/index.md
-          - "Mac":
-              - memo/config/mac/index.md
-              - "Homebrew":
-                  - memo/config/mac/homebrew/index.md
-          - "Linux":
-              - memo/config/linux/index.md
       - "编程语言":
           - memo/pl/index.md
           - "C++":
@@ -90,9 +78,21 @@ nav:
             - memo/pl/julia/index.md
           - "Lua":
             - memo/pl/lua/index.md
-  - "Life":
+      - "环境搭建":
+          - memo/config/index.md
+          - "Windows":
+              - memo/config/win/index.md
+              - "Scoop":
+                  - memo/config/win/scoop/index.md
+          - "Mac":
+              - memo/config/mac/index.md
+              - "Homebrew":
+                  - memo/config/mac/homebrew/index.md
+          - "Linux":
+              - memo/config/linux/index.md
+  - "生活":
       - life/index.md
-  - "Others":
+  - "杂项":
       - others/index.md
 
 theme:

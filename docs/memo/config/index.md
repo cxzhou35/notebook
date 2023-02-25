@@ -3,10 +3,10 @@ statistics: false
 comments: false
 ---
 
-# Configuration
+# 环境搭建
 
 !!! abstract "Abstract"
-    **这里记录了一些环境配置相关的内容。**
+    这里记录了一些环境配置相关的内容
 
 !!! note ""
     <br>

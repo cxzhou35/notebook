@@ -3,10 +3,10 @@ statistics: false
 comments: false
 ---
 
-# Tool
+# 常用工具
 
 !!! abstract "Abstract"
-    **这里记录了一些常用工具的命令。**
+    这里记录了一些常用工具相关的内容
 
 !!! note ""
     <br>
