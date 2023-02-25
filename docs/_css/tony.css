@@ -1,11 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;700&display=swap');
-
 :root {
     --md-text-font: "JetBrains Mono", "LXGW WenKai Screen";
     --md-code-font: "JetBrains Mono";
@@ -67,10 +59,27 @@
     --md-shadow-z3: 1px 1px 1px #edeadc, 1px 1px 7px #cebeb3;
 }
 
-/* h1 {
-    font-size: large;
-    font-family: 'Noto Serif SC';
-} */
+@media screen and (min-width: 960px) {
+
+    /* body {
+    zoom: 1.1;
+  } */
+    html {
+        font-size: 137.5%;
+    }
+}
+
+@media screen and (min-width: 100em) {
+    html {
+        font-size: 137.5%;
+    }
+}
+
+@media screen and (min-width: 125em) {
+    html {
+        font-size: 137.5%;
+    }
+}
 
 .md-typeset h1,
 .md-typeset h2 {
@@ -92,44 +101,16 @@
     font-size: .7rem;
 }
 
-center,
-p,
-li {
-    font-size: medium;
+.md-typeset h3 {
+    font-weight: 600;
 }
 
-li {
-    line-height: 0.9;
+.md-typeset code:not(pre code) {
+    font-size: inherit;
 }
 
-.md-nav__link {
-    font-size: small;
-}
-
-.md-typeset .admonition,
-.md-typeset details {
-    border: none;
-}
-
-.md-tabs {
-    background-color: var(--md-primary-fg-color--light);
-}
-
-.md-tabs__link {
-    margin-top: .8rem;
-    opacity: .4;
-    font-family: var(--md-text-font-family);
-}
-
-.md-tabs__link--active,
-.md-tabs__link:is(:focus, :hover) {
-    color: inherit;
-    opacity: 0.8;
-}
-
-.md-typeset details:not([open]) {
-    box-shadow: var(--md-shadow-z2);
-    padding-bottom: 0;
+.md-copyright {
+    font-size: .55rem;
 }
 
 .md-typeset .admonition,
@@ -143,9 +124,33 @@ li {
     border-radius: 5px;
 }
 
-/* .md-typeset div.arithmatex {
-    overflow-y: hidden;
-} */
+.md-tabs {
+    background-color: var(--md-primary-fg-color--light);
+}
+
+.katex {
+    -webkit-text-stroke-width: 0.3px;
+}
+
+center,
+p {
+    font-size: medium;
+}
+
+.reference ol {
+    counter-reset: li;
+}
+
+.reference li {
+    padding-left: 0.7em;
+    counter-increment: li;
+    word-break: break-all;
+}
+
+.reference li::marker {
+    content: "[" counter(li) "]";
+    font-size: 0.9em;
+}
 
 .md-typeset :is(.emojione, .twemoji, .gemoji) {
     vertical-align: sub;

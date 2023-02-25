@@ -7,7 +7,7 @@ comments: false
 
 !!! inline note ""
     <center>
-    <img src="https://media.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" width="99%" height=auto />
+    <img src="https://media.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" width="120%" height=auto />
     </center>
 
 !!! info "Info"
