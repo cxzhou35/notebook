@@ -105,7 +105,6 @@ theme:
     view: material/file-eye-outline
     logo: octicons/cloud-24
     repo: fontawesome/brands/git-alt
-    edit: material/pencil
     admonition:
       info: fontawesome/solid/anchor
       note: fontawesome/solid/pen-nib
