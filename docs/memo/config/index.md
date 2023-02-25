@@ -1,12 +1,11 @@
 ---
 statistics: false
 comments: false
-counter: false
 ---
 
 # Configuration
 
-!!! abstract "Abstract" 
+!!! abstract "Abstract"
     **这里记录了一些环境配置相关的内容。**
 
 !!! note ""

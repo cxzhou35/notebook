@@ -1,7 +1,6 @@
 ---
 statistics: false
 comments: true
-counter: false
 ---
 
 # Memorandum
@@ -21,15 +20,15 @@ counter: false
 </style>
 
 ???+ abstract "Overview"
-    <div style="font-size:70px;font-weight:bold"><center>***Tools***</center></div>
+    <div style="font-size:70px;font-weight:bold"><center>***实用工具***</center></div>
 
     <div style="text-align: center" markdown="1">
 
     | [:simple-git: Git](tool/git/index.md) | [:simple-powershell: Shell](tool/shell/index.md) | [:simple-cmake: CMake](tool/cmake/index.md) |
     | :---- | :---- | :---- |
     | [:simple-markdown: Markdown](tool/markdown/index.md) | [:simple-docker: Docker](tool/docker/index.md) | [:simple-latex: LaTeX](tool/latex/index.md) |
-    | [:simple-julia: Julia](tool/julia/index.md) | [:simple-numpy: NumPy](tool/numpy/index.md) | [:simple-vim: Vim](tool/vim/index.md) |
-    | [:simple-matrix: MATLAB](tool/matlab/index.md) | [:simple-anaconda: Conda](tool/conda/index.md) | [:simple-lua: Lua](tool/lua/index.md) |
+    | [:simple-matrix: MATLAB](tool/matlab/index.md) | [:simple-numpy: NumPy](tool/numpy/index.md) | [:simple-vim: Vim](tool/vim/index.md) |
+    | [:simple-anaconda: Conda](tool/conda/index.md) | | |
 
     </div>
 
@@ -41,5 +40,14 @@ counter: false
     [:fontawesome-brands-windows: Windows](config/win/index.md) &nbsp; [:fontawesome-brands-apple: Mac](config/mac/index.md) &nbsp; [:fontawesome-brands-linux: Linux](config/linux/index.md)
 
     </div>
+
+    <div style="font-size:70px;font-weight:bold"><center>***编程语言***</center></div>
+
+    <div style="text-align: center" markdown="1">
+
+    [:simple-julia: Julia](pl/julia/index.md) &nbsp; [:simple-lua: Lua](pl/lua/index.md)
+
+    </div>
+
 
 > ***Icon Source***: [mkdocs-material-icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)

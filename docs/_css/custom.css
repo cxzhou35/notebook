@@ -1,33 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;700&display=swap');
 
 :root {
-  --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
-  --md-code-font: "JetBrains Mono";
+    --md-text-font: "JetBrains Mono", "LXGW WenKai Screen";
+    --md-code-font: "JetBrains Mono";
 }
 
-:root, [data-md-color-scheme=default] {
+:root,
+[data-md-color-scheme=default] {
     --md-default-fg-color: rgba(72, 52, 52, .78);
-    --md-default-fg-color--light: rgba(72, 52, 52,.54);
-    --md-default-fg-color--lighter: rgba(72, 52, 52,.32);
-    --md-default-fg-color--lightest: rgba(72, 52, 52,.27);
+    --md-default-fg-color--light: rgba(72, 52, 52, .54);
+    --md-default-fg-color--lighter: rgba(72, 52, 52, .32);
+    --md-default-fg-color--lightest: rgba(72, 52, 52, .27);
     --md-default-bg-color: #fffffc;
-    --md-default-bg-color--light: hsla(0,0%,100%,.7);
-    --md-default-bg-color--lighter: hsla(0,0%,100%,.3);
-    --md-default-bg-color--lightest: hsla(0,0%,100%,.12);
+    --md-default-bg-color--light: hsla(0, 0%, 100%, .7);
+    --md-default-bg-color--lighter: hsla(0, 0%, 100%, .3);
+    --md-default-bg-color--lightest: hsla(0, 0%, 100%, .12);
     --md-primary-fg-color: #7991d1;
     --md-primary-fg-color--light: #687fa5;
     --md-primary-fg-color--dark: #95b1ba;
     --md-primary-bg-color: #edebe0;
-    --md-primary-bg-color--light: hsla(0,0%,100%,.7);
+    --md-primary-bg-color--light: hsla(0, 0%, 100%, .7);
     --md-accent-fg-color: #3c5e91;
     --md-accent-fg-color--light: #a381ba;
-    --md-accent-fg-color--transparent: rgba(82,108,254,.1);
+    --md-accent-fg-color--transparent: rgba(82, 108, 254, .1);
     --md-accent-bg-color: #fffffc;
-    --md-accent-bg-color--light: hsla(0,0%,100%,.7);
+    --md-accent-bg-color--light: hsla(0, 0%, 100%, .7);
     --md-code-fg-color: #66806A;
     --md-code-bg-color: #FFF3E4;
-    --md-code-hl-color: rgba(255,255,0,.5);
+    --md-code-hl-color: rgba(255, 255, 0, .5);
     --md-code-hl-number-color: #d52a2a;
     --md-code-hl-special-color: #db1457;
     --md-code-hl-function-color: #a846b9;
@@ -43,48 +49,67 @@
     --md-typeset-color: var(--md-default-fg-color);
     --md-typeset-a-color: var(--md-accent-fg-color--light);
     --md-typeset-mark-color: rgba(255, 179, 0, 0.5);
-    --md-typeset-del-color: rgba(245,80,61,.15);
-    --md-typeset-ins-color: rgba(11,213,112,.15);
+    --md-typeset-del-color: rgba(245, 80, 61, .15);
+    --md-typeset-ins-color: rgba(11, 213, 112, .15);
     --md-typeset-kbd-color: #fafafa;
     --md-typeset-kbd-accent-color: #fff;
     --md-typeset-kbd-border-color: #b8b8b8;
-    --md-typeset-table-color: rgba(0,0,0,.12);
+    --md-typeset-table-color: rgba(0, 0, 0, .12);
     --md-admonition-fg-color: var(--md-default-fg-color);
     --md-admonition-bg-color: #fbfaf5;
     --md-footer-fg-color: #fff;
-    --md-footer-fg-color--light: hsla(0,0%,100%,.7);
-    --md-footer-fg-color--lighter: hsla(0,0%,100%,.3);
-    --md-footer-bg-color: rgba(0,0,0,.87);
-    --md-footer-bg-color--dark: rgba(0,0,0,.32);
-    --md-shadow-z1: 1px 1px 3px #edeadc,1px 1px 5px #e1d0c5;
-    --md-shadow-z2: 1px 1px 3px #edeadc,1px 1px 5px #cebeb3;
-    --md-shadow-z3: 1px 1px 3px #edeadc,2px 2px 9px #cebeb3;
+    --md-footer-fg-color--light: hsla(0, 0%, 100%, .7);
+    --md-footer-fg-color--lighter: hsla(0, 0%, 100%, .3);
+    --md-footer-bg-color: rgba(0, 0, 0, .87);
+    --md-footer-bg-color--dark: rgba(0, 0, 0, .32);
+    --md-shadow-z1: 1px 1px 1px #edeadc, 1px 1px 3px #e1d0c5;
+    --md-shadow-z2: 1px 1px 1px #edeadc, 1px 1px 5px #cebeb3;
+    --md-shadow-z3: 1px 1px 1px #edeadc, 1px 1px 7px #cebeb3;
 }
 
-.md-ellipsis, h1, .headerlink{
-    font-size: larger;
-    font-family: 'ZCOOL XiaoWei';
+h1 {
+    font-size: large;
+    font-family: 'Noto Sans SC';
 }
 
-.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4, .md-typeset h5 {
-    font-weight: 500;
+.md-typeset h1,
+.md-typeset h2 {
+    font-weight: 450;
 }
 
-center, p, li {
+.md-typeset h3 {
+    font-weight: 350;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+    letter-spacing: 0;
+}
+
+.md-typeset {
+    font-size: .7rem;
+}
+
+center,
+p,
+li {
     font-size: medium;
 }
 
 li {
-    line-height: 1.0;
+    line-height: 0.9;
 }
 
 .md-nav__link {
     font-size: small;
 }
 
-.md-typeset .admonition, .md-typeset details {
+.md-typeset .admonition,
+.md-typeset details {
     border: none;
-} 
+}
 
 .md-tabs {
     background-color: var(--md-primary-fg-color--light);
@@ -96,7 +121,8 @@ li {
     font-family: var(--md-text-font-family);
 }
 
-.md-tabs__link--active, .md-tabs__link:is(:focus,:hover) {
+.md-tabs__link--active,
+.md-tabs__link:is(:focus, :hover) {
     color: inherit;
     opacity: 0.8;
 }
@@ -105,19 +131,22 @@ li {
     box-shadow: var(--md-shadow-z2);
     padding-bottom: 0;
 }
-.md-typeset .admonition, .md-typeset details {
+
+.md-typeset .admonition,
+.md-typeset details {
     box-shadow: var(--md-shadow-z2);
 }
 
-.md-typeset img, .md-typeset video {
+.md-typeset img,
+.md-typeset video {
     box-shadow: var(--md-shadow-z1);
     border-radius: 5px;
 }
 
-.md-typeset div.arithmatex {
+/* .md-typeset div.arithmatex {
     overflow-y: hidden;
-}
+} */
 
-.md-typeset :is(.emojione,.twemoji,.gemoji) {
-  vertical-align: sub;
+.md-typeset :is(.emojione, .twemoji, .gemoji) {
+    vertical-align: sub;
 }

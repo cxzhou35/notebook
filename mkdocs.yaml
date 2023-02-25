@@ -16,7 +16,7 @@ nav:
       - "Update": update.md
   - "Course":
       - course/index.md
-      - "CS":
+      - "计算机科学":
           - course/cs/index.md
           - "CS106L":
               - course/cs/cs106L/index.md
@@ -24,7 +24,7 @@ nav:
               - course/cs/cs231n/index.md
           - "Deep Learning Systems":
               - course/cs/dlsys/index.md
-          - "Data Structure":
+          - "数据结构与算法":
               - course/cs/ds/index.md
           - "计算机视觉导论":
               - course/cs/icv/index.md
@@ -34,15 +34,15 @@ nav:
               - course/cs/oop/index.md
           - "操作系统":
               - course/cs/os/index.md
-      - "OPT":
+      - "光电":
           - course/opt/index.md
           - "光电子学":
               - course/opt/optoelec/index.md
-      - "Math":
+      - "数学":
           - course/math/index.md
   - "Memo":
       - memo/index.md
-      - "Tool":
+      - "实用工具":
           - memo/tool/index.md
           - "Git":
               - memo/tool/git/index.md
@@ -54,10 +54,6 @@ nav:
               - memo/tool/docker/index.md
           - "LaTeX":
               - memo/tool/latex/index.md
-          - "Lua":
-              - memo/tool/lua/index.md
-          - "Julia":
-              - memo/tool/julia/index.md
           - "NumPy":
               - memo/tool/numpy/index.md
           - "Vim":
@@ -68,7 +64,7 @@ nav:
               - memo/tool/conda/index.md
           - "Markdown":
               - memo/tool/markdown/index.md
-      - "Configuration":
+      - "环境搭建":
           - memo/config/index.md
           - "Windows":
               - memo/config/win/index.md
@@ -80,6 +76,20 @@ nav:
                   - memo/config/mac/homebrew/index.md
           - "Linux":
               - memo/config/linux/index.md
+      - "编程语言":
+          - memo/pl/index.md
+          - "C++":
+            - memo/pl/cpp/index.md
+          - "Python":
+            - memo/pl/python/index.md
+          - "Go":
+            - memo/pl/go/index.md
+          - "Rust":
+            - memo/pl/rust/index.md
+          - "Julia":
+            - memo/pl/julia/index.md
+          - "Lua":
+            - memo/pl/lua/index.md
   - "Life":
       - life/index.md
   - "Others":
@@ -123,6 +133,7 @@ theme:
     - navigation.tabs
     # - navigation.tabs.sticky
     - navigation.indexes
+    - navigation.path
     - navigation.top
     - navigation.footer
     - search.highlight
@@ -147,11 +158,6 @@ plugins:
         - course/index.md
         - memo/index.md
         - life/index.md
-        - course/cs/index.md
-        - course/math/index.md
-        - course/opt/index.md
-        - memo/tool/index.md
-        - memo/config/index.md
 
 markdown_extensions:
   - toc:
@@ -174,8 +180,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tilde
-  - pymdownx.highlight:
-      anchor_linenums: true
+  - pymdownx.highlight
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -222,10 +227,7 @@ extra_css:
   - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
   - _css/flink.css
   - _css/custom.css
-  - _css/giscus.css
-  - _css/fold_toc.css
-  - _css/counter.css
-  - _css/card.css
+  # - _css/counter.css
 
 extra_javascript:
   # table sort support

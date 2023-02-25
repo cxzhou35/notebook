@@ -1,12 +1,11 @@
 ---
 statistics: false
 comments: false
-counter: false
 ---
 
 # Tool
 
-!!! abstract "Abstract" 
+!!! abstract "Abstract"
     **这里记录了一些常用工具的命令。**
 
 !!! note ""
