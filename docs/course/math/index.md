@@ -6,8 +6,8 @@ counter: false
 
 # Mathematics
 
-!!! abstract "Abstract" 
-    **数学相关课程的笔记都放在这里，好像学了十多年数学了。**
+!!! abstract "Abstract"
+    数学相关课程的笔记都放在这里，好像学了十多年数学了。
 
 
 !!! note ""
