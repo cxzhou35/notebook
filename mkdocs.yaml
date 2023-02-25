@@ -101,8 +101,8 @@ theme:
   font: false
   favicon: paw.svg
   icon:
-    edit: material/file-edit
-    view: material/file-eye
+    edit: material/file-edit-outline
+    view: material/file-eye-outline
     logo: octicons/cloud-24
     repo: fontawesome/brands/git-alt
     edit: material/pencil
@@ -130,6 +130,7 @@ theme:
         name: Switch to light mode
   features:
     - content.code.annotate
+    - content.code.copy
     - content.action.edit
     - content.action.view
     - navigation.instant
@@ -138,10 +139,10 @@ theme:
     # - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
-    - navigation.prune
     - navigation.footer
     - search.highlight
     - search.share
+    - search.suggest
     - toc.follow
   custom_dir: overrides
 
