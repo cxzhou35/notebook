@@ -131,7 +131,6 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.action.edit
-    - content.action.view
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
@@ -147,8 +146,7 @@ theme:
 
 plugins:
   - glightbox
-  - tags:
-      enabled: !ENV [CI, false]
+  - tags
   - search
   - statistics:
       page_check_metadata: comments
@@ -173,7 +171,6 @@ markdown_extensions:
   - abbr
   - attr_list
   - def_list
-  - sane_lists
   - tables
   - footnotes
   - meta
@@ -187,7 +184,11 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tilde
-  - pymdownx.magiclink
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      user: Xuer04
+      repo: notebook
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.arithmatex:
@@ -201,6 +202,9 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.superfences:
       custom_fences:
+        - name: diagram
+          class: diagram
+          format: !!python/name:pymdownx.superfences.fence_code_format
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
@@ -235,6 +239,9 @@ extra_css:
   # - _css/counter.css
 
 extra_javascript:
+  # mermaid support
+  # - https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js
+
   # table sort support
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - _js/tablesort.js
