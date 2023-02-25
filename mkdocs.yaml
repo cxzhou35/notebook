@@ -1,4 +1,4 @@
-site_name: Zicx's Notebook
+site_name: Zicx 的笔记本
 site_author: Zicx
 site_url: "https://zicx.top/notebook"
 site_description: Zicx's Notebook.
@@ -13,7 +13,7 @@ nav:
   - "主页":
       - index.md
       - "讨论区": diss.md
-      - "最近更新": update.md
+      - "近期更新": update.md
   - "课程笔记":
       - course/index.md
       - "计算机科学":

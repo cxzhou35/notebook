@@ -67,10 +67,10 @@
     --md-shadow-z3: 1px 1px 1px #edeadc, 1px 1px 7px #cebeb3;
 }
 
-h1 {
+/* h1 {
     font-size: large;
-    font-family: 'Noto Sans SC';
-}
+    font-family: 'Noto Serif SC';
+} */
 
 .md-typeset h1,
 .md-typeset h2 {

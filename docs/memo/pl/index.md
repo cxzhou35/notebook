@@ -6,7 +6,7 @@ comments: false
 # 编程语言
 
 !!! abstract "Abstract"
-    这里记录了一些编程相关的内容
+    这里记录了一些编程语言相关的内容
 
 !!! note ""
     <br>

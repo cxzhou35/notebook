@@ -2,7 +2,7 @@
 comments: false
 ---
 
-# CS 106L: Standard C++ Programming
+# CS106L: Standard C++ Programming
 
 !!! abstract "Abstract"
     - :fontawesome-solid-house: Website: [Latest version](https://web.stanford.edu/class/cs106l/)

@@ -7,7 +7,7 @@ comments: false
 
 !!! inline note ""
     <center>
-    <img src="https://media.giphy.com/media/TdjQAgDIkRsYm1HUbt/giphy.gif" width="84%" height=auto />
+    <img src="https://media.giphy.com/media/TdjQAgDIkRsYm1HUbt/giphy.gif" width="85%" height=auto />
     </center>
 
 !!! info "Info"
@@ -19,7 +19,7 @@ comments: false
 }
 </style>
 
-???+ abstract "Overview"
+??? abstract "Overview"
     <div style="text-align: center" markdown="1">**说明：✅-已完善  📶-更新中  ❎-未上传 *这个表格是可以排序的⬇️***</div>
 
     <div style="text-align: center" markdown="1">

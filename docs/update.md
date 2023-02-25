@@ -2,7 +2,7 @@
 comments: false
 ---
 
-# Recent Updates
+# 近期更新
 
 !!! info "最近更新的内容"
     **目前正在迁移本地笔记，敬请期待！**
