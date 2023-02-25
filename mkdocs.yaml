@@ -169,6 +169,7 @@ markdown_extensions:
   - abbr
   - attr_list
   - def_list
+  - sane_lists
   - tables
   - footnotes
   - meta
@@ -182,7 +183,9 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tilde
-  - pymdownx.highlight
+  - pymdownx.magiclink
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -190,10 +193,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.superfences:
