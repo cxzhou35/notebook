@@ -48,7 +48,7 @@ nav:
               - memo/tool/git/index.md
           - "Shell":
               - memo/tool/shell/index.md
-          - "Cmake":
+          - "CMake":
               - memo/tool/cmake/index.md
           - "Docker":
               - memo/tool/docker/index.md
@@ -58,7 +58,7 @@ nav:
               - memo/tool/lua/index.md
           - "Julia":
               - memo/tool/julia/index.md
-          - "Numpy":
+          - "NumPy":
               - memo/tool/numpy/index.md
           - "Vim":
               - memo/tool/vim/index.md

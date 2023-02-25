@@ -25,10 +25,10 @@ counter: true
 
     <div style="text-align: center" markdown="1">
 
-    | [:simple-git: Git](tool/git/index.md) | [:simple-powershell: Shell](tool/shell/index.md) | [:simple-cmake: Cmake](tool/cmake/index.md) |
+    | [:simple-git: Git](tool/git/index.md) | [:simple-powershell: Shell](tool/shell/index.md) | [:simple-cmake: CMake](tool/cmake/index.md) |
     | ---- | ---- | ---- |
-    | [:simple-markdown: Markdown](tool/markdown/index.md) | [:simple-docker: Docker](tool/docker/index.md) | [:simple-latex: LaTeX](tool/cmake/index.md) |
-    | [:simple-julia: Julia](tool/julia/index.md) | [:simple-numpy: Numpy](tool/numpy/index.md) | [:simple-vim: Vim](tool/vim/index.md) |
+    | [:simple-markdown: Markdown](tool/markdown/index.md) | [:simple-docker: Docker](tool/docker/index.md) | [:simple-latex: LaTeX](tool/latex/index.md) |
+    | [:simple-julia: Julia](tool/julia/index.md) | [:simple-numpy: NumPy](tool/numpy/index.md) | [:simple-vim: Vim](tool/vim/index.md) |
     | [:simple-matrix: MATLAB](tool/matlab/index.md) | [:simple-anaconda: Conda](tool/conda/index.md) | [:simple-lua: Lua](tool/lua/index.md) |
 
     </div>
