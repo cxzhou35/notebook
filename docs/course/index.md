@@ -1,6 +1,6 @@
 ---
 statistics: false
-counter: true
+counter: false
 comments: true
 ---
 

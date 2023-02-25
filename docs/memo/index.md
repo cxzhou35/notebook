@@ -1,7 +1,7 @@
 ---
 statistics: false
 comments: true
-counter: true
+counter: false
 ---
 
 # Memorandum

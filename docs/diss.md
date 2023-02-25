@@ -1,5 +1,5 @@
 ---
-counter: true
+counter: false
 comments: true
 ---
 
