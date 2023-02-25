@@ -201,17 +201,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://zicx.top/notebook/memo/tool/nvim/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://zicx.top/notebook/memo/tool/shell/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zicx.top/notebook/memo/tool/tmux/</loc>
-         <lastmod>2023-02-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://zicx.top/notebook/memo/tool/vim/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
