@@ -64,6 +64,8 @@ nav:
               - memo/tool/conda/index.md
           - "Markdown":
               - memo/tool/markdown/index.md
+          - "Tmux":
+              - memo/tool/tmux/index.md
       - "编程语言":
           - memo/pl/index.md
           - "C++":
