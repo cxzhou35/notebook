@@ -31,6 +31,71 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec01_intro/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec02_types_and_structs/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec03_streams/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec04_init_and_ref/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec05_containers/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec06_iterators_and_pointers/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec07_classes/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec08_templates/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec09_funcs_and_lambdas/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec10_operator_overloading/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec11_special_member_functions/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec12_type_safety/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/course/cs/cs106L/lec13_special_topics/</loc>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://zicx.top/notebook/course/cs/cs231n/</loc>
          <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
