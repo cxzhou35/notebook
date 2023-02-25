@@ -29,7 +29,7 @@ counter: true
     | ---- | ---- | ---- |
     | [:simple-markdown: Markdown](tool/markdown/index.md) | [:simple-docker: Docker](tool/docker/index.md) | [:simple-latex: LaTeX](tool/cmake/index.md) |
     | [:simple-julia: Julia](tool/julia/index.md) | [:simple-numpy: Numpy](tool/numpy/index.md) | [:simple-vim: Vim](tool/vim/index.md) |
-    | [:simple-matrix: Matlab](tool/matlab/index.md) | [:simple-anaconda: Conda](tool/conda/index.md) | [:simple-lua: Lua](tool/lua/index.md) |
+    | [:simple-matrix: MATLAB](tool/matlab/index.md) | [:simple-anaconda: Conda](tool/conda/index.md) | [:simple-lua: Lua](tool/lua/index.md) |
 
     </div>
 

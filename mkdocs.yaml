@@ -62,7 +62,7 @@ nav:
               - memo/tool/numpy/index.md
           - "Vim":
               - memo/tool/vim/index.md
-          - "Matlab":
+          - "MATLAB":
               - memo/tool/matlab/index.md
           - "Conda":
               - memo/tool/conda/index.md
