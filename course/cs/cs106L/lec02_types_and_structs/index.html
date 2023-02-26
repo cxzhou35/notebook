@@ -9,10 +9,10 @@
 <meta content="Zicx" name="author"/>
 <link href="https://zicx.top/notebook/course/cs/cs106L/lec02_types_and_structs/" rel="canonical"/>
 <link href="../lec01_intro/" rel="prev"/>
-<link href="../lec03_streams/" rel="next"/>
+<link href="../../cs231n/" rel="next"/>
 <link href="../../../../paw.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
-<title>Lec02 - Zicx 的笔记本</title>
+<title>类型和结构 - Zicx 的笔记本</title>
 <link href="../../../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
@@ -41,7 +41,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#types-and-structs">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -65,7 +65,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Lec02
+              类型和结构
             
           </span>
 </div>
@@ -253,17 +253,17 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../lec01_intro/">
-        Lec01
+        课程介绍
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Lec02
+          类型和结构
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Lec02
+        类型和结构
       </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -272,18 +272,18 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#c-fundamental-types">
-    C++ Fundamental Types
+<a class="md-nav__link" href="#c">
+    C++ 基础类型
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dynamic-vs-static-typing">
-    Dynamic vs Static typing
+<a class="md-nav__link" href="#_2">
+    动态类型和静态类型
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#overloading">
-    Overloading
+<a class="md-nav__link" href="#_3">
+    重载
   </a>
 </li>
 <li class="md-nav__item">
@@ -303,21 +303,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../lec03_streams/">
-        Lec03
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../lec04_init_and_ref/">
-        Lec04
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../lec05_containers/">
-        Lec05
-      </a>
 </li>
 </ul>
 </nav>
@@ -857,6 +842,9 @@
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../../../../life/">生活</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
 </div>
 <nav aria-label="生活" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
@@ -864,6 +852,34 @@
           生活
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../../life/film/">影视</a>
+</div>
+<nav aria-label="影视" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          影视
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../../../life/reading/">阅读</a>
+</div>
+<nav aria-label="阅读" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          阅读
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -896,18 +912,18 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#c-fundamental-types">
-    C++ Fundamental Types
+<a class="md-nav__link" href="#c">
+    C++ 基础类型
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dynamic-vs-static-typing">
-    Dynamic vs Static typing
+<a class="md-nav__link" href="#_2">
+    动态类型和静态类型
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#overloading">
-    Overloading
+<a class="md-nav__link" href="#_3">
+    重载
   </a>
 </li>
 <li class="md-nav__item">
@@ -935,36 +951,31 @@
 <a class="md-content__button md-icon" href="https://github.com/Xuer04/notebook/tree/main/docs/course/cs/cs106L/lec02_types_and_structs.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1 id="types-and-structs">Types and Structs<a class="headerlink" href="#types-and-structs" title="Permanent link">¶</a></h1>
+<h1 id="_1">类型和结构<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <div style="margin-top: -30px; font-size: 0.60em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"></path></svg></span> 约 239 个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> 63 行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"></path></svg></span> 预计阅读时间 2 分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"></path></svg></span> 约 495 个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> 62 行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"></path></svg></span> 预计阅读时间 2 分钟</p>
 </div>
-<h2 id="c-fundamental-types">C++ Fundamental Types<a class="headerlink" href="#c-fundamental-types" title="Permanent link">¶</a></h2>
+<h2 id="c">C++ 基础类型<a class="headerlink" href="#c" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">//32 bits</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'F'</span><span class="p">;</span><span class="w"> </span><span class="c1">//8 bits (usually)</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">decimalVal1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span><span class="w"> </span><span class="c1">//32 bits (usually)</span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kt">double</span><span class="w"> </span><span class="n">decimalVal2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span><span class="w"> </span><span class="c1">//64 bits (usually)</span>
 <a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kt">bool</span><span class="w"> </span><span class="n">bVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="c1">//1 bit</span>
 </code></pre></div>
-<p>String type:
+<p>字符串类型:
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1"> // need `string` library</span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Sarah"</span><span class="p">;</span><span class="w"> </span><span class="c1">// double quotes means string</span>
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">// index into a string and get a character</span>
 <a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kt">char</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// 'a'</span>
 </code></pre></div></p>
-<h2 id="dynamic-vs-static-typing">Dynamic vs Static typing<a class="headerlink" href="#dynamic-vs-static-typing" title="Permanent link">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>C++ is a <mark>statically typed language.</mark></p>
-<p><code>Statically Typed</code>:
-Everything with a name (variables, functions, etc) is given a type before runtime.(C++)</p>
-<p><code>Dynamically Typed</code>:
-Everything with a name (variables, functions, etc) is given a
-type at runtime based on the thing’s current value.(Python)</p>
-<p><code>Runtime</code>:
-Period when program is executing commands (after compilation, if compiled).</p>
-</div>
+<h2 id="_2">动态类型和静态类型<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>C++ 是一种<strong>静态类型语言</strong></p>
+<ul>
+<li><strong>静态类型</strong>: 具有命名(变量，函数等)的内容在运行时之前都具有明确类型 (C++)</li>
+<li><strong>动态类型</strong>: 具有命名(变量，函数等)的内容<strong>在运行时</strong>根据当前值被指定一个类型 (Python)</li>
+<li><strong>运行时</strong>: 从程序开始运行到终止的时期 (如果是需要编译的语言, 则在编译期之后)</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># CRASH during runtime, can’t divide a string</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">def</span> <span class="nf">div_3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">3</span>
@@ -977,11 +988,11 @@ Period when program is executing commands (after compilation, if compiled).</p>
 <a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>
 <a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">div_3</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
 </code></pre></div>
-<p>Static typing helps us to prevent errors before our code runs.</p>
-<h2 id="overloading">Overloading<a class="headerlink" href="#overloading" title="Permanent link">¶</a></h2>
-<p><strong>Deﬁne two functions with the same name but diﬀerent types.</strong></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+<blockquote>
+<p>静态类型有助于我们在代码运行之前发现和解决错误。</p>
+</blockquote>
+<h2 id="_3">重载<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>定义两个具有相同名称但不同类型的内容(运算符, 函数等), 之后的课程会重点讲解</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">half</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="err">“</span><span class="mi">1</span><span class="err">”</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
 <a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
@@ -992,9 +1003,8 @@ Period when program is executing commands (after compilation, if compiled).</p>
 <a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
 </code></pre></div>
-</div>
 <h2 id="struct">Struct<a class="headerlink" href="#struct" title="Permanent link">¶</a></h2>
-<p><code>struct</code>: A group of named variables each with their own type. A way to bundle different types together.</p>
+<p><code>struct</code>: 一种由用户自定义的可用数据类型，允许存储不同类型的数据项，是一种将不同类型变量组合在一起的方式</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="c1">// these are called fields</span>
 <a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="w"> </span><span class="c1">// separate these by semicolons</span>
@@ -1013,7 +1023,7 @@ Period when program is executing commands (after compilation, if compiled).</p>
 <a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="pair">Pair<a class="headerlink" href="#pair" title="Permanent link">¶</a></h2>
-<p><code>std::pair</code>: An STL built-in struct with two ﬁelds of any type.</p>
+<p><code>std::pair</code>: STL 内置的一种 <code>struct</code>，由两个 fields 组成，可以是任何类型</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// The fields in std::pairs are named `first` and `second`</span>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1">// initialize</span>
 <a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numSuffix</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"st"</span><span class="p">};</span>
@@ -1025,41 +1035,40 @@ Period when program is executing commands (after compilation, if compiled).</p>
 <a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1">// also same as ...</span>
 <a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numSuffix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"st"</span><span class="p">};</span>
 </code></pre></div>
-<p>To avoid specifying the types of a pair, use <code>std::make_pair(field1, field2)</code>.</p>
+<p>为了避免指定 <code>pair</code> 的类型，我们可以使用一个函数 <code>std::make_pair(field1, field2)</code></p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">suffix</span><span class="p">;</span>
 <a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
 <a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">suffix</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"st"</span><span class="p">);</span>
 <a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">suffix</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a>
-<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="c1">// more efficient way in c++17</span>
-<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">make_pair</span><span class="p">(</span><span class="mf">3.4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Use <code>std::tie(arg1, arg2)</code> to accept the pair.</p>
-</div>
+<p>可以使用另一个函数 <code>std::tie(arg1, arg2)</code> 来接收一个 <code>pair</code>，在 c++17 中，引入了一个新的特性叫<strong>结构化绑定(Structured Bindings)</strong>，可以帮助我们简化代码</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">// more efficient way in c++17</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="mf">3.4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+</code></pre></div>
 <h2 id="auto">Auto<a class="headerlink" href="#auto" title="Permanent link">¶</a></h2>
-<p>Type deduction with <code>auto</code>.</p>
-<p><code>auto:</code> Keyword used in lieu of type when declaring a variable, tells the compiler to deduce the type.</p>
-<p><strong>When to use auto?</strong></p>
+<p><code>auto</code>: C++ 中的一个关键字，可以做类型自动推导，主要用于两种情况</p>
 <ul>
-<li>When you don't care what the type is (iterators)</li>
-<li>When its type is clear from context (templates)</li>
-<li>When you don't know what the type is (lambdas)</li>
-<li>Don't use it unnecessarily for return types like below:
-    <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">spliceString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<li>声明变量时根据初始化表达式自动推断该变量的类型</li>
+<li>声明函数时函数返回值的占位符</li>
+</ul>
+<p><strong>什么时候应该使用 auto?</strong></p>
+<ul>
+<li>你不需要在意是什么类型 (iterators)</li>
+<li>它的类型在上下文中很明确 (templates)</li>
+<li>你不知道具体是什么类型 (lambdas)</li>
+<li>不要将它用于返回类型，这会让人很迷惑，像下面的代码一样
+    <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">spliceString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
 </code></pre></div></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>auto doesn't mean that the variable doesn't have a type, it means that the type is <mark>deduced by the compiler</mark>.</p>
-</div>
+<blockquote>
+<p>使用 auto 并不意味着变量没有类型，该变量的类型是由<strong>编译器自动推导</strong>的</p>
+</blockquote>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年2月26日 01:22:02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年2月26日 14:56:32</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年2月26日 01:22:02</span>
@@ -1111,7 +1120,7 @@ Period when program is executing commands (after compilation, if compiled).</p>
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Lec01" class="md-footer__link md-footer__link--prev" href="../lec01_intro/" rel="prev">
+<a aria-label="上一页: 课程介绍" class="md-footer__link md-footer__link--prev" href="../lec01_intro/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1120,17 +1129,17 @@ Period when program is executing commands (after compilation, if compiled).</p>
 <span class="md-footer__direction">
                   上一页
                 </span>
-                Lec01
+                课程介绍
               </div>
 </div>
 </a>
-<a aria-label="下一页: Lec03" class="md-footer__link md-footer__link--next" href="../lec03_streams/" rel="next">
+<a aria-label="下一页: CS231n: Deep Learning for Computer Vision" class="md-footer__link md-footer__link--next" href="../../cs231n/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                Lec03
+                CS231n: Deep Learning for Computer Vision
               </div>
 </div>
 <div class="md-footer__button md-icon">
