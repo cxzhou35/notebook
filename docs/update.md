@@ -10,4 +10,4 @@ comments: false
 !!! abstract "近期要做的一些事情"
     - 整理 cs106L 的本地笔记
     - 阅读《Effective modern C++》
-    - 学习 cs231n 和 dlsys, 这两门课的作业都很不错!
+    - 学习 cs231n 和 dlsys，这两门课的作业都很不错!

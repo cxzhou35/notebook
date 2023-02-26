@@ -20,11 +20,19 @@ nav:
           - course/cs/index.md
           - "CS106L":
               - course/cs/cs106L/index.md
-              - "Lec01": course/cs/cs106L/lec01_intro.md
-              - "Lec02": course/cs/cs106L/lec02_types_and_structs.md
-              - "Lec03": course/cs/cs106L/lec03_streams.md
-              - "Lec04": course/cs/cs106L/lec04_init_and_ref.md
-              - "Lec05": course/cs/cs106L/lec05_containers.md
+              - "课程介绍": course/cs/cs106L/lec01_intro.md
+              - "类型和结构": course/cs/cs106L/lec02_types_and_structs.md
+              # - "流和流对象": course/cs/cs106L/lec03_streams.md
+              # - "初始化和引用": course/cs/cs106L/lec04_init_and_ref.md
+              # - "容器": course/cs/cs106L/lec05_containers.md
+              # - "迭代器和指针": course/cs/cs106L/lec06_iterators_and_pointers.md
+              # - "类和对象": course/cs/cs106L/lec07_classes.md
+              # - "模板": course/cs/cs106L/lec08_templates.md
+              # - "方程和 Lambda 表达式": course/cs/cs106L/lec09_funcs_and_lambdas.md
+              # - "操作符重载": course/cs/cs106L/lec10_operator_overloading.md
+              # - "特殊成员函数": course/cs/cs106L/lec11_special_member_functions.md
+              # - "类型安全": course/cs/cs106L/lec12_type_safety.md
+              # - "其他话题": course/cs/cs106L/lec13_special_topics.md
           - "CS231n":
               - course/cs/cs231n/index.md
           - "Deep Learning Systems":
@@ -99,6 +107,10 @@ nav:
               - memo/config/linux/index.md
   - "生活":
       - life/index.md
+      - "影视":
+        - life/film/index.md
+      - "阅读":
+        - life/reading/index.md
   - "杂项":
       - others/index.md
 
@@ -173,7 +185,6 @@ plugins:
 markdown_extensions:
   - toc:
       permalink: true # link for each title
-      toc_depth: 4
   - admonition
   - abbr
   - attr_list

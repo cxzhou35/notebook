@@ -11,7 +11,7 @@ comments: false
     </center>
 
 !!! info "Info"
-    这里是**[备忘录](./)**, 包括以下内容:
+    这里是**[备忘录](./)**，包括以下内容:
 
     - [常用工具](./tool/): Shell/Git/Cmake/...
     - [编程语言](./pl/): C++/Python/Go/...

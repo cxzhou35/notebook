@@ -2,24 +2,24 @@
 comments: true
 ---
 
-# Stream
+# 流和流对象
 
-## Stream Abstraction
+## 流
 
 Convert between **string-represented data** and the real thing.
 
-<div align=center><img src="https://gitee.com/vercent_zhou/picgo-md/raw/master/image/202301101510893.png" style="zoom:90%" alt="fig1"></div>
+![](./res/streams.png "Streams")
 
 `stream`: an **abstraction** for input/output. Streams convert between data and the **string representation of data**.
 
-## Standard iostreams
+## 标准输入/输出流
 
 - `cin`: Standard input stream(buffered)
 - `cout`: Standard output stream(buffered)
 - `cerr`: Standard error stream(unbuffered)
 - `clog`: Standard error stream(buffered)
 
-### Output Streams
+### 输出流
 
 `std::out` is an output stream. It has type `std::ostream`.
 
@@ -34,7 +34,7 @@ Convert between **string-represented data** and the real thing.
     // send "5" to the console output stream
     ```
 
-### Input Streams
+### 输入流
 
 `std::cin` is an input stream. It has type `std::istream`.
 
@@ -51,7 +51,7 @@ Convert between **string-represented data** and the real thing.
     //reads exactly one int then one string from console
     ```
 
-About **std::in**
+关于 **std::in**
 
 - Each `>>` only reads until the next **whitespace(tab, space, newline)**.
 - Everything after the ﬁrst whitespace **gets saved(saved in buffer)** and used the next time `std::cin >>` is called.
@@ -85,7 +85,7 @@ Think of a std::istream as a sequence of characters.
 
 When we first input 2.17, the `2` is read and put into variable `age`, but the std::istream is still reading(not meet whitespace), and save `.17` in buffer, when the second `std::cin >>` called, write `.17` into variable `hourlyWage`.
 
-## State bits
+## 状态位
 
 We can use state bits to check if the stream has errors.
 
@@ -138,9 +138,9 @@ Compare `>>` with `geline`
 - `>>` reads up to the next whitespace character and **does not go past that whitespace character.**
 - `getline` reads up to the next delimiter (by default, '\n'), and **does go past that delimiter.**
 
-## File Streams
+## 文件流
 
-### Output File Streams
+### 输出文件流
 
 - Defined in header `<fstream>`
 - Have type `std::ofstream`
@@ -155,7 +155,7 @@ Compare `>>` with `geline`
     out_file << 5 << std::endl; // out.txt now contains 5
     ```
 
-### Input File Streams
+### 输入文件流
 
 - Defined in header `<fstream>`
 - Have type `std::ifstream`.
@@ -172,7 +172,7 @@ Compare `>>` with `geline`
     in_file >> str; // first word in out.txt goes into str
     ```
 
-### File mode
+### 文件模式
 
 - `ios::app`: append
 - `ios::ate`: at end
@@ -182,14 +182,12 @@ Compare `>>` with `geline`
 - multi mode
 	- we can use `|` to combine two modes, like ==ios::out | ios::ate==
 
-## String Streams
+## 字符串流
 
-- Input stream: `std::istringstream`
-	- Give any data type to the **istringstream,** it’ll store it as a string.
-	==(data type -> string)==
-- Output stream: `std::ostringstream`
-	- Make an **ostringstream** out of a **string,** read from it word/type by word/type.
-	==(string -> data type)==
+- 输入流: `std::istringstream`
+	- Give any data type to the **istringstream,** it’ll store it as a string. **(data type -> string)**
+- 输出流: `std::ostringstream`
+	- Make an **ostringstream** out of a **string,** read from it word/type by word/type. **(string -> data type)**
 
 !!! example "Example"
     ```cpp

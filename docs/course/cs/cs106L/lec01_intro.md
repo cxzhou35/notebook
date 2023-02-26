@@ -2,61 +2,56 @@
 comments: true
 ---
 
-# Introductions
+# 课程介绍
 
-## About CS106L
+## 关于 CS106L
 
-- Focus is on code: What makes it good, what powerful and elegant code looks like
-- The real deal: No Stanford libraries, only STL
-- Understand how and why C++ was made
+- **重点在于代码**: 怎样让代码变得更好，优雅的代码应该是怎么样的
+- 理解 C++ 是怎么产生和发展的
+- 深入了解 STL
 
-## C++ History
-### Assembly
+## C++ 的历史
+### 汇编语言
 
-**Benefits**
+#### 优势
 
-- Unbelievably **simple** instructions
-- Extremely **fast** (when well-written)
-- **Complete control** over your program
+- **简单**的指令集
+- 运行速度快(如果代码写得好)
+- 可以**完全控制**你的程序
 
-**Drawbacks**
+#### 不足
 
-- A lot of code to do simple tasks
-- Very hard to understand
-- Extremely unportable (hard to make work across all systems)
+- 代码写的很冗长(即使是执行简单的任务)
+- 代码很难理解
+- 通用性很差(很难跨平台工作)
 
-### Invention of C
+### C 语言的出现
 
-**C made it easy to write code that was**
+#### 优势
 
-- Fast
-- Simple
-- Cross-platform
+- 更快
+- 更简单
+- 跨平台
 
-**Weakness**
+#### 不足
 
-- **No objects or classes**
-- Diﬃcult to write **generic code**
-- **Tedious** when writing large programs
+- **没有对象和类型**
+- 很难写出 "通用代码"
+- 编写大型项目很吃力
 
-### Design Philosophy of C++
+### C++ 的设计理念
 
-[Cpp Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
+> [C++ 核心指南](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 
-- **Only add features if they solve an actual problem**
-- Express ideas and intent directly in code
-- **Compartmentalization(区块化)** is key
-- Do not waste time or space
-- **Enforce safety at compile time whenever possible**
+- 只添加用于解决实际问题的特性
+- 在代码中直接表达想法和意图
+- **区块化(Compartmentalization)** 是关键
+- 不要浪费时间或空间
+- 尽可能在**编译时**保证安全
 
-!!! note "Note"
-    C++: Basic Syntax + the STL
+### 关于 STL
 
-    Standard C++: Basic Syntax + std(standard) library
-
-### The STL
-
-- Tons at of EOL general functionality
-- Built in classes like maps, sets, vectors
-- Accessed through the namespace `std::`
-- **Extremely powerful and wel-maintained**
+- 功能性齐全, 包括常用的函数和一些算法
+- 内置多种类, 比如 maps, sets, vectors
+- 通过 namespace `std::` 来使用 STL 中的内容
+- 功能强大并且一直在更新维护

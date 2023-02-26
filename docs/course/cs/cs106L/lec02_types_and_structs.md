@@ -2,9 +2,9 @@
 comments: true
 ---
 
-# Types and Structs
+# 类型和结构
 
-## C++ Fundamental Types
+## C++ 基础类型
 
 ```cpp
 int val = 5; //32 bits
@@ -14,7 +14,7 @@ double decimalVal2 = 5.0; //64 bits (usually)
 bool bVal = true; //1 bit
 ```
 
-String type:
+字符串类型:
 ```cpp
 #include <string> // need `string` library
 std::string str = "Sarah"; // double quotes means string
@@ -23,20 +23,13 @@ std::string str = "Sarah"; // double quotes means string
 char character = str[1]; // 'a'
 ```
 
-## Dynamic vs Static typing
+## 动态类型和静态类型
 
-!!! note "Note"
-    C++ is a ==statically typed language.==
+C++ 是一种**静态类型语言**
 
-    `Statically Typed`:
-    Everything with a name (variables, functions, etc) is given a type before runtime.(C++)
-
-    `Dynamically Typed`:
-    Everything with a name (variables, functions, etc) is given a
-    type at runtime based on the thing’s current value.(Python)
-
-    `Runtime`:
-    Period when program is executing commands (after compilation, if compiled).
+- **静态类型**: 具有命名(变量，函数等)的内容在运行时之前都具有明确类型 (C++)
+- **动态类型**: 具有命名(变量，函数等)的内容**在运行时**根据当前值被指定一个类型 (Python)
+- **运行时**: 从程序开始运行到终止的时期 (如果是需要编译的语言, 则在编译期之后)
 
 ```python
 # CRASH during runtime, can’t divide a string
@@ -54,28 +47,27 @@ int div_3(int x){
 div_3("hello");
 ```
 
-Static typing helps us to prevent errors before our code runs.
+> 静态类型有助于我们在代码运行之前发现和解决错误。
 
-## Overloading
+## 重载
 
-**Deﬁne two functions with the same name but diﬀerent types.**
+定义两个具有相同名称但不同类型的内容(运算符, 函数等), 之后的课程会重点讲解
 
-!!! example "Example"
-    ```cpp
-    int half(int x) {
-        std::cout << “1” << endl;
-        return x / 2;
-    }
+```cpp
+int half(int x) {
+    std::cout << “1” << endl;
+    return x / 2;
+}
 
-    double half(double x) {
-        cout << “2” << endl;
-        return x / 2;
-    }
-    ```
+double half(double x) {
+    cout << “2” << endl;
+    return x / 2;
+}
+```
 
 ## Struct
 
-`struct`: A group of named variables each with their own type. A way to bundle different types together.
+`struct`: 一种由用户自定义的可用数据类型，允许存储不同类型的数据项，是一种将不同类型变量组合在一起的方式
 
 ```cpp
 struct Student {
@@ -98,7 +90,7 @@ auto [name, state, age] = s;
 
 ## Pair
 
-`std::pair`: An STL built-in struct with two ﬁelds of any type.
+`std::pair`: STL 内置的一种 `struct`，由两个 fields 组成，可以是任何类型
 
 ```cpp
 // The fields in std::pairs are named `first` and `second`
@@ -113,36 +105,37 @@ std::pair<int, string> numSuffix = std::make_pair(1, "st");
 std::pair<int, string> numSuffix = {1, "st"};
 ```
 
-To avoid specifying the types of a pair, use `std::make_pair(field1, field2)`.
+为了避免指定 `pair` 的类型，我们可以使用一个函数 `std::make_pair(field1, field2)`
 
 ```cpp
 std::string suffix;
 int num;
 std::tie(num, suffix) = std::make_pair(1, "st");
 std::cout << num << " " << suffix << std::endl;
-
-// more efficient way in c++17
-auto [a, b] = make_pair(3.4, 5);
 ```
 
-!!! note "Note"
-    Use `std::tie(arg1, arg2)` to accept the pair.
+可以使用另一个函数 `std::tie(arg1, arg2)` 来接收一个 `pair`，在 c++17 中，引入了一个新的特性叫**结构化绑定(Structured Bindings)**，可以帮助我们简化代码
+
+```cpp
+// more efficient way in c++17
+auto [a, b] = std::make_pair(3.4, 5);
+```
 
 ## Auto
 
-Type deduction with `auto`.
+`auto`: C++ 中的一个关键字，可以做类型自动推导，主要用于两种情况
 
-`auto:` Keyword used in lieu of type when declaring a variable, tells the compiler to deduce the type.
+- 声明变量时根据初始化表达式自动推断该变量的类型
+- 声明函数时函数返回值的占位符
 
-**When to use auto?**
+**什么时候应该使用 auto?**
 
-- When you don't care what the type is (iterators)
-- When its type is clear from context (templates)
-- When you don't know what the type is (lambdas)
-- Don't use it unnecessarily for return types like below:
+- 你不需要在意是什么类型 (iterators)
+- 它的类型在上下文中很明确 (templates)
+- 你不知道具体是什么类型 (lambdas)
+- 不要将它用于返回类型，这会让人很迷惑，像下面的代码一样
     ```cpp
     auto spliceString(const string& s);
     ```
 
-!!! note "Note"
-    auto doesn't mean that the variable doesn't have a type, it means that the type is ==deduced by the compiler==.
+> 使用 auto 并不意味着变量没有类型，该变量的类型是由**编译器自动推导**的

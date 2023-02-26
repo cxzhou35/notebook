@@ -2,23 +2,23 @@
 comments: true
 ---
 
-# Containers
+# 容器
 
-`Container`: An object that allows us to collect other objects together and interact with them in some way.
+容器: An object that allows us to collect other objects together and interact with them in some way.
 
 - Organization: Related data can be packaged together.
 - Standardization: Common features are expected and implemented.
 - Abstraction: Complex ideas made easier to utilize by clients.
 
-## STL Containers
+## STL 中的容器
 
-- Familiar: vector, stack, queue, set, map
-- Unfamiliar:
+- 常见的: vector, stack, queue, set, map
+- 不常见的:
 	- `array` : An array is the primitive form of a vector, fixed size in a strict sequence.
 	- `deque` : A deque is a double ended queue.
 	- list: A list is a doubly linked list, can loop through in either direction.
 
-Two types of containers
+**两种类型的容器**
 
 - Sequence:
 	- Containers that can be accessed sequentially.
