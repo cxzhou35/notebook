@@ -8,6 +8,6 @@ comments: false
     **目前正在迁移本地笔记，敬请期待！**
 
 !!! abstract "近期要做的一些事情"
+    - 最近主要在学 cs231n 和复习 3DV 的知识，C++ 相关的内容会咕一段时间
     - 整理 cs106L 的本地笔记
     - 阅读《Effective modern C++》
-    - 学习 cs231n 和 dlsys，这两门课的作业都很不错!
