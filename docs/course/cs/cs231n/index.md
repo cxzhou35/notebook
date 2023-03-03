@@ -14,3 +14,9 @@ comments: false
         - [Course repo](https://github.com/cs231n/cs231n.github.io)
 
 ## Table of Contents
+
+- [Lec01: 课程介绍](./lec01_introduction_overview.md)
+- [Lec02: 图像分类任务](./lec02_image_classification.md)
+<!-- - [Lec03: 正则化和优化](./lec03_regularization_and_optimization.md) -->
+
+> 在学习这门课的时候由于资料都是英文的，所以用英文记的笔记，在网站上排版会显得很稀疏，之后会更新成中文笔记的，有些不会翻译的地方会保留原始描述，有翻译错误或不妥的地方，可以在评论区告诉我哦 :)

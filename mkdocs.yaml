@@ -35,6 +35,8 @@ nav:
               # - "其他话题": course/cs/cs106L/lec13_special_topics.md
           - "CS231n":
               - course/cs/cs231n/index.md
+              - "课程介绍": course/cs/cs231n/lec01_introduction_overview.md
+              - "图像分类任务": course/cs/cs231n/lec02_image_classification.md
           - "Deep Learning Systems":
               - course/cs/dlsys/index.md
           - "数据结构与算法":
