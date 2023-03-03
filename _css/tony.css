@@ -96,7 +96,8 @@
     font-weight: 600;
 }
 
-.md-typeset h3 {
+.md-typeset h3,
+.md-typeset h4 {
     font-weight: 550;
 }
 
@@ -173,3 +174,14 @@ p {
 .md-typeset :is(.emojione, .twemoji, .gemoji) {
     vertical-align: sub;
 }
+
+img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+    
+ .markdown-source-view.mod-cm6 .cm-content > * {
+  margin: auto auto !important;
+}
+
