@@ -81,6 +81,8 @@ nav:
               - memo/tool/markdown/index.md
           - "Tmux":
               - memo/tool/tmux/index.md
+          - "FFmpeg":
+              - memo/tool/ffmpeg/index.md
       - "编程语言":
           - memo/pl/index.md
           - "C++":

@@ -32,7 +32,7 @@ comments: false
     | [:simple-git: Git](tool/git/index.md) | [:simple-powershell: Shell](tool/shell/index.md) | [:simple-cmake: CMake](tool/cmake/index.md) |
     | [:simple-markdown: Markdown](tool/markdown/index.md) | [:simple-docker: Docker](tool/docker/index.md) | [:simple-latex: LaTeX](tool/latex/index.md) |
     | [:simple-matrix: MATLAB](tool/matlab/index.md) | [:simple-numpy: NumPy](tool/numpy/index.md) | [:simple-neovim: Neovim](tool/nvim/index.md) |
-    | [:simple-anaconda: Conda](tool/conda/index.md) | [:simple-tmux: Tmux](tool/tmux/index.md) | |
+    | [:simple-anaconda: Conda](tool/conda/index.md) | [:simple-tmux: Tmux](tool/tmux/index.md) | [:simple-ffmpeg: FFmpeg](tool/ffmpeg/index.md) |
 
     </div>
 
