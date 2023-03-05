@@ -24,16 +24,16 @@ comments: false
 
     <div style="text-align: center" markdown="1">
 
-    | **课程名称**                  | **开课学校** | **类别**| **状态** |
-    | :-- | :-- | :-- | :-- |
-    | [CS106L](cs/cs106L/)      | Stanford     | CS      | 📶       |
-    | [CS231n](cs/cs231n/)      | Stanford     | CS      | ❎       |
-    | [DL Systems](cs/dlsys/)   | CMU          | CS      | 📶       |
-    | [数据结构与算法](cs/ds/)        | ZJU          | CS      | ❎       |
-    | [计算机视觉导论](cs/icv/) | ZJU          | CS      | 📶       |
-    | [数值分析](cs/na/)        | ZJU          | CS      | ❎       |
-    | [面向对象编程](cs/oop/)   | ZJU          | CS      | ❎       |
-    | [操作系统](cs/os/)        | ZJU          | CS      | ❎       |
-    | [光电子学](opt/optoelec/)  | ZJU          | OPT     | 📶       |
+    | **课程名称**              | **开课学校** | **类别** | **状态** |
+    |:--------------------------|:-------------|:---------|:---------|
+    | [CS106L](cs/cs106L/)      | Stanford     | CS       | 📶       |
+    | [CS231n](cs/cs231n/)      | Stanford     | CS       | ❎       |
+    | [DL Systems](cs/dlsys/)   | CMU          | CS       | 📶       |
+    | [数据结构与算法](cs/ds/)  | ZJU          | CS       | ❎       |
+    | [计算机视觉导论](cs/icv/) | ZJU          | CS       | 📶       |
+    | [数值分析](cs/na/)        | ZJU          | CS       | ❎       |
+    | [面向对象编程](cs/oop/)   | ZJU          | CS       | ❎       |
+    | [操作系统](cs/os/)        | ZJU          | CS       | ❎       |
+    | [光电子学](opt/optoelec/) | ZJU          | OPT      | 📶       |
 
     </div>
