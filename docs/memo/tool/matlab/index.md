@@ -19,7 +19,6 @@ MATLAB 用 `%` 来表示注释
 
 ## 数据对象
 
-
 ## 流程控制
 
 ### if 语句
@@ -61,6 +60,7 @@ x = linspace(0,4*pi,300);
 y = sin(x);
 plot(x,y);
 ```
+
 <figure markdown>
 ![](./assets/2023-03-04-16-02-27.png){width="450"}
 <figcaption></figcaption>
@@ -81,6 +81,7 @@ title('Sine and Cosine Functions');
 ```
 
 > title、legend、label 都是支持 $LaTeX$ 语法的
+
   ```matlab
   title('$y_1=\sin(4\pi t+\pi /3)$','interpreter','latex')
   ```

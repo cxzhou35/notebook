@@ -77,6 +77,8 @@ nav:
               - memo/tool/matlab/index.md
           - "Conda":
               - memo/tool/conda/index.md
+          - "Pytorch":
+              - memo/tool/pytorch/index.md
           - "Markdown":
               - memo/tool/markdown/index.md
           - "Tmux":
