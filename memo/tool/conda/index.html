@@ -12,7 +12,7 @@
 <link href="../pytorch/" rel="next"/>
 <link href="../../../paw.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
-<title>Index - Zicx 的笔记本</title>
+<title>Conda - Zicx 的笔记本</title>
 <link href="../../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
@@ -41,6 +41,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#conda">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -62,7 +65,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Index
+              Conda
             
           </span>
 </div>
@@ -901,6 +904,41 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    安装
+  </a>
+<nav aria-label="安装" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linux">
+    Linux
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mac">
+    Mac
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    常用命令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    常用配置
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -910,12 +948,93 @@
 <a class="md-content__button md-icon" href="https://github.com/Xuer04/notebook/tree/main/docs/memo/tool/conda/index.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
+<h1 id="conda">Conda<a class="headerlink" href="#conda" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.60em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"></path></svg></span> 约 323 个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> 50 行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"></path></svg></span> 预计阅读时间 2 分钟</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>这里记录了一些 Conda 相关的内容</p>
+</div>
+<h2 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>安装以 <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> 为例，Anaconda 的安装步骤差不多，但是 Miniconda 要更精简一些</p>
+<h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>wget<span class="w"> </span>https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh<span class="w"> </span><span class="c1"># 下载安装脚本</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>chmod<span class="w"> </span>+x<span class="w"> </span>Miniconda3-latest-Linux-x86_64.sh<span class="w"> </span><span class="c1"># 添加可执行权限</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>./Miniconda3-latest-Linux-x86_64.sh<span class="w"> </span><span class="c1"># 安装</span>
+</code></pre></div>
+<p>安装完成之后，需要在<code>~/.zshrc</code>或<code>~/.bashrc</code>中写入 Conda 的环境变量</p>
+<p>假设 miniconda 路径为<code>~/miniconda3/</code>，记为<code>conda_path</code></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">__conda_setup</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="s1">'conda_path/bin/conda'</span><span class="w"> </span><span class="s1">'shell.zsh'</span><span class="w"> </span><span class="s1">'hook'</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="k">)</span><span class="s2">"</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="nv">$__conda_setup</span><span class="s2">"</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">else</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">"conda_path/etc/profile.d/conda.sh"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span>.<span class="w"> </span><span class="s2">"conda_path/etc/profile.d/conda.sh"</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="k">else</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"conda_path/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="k">fi</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="k">fi</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nb">unset</span><span class="w"> </span>__conda_setup
+</code></pre></div>
+<blockquote>
+<p>这里用<code>conda_path</code>是为了表示方便，请将<code>conda_path</code>替换为安装 miniconda 的路径</p>
+</blockquote>
+<p>写入之后，可以用<code>source ~/.zshrc</code>或<code>source ~/.bashrc</code>命令来使环境变量生效，</p>
+<p>在终端中输入<code>conda info</code>如果有信息输出则说明已经配置完成</p>
+<blockquote></blockquote>
+<h3 id="mac">Mac<a class="headerlink" href="#mac" title="Permanent link">¶</a></h3>
+<p>Mac 安装 miniconda 和 Linux 的安装步骤类似，通过 shell 脚本安装的方式就不赘述了。另外一种安装方式就是通过 <a href="https://brew.sh/">Homebrew</a> 安装</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>miniconda
+</code></pre></div>
+<p>安装后同样需要按照 Linux 中的步骤来配置环境变量，之后在终端中输入以下指令来初始化 Conda</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>conda<span class="w"> </span>init<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">SHELL</span><span class="si">}</span><span class="s2">"</span><span class="k">)</span><span class="s2">"</span>
+</code></pre></div>
+<h2 id="_2">常用命令<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>conda<span class="w"> </span>--version<span class="w"> </span>or<span class="w"> </span>conda<span class="w"> </span>-V<span class="w"> </span><span class="c1"># 查看 conda 的版本</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>conda<span class="w"> </span>update<span class="w"> </span>conda<span class="w"> </span><span class="c1"># 更新 conda</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>conda<span class="w"> </span>info<span class="w"> </span><span class="c1"># 查看当前环境下的 conda 信息</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>env_name<span class="w"> </span><span class="o">[</span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.x<span class="o">]</span><span class="w"> </span><span class="c1"># 创建环境，可以指定 Python 版本</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>conda<span class="w"> </span>activate<span class="w"> </span>env_name<span class="w"> </span><span class="c1"># 激活 env_name 环境</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>conda<span class="w"> </span>deactivate<span class="w"> </span><span class="c1"># 退出当前环境</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>env_name<span class="w"> </span>--all<span class="w"> </span><span class="c1"># 删除 env_name 环境</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>conda<span class="w"> </span>env<span class="w"> </span>list<span class="w"> </span><span class="c1"># 列出所有的环境</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>conda<span class="w"> </span>install<span class="w"> </span>package_name<span class="w"> </span><span class="c1"># 在当前环境中安装包</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>conda<span class="w"> </span>list<span class="w"> </span><span class="c1"># 列出当前环境中的所有 Python 包</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>conda<span class="w"> </span>search<span class="w"> </span><span class="o">[</span>-c<span class="w"> </span>channel_address<span class="o">]</span><span class="w"> </span><span class="o">[</span>-f<span class="o">]</span><span class="w"> </span><span class="o">[</span>packages<span class="o">]</span><span class="w"> </span><span class="c1"># 搜索指定的包</span>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>conda<span class="w"> </span>clean<span class="w"> </span>-a<span class="w"> </span><span class="c1"># 清除缓存和没有依赖的包</span>
+</code></pre></div>
+<h2 id="_3">常用配置<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>Windows 系统的 Conda 配置文件位于<code>C:\Users\username\.condarc</code>，Linux 或者 Mac 系统 Conda 的配置文件位于<code>~/.condarc</code>或<code>~/.conda/.condarc</code>，也可以使用<code>conda config --set ...</code>指令来添加或更改对应的设置，可以在配置文件中<strong>修改下载源</strong>从而加快下载的速度</p>
+<p>我的常用设置(用的是阿里源)：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>report_errors:<span class="w"> </span><span class="nb">true</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>auto_activate_base:<span class="w"> </span><span class="nb">false</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>ssl_verify:<span class="w"> </span><span class="nb">true</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>show_channel_urls:<span class="w"> </span><span class="nb">true</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>channels:
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">  </span>-<span class="w"> </span>http://mirrors.aliyun.com/anaconda/pkgs/main
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">  </span>-<span class="w"> </span>http://mirrors.aliyun.com/anaconda/pkgs/r
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">  </span>-<span class="w"> </span>http://mirrors.aliyun.com/anaconda/pkgs/msys2
+</code></pre></div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年1月29日 13:39:17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月18日 01:10:20</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年1月21日 20:26:24</span>
