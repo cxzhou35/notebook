@@ -904,6 +904,75 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    基本语法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    常用模块
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tensorboard">
+    TensorBoard
+  </a>
+<nav aria-label="TensorBoard" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    安装
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    使用
+  </a>
+<nav aria-label="使用" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    初始化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    记录数据
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    运行图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    嵌入向量
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    导出
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    登陆
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -915,18 +984,88 @@
 </a>
 <h1 id="pytorch">Pytorch<a class="headerlink" href="#pytorch" title="Permanent link">¶</a></h1>
 <div style="margin-top: -30px; font-size: 0.60em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"></path></svg></span> 约 31 个字 </p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"></path></svg></span> 约 453 个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> 16 行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"></path></svg></span> 预计阅读时间 2 分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>最近在复显论文，在这里记录一些 Pytorch 相关的内容以及一些有用的tricks</p>
+<p>最近在复现论文，在这里记录一些 Pytorch 相关的内容以及一些有用的 tricks</p>
+<ul>
+<li>官方教程：<a href="https://pytorch.org/tutorials/">Pytorch Tutorial</a></li>
+<li>官方文档：<a href="https://pytorch.org/docs/stable/index.html">Pytorch documentation</a></li>
+<li>Cheet Sheet: <a href="https://pytorch.org/tutorials/beginner/ptcheat.html">Pytorch Cheet Sheet</a></li>
+</ul>
 </div>
+<h2 id="_1">基本语法<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h2 id="_2">常用模块<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h2 id="tensorboard">TensorBoard<a class="headerlink" href="#tensorboard" title="Permanent link">¶</a></h2>
+<p>现在推荐使用的是 lanpa 大佬开发的<a href="https://github.com/lanpa/tensorboardX">tensorboardX</a>，这是一个完全支持 PyTorch 的 tensorboard 工具包，从而让 PyTorch 很好地调用 tensorboard 的数据可视化工具来监控神经网络训练的过程。</p>
+<blockquote>
+<p>官方文档：<a href="https://tensorboardx.readthedocs.io/en/latest/index.html">tensorboardX’s documentation</a></p>
+<p>官方仓库：<a href="https://github.com/lanpa/tensorboardX">Github repo</a></p>
+</blockquote>
+<h3 id="_3">安装<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>tensorboardX
+</code></pre></div>
+<h3 id="_4">使用<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>我们需要用到 tensorboardX 中的一个类，叫做<code>SummaryWriter</code></p>
+<h4 id="_5">初始化<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">tensorboardX</span> <span class="kn">import</span> <span class="n">SummaryWriter</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1"># 初始化，可以指定路径</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">writer1</span> <span class="o">=</span> <span class="n">SummaryWriter</span><span class="p">()</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">writer2</span> <span class="o">=</span> <span class="n">SummaryWriter</span><span class="p">(</span><span class="s2">"./logs"</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="_6">记录数据<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">scalar_value</span><span class="p">,</span> <span class="n">global_step</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">walltime</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><strong>tag</strong>: 数据标签，不同标签的数据使用不同曲线绘制</li>
+<li><strong>scalar_value</strong>: 常量值</li>
+<li><strong>global_step</strong>: 训练的 step</li>
+<li><strong>walltime</strong>: 记录时间，默认为 time.time()</li>
+</ul>
+<blockquote>
+<p>需要注意，这里的 scalar_value 必须为 <strong>float</strong> 类型，如果是 scalar tensor，则需要调用<code>tensor.item()</code>方法获取其数值</p>
+</blockquote>
+<p>我们一般会使用<code>add_scalar</code>方法来记录训练过程的 loss、accuracy、learning rate 等数值的变化，直观地监控训练过程</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="s1">'Train/Loss'</span><span class="p">,</span> <span class="n">loss</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">niter</span><span class="p">)</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="s1">'Test/Accu'</span><span class="p">,</span> <span class="n">correct</span><span class="o">/</span><span class="n">total</span><span class="p">,</span> <span class="n">niter</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="_7">运行图<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<p>我们可以使用<code>add_graph</code>方法来添加一个运行图，可视化一个神经网络</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">writer</span><span class="o">.</span><span class="n">add_graph</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">input_to_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><strong>model</strong>: 待可视化的网络模型</li>
+<li><strong>input_to_model</strong>: 待输入神经网络的变量</li>
+</ul>
+<h4 id="_8">嵌入向量<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<p>我们可以使用<code>add_embedding</code>方法在二维或三维空间可视化 embedding 向量</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">writer</span><span class="o">.</span><span class="n">add_embedding</span><span class="p">(</span><span class="n">mat</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">label_img</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">global_step</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">'default'</span><span class="p">,</span> <span class="n">metadata_header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><strong>mat</strong>: 二维矩阵，每行代表特征空间的一个数据点</li>
+<li><strong>metadata</strong>: 一维列表，表示 mat 中每行数据的 label，大小应和 mat 行数相同</li>
+<li><strong>label_img</strong>: 形如 NxCxHxW 的四维 tensor，对应 mat 中每一行数据显示出的图像，N 应和 mat 行数相同</li>
+<li><strong>global_step</strong>: 训练的 step</li>
+<li><strong>tag</strong>: 数据标签</li>
+</ul>
+<h4 id="_9">导出<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># export scalar data to JSON for external processing</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">writer</span><span class="o">.</span><span class="n">export_scalars_to_json</span><span class="p">(</span><span class="s2">"./all_scalars.json"</span><span class="p">)</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="_10">登陆<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<p>在命令行中运行以下指令即可打开 tensorboard</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># --port 可以指定打开的端口</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>tensorboard<span class="w"> </span>--logdir<span class="o">=</span>logs<span class="w"> </span>--port<span class="o">=</span><span class="m">6007</span>
+</code></pre></div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月18日 00:24:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月19日 12:49:54</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月18日 00:24:23</span>
