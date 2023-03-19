@@ -11,6 +11,76 @@ comments: true
     - 官方文档：[Pytorch documentation](https://pytorch.org/docs/stable/index.html)
     - Cheet Sheet: [Pytorch Cheet Sheet](https://pytorch.org/tutorials/beginner/ptcheat.html)
 
+## 安装
+
+推荐使用 Anaconda/Miniconda 创建虚拟环境安装 Pytorch
+
+> 如果你需要使用 CPU 版本的 Pytorch，那么以下的复杂步骤都不需要做，只需要运行以下指令即可安装
+>
+> ```sh
+> pip3 install torch torchvision torchaudio               # pip
+> conda install pytorch torchvision torchaudio cpuonly    # conda
+> ```
+
+正确的安装流程如下:
+
+- 在终端输入`nvidia-smi`查看 NVIDIA 驱动的版本和支持的 CUDA 的最高版本
+
+<figure markdown>
+  ![](./assets/2023-03-20-00-10-14.png){width = 200}
+  <figcaption></figcaption>
+</figure>
+
+- 在终端输入`nvcc -V`查看本机安装的 CUDA 版本，如果提示该命令不存在，则需要去 [NVIDIA 官网](https://developer.nvidia.com/cuda-downloads) 下载 CUDA
+
+  ```sh
+  $ nvcc -V
+  nvcc: NVIDIA (R) Cuda compiler driver
+  Copyright (c) 2005-2021 NVIDIA Corporation
+  Built on Fri_Dec_17_18:28:54:_Pacific_Standard_Time_2021
+  Cuda compilation tools, release 11.2, V11.2.152
+  Build cuda_11.2.r11.2/compiler.30794723_0
+  ```
+
+- 安装对应 CUDA 版本的 cudnn，官方下载地址为 [cudnn download](https://developer.nvidia.com/rdp/cudnn-download)
+- 下载 Anaconda/Miniconda，创建一个环境（e.g. pytorch)，<br>Conda 的配置和使用可以参考 [Conda 备忘录](../conda/index.md)
+- 在 [Pytoch 官方](https://pytorch.org/get-started/locally/) 找到对应平台和 CUDA 版本的安装指令(e.g. cuda11.1)
+
+```sh
+conda install pytorch torchvision torchaudio pytorch-cuda=11.2 -c pytorch -c nvidia
+```
+
+- 安装完 Pytorch 后我们需要检验安装是否成功，且版本是否正确
+
+```py
+>>> import torch
+>>> torch.__version__
+'1.12.1'
+>>> torch.cuda.is_available()
+True
+>>> torch.cuda.get_device_name()
+'NVIDIA GeForce GTX 1660 Ti'
+>>> from torch.backends import cudnn
+>>> cudnn.is_available()
+True
+```
+
+如果执行上述指令看到的结果一致，那么 Pytorch 的安装已经成功了
+
+最后可以安装一些深度学习常用的 Python 包
+
+```
+pyyaml
+tqdm
+plyfile
+tensorboardX
+jupyter
+pandas
+matplotlib
+numpy
+scipy
+```
+
 ## 基本语法
 
 ## 常用模块
