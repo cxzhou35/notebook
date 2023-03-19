@@ -15,7 +15,7 @@ comments: true
 
 推荐使用 Anaconda/Miniconda 创建虚拟环境安装 Pytorch
 
-> 如果你需要使用 CPU 版本的 Pytorch，那么以下的复杂步骤都不需要做，只需要运行以下指令即可安装
+> 如果你需要使用 CPU 版本的 Pytorch，那么以下的复杂步骤都不需要做，只需要运行以下两条指令中的一条即可安装
 >
 > ```sh
 > pip3 install torch torchvision torchaudio               # pip
