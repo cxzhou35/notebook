@@ -74,6 +74,19 @@ writer.add_graph(model, input_to_model=None, verbose=False, **kwargs)
 - **model**: 待可视化的网络模型
 - **input\_to\_model**: 待输入神经网络的变量
 
+#### 添加图片
+
+我们可以使用`add_image`方法来可视化一张图片
+
+```py
+writer.add_image(tag, img_tensor, global_step=None, walltime=None, dataformats='CHW')
+```
+
+- **tag**: 数据标签
+- **img_tensor**: 图像数据，是多维 tensor
+- **global_step**: 训练的 step
+- **walltime**: 记录时间，默认为 time.time()
+
 #### 嵌入向量
 
 我们可以使用`add_embedding`方法在二维或三维空间可视化 embedding 向量
