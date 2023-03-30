@@ -86,6 +86,10 @@ conda list # 列出当前环境中的所有 Python 包
 conda search [-c channel_address] [-f] [packages] # 搜索指定的包
 
 conda clean -a # 清除缓存和没有依赖的包
+
+conda env export > environment.yaml # 导出当前环境的配置，名称可以自定义
+
+conda env create -f environment.yml # 根据配置文件创建新的 conda 环境
 ```
 
 ## 常用配置
