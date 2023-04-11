@@ -330,4 +330,19 @@
          <lastmod>2023-04-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://zicx.top/notebook/paper/nerf/code/</loc>
+         <lastmod>2023-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/paper/nerf/math/</loc>
+         <lastmod>2023-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zicx.top/notebook/paper/nerf/note/</loc>
+         <lastmod>2023-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
