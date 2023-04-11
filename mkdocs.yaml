@@ -115,6 +115,9 @@ nav:
       - paper/index.md
       - "NeRF":
         - paper/nerf/index.md
+        - "论文笔记": paper/nerf/note.md
+        - "数学推导": paper/nerf/math.md
+        - "代码学习": paper/nerf/code.md
   - "生活":
       - life/index.md
       - "影视":
