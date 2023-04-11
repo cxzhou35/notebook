@@ -111,6 +111,10 @@ nav:
                   - memo/config/mac/homebrew/index.md
           - "Linux":
               - memo/config/linux/index.md
+  - "论文":
+      - paper/index.md
+      - "NeRF":
+        - paper/nerf/index.md
   - "生活":
       - life/index.md
       - "影视":
