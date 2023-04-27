@@ -1144,6 +1144,10 @@
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <p>NeRF 论文的阅读笔记录在这里</p>
+<p><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 3.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h4.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 13H9.06l-2.573 2.573A1.458 1.458 0 0 1 4 14.543V13H2.75A1.75 1.75 0 0 1 1 11.25v-7.5C1 2.784 1.784 2 2.75 2h5.5a.75.75 0 0 1 0 1.5ZM16 1.25v4.146a.25.25 0 0 1-.427.177L14.03 4.03l-3.75 3.75a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l3.75-3.75-1.543-1.543A.25.25 0 0 1 11.604 1h4.146a.25.25 0 0 1 .25.25Z"></path></svg></span> 参考资料</p>
+<ul>
+<li><a href="https://yconquesty.github.io/blog/ml/nerf/">https://yconquesty.github.io/blog/ml/nerf/</a></li>
+</ul>
 <p><p align="right">-- By <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Zicx" title="GitHub User: Zicx">@Zicx</a></p></p>
 </div>
 <h2 id="nerf_1">NeRF 是做什么的<a class="headerlink" href="#nerf_1" title="Permanent link">¶</a></h2>
@@ -1189,11 +1193,13 @@
 \mathcal{L}=\sum_{\mathbf{r} \in \mathcal{R}}\left[\left\|\hat{C}_c(\mathbf{r})-C(\mathbf{r})\right\|_2^2+\left\|\hat{C}_f(\mathbf{r})-C(\mathbf{r})\right\|_2^2\right]
 \]</div>
 <ul>
-<li>用了两个 MLP 网络，分别是<strong>粗(coarse) 网络和细(fine) 网络</strong><blockquote>
+<li>用了两个 MLP 网络，分别是<strong>粗(coarse) 网络和细(fine) 网络</strong></li>
+</ul>
+<blockquote>
 <p>后续<strong>优化的部分</strong>会具体解释粗网络和细网络</p>
 </blockquote>
-</li>
-<li><span class="arithmatex">\(\mathcal{R}\)</span> 是每个 batch 里面光线的集合，<span class="arithmatex">\(\mathbf{r}\)</span> 是指集合里面的每一条光线 </li>
+<ul>
+<li><span class="arithmatex">\(\mathcal{R}\)</span> 是每个 batch 里面光线的集合，<span class="arithmatex">\(\mathbf{r}\)</span> 是指集合里面的每一条光线</li>
 <li><span class="arithmatex">\(C(\mathbf{r})\)</span>，<span class="arithmatex">\(\hat{C}_c(\mathbf{r})\)</span>，<span class="arithmatex">\(\hat{C}_f(\mathbf{r})\)</span> 分别是实景，粗网络，细网络中输出的光线 RGB 颜色</li>
 <li>同时还将 <span class="arithmatex">\(\hat{C}_c(\mathbf{r})\)</span> 的损失最小化，以便粗网络的权重分布可以用于在细网络中分配样本</li>
 </ul>
@@ -1249,7 +1255,7 @@ t_i \sim \mathcal{U}\left[t_n+\frac{i-1}{N}\left(t_f-t_n\right), t_n+\frac{i}{N}
 </blockquote>
 <p>根据数值积分方法估计的颜色积分结果如下所示：</p>
 <div class="arithmatex">\[
-\hat{C}(\mathbf{r})=\sum_{i=1}^N T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right) \mathbf{c}_i, \text { where } T_i=\exp \left(-\sum_{j=1}^{i-1} \sigma_j \delta_j\right)
+\hat{C}(\mathbf{r})=\sum_{i=1}^N T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right) \mathbf{c}*i, \text { where } T_i=\exp \left(-\sum*{j=1}^{i-1} \sigma_j \delta_j\right)
 \]</div>
 <p>通过分层抽样的方式，将<strong>连续的积分变成了离散的求和</strong>，<span class="arithmatex">\(\delta_i = t_{i+1} - t_i\)</span> 是<strong>样本间隔(距离)</strong>
 文中还提到了可以简化为传统的 Alpha 合成，对应的 alpha value 是</p>
@@ -1299,7 +1305,7 @@ F_{\Theta}=F_{\Theta}^{\prime} \circ \gamma
 <p><strong>第三步具体是怎么做的</strong></p>
 <p>首先将原方程中粗网络 <span class="arithmatex">\(\hat{C_c}(\mathbf{r})\)</span> 的 Alpha 合成的颜色重写为沿着光线采样到的所有颜色 <span class="arithmatex">\(c_i\)</span> 的加权和</p>
 <div class="arithmatex">\[
-\hat{C}_c(\mathbf{r})=\sum_{i=1}^{N_c} w_i c_i, \quad w_i=T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right)
+\hat{C}*c(\mathbf{r})=\sum*{i=1}^{N_c} w_i c_i, \quad w_i=T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right)
 \]</div>
 <blockquote>
 <p>这个权值 <span class="arithmatex">\(w_i\)</span> 和透过率以及体积密度有关</p>
@@ -1341,7 +1347,7 @@ F_{\Theta}=F_{\Theta}^{\prime} \circ \gamma
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年4月11日 18:16:30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年4月27日 17:38:51</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年4月11日 18:16:30</span>
