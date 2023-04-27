@@ -3,6 +3,10 @@
 !!! abstract "Abstract"
     NeRF 论文的阅读笔记录在这里
 
+    :octicons-cross-reference-16: 参考资料
+    
+    - https://yconquesty.github.io/blog/ml/nerf/
+
     <p align="right">-- By @Zicx</p>
 
 ## NeRF 是做什么的
@@ -17,6 +21,7 @@
 </figure>
 
 ### 一、Pipeline
+
 - a).沿着相机光线的方向采样 5D 坐标
 - b).将坐标信息输入到 MLP 中，产生颜色和体积密度
 - c).使用立体渲染将颜色和体积密度合成为图像
@@ -35,7 +40,7 @@
 
 - 体积密度 $\sigma$ 函数只与空间位置 $\mathbf{x}$ 有关 --> $\sigma(\mathbf{x})$
 - 颜色 $c$ 函数与空间位置 $\mathbf{x}$ 和视角 $\mathbf{d}$ 都有关 --> $c(\mathbf{x},\mathbf{d})$
- 
+
 **MLP 的设计**
 
 - 用 8 个全连接层来处理输入的空间坐标 $x$ (激活函数为 ReLU，每层256个通道)
@@ -51,13 +56,15 @@ $$
 $$
 
 - 用了两个 MLP 网络，分别是**粗(coarse) 网络和细(fine) 网络**
+
 > 后续**优化的部分**会具体解释粗网络和细网络
-- $\mathcal{R}$ 是每个 batch 里面光线的集合，$\mathbf{r}$ 是指集合里面的每一条光线 
+
+- $\mathcal{R}$ 是每个 batch 里面光线的集合，$\mathbf{r}$ 是指集合里面的每一条光线
 - $C(\mathbf{r})$，$\hat{C}_c(\mathbf{r})$，$\hat{C}_f(\mathbf{r})$ 分别是实景，粗网络，细网络中输出的光线 RGB 颜色
 - 同时还将 $\hat{C}_c(\mathbf{r})$ 的损失最小化，以便粗网络的权重分布可以用于在细网络中分配样本
- 
+
 ### 三、神经渲染
- 
+
 - 沿着相机光线查询 5D 坐标来合成视图
 - 使用**立体渲染**将输出颜色和密度投影到 2D 图像中
 
@@ -66,7 +73,7 @@ $$
 - 利用穿过场景的相机光线，生成一组采样的三维点 $P_{3D}$
 - 利用三维点和对应的 2D 视角方向作为 MLP 的输入，输出密度和颜色
 - 使用立体渲染技术将输出颜色和密度累积到一个二维图像 $I_{2D}$ 中
- 
+
 > 由于具有可微性，所以可以利用**梯度下降**的方法来优化 MLP 网络，**最小化每个观察图像和 NeRF 渲染出来的相应视图之间的误差**
 
 该部分详细内容参见 [NeRF 的数学推导](./math.md)
@@ -83,7 +90,6 @@ $$
     1. 场景是由一团发光粒子组成的，这里粒子密度的空间分布会发生变化**
     2. 发射的光（每一个体素都会向四周均匀发出光）不随观察视角而改变**
 
-
 假设**距离** $t$ 的近场边界和远场边界分别为 $t_n$ 和 $t_f$ ，那么对于一条射线，它的期望颜色表达式应该如下：
 
 $$
@@ -91,7 +97,6 @@ C(\mathbf{r})=\int_{t_n}^{t_f} T(t) \sigma(\mathbf{r}(t)) \mathbf{c}(\mathbf{r}(
 $$
 
 函数 $T(t)$ 表示的是光线在 $t_n$ 到 $t$ 距离内的透射率，即光线在不碰到任何其他粒子的情况下能够传播的概率
-
 
 一张示例图：
 
@@ -116,7 +121,7 @@ $$
 根据数值积分方法估计的颜色积分结果如下所示：
 
 $$
-\hat{C}(\mathbf{r})=\sum_{i=1}^N T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right) \mathbf{c}_i, \text { where } T_i=\exp \left(-\sum_{j=1}^{i-1} \sigma_j \delta_j\right)
+\hat{C}(\mathbf{r})=\sum_{i=1}^N T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right) \mathbf{c}*i, \text { where } T_i=\exp \left(-\sum*{j=1}^{i-1} \sigma_j \delta_j\right)
 $$
 
 通过分层抽样的方式，将**连续的积分变成了离散的求和**，$\delta_i = t_{i+1} - t_i$ 是**样本间隔(距离)**
@@ -136,7 +141,6 @@ $$
 - 采用了一种**由粗到细的分层采样**程序，对于颜色贡献大的点附近采样密集，贡献小的点附近采样稀疏，以减少必要的采样次数，充分采样整个高频场景表示
 
 > 这个采样的过程应该是指相机光线对真实 3D 场景的采样，在输入到 MLP 之前
-
 
 #### 位置编码(Positional encoding)
 
@@ -162,7 +166,7 @@ $\gamma(\cdot)$ 分别作用于空间坐标 $\mathbf{x}$ 中的**每一个分量
 
 - $L = 10 \quad \text{for} \quad \gamma(\mathbf{x})$
 - $L = 4 \quad \text{for} \quad \gamma(\mathbf{d})$
- 
+
 > *维度 $L$ 的选择和场景的复杂度以及算力有关，也决定了神经网络能学习到的最高频率的大小*
 
 #### 分层采样(Hierarchical volume sampling)
@@ -180,7 +184,7 @@ $\gamma(\cdot)$ 分别作用于空间坐标 $\mathbf{x}$ 中的**每一个分量
 首先将原方程中粗网络 $\hat{C_c}(\mathbf{r})$ 的 Alpha 合成的颜色重写为沿着光线采样到的所有颜色 $c_i$ 的加权和
 
 $$
-\hat{C}_c(\mathbf{r})=\sum_{i=1}^{N_c} w_i c_i, \quad w_i=T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right)
+\hat{C}*c(\mathbf{r})=\sum*{i=1}^{N_c} w_i c_i, \quad w_i=T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right)
 $$
 
 > 这个权值 $w_i$ 和透过率以及体积密度有关
@@ -190,7 +194,6 @@ $$
 $$
 \hat{w_i} = \frac{w_i}{\sum_{j=1}^{N_c}w_j}
 $$
-
 
 ### 细节说明
 
@@ -212,6 +215,7 @@ $$
 ## NeRF 做的结果怎么样
 
 ### 相关指标
+
 - PSNR: 峰值信噪比，是一种评价**图像质量**的指标 *(越高越好)*
 - SSIM: 结构相似性，是一种衡量两幅**图像相似度**的指标 *(越高越好)*
 - LPIPS: 学习感知图像块相似度，是一种度量两幅**图像之间的差别**的指标 *(越低越好)*
@@ -222,10 +226,7 @@ $$
 - 适合使用投影图像进行**基于梯度（可微）的优化**
 - 克服了在高分辨率建模复杂场景时，**离散化体素网格**所带来的**存储成本过高**的问题
 
-
 ### 不足
 
 - 训练速度太慢：每个像素都需要近 200 次 MLP 模型的前向预测
 - 模型泛化性太差：NeRF 要针对每个场景单独进行训练，无法直接扩展到新出现的场景
-
-
