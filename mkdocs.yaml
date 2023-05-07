@@ -3,11 +3,11 @@ site_author: Zicx
 site_url: "https://zicx.top/notebook"
 site_description: Zicx's Notebook.
 
-repo_name: Xuer04/notebook
-repo_url: https://github.com/Xuer04/notebook/
+repo_name: cxzhou35/notebook
+repo_url: https://github.com/cxzhou35/notebook/
 edit_uri: tree/main/docs/
 
-copyright: Copyright &copy; 2022-2023 <a href="https://github.com/Xuer04" target="_blank" rel="noopener">Zicx</a>
+copyright: Copyright &copy; 2022-2023 <a href="https://github.com/cxzhou35" target="_blank" rel="noopener">Zicx</a>
 
 nav:
   - "主页":
@@ -218,7 +218,7 @@ markdown_extensions:
   - pymdownx.magiclink:
       repo_url_shortener: true
       repo_url_shorthand: true
-      user: Xuer04
+      user: cxzhou35
       repo: notebook
   - pymdownx.highlight:
       anchor_linenums: true
@@ -248,11 +248,14 @@ extra:
     property: G-4P08GMSPJM
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/Xuer04
+      link: https://github.com/cxzhou35
       name: Github
     - icon: fontawesome/brands/telegram
-      link: https://telegram.me/Xuer04
+      link: https://telegram.me/cxzhou35
       name: Telegram
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/cxzhou35
+      name: Twitter
     - icon: fontawesome/solid/rss
       link: https://zicx.top/
       name: Blog

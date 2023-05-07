@@ -10,7 +10,7 @@ comments: false
         - [:fontawesome-brands-bilibili:(2017 Spring)](https://www.bilibili.com/video/BV1nJ411z7fe/?spm_id_from=333.337.search-card.all.click&vd_source=1ea447fa8899c06a57b9296c131b092c)
         - [:fontawesome-brands-youtube:(2017 Spring)](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk)
     - :fontawesome-brands-github: Github repo:
-        - [Zicx's repo(2022 Spring)](https://github.com/Xuer04/CS231n)
+        - [Zicx's repo(2022 Spring)](https://github.com/cxzhou35/CS231n)
         - [Course repo](https://github.com/cs231n/cs231n.github.io)
 
 ## Table of Contents

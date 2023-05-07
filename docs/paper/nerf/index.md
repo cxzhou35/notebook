@@ -10,7 +10,7 @@
     - :simple-tensorflow: [TensorFlow](https://github.com/bmild/nerf)
     - :simple-pytorch: [Pytorch](https://github.com/yenchenlin/nerf-pytorch)
     - :simple-pytorchlightning: [Pytorch-lightning](https://github.com/kwea123/nerf_pl)
-    - :material-chevron-right-circle-outline: [My Reproduction](https://github.com/Xuer04/learning_nerf)
+    - :material-chevron-right-circle-outline: [My Reproduction](https://github.com/cxzhou35/learning_nerf)
 
     :material-web: Project Page:
 
