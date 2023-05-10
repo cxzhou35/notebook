@@ -271,7 +271,8 @@ extra_css:
   - _css/flink.css
   # - _css/custom.css
   - _css/tony.css
-  - https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.css
+  # - https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css
   # - _css/counter.css
 
 extra_javascript:
@@ -279,9 +280,10 @@ extra_javascript:
   # - https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js
   - _js/extra.js
   - _js/katex.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
   # - https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.min.js
-  - https://cdn.tonycrane.cc/utils/katex.min.js
+  # - https://cdn.tonycrane.cc/utils/katex.min.js
 
   # table sort support
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
