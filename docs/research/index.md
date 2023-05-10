@@ -3,15 +3,16 @@ statistics: false
 comments: false
 ---
 
-# 论文
+# 科研
 
 > 论文和科研项目相关的内容会记录在这里
 
 ## 资料
 
 - [Awesome-NeRF](https://github.com/awesome-NeRF/awesome-NeRF)
+- [sida 的科研经验分享](https://github.com/pengsida/learning_research)
 
-## 学习记录
+## 论文学习记录
 
 - [**NeRF**](./nerf/index.md)
     - [论文笔记](./nerf/note.md)

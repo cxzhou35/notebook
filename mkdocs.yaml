@@ -88,17 +88,17 @@ nav:
       - "编程语言":
           - memo/pl/index.md
           - "C++":
-            - memo/pl/cpp/index.md
+              - memo/pl/cpp/index.md
           - "Python":
-            - memo/pl/python/index.md
+              - memo/pl/python/index.md
           - "Go":
-            - memo/pl/go/index.md
+              - memo/pl/go/index.md
           - "Rust":
-            - memo/pl/rust/index.md
+              - memo/pl/rust/index.md
           - "Julia":
-            - memo/pl/julia/index.md
+              - memo/pl/julia/index.md
           - "Lua":
-            - memo/pl/lua/index.md
+              - memo/pl/lua/index.md
       - "环境搭建":
           - memo/config/index.md
           - "Windows":
@@ -111,19 +111,19 @@ nav:
                   - memo/config/mac/homebrew/index.md
           - "Linux":
               - memo/config/linux/index.md
-  - "论文":
-      - paper/index.md
+  - "科研":
+      - research/index.md
       - "NeRF":
-        - paper/nerf/index.md
-        - "论文笔记": paper/nerf/note.md
-        - "数学推导": paper/nerf/math.md
-        - "代码学习": paper/nerf/code.md
+          - research/nerf/index.md
+          - "论文笔记": research/nerf/note.md
+          - "数学推导": research/nerf/math.md
+          - "代码学习": research/nerf/code.md
   - "生活":
       - life/index.md
       - "影视":
-        - life/film/index.md
+          - life/film/index.md
       - "阅读":
-        - life/reading/index.md
+          - life/reading/index.md
   - "杂项":
       - others/index.md
 
