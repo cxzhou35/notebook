@@ -45,6 +45,7 @@ comments: false
     | :---- | :---- | :---- |
     | [:simple-cplusplus: C++](pl/cpp/index.md) | [:simple-python: Python](pl/python/index.md) | [:simple-go: Go](pl/go/index.md) |
     | [:simple-rust: Rust](pl/rust/index.md) | [:simple-julia: Julia](pl/julia/index.md) | [:simple-lua: Lua](pl/lua/index.md) |
+    | [:simple-taichilang: Taichi](pl/taichi/index.md)|  |  |
 
     </div>
 

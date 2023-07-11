@@ -99,6 +99,8 @@ nav:
               - memo/pl/julia/index.md
           - "Lua":
               - memo/pl/lua/index.md
+          - "Taichi":
+              - memo/pl/taichi/index.md
       - "环境搭建":
           - memo/config/index.md
           - "Windows":
