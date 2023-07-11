@@ -12,27 +12,23 @@
         <meta name="author" content="Zicx">
       
       
-        <link rel="canonical" href="https://zicx.top/notebook/course/cs/cs231n/">
+        <link rel="canonical" href="https://zicx.top/notebook/memo/pl/taichi/01_intro/">
       
       
-        <link rel="prev" href="../cs106L/lec02_types_and_structs/">
       
-      
-        <link rel="next" href="lec01_introduction_overview/">
-      
-      <link rel="icon" href="../../../paw.svg">
+      <link rel="icon" href="../../../../paw.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>CS231n: Deep Learning for Computer Vision - Zicx 的笔记本</title>
+        <title>Introduction - Zicx 的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -48,11 +44,11 @@
     
       <link rel="stylesheet" href="https://cdn.tonycrane.cc/utils/katex.min.css">
     
-      <link rel="stylesheet" href="../../../_css/flink.css">
+      <link rel="stylesheet" href="../../../../_css/flink.css">
     
-      <link rel="stylesheet" href="../../../_css/tony.css">
+      <link rel="stylesheet" href="../../../../_css/tony.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -71,7 +67,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -82,7 +78,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -104,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cs231n-deep-learning-for-computer-vision" class="md-skip">
+        <a href="#introduction" class="md-skip">
           跳转至
         </a>
       
@@ -118,7 +114,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Zicx 的笔记本" class="md-header__button md-logo" aria-label="Zicx 的笔记本" data-md-component="logo">
+    <a href="../../../.." title="Zicx 的笔记本" class="md-header__button md-logo" aria-label="Zicx 的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.103 10.107c0-4.244 3.445-7.607 7.733-7.607 3.19 0 5.912 1.858 7.099 4.563l.01.022.001.006C21.348 7.345 24 10.095 24 13.536 24 17.148 21.076 20 17.431 20H5.017C2.23 20 0 17.83 0 15.06a4.899 4.899 0 0 1 3.112-4.581 7.696 7.696 0 0 1-.009-.372ZM10.836 4c-3.485 0-6.233 2.717-6.233 6.107 0 .284.022.602.052.756a.75.75 0 0 1-.552.869c-1.52.385-2.603 1.712-2.603 3.328 0 1.917 1.532 3.44 3.517 3.44h12.414c2.843 0 5.069-2.206 5.069-4.964 0-2.759-2.226-4.965-5.069-4.965a.75.75 0 0 1-.696-.47l-.179-.446C15.606 5.5 13.424 4 10.836 4Z"/></svg>
@@ -137,7 +133,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CS231n: Deep Learning for Computer Vision
+              Introduction
             
           </span>
         </div>
@@ -247,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         主页
       </a>
     </li>
@@ -257,15 +253,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../../course/" class="md-tabs__link">
         课程笔记
       </a>
     </li>
@@ -281,7 +275,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../memo/" class="md-tabs__link">
+      <a href="../../../" class="md-tabs__link">
         备忘录
       </a>
     </li>
@@ -297,7 +291,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../research/" class="md-tabs__link">
+      <a href="../../../../research/" class="md-tabs__link">
         科研
       </a>
     </li>
@@ -313,7 +307,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../life/" class="md-tabs__link">
+      <a href="../../../../life/" class="md-tabs__link">
         生活
       </a>
     </li>
@@ -329,7 +323,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../others/" class="md-tabs__link">
+      <a href="../../../../others/" class="md-tabs__link">
         杂项
       </a>
     </li>
@@ -357,7 +351,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Zicx 的笔记本" class="md-nav__button md-logo" aria-label="Zicx 的笔记本" data-md-component="logo">
+    <a href="../../../.." title="Zicx 的笔记本" class="md-nav__button md-logo" aria-label="Zicx 的笔记本" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.103 10.107c0-4.244 3.445-7.607 7.733-7.607 3.19 0 5.912 1.858 7.099 4.563l.01.022.001.006C21.348 7.345 24 10.095 24 13.536 24 17.148 21.076 20 17.431 20H5.017C2.23 20 0 17.83 0 15.06a4.899 4.899 0 0 1 3.112-4.581 7.696 7.696 0 0 1-.009-.372ZM10.836 4c-3.485 0-6.233 2.717-6.233 6.107 0 .284.022.602.052.756a.75.75 0 0 1-.552.869c-1.52.385-2.603 1.712-2.603 3.328 0 1.917 1.532 3.44 3.517 3.44h12.414c2.843 0 5.069-2.206 5.069-4.964 0-2.759-2.226-4.965-5.069-4.965a.75.75 0 0 1-.696-.47l-.179-.446C15.606 5.5 13.424 4 10.836 4Z"/></svg>
@@ -410,7 +404,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../..">主页</a>
+          <a href="../../../..">主页</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -433,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../diss/" class="md-nav__link">
+      <a href="../../../../diss/" class="md-nav__link">
         讨论区
       </a>
     </li>
@@ -447,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../update/" class="md-nav__link">
+      <a href="../../../../update/" class="md-nav__link">
         近期更新
       </a>
     </li>
@@ -467,16 +461,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
         
@@ -495,7 +487,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">课程笔记</a>
+          <a href="../../../../course/">课程笔记</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -503,7 +495,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           课程笔记
@@ -516,16 +508,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
       
       
         
@@ -554,7 +544,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">计算机科学</a>
+          <a href="../../../../course/cs/">计算机科学</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -562,7 +552,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           计算机科学
@@ -599,7 +589,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../cs106L/">CS106L</a>
+          <a href="../../../../course/cs/cs106L/">CS106L</a>
           
             <label for="__nav_2_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -622,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cs106L/lec01_intro/" class="md-nav__link">
+      <a href="../../../../course/cs/cs106L/lec01_intro/" class="md-nav__link">
         课程介绍
       </a>
     </li>
@@ -636,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cs106L/lec02_types_and_structs/" class="md-nav__link">
+      <a href="../../../../course/cs/cs106L/lec02_types_and_structs/" class="md-nav__link">
         类型和结构
       </a>
     </li>
@@ -655,16 +645,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
       
       
         
@@ -680,8 +668,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">CS231n</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../course/cs/cs231n/">CS231n</a>
           
             <label for="__nav_2_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -689,7 +677,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_2_3">
           <span class="md-nav__icon md-icon"></span>
           CS231n
@@ -704,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lec01_introduction_overview/" class="md-nav__link">
+      <a href="../../../../course/cs/cs231n/lec01_introduction_overview/" class="md-nav__link">
         课程介绍
       </a>
     </li>
@@ -718,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lec02_image_classification/" class="md-nav__link">
+      <a href="../../../../course/cs/cs231n/lec02_image_classification/" class="md-nav__link">
         图像分类任务
       </a>
     </li>
@@ -757,7 +745,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../dlsys/">Deep Learning Systems</a>
+          <a href="../../../../course/cs/dlsys/">Deep Learning Systems</a>
           
         </div>
       
@@ -801,7 +789,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../ds/">数据结构与算法</a>
+          <a href="../../../../course/cs/ds/">数据结构与算法</a>
           
         </div>
       
@@ -845,7 +833,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../icv/">计算机视觉导论</a>
+          <a href="../../../../course/cs/icv/">计算机视觉导论</a>
           
         </div>
       
@@ -889,7 +877,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../na/">数值分析</a>
+          <a href="../../../../course/cs/na/">数值分析</a>
           
         </div>
       
@@ -933,7 +921,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../oop/">面向对象编程</a>
+          <a href="../../../../course/cs/oop/">面向对象编程</a>
           
         </div>
       
@@ -977,7 +965,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../os/">操作系统</a>
+          <a href="../../../../course/cs/os/">操作系统</a>
           
         </div>
       
@@ -1030,7 +1018,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../opt/">光电</a>
+          <a href="../../../../course/opt/">光电</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1071,7 +1059,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../opt/optoelec/">光电子学</a>
+          <a href="../../../../course/opt/optoelec/">光电子学</a>
           
         </div>
       
@@ -1122,7 +1110,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../math/">数学</a>
+          <a href="../../../../course/math/">数学</a>
           
         </div>
       
@@ -1180,7 +1168,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/">备忘录</a>
+          <a href="../../../">备忘录</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1247,7 +1235,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/">常用工具</a>
+          <a href="../../../tool/">常用工具</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1288,7 +1276,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/git/">Git</a>
+          <a href="../../../tool/git/">Git</a>
           
         </div>
       
@@ -1332,7 +1320,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/shell/">Shell</a>
+          <a href="../../../tool/shell/">Shell</a>
           
         </div>
       
@@ -1376,7 +1364,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/cmake/">CMake</a>
+          <a href="../../../tool/cmake/">CMake</a>
           
         </div>
       
@@ -1420,7 +1408,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/docker/">Docker</a>
+          <a href="../../../tool/docker/">Docker</a>
           
         </div>
       
@@ -1464,7 +1452,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/latex/">LaTeX</a>
+          <a href="../../../tool/latex/">LaTeX</a>
           
         </div>
       
@@ -1508,7 +1496,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/numpy/">NumPy</a>
+          <a href="../../../tool/numpy/">NumPy</a>
           
         </div>
       
@@ -1552,7 +1540,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/nvim/">Neoim</a>
+          <a href="../../../tool/nvim/">Neoim</a>
           
         </div>
       
@@ -1596,7 +1584,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/matlab/">MATLAB</a>
+          <a href="../../../tool/matlab/">MATLAB</a>
           
         </div>
       
@@ -1640,7 +1628,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/conda/">Conda</a>
+          <a href="../../../tool/conda/">Conda</a>
           
         </div>
       
@@ -1684,7 +1672,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/pytorch/">Pytorch</a>
+          <a href="../../../tool/pytorch/">Pytorch</a>
           
         </div>
       
@@ -1728,7 +1716,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/markdown/">Markdown</a>
+          <a href="../../../tool/markdown/">Markdown</a>
           
         </div>
       
@@ -1772,7 +1760,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/tmux/">Tmux</a>
+          <a href="../../../tool/tmux/">Tmux</a>
           
         </div>
       
@@ -1816,7 +1804,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/tool/ffmpeg/">FFmpeg</a>
+          <a href="../../../tool/ffmpeg/">FFmpeg</a>
           
         </div>
       
@@ -1881,7 +1869,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/pl/">编程语言</a>
+          <a href="../../">编程语言</a>
           
             <label for="__nav_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1922,7 +1910,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/pl/cpp/">C++</a>
+          <a href="../../cpp/">C++</a>
           
         </div>
       
@@ -1966,7 +1954,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/pl/python/">Python</a>
+          <a href="../../python/">Python</a>
           
         </div>
       
@@ -2010,7 +1998,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/pl/go/">Go</a>
+          <a href="../../go/">Go</a>
           
         </div>
       
@@ -2054,7 +2042,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/pl/rust/">Rust</a>
+          <a href="../../rust/">Rust</a>
           
         </div>
       
@@ -2098,7 +2086,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/pl/julia/">Julia</a>
+          <a href="../../julia/">Julia</a>
           
         </div>
       
@@ -2142,7 +2130,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/pl/lua/">Lua</a>
+          <a href="../../lua/">Lua</a>
           
         </div>
       
@@ -2186,7 +2174,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/pl/taichi/">Taichi</a>
+          <a href="../">Taichi</a>
           
         </div>
       
@@ -2243,7 +2231,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/config/">环境搭建</a>
+          <a href="../../../config/">环境搭建</a>
           
             <label for="__nav_3_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2286,7 +2274,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/config/win/">Windows</a>
+          <a href="../../../config/win/">Windows</a>
           
             <label for="__nav_3_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -2327,7 +2315,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/config/win/scoop/">Scoop</a>
+          <a href="../../../config/win/scoop/">Scoop</a>
           
         </div>
       
@@ -2380,7 +2368,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/config/mac/">Mac</a>
+          <a href="../../../config/mac/">Mac</a>
           
             <label for="__nav_3_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2421,7 +2409,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/config/mac/homebrew/">Homebrew</a>
+          <a href="../../../config/mac/homebrew/">Homebrew</a>
           
         </div>
       
@@ -2472,7 +2460,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../memo/config/linux/">Linux</a>
+          <a href="../../../config/linux/">Linux</a>
           
         </div>
       
@@ -2533,7 +2521,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../research/">科研</a>
+          <a href="../../../../research/">科研</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2580,7 +2568,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../research/nerf/">NeRF</a>
+          <a href="../../../../research/nerf/">NeRF</a>
           
             <label for="__nav_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -2603,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../research/nerf/note/" class="md-nav__link">
+      <a href="../../../../research/nerf/note/" class="md-nav__link">
         论文笔记
       </a>
     </li>
@@ -2617,7 +2605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../research/nerf/math/" class="md-nav__link">
+      <a href="../../../../research/nerf/math/" class="md-nav__link">
         数学推导
       </a>
     </li>
@@ -2631,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../research/nerf/code/" class="md-nav__link">
+      <a href="../../../../research/nerf/code/" class="md-nav__link">
         代码学习
       </a>
     </li>
@@ -2682,7 +2670,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../life/">生活</a>
+          <a href="../../../../life/">生活</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2723,7 +2711,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../life/film/">影视</a>
+          <a href="../../../../life/film/">影视</a>
           
         </div>
       
@@ -2767,7 +2755,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../life/reading/">阅读</a>
+          <a href="../../../../life/reading/">阅读</a>
           
         </div>
       
@@ -2819,7 +2807,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../others/">杂项</a>
+          <a href="../../../../others/">杂项</a>
           
         </div>
       
@@ -2858,21 +2846,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
-    Table of Contents
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2889,7 +2862,7 @@
 
 
   
-    <a href="https://github.com/cxzhou35/notebook/tree/main/docs/course/cs/cs231n/index.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/cxzhou35/notebook/tree/main/docs/memo/pl/taichi/01_intro.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2897,44 +2870,25 @@
   
 
 
-<h1 id="cs231n-deep-learning-for-computer-vision">CS231n: Deep Learning for Computer Vision<a class="headerlink" href="#cs231n-deep-learning-for-computer-vision" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>Taichi是一门应用于特定领域的编程语言，专为高性能，并行计算而设计，内嵌在Python中</p>
+<p>Taichi有以下特性：</p>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg></span> Website: <a href="http://cs231n.stanford.edu/index.html">Latest version</a></li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 128c0-35.3 28.7-64 64-64h256c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zm559.1-28.2c10.4 5.6 16.9 16.4 16.9 28.2v256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64-14.2-9.5V174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg></span> Video:<ul>
-<li><a href="https://www.bilibili.com/video/BV1nJ411z7fe/?spm_id_from=333.337.search-card.all.click&amp;vd_source=1ea447fa8899c06a57b9296c131b092c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg></span>(2017 Spring)</a></li>
-<li><a href="https://www.youtube.com/watch?v=vT1JzLTH4G4&amp;list=PLC1qU-LWwrF64f4QKQT-Vg5Wr4qEE1Zxk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span>(2017 Spring)</a></li>
+<li>Taichi在指定的后端编译并执行Taichi function和kernel</li>
+<li>对于位于Taichi kernel中最外层scoop的循环，Taichi会自动将其并行化</li>
+<li>Taichi提供了很多很灵活的数据结构，如field</li>
 </ul>
-</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Github repo:<ul>
-<li><a href="https://github.com/cxzhou35/CS231n">Zicx's repo(2022 Spring)</a></li>
-<li><a href="https://github.com/cs231n/cs231n.github.io">Course repo</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="lec01_introduction_overview/">Lec01: 课程介绍</a></li>
-<li><a href="lec02_image_classification/">Lec02: 图像分类任务</a></li>
-</ul>
-<!-- - [Lec03: 正则化和优化](./lec03_regularization_and_optimization.md) -->
-
-<blockquote>
-<p>在学习这门课的时候由于资料都是英文的，所以用英文记的笔记，在网站上排版会显得很稀疏，之后会更新成中文笔记的，有些不会翻译的地方会保留原始描述，有翻译错误或不妥的地方，可以在评论区告诉我哦 :)</p>
-</blockquote>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年5月7日 19:31:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年7月11日 18:52:07</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年1月21日 20:26:24</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年7月11日 18:52:07</span>
       
     
   </small>
@@ -2945,6 +2899,47 @@
 
 
 
+
+<h2 id="__comments">评论</h2>
+<!-- Insert generated snippet here -->
+<script src="https://giscus.app/client.js" data-repo="xuer04/notebook" data-repo-id="R_kgDOI0PNYQ"
+    data-category="Announcements" data-category-id="DIC_kwDOI0PNYc4CTvN5" data-mapping="pathname" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="zh-CN"
+    crossorigin="anonymous" async>
+
+        updateScheme();
+    </script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    // if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+    //     var giscus = document.querySelector("script[src*=giscus]")
+    //     giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/TonyCrane/note/docs/css/giscus.css")
+    // }
+
+    var giscus = document.querySelector("script[src*=giscus]")
+    // /* Set palette on initial load */
+    // var palette = __md_get("__palette")
+    // if (palette && typeof palette.color === "object") {
+    //     var theme = "light"
+    //     giscus.setAttribute("data-theme", theme)
+    // }
+    // /* Register event handlers after documented loaded */
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     var ref = document.querySelector("[data-md-component=palette]")
+    //     ref.addEventListener("change", function () {
+    //         var palette = __md_get("__palette")
+    //         if (palette && typeof palette.color === "object") {
+    //             var theme = "light"
+    //             var frame = document.querySelector(".giscus-frame")
+    //             frame.contentWindow.postMessage(
+    //                 { giscus: { setConfig: { theme } } },
+    //                 "https://giscus.app"
+    //             )
+    //         }
+    //     })
+    // })
+</script>
 
                 
               </article>
@@ -2962,42 +2957,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../cs106L/lec02_types_and_structs/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 类型和结构" rel="prev">
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                类型和结构
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="lec01_introduction_overview/" class="md-footer__link md-footer__link--next" aria-label="下一页: 课程介绍" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                课程介绍
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -3069,13 +3028,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.action.edit", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.code.copy", "content.action.edit", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
-          <script src="../../../_js/katex.js"></script>
+          <script src="../../../../_js/katex.js"></script>
         
       
         
@@ -3087,7 +3046,7 @@
         
       
         
-          <script src="../../../_js/tablesort.js"></script>
+          <script src="../../../../_js/tablesort.js"></script>
         
       
     
