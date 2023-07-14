@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Taichi Lang
 
 !!! abstract "Abstract"
@@ -10,4 +14,5 @@
 ## Table of Contents
 
 - [Introduction](./01_intro.md)
-- [Kernels & Functions](./02_kernel_function.md)
+- [Kernels & Functions](./02_kernel_and_function.md)
+- [Type System](./03_type_system.md)
