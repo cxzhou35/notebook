@@ -9,10 +9,11 @@ comments: false
 
 ## 资料
 
-- [Awesome-NeRF](https://github.com/awesome-NeRF/awesome-NeRF)
-- [sida 的科研经验分享](https://github.com/pengsida/learning_research)
+- [Awesome NeRF](https://github.com/awesome-NeRF/awesome-NeRF)
+- [Awesome Computer Vision](https://github.com/jbhuang0604/awesome-computer-vision)
+- [思达学长的科研经验分享](https://github.com/pengsida/learning_research)
 
-## 论文学习记录
+## 论文阅读
 
 - [**NeRF**](./nerf/index.md)
     - [论文笔记](./nerf/note.md)
