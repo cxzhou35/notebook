@@ -2854,15 +2854,76 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    原始类型
+    基本类型
   </a>
+  
+    <nav class="md-nav" aria-label="基本类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    数据类型别名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    显式类型转换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    隐式类型转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     复合类型
   </a>
+  
+    <nav class="md-nav" aria-label="复合类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    矩阵和向量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataclass" class="md-nav__link">
+    结构体和数据类(dataclass)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    类型转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2894,7 +2955,7 @@
 
 <h1 id="type-system">Type System<a class="headerlink" href="#type-system" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 196 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 5 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 1 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 859 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 58 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
 </div>
 <p>Taichi是一门静态类型的编程语言，Taichi中的变量类型是在编译时就确定的，一旦声明了变量，就不能再为其分配不同类型的值。</p>
 <div class="admonition example">
@@ -2909,20 +2970,159 @@
 <blockquote>
 <p>上述代码的最后一行会报错，因为<code>ti.Vector()</code>类型的值不能赋值给变量<code>x</code></p>
 </blockquote>
-<p>Taichi中的<code>ti.types</code>模块定义了所有Taichi支持的数据类型，这些数据类型分为两类: 原始类型(primitive)和复合类型(compound)</p>
+<p>Taichi中的<code>ti.types</code>模块定义了所有Taichi支持的数据类型，这些数据类型分为两类: 基本类型(primitive)和复合类型(compound)</p>
 <ul>
-<li>原始类型包括常用的数值数据类型</li>
-<li>复合类型包括类似数组或类似结构的数据类型，这些类型由多个成员组成，这些成员可以是原始类型，也可以是其他复合类型</li>
+<li>基本类型包括常用的数值数据类型，比如<code>ti.i32(int32)</code>, <code>ti.u8(uint8)</code>,和<code>ti.f64(float64)</code></li>
+<li>复合类型包括类似数组或类似结构的数据类型，这些类型由多个成员组成，这些成员可以是基本类型，也可以是其他复合类型，比如<code>ti.types.matrix</code>, <code>ti.types.ndarray</code>, 和<code>ti.types.struct</code></li>
 </ul>
-<h2 id="_1">原始类型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h2 id="_2">复合类型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_1">基本类型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>用<code>i</code>表示有符号整数，<code>u</code>表示无符号整数，<code>f</code>表示浮点数，后面跟的位数可以是8，16，32，64，最常用的两种基本类型为</p>
+<ul>
+<li><code>i32</code>: 32位有符号整数，也是默认的整数类型</li>
+<li><code>f32</code>: 32位浮点数，也是默认的浮点数类型</li>
+</ul>
+<p>需要注意，不同backend对Taichi基本类型的支持会有所不同，详见下表：</p>
+<figure>
+<p><a class="glightbox" href="../assets/backend_for_primitive_types.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/backend_for_primitive_types.png" width="600" /></a>
+  </p>
+<figcaption>不同backend对基本类型的支持对比</figcaption>
+</figure>
+<p>Taichi允许在调用<code>ti.init()</code>时指定默认的基本数据类型，用法如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ti</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">default_ip</span><span class="o">=</span><span class="n">ti</span><span class="o">.</span><span class="n">i64</span><span class="p">)</span>  <span class="c1"># Sets the default integer type to ti.i64</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">ti</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">default_fp</span><span class="o">=</span><span class="n">ti</span><span class="o">.</span><span class="n">f64</span><span class="p">)</span>  <span class="c1"># Sets the default floating-point type to ti.f64</span>
+</code></pre></div>
+<blockquote>
+<p>在应用中如果要保持数据的高精度，建议将<code>default_fp</code>设置为<code>ti.F64</code></p>
+</blockquote>
+<h3 id="_2">数据类型别名<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>在Taichi scope中，<code>int</code>和<code>float</code>会被分别用作默认整数和浮点类型的别名</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ti</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">default_ip</span><span class="o">=</span><span class="n">ti</span><span class="o">.</span><span class="n">i64</span><span class="p">,</span> <span class="n">default_fp</span><span class="o">=</span><span class="n">ti</span><span class="o">.</span><span class="n">f64</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nd">@ti</span><span class="o">.</span><span class="n">kernel</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span> <span class="nf">example_cast</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>  <span class="c1"># the returned type is ti.i64</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mf">3.14</span>    <span class="c1"># x is of ti.f64 type</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># equivalent to ti.i64(x)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">return</span> <span class="n">y</span>
+</code></pre></div>
+<p>在Python scope中，创建一个Taichi的data container并指定类型时，使用的也是别名</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># Is equivalent to:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">x</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="n">ti</span><span class="o">.</span><span class="n">f64</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>除了Taichi scope和Python scope创建的Taichi data container以外，<code>int</code>和<code>float</code>作为Python中的内置函数</p>
+</blockquote>
+<h3 id="_3">显式类型转换<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>可以用<code>ti.cast()</code>函将给定值转换为特定的目标类型</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nd">@ti</span><span class="o">.</span><span class="n">kernel</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mf">3.14</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">ti</span><span class="o">.</span><span class="n">i32</span><span class="p">)</span>  <span class="c1"># 3</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">ti</span><span class="o">.</span><span class="n">f32</span><span class="p">)</span>  <span class="c1"># 3.0</span>
+</code></pre></div>
+<p>还有一种更方便的方式，使用基本类型直接转换</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nd">@ti</span><span class="o">.</span><span class="n">kernel</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mf">3.14</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>    <span class="c1"># 3</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 3.14</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">z</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">i32</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 3</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">w</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">f64</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 3.14</span>
+</code></pre></div>
+<h3 id="_4">隐式类型转换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>在Taichi里，隐式类型转换发生在二元操作和赋值操作中</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>隐式类型转换通常是bug产生的来源，因此不推荐使用隐式类型转换，而是显式地指定变量类型和传入的数据</p>
+</div>
+<p>隐式类型转换的规则如下：</p>
+<figure>
+<p><a class="glightbox" href="../assets/type_casting.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/type_casting.png" width="600" /></a>
+  </p>
+<figcaption>隐式类型转换的规则</figcaption>
+</figure>
+<p>有一些例外：</p>
+<ul>
+<li>逻辑运算的返回值类型为<code>i32</code></li>
+<li>比较运算的返回值类型为<code>i32</code></li>
+</ul>
+<p><strong>赋值操作中发生的隐式类型转换</strong></p>
+<div class="admonition example">
+<p class="admonition-title">Example1</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@ti</span><span class="o">.</span><span class="n">kernel</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mf">3.14</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 1.0</span>
+</code></pre></div>
+</div>
+<blockquote>
+<p>将变量<code>a</code>的值从<code>int 1</code>转成<code>float 1.0</code></p>
+</blockquote>
+<div class="admonition example">
+<p class="admonition-title">Example2</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nd">@ti</span><span class="o">.</span><span class="n">kernel</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">a</span> <span class="o">=</span> <span class="mf">3.14</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 3</span>
+</code></pre></div>
+</div>
+<blockquote>
+<p>将变量<code>a</code>的值从<code>float 3.14</code>转成<code>int 3</code></p>
+</blockquote>
+<p>由此可见，<strong>初始化时的变量类型</strong>决定了隐式类型转换的结果</p>
+<h2 id="_5">复合类型<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="_6">矩阵和向量<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>可以用<code>ti.types.matrix()</code>和<code>ti.types.vector()</code>来自定义创建矩阵和向量数据类型</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">vec4d</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">ti</span><span class="o">.</span><span class="n">f64</span><span class="p">)</span>  <span class="c1"># a 64-bit floating-point 4D vector type</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">mat4x3i</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>  <span class="c1"># a 4x3 integer matrix type</span>
+</code></pre></div>
+</div>
+<p>在上述代码中，我们分别创建了两个类型</p>
+<ul>
+<li>元素为64位浮点数的4维向量类型</li>
+<li>元素为整数的4x3矩阵类型</li>
+</ul>
+<p>可以利用自定义的复合类型来实例化向量和矩阵，以及作为函数参数的数据类型</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">v</span> <span class="o">=</span> <span class="n">vec4d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Create a vector instance, here v = [1.0 2.0 3.0 4.0]</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nd">@ti</span><span class="o">.</span><span class="n">func</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="n">w</span><span class="p">:</span> <span class="n">vec4d</span><span class="p">):</span>  <span class="c1"># vec4d as type hint</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="k">return</span> <span class="n">w</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nd">@ti</span><span class="o">.</span><span class="n">kernel</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<h3 id="dataclass">结构体和数据类(dataclass)<a class="headerlink" href="#dataclass" title="Permanent link">&para;</a></h3>
+<p>可以用<code>ti.types.struct()</code>函数来创建一个结构体类型，以下是一个创建3D球体结构体类型的例子</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Define a compound type vec3 to represent a sphere&#39;s center</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">vec3</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">vector</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># Define a compound type sphere_type to represent a sphere</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">sphere_type</span> <span class="o">=</span> <span class="n">ti</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">struct</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">vec3</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># Initialize sphere1, whose center is at [0,0,0] and whose radius is 1.0</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="n">sphere1</span> <span class="o">=</span> <span class="n">sphere_type</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">vec3</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">radius</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Initialize sphere2, whose center is at [1,1,1] and whose radius is 1.0</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">sphere2</span> <span class="o">=</span> <span class="n">sphere_type</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">vec3</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="n">radius</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h3 id="_7">初始化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_8">类型转换<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年7月14日 13:40:22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年7月17日 09:41:27</span>
       
         <br>
         创建日期:
