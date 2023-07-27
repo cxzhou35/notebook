@@ -153,8 +153,8 @@ def foo():
 
 在上述代码中，我们分别创建了两个类型
 
-- 元素为64位浮点数的4维向量类型
-- 元素为整数的4x3矩阵类型
+- `vec4d`: 元素为64位浮点数的4维向量类型
+- `mat4x3i`: 元素为整数的4x3矩阵类型
 
 可以利用自定义的复合类型来实例化向量和矩阵，以及作为函数参数的数据类型
 
@@ -174,7 +174,7 @@ def foo():
 
 ### 结构体和数据类(dataclass)
 
-可以用`ti.types.struct()`函数来创建一个结构体类型，以下是一个创建3D球体结构体类型的例子
+可以用`ti.types.struct()`函数来创建一个结构体类型，以下是一个创建球体类型(`sphere_type`)的例子
 
 !!! example "Example"
 
@@ -189,20 +189,61 @@ def foo():
     sphere2 = sphere_type(center=vec3([1, 1, 1]), radius=1.0)
     ```
 
+如果定义的结构体有很多成员变量的时候，使用`ti.types.struct`会导致代码混乱、组织性很差，这个时候可以用一个修饰器`ti.dataclass`，它包装了struct类型
+
+!!! example "Example"
+
+    ```python
+    @ti.dataclass
+    class Sphere:
+        center: vec3
+        radius: float
+    ```
+
+使用`ti.dataclass`还可以让我们在数据类中定义成员函数，从而实现OOP的功能
+
 ### 初始化
+
+Taichi中有很多初始化struct或者dataclass的方式，除了直接调用类型进行实例化之外，还可以用以下几种方式：
+
+- 按照**定义的参数顺序**将位置参数传递给类型
+- 利用**关键字参数**设置特定的成员变量
+- 未指定的成员变量将被自动设置为0
+
+!!! exampole "Example"
+
+    ```python
+    @ti.dataclass
+    class Ray:
+        ro: vec3
+        rd: vec3
+        t: float
+
+    # The definition above is equivalent to
+    #Ray = ti.types.struct(ro=vec3, rd=vec3, t=float)
+    # Use positional arguments to set struct members in order
+    ray = Ray(vec3(0), vec3(1, 0, 0), 1.0)
+    # ro is set to vec3(0) and t will be set to 0
+    ray = Ray(vec3(0), rd=vec3(1, 0, 0))
+    # both ro and rd are set to vec3(0)
+    ray = Ray(t=1.0)
+    # ro is set to vec3(1), rd=vec3(0) and t=0.0
+    ray = Ray(1)
+    # All members are set to 0
+    ray = Ray()
+    ```
 
 ### 类型转换
 
+目前Taichi的复合类型中只有vector和matrix支持类型转换，并且是element-wise的
 
-
-
-
-
-
-
-
-
-
-
-
+!!! example "Example"
+    ```python
+    @ti.kernel
+    def foo():
+        u = ti.Vector([2.3, 4.7])
+        v = int(u)              # ti.Vector([2, 4])
+        # If you are using ti.i32 as default_ip, this is equivalent to:
+        v = ti.cast(u, ti.i32)  # ti.Vector([2, 4])
+    ```
 

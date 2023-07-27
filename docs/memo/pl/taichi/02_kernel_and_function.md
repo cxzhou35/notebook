@@ -150,6 +150,7 @@ Taichi function和kernel的区别如下表所示：
 ## 循环的并行运算
 
 Taichi kernel里最外层的任何for循环都会自动并行化
+
 ```python
 @ti.kernel
 def fill():
