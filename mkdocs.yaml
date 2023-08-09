@@ -250,7 +250,7 @@ markdown_extensions:
 extra:
   analytics:
     provider: google
-    property: G-4P08GMSPJM
+    property: G-02XSVD1LHD
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/cxzhou35

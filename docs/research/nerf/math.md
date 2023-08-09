@@ -5,6 +5,8 @@
     <p align="right">-- By @Zicx</p>
 
 
+> 关于volume rendering的讲解，可以看这个视频[:simple-youtube:](https://www.youtube.com/watch?v=hiaHlTLN9TE)
+
 ## 透射率的推导
 
 设密度场为 $\sigma(\mathbf{x})$，其中 $\mathbf{x} \in \mathbb{R}^3$，由于沿射线传播的任何空间点 $\mathbf{x}$ 都可以写成以下射线的形式：

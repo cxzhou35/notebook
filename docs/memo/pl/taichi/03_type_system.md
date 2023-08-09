@@ -4,7 +4,7 @@ comments: true
 
 # Type System
 
-Taichi是一门静态类型的编程语言，Taichi中的变量类型是在编译时就确定的，一旦声明了变量，就不能再为其分配不同类型的值。
+Taichi是一门静态类型的编程语言，Taichi中的变量类型是在编译时就确定的，一旦声明了变量，就不能再为其分配不同类型的值
 
 !!! example "Example"
     ```python

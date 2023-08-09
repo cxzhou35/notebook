@@ -312,7 +312,7 @@ d = copy.copy(b)  # d is a shallow copy of b; they share the underlying memory
 d[0, 0][0] = 1.2  # This mutates b as well, so b[0, 0][0] is now 1.2
 ```
 
-- 与NumPy ndarrays的数据交换
+- 与NumPy ndarrays的数据交换（这一部分也可以看 [与外部数据进行交互](##与外部数据进行交互))
 
 ```python
 # to_numpy returns a NumPy array with the same shape as d and a copy of d's value
@@ -380,4 +380,129 @@ test(e) # New kernel compilation
 - 迭代时自动并行
 - 自动优化内存访问
 
+> TODO: Field的稀疏性暂时用不到，之后用到了再学
 
+## 坐标偏移
+
+在定义Taichi fiel的时候可以使用坐标偏移，会改变field的边界，而不是从0开始
+
+```python
+a = ti.Matrix.field(2, 2, dtype=ti.f32, shape=(32, 64), offset=(-16, 8))
+
+a[-16, 8]  # lower left corner
+a[16, 8]   # lower right corner
+a[-16, 72]  # upper left corner
+a[16, 72]   # upper right corner
+```
+
+> 坐标偏移参数`offset`的维度要和Taichi field的形状一致，否则会报错
+
+## 与外部数据进行交互
+
+### NumPy ndarray
+
+将一个NumPy的array导入到Taichi scope有两种方式：
+
+- 创建一个Taichi field `f`，shape和dtype和要导入的ndarray一致，通过`f.from_numpy(arr)`将ndarray的值拷贝到`f`中
+
+```python
+x = ti.field(float, shape=(3, 3))
+a = np.arange(9).reshape(3, 3).astype(np.int32)
+x.from_numpy(a)
+print(x)
+
+#[[0 1 2]
+# [3 4 5]
+# [6 7 8]]
+
+arr = x.to_numpy()
+#array([[0, 1, 2],
+#       [3, 4, 5],
+#       [6, 7, 8]], dtype=int32)
+```
+
+- 以参数的形式将ndarray传入Taichi function或者kernel中，使用`ti.types.ndarray()`作为类型提示，这种形式传入的是变量的引用，通常要对ndarray操作时才会用这种方式
+
+```python
+import taichi as ti
+import numpy as np
+ti.init()
+
+a = np.zeros((5, 5))
+
+@ti.kernel
+def test(a: ti.types.ndarray()):
+    for i in range(a.shape[0]):  # a parallel for loop
+        for j in range(a.shape[1]):
+            a[i, j] = i + j
+
+test(a)
+print(a)
+```
+
+
+### PyTorch tensor
+
+和NumPy ndarray类似，可以用`x.from_torch()`和`x.to_torch()`导入和导出tensor，但是在调用`to_torch()`的时候还需要指定一个参数`device`
+
+```python
+x = ti.field(float, shape=(3, 3))
+t = x.to_torch(device="cuda:0")
+print(t.device) # device(type='cuda', index=0)
+```
+
+### 外部数据的形状
+
+用Taichi field和外部数据交互时，形状匹配的规则如下：
+
+- 标量 field
+
+```python
+field = ti.field(int, shape=(256, 512))
+array = field.to_numpy()
+
+field.shape[0]=array.shape[0]
+field.shape[1]=array.shape[1]
+```
+
+- n维向量 field
+
+```python
+field = ti.Vector.field(3, int, shape=(256, 512))
+array = field.to_numpy()
+
+field.shape[0]=array.shape[0]
+field.shape[1]=array.shape[1]
+n=array.shape[1]
+```
+
+外部数据的形状为`(*field_shape, n)`
+
+- n-by-m (n x m)矩阵 field
+
+```python
+field = ti.Matrix.field(3, 4, ti.i32, shape=(256, 512))
+array = field.to_numpy()
+array.shape  # (256, 512, 3, 4)
+```
+
+外部数据的形状为`(*field_shape, n, m)`
+
+
+!!! hint "Hint"
+    此外，Taichi kernel中的外部数据使用其物理内存布局进行索引，对于PyTorch tensor来说，在传入到Taichi kernel之前，必须是**连续的(needs to be made contiguous)**
+
+    ```python
+    x = ti.field(dtype=int, shape=(3, 3))
+    y = torch.Tensor([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    y = y.T # Transposing the tensor returns a view of the tensor which is not contiguous
+
+    @ti.kernel
+    def copy_scalar(x: ti.template(), y: ti.types.ndarray()):
+        for i, j in x:
+            y[i, j] = x[i, j]
+
+    # copy(x, y) # error!
+    copy(x, y.clone()) # correct
+    copy(x, y.contiguous()) # correct
+    ```
