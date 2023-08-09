@@ -1,9 +1,11 @@
 # NeRF 代码学习
 
 !!! abstract "Abstract"
-    NeRF 的代码学习记录在这里(学习的是 Pytorch 版本)
+    NeRF 的代码学习记录在这里(学习的是Pytorch实现版本)
 
     源代码仓库在这里: :simple-github: [nerf-pytorch](https://github.com/yenchenlin/nerf-pytorch)
+
+    Pytorch版本代码解读: [Blog](https://yconquesty.github.io/blog/ml/nerf/nerf_rendering.html#analysis)
 
     我复现代码的仓库在这里: :simple-github: [Learning NeRF](https://github.com/cxzhou35/learning_nerf)
 
