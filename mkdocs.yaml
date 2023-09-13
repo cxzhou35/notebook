@@ -199,6 +199,7 @@ plugins:
         - course/index.md
         - memo/index.md
         - life/index.md
+        - others/index.md
 
 markdown_extensions:
   - toc:
@@ -274,6 +275,7 @@ extra_css:
   - https://cdn.tonycrane.cc/utils/katex.min.css
   - _css/flink.css
   - _css/tony.css
+  - _css/card.css
 
 extra_javascript:
   # mermaid support
