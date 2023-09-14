@@ -7,7 +7,7 @@
     <p align="right">-- By @Zicx</p>
 
 
-> 关于volume rendering的讲解，可以看这个视频[:simple-youtube:](https://www.youtube.com/watch?v=hiaHlTLN9TE)
+> 关于volume rendering的讲解，可以看这个视频 [:simple-youtube:](https://www.youtube.com/watch?v=hiaHlTLN9TE)
 
 ## 透射率的推导
 

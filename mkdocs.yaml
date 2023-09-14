@@ -120,11 +120,16 @@ nav:
               - memo/config/linux/index.md
   - "科研":
       - research/index.md
-      - "NeRF":
-          - research/nerf/index.md
+      - "论文阅读":
+        - research/paper_reading/index.md
+        - "NeRF":
+          - research/paper_reading/nerf/index.md
           - "论文笔记": research/nerf/note.md
           - "数学推导": research/nerf/math.md
           - "代码学习": research/nerf/code.md
+      - "科研经验":
+        - research/learning_research/index.md
+
   - "生活":
       - life/index.md
       - "影视":
