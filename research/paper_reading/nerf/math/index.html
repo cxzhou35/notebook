@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://zicx.top/notebook/research/paper_reading/nerf/math/">
       
       
+        <link rel="prev" href="../note/">
+      
+      
+        <link rel="next" href="../code/">
       
       
       <link rel="icon" href="../../../../paw.svg">
@@ -22,7 +26,7 @@
     
     
       
-        <title>NeRF 数学推导 - Zicx 的笔记本</title>
+        <title>数学推导 - Zicx 的笔记本</title>
       
     
     
@@ -138,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NeRF 数学推导
+              数学推导
             
           </span>
         </div>
@@ -307,10 +311,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../../" class="md-tabs__link">
           
   
@@ -3106,6 +3112,8 @@
       
   
   
+    
+  
   
     
     
@@ -3120,13 +3128,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
@@ -3147,7 +3155,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             科研
@@ -3159,6 +3167,8 @@
               
                 
   
+  
+    
   
   
     
@@ -3172,13 +3182,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           
@@ -3199,7 +3209,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             论文阅读
@@ -3211,6 +3221,8 @@
               
                 
   
+  
+    
   
   
     
@@ -3228,13 +3240,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" checked>
         
           
           
@@ -3255,7 +3267,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2_2">
             <span class="md-nav__icon md-icon"></span>
             NeRF
@@ -3270,7 +3282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nerf/note.md" class="md-nav__link">
+      <a href="../note/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3288,9 +3300,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../nerf/math.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    数学推导
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3299,6 +3331,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    透射率的推导
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    颜色积分的推导
+  </a>
+  
+    <nav class="md-nav" aria-label="颜色积分的推导">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    一、仅考虑吸收光（无散射、反射）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    二、仅考虑发射光（无吸收）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    三、考虑吸收和发射
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    分段体积渲染推导
+  </a>
+  
+    <nav class="md-nav" aria-label="分段体积渲染推导">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    一、计算分段体积的颜色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    二、计算分段体积的透射率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    三、分段体积的渲染
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ndc" class="md-nav__link">
+    射线空间NDC 坐标系推导
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3310,7 +3444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nerf/code.md" class="md-nav__link">
+      <a href="../code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3757,7 +3891,7 @@
 <h1 id="nerf">NeRF 数学推导<a class="headerlink" href="#nerf" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>NeRF 论文中有关数学公式的推导记录在这里</p>
+<p>NeRF 论文中有关数学公式的推导</p>
 <p>参考的Blog: <a href="https://yconquesty.github.io/blog/ml/nerf/nerf_rendering.html">NeRF: A Volume Rendering Perspective</a></p>
 <p><p align="right">-- By <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Zicx" title="GitHub User: Zicx">@Zicx</a></p></p>
 </div>
@@ -4254,7 +4388,7 @@ t_{n} = \frac{n+o_{z}}{d_{z}}
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月14日 11:50:34</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月14日 13:51:06</span>
       
         <br>
         创建日期:
@@ -4337,6 +4471,44 @@ t_{n} = \frac{n+o_{z}}{d_{z}}
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../note/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 论文笔记" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                论文笔记
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../code/" class="md-footer__link md-footer__link--next" aria-label="下一页: 代码学习" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                代码学习
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
