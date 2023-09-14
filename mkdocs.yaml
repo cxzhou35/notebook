@@ -124,9 +124,9 @@ nav:
         - research/paper_reading/index.md
         - "NeRF":
           - research/paper_reading/nerf/index.md
-          - "论文笔记": research/nerf/note.md
-          - "数学推导": research/nerf/math.md
-          - "代码学习": research/nerf/code.md
+          - "论文笔记": research/paper_reading/nerf/note.md
+          - "数学推导": research/paper_reading/nerf/math.md
+          - "代码学习": research/paper_reading/nerf/code.md
       - "科研经验":
         - research/learning_research/index.md
 

@@ -3,8 +3,8 @@ statistics: false
 comments: false
 ---
 
-# 杂项记录
+# 杂项
 
-> 一些杂七杂八的东西会放到这里
+!!! info "Info"
+    杂项的内容记录
 
-TODO

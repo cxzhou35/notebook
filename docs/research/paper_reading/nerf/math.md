@@ -1,6 +1,6 @@
 # NeRF 数学推导
 !!! abstract "Abstract"
-    NeRF 论文中有关数学公式的推导记录在这里
+    NeRF 论文中有关数学公式的推导
 
     参考的Blog: [NeRF: A Volume Rendering Perspective](https://yconquesty.github.io/blog/ml/nerf/nerf_rendering.html)
 

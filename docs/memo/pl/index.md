@@ -5,9 +5,6 @@ comments: false
 
 # 编程语言
 
-!!! abstract "Abstract"
-    这里记录了一些编程语言相关的内容
-
 !!! note ""
     <br>
 
@@ -20,3 +17,25 @@ comments: false
     </div>
 
     <br>
+
+<style>
+.md-typeset table:not([class]) th {
+    min-width: 1em;
+}
+</style>
+
+???+ abstract "Overview"
+
+    <div style="text-align: center" markdown="1">
+
+    | &nbsp; | **编程语言** | &nbsp; |
+    | :---- | :---- | :---- |
+    | [:simple-cplusplus: C++](pl/cpp/index.md) | [:simple-python: Python](pl/python/index.md) | [:simple-go: Go](pl/go/index.md) |
+    | [:simple-rust: Rust](pl/rust/index.md) | [:simple-julia: Julia](pl/julia/index.md) | [:simple-lua: Lua](pl/lua/index.md) |
+    | [:simple-taichilang: Taichi](pl/taichi/index.md)|  |  |
+
+    </div>
+
+    ---
+
+    > ***Icon Source***: [mkdocs-material-icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)

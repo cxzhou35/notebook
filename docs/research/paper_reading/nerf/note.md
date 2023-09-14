@@ -1,7 +1,7 @@
 # NeRF 论文笔记
 
 !!! abstract "Abstract"
-    NeRF 论文的阅读笔记录在这里
+    NeRF 论文的阅读笔记
 
     :octicons-cross-reference-16: 参考资料
     

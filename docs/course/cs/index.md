@@ -6,7 +6,7 @@ comments: false
 # Computer Science
 
 !!! abstract "Abstract"
-    计算机相关课程的笔记都放在这里，想让自己看起来更 *"CS"* 一点
+    计算机相关课程的笔记
 
 !!! note ""
     <br>

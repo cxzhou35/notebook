@@ -5,9 +5,6 @@ comments: false
 
 # 环境搭建
 
-!!! abstract "Abstract"
-    这里记录了一些环境配置相关的内容
-
 !!! note ""
     <br>
 
@@ -20,3 +17,25 @@ comments: false
     </div>
 
     <br>
+
+<style>
+.md-typeset table:not([class]) th {
+    min-width: 1em;
+}
+</style>
+
+???+ abstract "Overview"
+
+
+    <div style="text-align: center" markdown="1">
+
+    | &nbsp; | **环境搭建** | &nbsp; |
+    | :---- | :----: | :---- |
+    | [:fontawesome-brands-windows: Windows](config/win/index.md) | [:fontawesome-brands-apple: Mac](config/mac/index.md) | [:fontawesome-brands-linux: Linux](config/linux/index.md) |
+
+    </div>
+
+    ---
+
+    > ***Icon Source***: [mkdocs-material-icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)
+
