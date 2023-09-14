@@ -12,13 +12,13 @@
         <meta name="author" content="Zicx">
       
       
-        <link rel="canonical" href="https://zicx.top/notebook/research/nerf/math/">
+        <link rel="canonical" href="https://zicx.top/notebook/research/paper_reading/nerf/">
       
       
-        <link rel="prev" href="../note/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../code/">
+        <link rel="next" href="../../learning_research/">
       
       
       <link rel="icon" href="../../../paw.svg">
@@ -26,7 +26,7 @@
     
     
       
-        <title>数学推导 - Zicx 的笔记本</title>
+        <title>NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis - Zicx 的笔记本</title>
       
     
     
@@ -108,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nerf" class="md-skip">
+        <a href="#nerf-representing-scenes-as-neural-radiance-fields-for-view-synthesis" class="md-skip">
           跳转至
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数学推导
+              NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
             
           </span>
         </div>
@@ -3124,6 +3124,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -3178,10 +3180,6 @@
       
         
       
-        
-      
-        
-      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -3199,7 +3197,7 @@
               
   
   <span class="md-ellipsis">
-    NeRF
+    论文阅读
   </span>
   
 
@@ -3214,6 +3212,64 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
+            论文阅读
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    NeRF
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_2_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
             NeRF
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -3226,7 +3282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../note/" class="md-nav__link">
+      <a href="../../nerf/note.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3244,29 +3300,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    数学推导
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../nerf/math.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3275,108 +3311,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    透射率的推导
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    颜色积分的推导
-  </a>
-  
-    <nav class="md-nav" aria-label="颜色积分的推导">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    一、仅考虑吸收光（无散射、反射）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    二、仅考虑发射光（无吸收）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    三、考虑吸收和发射
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    分段体积渲染推导
-  </a>
-  
-    <nav class="md-nav" aria-label="分段体积渲染推导">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    一、计算分段体积的颜色
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    二、计算分段体积的透射率
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    三、分段体积的渲染
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ndc" class="md-nav__link">
-    射线空间NDC 坐标系推导
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3388,7 +3322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code/" class="md-nav__link">
+      <a href="../../nerf/code.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3400,6 +3334,68 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../learning_research/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    科研经验
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            科研经验
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
           </ul>
@@ -3659,96 +3655,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    透射率的推导
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    颜色积分的推导
-  </a>
-  
-    <nav class="md-nav" aria-label="颜色积分的推导">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    一、仅考虑吸收光（无散射、反射）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    二、仅考虑发射光（无吸收）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    三、考虑吸收和发射
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    分段体积渲染推导
-  </a>
-  
-    <nav class="md-nav" aria-label="分段体积渲染推导">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    一、计算分段体积的颜色
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    二、计算分段体积的透射率
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    三、分段体积的渲染
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ndc" class="md-nav__link">
-    射线空间NDC 坐标系推导
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3762,7 +3668,7 @@
                   
 
   
-    <a href="https://github.com/cxzhou35/notebook/tree/main/docs/research/nerf/math.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/cxzhou35/notebook/tree/main/docs/research/paper_reading/nerf/index.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -3770,511 +3676,29 @@
   
 
 
-<h1 id="nerf">NeRF 数学推导<a class="headerlink" href="#nerf" title="Permanent link">&para;</a></h1>
+<h1 id="nerf-representing-scenes-as-neural-radiance-fields-for-view-synthesis">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis<a class="headerlink" href="#nerf-representing-scenes-as-neural-radiance-fields-for-view-synthesis" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>NeRF 论文中有关数学公式的推导记录在这里</p>
-<p>参考的Blog: <a href="https://yconquesty.github.io/blog/ml/nerf/nerf_rendering.html">NeRF: A Volume Rendering Perspective</a></p>
-<p><p align="right">-- By <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Zicx" title="GitHub User: Zicx">@Zicx</a></p></p>
+<p><a href="https://arxiv.org/pdf/2003.08934.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 64C0 28.7 28.7 0 64 0h160v128c0 17.7 14.3 32 32 32h128v144H176c-35.3 0-64 28.7-64 64v144H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0l128 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56h-16v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-16v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48h-32c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16h-16v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V368z"/></svg></span> Paper</a> | <a href="https://github.com/bmild/nerf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> Code</a> | <a href="https://www.matthewtancik.com/nerf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span> Project Page</a> | <a href="https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.01 1.485c-2.082 0-3.754.02-3.743.047.01.02 1.708 3.001 3.774 6.62l3.76 6.574h3.76c2.081 0 3.753-.02 3.742-.047-.005-.02-1.708-3.001-3.775-6.62l-3.76-6.574zm-4.76 1.73a789.828 789.861 0 0 0-3.63 6.319L0 15.868l1.89 3.298 1.885 3.297 3.62-6.335 3.618-6.33-1.88-3.287C8.1 4.704 7.255 3.22 7.25 3.214zm2.259 12.653-.203.348c-.114.198-.96 1.672-1.88 3.287a423.93 423.948 0 0 1-1.698 2.97c-.01.026 3.24.042 7.222.042h7.244l1.796-3.157c.992-1.734 1.85-3.23 1.906-3.323l.104-.167h-7.249z"/></svg></span> Data</a></p>
+<p>Other implementations:</p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.292 5.856 11.54 0v24l-4.095-2.378V7.603l-6.168 3.564.015-5.31zm21.43 5.311-.014-5.31L12.46 0v24l4.095-2.378V14.87l3.092 1.788-.018-4.618-3.074-1.756V7.603l6.168 3.564z"/></svg></span> <a href="https://github.com/bmild/nerf">TensorFlow version</a></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.005 0 4.952 7.053a9.865 9.865 0 0 0 0 14.022 9.866 9.866 0 0 0 14.022 0c3.984-3.9 3.986-10.205.085-14.023l-1.744 1.743c2.904 2.905 2.904 7.634 0 10.538s-7.634 2.904-10.538 0-2.904-7.634 0-10.538l4.647-4.646.582-.665zm3.568 3.899a1.327 1.327 0 0 0-1.327 1.327 1.327 1.327 0 0 0 1.327 1.328A1.327 1.327 0 0 0 16.9 5.226 1.327 1.327 0 0 0 15.573 3.9z"/></svg></span> <a href="https://github.com/yenchenlin/nerf-pytorch">Pytorch version</a></li>
+<li>:simple-pytorchlightning: <a href="https://github.com/kwea123/nerf_pl">Pytorch-lightning version</a></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-2 0a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8M8.6 16.6l4.6-4.6-4.6-4.6L10 6l6 6-6 6-1.4-1.4Z"/></svg></span> <a href="https://github.com/cxzhou35/learning_nerf">My Reproduction</a></li>
+</ul>
 </div>
-<blockquote>
-<p>关于volume rendering的讲解，可以看这个视频<a href="https://www.youtube.com/watch?v=hiaHlTLN9TE"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span></a></p>
-</blockquote>
-<h2 id="_1">透射率的推导<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>设密度场为 <span class="arithmatex">\(\sigma(\mathbf{x})\)</span>，其中 <span class="arithmatex">\(\mathbf{x} \in \mathbb{R}^3\)</span>，由于沿射线传播的任何空间点 <span class="arithmatex">\(\mathbf{x}\)</span> 都可以写成以下射线的形式：</p>
-<div class="arithmatex">\[
-\mathbf{r}(t) = \mathbf{o} + t \mathbf{d}
-\]</div>
-<p>于是可以重新参数化沿给定<strong>射线 <span class="arithmatex">\(\mathbf{r}=\left(\mathbf{o}, \mathbf{d}\right)\)</span> 的密度函数</strong>为一个<strong>标量函数</strong> <span class="arithmatex">\(\sigma(t)\)</span>
-密度与<strong>透射率函数</strong> <span class="arithmatex">\(T(t)\)</span> 密切相关，它表示光线在区间 <span class="arithmatex">\([0,t)\)</span> 上传播而<strong>没有击中任何粒子 (没有发生碰撞)</strong> 的概率</p>
-<p>现在考虑光线从位置 <span class="arithmatex">\(t\)</span> 传播了 <span class="arithmatex">\(d t\)</span> 距离的过程，<strong>若这个过程中没有击中粒子</strong>，则有下式成立：</p>
-<div class="arithmatex">\[
-T(t+dt) = T(t)\cdot \left(1-dt \cdot \sigma(t)\right)
-\]</div>
-<ul>
-<li><span class="arithmatex">\(T(t+dt)\)</span> 是光线在区间 <span class="arithmatex">\([0,t+dt)\)</span> 内没有碰撞的概率</li>
-<li><span class="arithmatex">\(T(t)\)</span> 是光线在区间 <span class="arithmatex">\([0,t)\)</span> 内没有碰撞的概率</li>
-<li><span class="arithmatex">\(1-dt \cdot \sigma(t)\)</span> 是光线在区间 <span class="arithmatex">\([t,t+dt)\)</span> 内没有碰撞的概率</li>
-<li>符合乘法原理</li>
-</ul>
-<p>移项化简上面的表达式，可以得到下面这个微分方程：</p>
-<div class="arithmatex">\[
-T^{\prime}(t)=-T(t) \cdot \sigma(t)
-\]</div>
-<p>求解得到：</p>
-<div class="arithmatex">\[
-T(a \rightarrow b) \equiv \frac{T(b)}{T(a)}=\exp \left(-\int_a^b \sigma(t) d t\right)
-\]</div>
-<p><strong><span class="arithmatex">\(T(a \rightarrow b)\)</span> 定义为光线从距离 <span class="arithmatex">\(a\)</span> 到距离 <span class="arithmatex">\(b\)</span> 而没有碰到粒子的概率</strong>，与 NeRF 中的透过率的概念对应</p>
-<blockquote>
-<p>一般把 <span class="arithmatex">\(1-T(t)\)</span> 称为<strong>不透明度</strong>，解释为<strong>累积分布函数（CDF）</strong>，表示射线在某时刻前到达距离 <span class="arithmatex">\(t\)</span> 处并在途中<strong>击中过粒子的概率</strong>，<span class="arithmatex">\(T(t) \cdot \sigma(t)\)</span> 是相应的<strong>概率密度函数（PDF）</strong>，它表示射线在距离 <span class="arithmatex">\(t\)</span> 处刚好停止的概率</p>
-</blockquote>
-<details class="warning" open="open">
-<summary>Tips</summary>
-<p>下文的 <strong>“颜色积分推导”</strong> 部分中也涉及到透射率 <span class="arithmatex">\(T(t)\)</span> 的推导（根据 Max 的论文），但我觉得上述的这个模型更加容易理解，且更加准确一点</p>
-</details>
-<h2 id="_2">颜色积分的推导<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>参考 1995 年 Max 的论文</p>
-</blockquote>
-<h3 id="_3">一、仅考虑吸收光（无散射、反射）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<figure>
-<p><a class="glightbox" href="../assets/2023-04-11-17-43-34.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/2023-04-11-17-43-34.png" width="350" /></a>
-  </p>
-<figcaption>Fig1. A slab of base area E and thickness ∆s.</figcaption>
-</figure>
-<p>假设粒子都是半径为 <span class="arithmatex">\(r\)</span> ，投影面积 <span class="arithmatex">\(A = \pi r^2\)</span> 的相同球体，<span class="arithmatex">\(\rho\)</span>  表示单位体积内的粒子数
-考虑一个小圆柱形的底板，底部的面积为 <span class="arithmatex">\(E\)</span> ，底板的厚度为 <span class="arithmatex">\(\Delta s\)</span>，光沿着垂直底面的方向 <span class="arithmatex">\(\Delta s\)</span>  流动。底板的体积 <span class="arithmatex">\(V=E \Delta s\)</span>，至少包含的粒子数目 <span class="arithmatex">\(N = \rho E \Delta s\)</span>，<strong>如果底板足够薄使得底面上的粒子投影很少重叠</strong>，那么这些粒子在底板上遮挡的总面积可以用 <span class="arithmatex">\(NA = \rho AE \Delta s\)</span> 表示</p>
-<p>则被遮挡的光线的比例可以计算：</p>
-<div class="arithmatex">\[
-\eta = \frac{\rho AE \Delta s}{E} = \rho A \Delta s
-\]</div>
-<p>进一步估计，当 <span class="arithmatex">\(\Delta s \rightarrow 0\)</span> 时，<strong>且粒子的重叠概率为 0 时</strong>，有如下微分方程成立：</p>
-<div class="arithmatex">\[
-\frac{d I}{d s}=-\rho(s) A I(s)=-\tau(s) I(s)
-\]</div>
-<p>上式中，<span class="arithmatex">\(s\)</span> 是沿着光流方向的一条射线上的<strong>长度参数</strong>，<span class="arithmatex">\(I(s)\)</span> 是距离为 <span class="arithmatex">\(s\)</span> 处的<strong>光强度</strong>
-<span class="arithmatex">\(\tau(s) = \rho(s) A\)</span> 是<strong>消光系数</strong>，<strong>定义了光线被遮挡的比例</strong>，上述微分方程的解如下：</p>
-<div class="arithmatex">\[
-I(s)=I_0 \exp \left(-\int_0^s \tau(t) d t\right)
-\]</div>
-<p><span class="arithmatex">\(I(0)\)</span> 是 <span class="arithmatex">\(s = 0\)</span> 处的光强度，是光线刚接触物体时的<strong>初始强度</strong></p>
-<p>从上式中可以提取出一个量：</p>
-<div class="arithmatex">\[
-T(s) = \exp \left(-\int_0^s \tau(t) d t\right)
-\]</div>
-<blockquote>
-<p>这个量是从距离 <span class="arithmatex">\(0 \rightarrow s\)</span> 的<strong>透射率</strong></p>
-</blockquote>
-<p>从透射率引出了<strong>体素的不透明度</strong> <span class="arithmatex">\(\alpha\)</span>，假设体素的边长为 <span class="arithmatex">\(l\)</span> ，当沿着一条边平行观察时：</p>
-<div class="arithmatex">\[
-\alpha = 1 - T(l) = 1 - \exp\left(-\int_0^l \tau(t) d t\right)
-\]</div>
-<h3 id="_4">二、仅考虑发射光（无吸收）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>如果 Fig1 中的粒子是透明的，但以每单位投影面积强度为 <span class="arithmatex">\(C\)</span> 在发光，则前文推导得出的投影面积 <span class="arithmatex">\(\rho A E \Delta s\)</span> 将会为底面 <span class="arithmatex">\(E\)</span> 贡献一个发光通量 <span class="arithmatex">\(C \rho A E \Delta s\)</span>，对于底面上每单位面积，增加的通光量为 <span class="arithmatex">\(C \rho A \Delta s\)</span>，则有以下微分方程成立：</p>
-<div class="arithmatex">\[
-\frac{d I}{d s}=C(s) \rho(s) A=C(s) \tau(s)=g(s)
-\]</div>
-<p>这里的 <span class="arithmatex">\(g(s)\)</span> 被称为<strong>源项</strong>，后面还会继续讨论它，包括反射、发射等，上述微分方程的解如下：</p>
-<div class="arithmatex">\[
-I(s)=I_0+\int_0^s g(t) d t
-\]</div>
-<h3 id="_5">三、考虑吸收和发射<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>合并一、二两个模型中的两个微分方程，可以得到以下微分方程：</p>
-<div class="arithmatex">\[
-\frac{d I}{d s} =g(s)-\tau(s) I(s)
-\]</div>
-<blockquote>
-<p>这里源项 <span class="arithmatex">\(g(s)\)</span> 是位置的任意函数，不再是之前的形式了</p>
-</blockquote>
-<p>在上式左右同乘一个式子，得到如下方程：</p>
-<div class="arithmatex">\[
-\left(\frac{d I}{d s}+\tau(s) I(s)\right) \exp \left(\int_0^s \tau(t) d t\right)=g(s) \exp \left(\int_0^s \tau(t) d t\right)
-\]</div>
-<p>上式左边是两个乘积的微分，可以合并：</p>
-<div class="arithmatex">\[
-\frac{d}{d s}\left(I(s) \exp \left(\int_0^s \tau(t) d t\right)\right)=g(s) \exp \left(\int_0^s \tau(t) d t\right)
-\]</div>
-<p>从 <span class="arithmatex">\(s = 0\)</span> 积分到 <span class="arithmatex">\(s = D\)</span>：</p>
-<div class="arithmatex">\[
-I(D) \exp \left(\int_0^D \tau(t) d t\right)-I_0=\int_0^D\left(g(s) \exp \left(\int_0^s \tau(t) d t\right)\right) d s
-\]</div>
-<p>移项后化简，可以得到：</p>
-<div class="arithmatex">\[
-I(D)=I_0 \exp \left(-\int_0^D \tau(t) d t\right)+\int_0^D g(s) \exp \left(-\int_s^D \tau(t) d t\right) d s
-\]</div>
-<blockquote>
-<p>上式的第一项是<strong>背景光源的光强</strong>，第二项是源项 <span class="arithmatex">\(g(s)\)</span> 在每个位置上的贡献积分</p>
-</blockquote>
-<p>写成透射率相关的形式如下所示：</p>
-<div class="arithmatex">\[
-I(D)=I_0 T(D)+\int_0^D g(s) T(s) d s
-\]</div>
-<p>对比 NeRF 中的颜色积分公式</p>
-<div class="arithmatex">\[
-C(\mathbf{r})=\int_{t_n}^{t_f} T(t) \sigma(\mathbf{r}(t)) \mathbf{c}(\mathbf{r}(t), \mathbf{d}) d t, \text{ where } T(t)=\exp \left(-\int_{t_n}^t \sigma(\mathbf{r}(s)) d s\right)
-\]</div>
-<p>我们可以发现：</p>
-<ul>
-<li>NeRF 忽略了背景光源带来的光强影响</li>
-<li>NeRF 把源项 <span class="arithmatex">\(g(s)\)</span> 写成了 <span class="arithmatex">\(\sigma(\mathbf{r}(t))\cdot\mathbf{c}(\mathbf{r}(t),\mathbf{d})\)</span> 的形式，其中 <span class="arithmatex">\(\sigma\)</span> 是概率密度函数</li>
-</ul>
-<p>此外这个公式和 NeRF 中的公式不一样，一个重要的原因是<strong>坐标系不同</strong>，在 NeRF 中<strong>相机中心为坐标原点</strong></p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>从<strong>概率的角度</strong>解释，<span class="arithmatex">\(T(t) \cdot \sigma(t)\)</span> 是光线在距离 <span class="arithmatex">\(t\)</span> 处停下的概率，<span class="arithmatex">\(c(t)dt\)</span> 是光线在距离 <span class="arithmatex">\(t\)</span> 处的颜色</p>
-</details>
-<h2 id="_6">分段体积渲染推导<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="_7">一、计算分段体积的颜色<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>文中假设了场景在一小块射线段 <span class="arithmatex">\([a,b]\)</span> 内为同质均匀介质，具有恒定颜色 <span class="arithmatex">\(\mathbf{c}_a\)</span> 和 密度 <span class="arithmatex">\(\sigma_a\)</span>
-体积介质的颜色可以如下计算：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\boldsymbol{C}(a \rightarrow b) &amp; =\int_a^b T(a \rightarrow t) \cdot \sigma(t) \cdot \mathbf{c}(t) d t \\
-&amp; =\sigma_a \cdot \mathbf{c}_a \int_a^b T(a \rightarrow t) d t \\
-&amp; =\sigma_a \cdot \mathbf{c}_a \int_a^b \exp \left(-\int_a^t \sigma(u) d u\right) d t \\
-&amp; =\sigma_a \cdot \mathbf{c}_a \int_a^b \exp \left(-\left.\sigma_a u\right|_a ^t\right) d t \\
-&amp; =\sigma_a \cdot \mathbf{c}_a \int_a^b \exp \left(-\sigma_a(t-a)\right) d t \\
-&amp; =\left.\sigma_a \cdot \mathbf{c}_a \cdot \frac{\exp \left(-\sigma_a(t-a)\right)}{-\sigma_a}\right|_a ^b \\
-&amp; =\mathbf{c}_a \cdot\left(1-\exp \left(-\sigma_a(b-a)\right)\right)
-\end{aligned}
-\]</div>
-<blockquote>
-<p>这个式子说明，如果是<strong>分段连续的介质</strong>，它在某一段内最终的颜色等于初始颜色与一个密度相关的<strong>常数</strong>的乘积（这也为后续的可微优化奠定了基础）</p>
-</blockquote>
-<h3 id="_8">二、计算分段体积的透射率<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>给定一组区间 <span class="arithmatex">\(\{[t_i,t_{i+1}]\}_{i=1}^{N}\)</span>，假设在第 <span class="arithmatex">\(i\)</span> 段区间内介质具有恒定密度 <span class="arithmatex">\(\sigma_i\)</span>，设 <span class="arithmatex">\(t_{1}=0\)</span> 和 <span class="arithmatex">\(\delta_{i} = t_{i+1} - t_{i}\)</span>，则透射率的表达式如下：</p>
-<div class="arithmatex">\[
-T_i=T\left(t_i\right)=T\left(0 \rightarrow t_i\right)=\exp \left(-\int_0^{t_i} \sigma(t) d t\right)=\exp \left(\sum_{j=1}^{i-1}-\sigma_j \delta_j\right)
-\]</div>
-<blockquote>
-<p>这里使用了<strong>微分</strong>的思想离散地计算这个积分值</p>
-</blockquote>
-<h3 id="_9">三、分段体积的渲染<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>结合第一部分和第二部分的计算结果，我们可以通过具有<strong>分段常数颜色和密度</strong>的介质来进行立体渲染计算最后的颜色：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\boldsymbol{C}\left(t_{N+1}\right) &amp; =\sum_{i=1}^N \int_{t_i}^{t_{i+1}} T(t) \cdot \sigma_i \cdot \mathbf{c}_i d t \\
-&amp; =\sum_{i=1}^N \int_{t_i}^{t_{i+1}} T\left(0 \rightarrow t_i\right) \cdot T\left(t_i \rightarrow t\right) \cdot \sigma_i \cdot \mathbf{c}_i d t \\
-&amp; =\sum_{i=1}^N T\left(0 \rightarrow t_i\right) \int_{t_i}^{t_{i+1}} T\left(t_i \rightarrow t\right) \cdot \sigma_i \cdot \mathbf{c}_i d t \\
-&amp; =\sum_{i=1}^N T\left(0 \rightarrow t_i\right) \cdot\left(1-\exp \left(-\sigma_i\left(t_{i+1}-t_i\right)\right)\right) \cdot \mathbf{c}_{i}\\
-&amp; =\sum_{i=1}^N T\left(0 \rightarrow t_i\right) \cdot\left(1-\exp \left(-\sigma_{i} \delta_{i}\right)\right) \cdot \mathbf{c}_i
-\end{aligned}
-\]</div>
-<p>对这个表达式的一些补充说明，对于第 <span class="arithmatex">\(i\)</span> 个区间 <span class="arithmatex">\([t_{i},t_{i+1}]\)</span>：</p>
-<ul>
-<li><span class="arithmatex">\(T(0 \rightarrow t_{i})\)</span> 是光线可以到达这个区间的<strong>概率</strong></li>
-<li><span class="arithmatex">\(1-\exp(-\sigma_{i} \delta_{i})\)</span> 是光线经过这段区间的<strong>折损率</strong></li>
-<li><span class="arithmatex">\(c_i\)</span> 是距离 <span class="arithmatex">\(t_{i}\)</span> 处 <strong>(区间入射点)的颜色</strong></li>
-</ul>
-<blockquote>
-<p><em>简单理解</em>：一束光首先要到达这个区域，然后经过这个区域的时候会有一些折损，最后要计算出射的时候的颜色</p>
-</blockquote>
-<p>原文中 NeRF 中的表达式是这样的：</p>
-<div class="arithmatex">\[
-\hat{C}(\mathbf{r})=\sum_{i=1}^N T_i\left(1-\exp \left(-\sigma_i \delta_i\right)\right) \mathbf{c}_i, \text { where } T_i=\exp \left(-\sum_{j=1}^{i-1} \sigma_j \delta_j\right)
-\]</div>
-<p>最后，我们可以用 Alpha 合成权重 <span class="arithmatex">\(\alpha_{i}=1-\exp({-\sigma_{i} \delta_{i})}\)</span> 来重写上述式子：</p>
-<div class="arithmatex">\[
-\boldsymbol{C}\left(t_{N+1}\right)=\sum_{n=i}^N T_i \cdot \alpha_i \cdot \mathbf{c}_i, \quad \text { where } \quad T_i=\prod_{i=1}^{N-1}\left(1-\alpha_i\right)
-\]</div>
-<h2 id="ndc">射线空间NDC 坐标系推导<a class="headerlink" href="#ndc" title="Permanent link">&para;</a></h2>
-<p>NDC (Normalized Device Coordinate，归一化设备空间坐标系)</p>
-<blockquote>
-<p>这个坐标系是以<strong>相机为原点</strong>的[-1, 1]的一个<strong>三维空间坐标系</strong>，不再区别 perspective 和 orthographics 投影，这个坐标系将真实世界 near--far 的空间压缩的一个<strong>相对坐标系</strong>，坐标值不具有空间的物理意义</p>
-</blockquote>
-<p>从相机空间到 NDC 空间的变换，用于齐次坐标的 3D 透视投影矩阵：</p>
-<div class="arithmatex">\[
-M=\left(\begin{array}{cccc}
-\frac{n}{r} &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \frac{n}{t} &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; \frac{-(f+n)}{f-n} &amp; \frac{-2 f n}{f-n} \\
-0 &amp; 0 &amp; -1 &amp; 0
-\end{array}\right)
-\]</div>
-<ul>
-<li><span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(f\)</span> 是<strong>近场和远场裁剪平面的位置</strong></li>
-<li><span class="arithmatex">\(r\)</span> 和 <span class="arithmatex">\(t\)</span> 是场景在<strong>近场裁剪平面右侧和顶部的边界</strong></li>
-<li>需要注意，这是在<strong>相机中心朝向 <span class="arithmatex">\(-z\)</span> 方向</strong>下的规定</li>
-</ul>
-<p><strong>如何推导出 M 矩阵（透视投影矩阵）？</strong></p>
-<blockquote>
-<p>参考 <a href="http://www.songho.ca/opengl/gl_projectionmatrix.html">OpenGL Projection Matrix</a></p>
-</blockquote>
-<figure>
-<p><a class="glightbox" href="../assets/2023-04-11-17-47-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/2023-04-11-17-47-10.png" width="550" /></a>
-  </p>
-<figcaption>Fig2. Perspective Frustum and NDC.</figcaption>
-</figure>
-<p>首先需要明确的是，M 矩阵集成了<strong>裁剪 3D 坐标系和转化到 NDC 空间的功能</strong></p>
-<p><strong>所以现在的坐标系有三个，依次为：3D 空间坐标系 &rarr; 裁剪坐标系 &rarr; NDC 坐标系</strong></p>
-<p>3D 空间坐标系又可以叫做人眼坐标系，三个坐标系之间的关系如下：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\left(\begin{array}{c}
-x_{\text {clip }} \\
-y_{\text {clip }} \\
-z_{\text {clip }} \\
-w_{\text {clip }}
-\end{array}\right)=M_{p r o j e c t i o n} \cdot\left(\begin{array}{c}
-x_{\text {eye }} \\
-y_{\text {eye }} \\
-z_{\text {eye }} \\
-w_{\text {eye }}
-\end{array}\right) \\
-\\
-\left(\begin{array}{l}
-x_{n d c} \\
-y_{n d c} \\
-z_{n d c}
-\end{array}\right)=\left(\begin{array}{l}
-x_{\text {clip }} / w_{c l i p} \\
-y_{c l i p} / w_{c l i p} \\
-z_{c l i p} / w_{c l i p}
-\end{array}\right)
-\end{aligned}
-\]</div>
-<blockquote>
-<p><strong>这里人眼坐标系和裁剪坐标系的坐标都用齐次坐标来表示</strong></p>
-</blockquote>
-<p>3D 空间坐标系是<strong>右手坐标系</strong>，而 NDC 空间使用的是<strong>左手坐标系</strong>，它们的 z 轴方向是相反的，在 3D 空间坐标系中，<strong>相机中心在原点，观察方向为 z 轴的负方向</strong></p>
-<p>3D 空间坐标系中的一个 3D 点会被投影在近平面(near plane，又叫投影平面）上</p>
-<p>下图展示了 3D 空间点 <span class="arithmatex">\((x_{e},y_{e},z_{e})\)</span> 如何投影到近平面上变成点 <span class="arithmatex">\((x_{p},y_{p})\)</span></p>
-<figure>
-<p><a class="glightbox" href="../assets/2023-04-11-17-51-39.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/2023-04-11-17-51-39.png" width="550" /></a>
-  </p>
-<figcaption>Fig3. 3D Projection.</figcaption>
-</figure>
-<p>从不同坐标轴视角来看，根据相似三角形，可以得到如下的坐标：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-x_p=\frac{-n \cdot x_e}{z_e}=\frac{n \cdot x_e}{-z_{e}}\\
-y_p=\frac{-n \cdot y_e}{z_e}=\frac{n \cdot y_e}{-z_{e}}
-\end{aligned}
-\]</div>
-<p>我们将裁剪坐标系的第四个分量设置为 <span class="arithmatex">\(-z_{e}\)</span>，这样 M 矩阵的第四行变成了 <span class="arithmatex">\((0,0,-1,0)\)</span></p>
-<p>接下来，将 <span class="arithmatex">\(x_{p}\)</span> 和 <span class="arithmatex">\(y_{p}\)</span> 映射到 NDC 坐标系中的 <span class="arithmatex">\(x_{n}\)</span> 和 <span class="arithmatex">\(y_{n}\)</span>，利用的映射关系是：</p>
-<div class="arithmatex">\[
-[l, r] \rightarrow [-1, 1] \quad \text{and} \quad [b, t] \rightarrow [-1, 1]
-\]</div>
-<figure>
-<p><a class="glightbox" href="../assets/2023-04-11-17-56-46.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/2023-04-11-17-56-46.png" width="550" /></a>
-  </p>
-<figcaption>Fig4. Formula deduction for mapping.</figcaption>
-</figure>
-<p>代入之前求得的 <span class="arithmatex">\(x_{p}\)</span> 和 <span class="arithmatex">\(y_{p}\)</span> 的值，我们可以得到 <span class="arithmatex">\((x_{n},y_{n})\)</span> 的表达式：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-x_{n} = (\underbrace{\frac{2 n}{r-l} \cdot x_e+\frac{r+l}{r-l} \cdot z_e}_{x_c}) /-z_{e}\\
-y_{n} = (\underbrace{\frac{2 n}{t-b} \cdot y_e+\frac{t+b}{t-b} \cdot z_e}_{y_c}) /-z_e
-\end{aligned}
-\]</div>
-<p>由于之前我们已经设裁剪坐标系的第四个分量为 <span class="arithmatex">\(-z_{e}\)</span>，于是这里直接可以不考虑分母，得到 M 矩阵的第一行和第二行分别为：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\left(\begin{array}{cccc}
-\frac{2 n}{r-l} &amp; 0 &amp; \frac{r+l}{r-l} &amp; 0 \\
-0 &amp; \frac{2 n}{t-b} &amp; \frac{t+b}{t-b} &amp; 0 \\
-. &amp; . &amp; . &amp; . \\
-0 &amp; 0 &amp; -1 &amp; 0
-\end{array}\right)
-\end{aligned}
-\]</div>
-<p>最后只需要计算第三行就可以得到 M 矩阵的完整表达式</p>
-<p>因为 <span class="arithmatex">\(z\)</span> 与 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 无关，我们可以借助 <span class="arithmatex">\(w\)</span> 分量来寻找 <span class="arithmatex">\(z_{n}\)</span> 和 <span class="arithmatex">\(z_{e}\)</span> 的关系</p>
-<p>利用<strong>待定系数法</strong>，设 M 矩阵为：</p>
-<div class="arithmatex">\[
-\left(\begin{array}{l}
-x_c \\
-y_c \\
-z_c \\
-w_c
-\end{array}\right)=\left(\begin{array}{cccc}
-\frac{2 n}{r-l} &amp; 0 &amp; \frac{r+l}{r-l} &amp; 0 \\
-0 &amp; \frac{2 n}{t-b} &amp; \frac{t+b}{t-b} &amp; 0 \\
-0 &amp; 0 &amp; A &amp; B \\
-0 &amp; 0 &amp; -1 &amp; 0
-\end{array}\right)\left(\begin{array}{l}
-x_e \\
-y_e \\
-z_e \\
-w_e
-\end{array}\right)
-\]</div>
-<blockquote>
-<p>其中 <span class="arithmatex">\(A, B\)</span> 是待解的参数</p>
-</blockquote>
-<p>在人眼坐标系中 <span class="arithmatex">\(w_{e} = 1\)</span>，代入解得：</p>
-<div class="arithmatex">\[
-z_n=\frac{A z_e+B}{-z_e}
-\]</div>
-<p>为了计算参数 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span>, 可以利用 <span class="arithmatex">\(z_{e}, z_{n}\)</span> 的关系：<span class="arithmatex">\((-n, -1)\)</span> 和 <span class="arithmatex">\((-f, 1)\)</span></p>
-<p>代入可列出方程组：</p>
-<div class="arithmatex">\[
-\left\{\begin{array} { l } 
-{ \frac { - A n + B } { n } = - 1 } \\
-{ \frac { - A f + B } { f } = 1 }
-\end{array} \rightarrow \left\{\begin{array}{l}
--A n+B=-n \\
--A f+B=f
-\end{array}\right.\right.
-\]</div>
-<p>解得参数 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 后可以得到完整的 M 矩阵表达式如下：</p>
-<div class="arithmatex">\[
-\left(\begin{array}{cccc}
-\frac{2 n}{r-l} &amp; 0 &amp; \frac{r+l}{r-l} &amp; 0 \\
-0 &amp; \frac{2 n}{t-b} &amp; \frac{t+b}{t-b} &amp; 0 \\
-0 &amp; 0 &amp; \frac{-(f+n)}{f-n} &amp; \frac{-2 f n}{f-n} \\
-0 &amp; 0 &amp; -1 &amp; 0
-\end{array}\right)
-\]</div>
-<p>如果人眼空间是对称的，即 <span class="arithmatex">\(l = -r, b = -t\)</span>，则 M 矩阵可以写成如下形式：</p>
-<div class="arithmatex">\[
-\left(\begin{array}{cccc}
-\frac{n}{r} &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \frac{n}{t} &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; \frac{-(f+n)}{f-n} &amp; \frac{-2 f n}{f-n} \\
-0 &amp; 0 &amp; -1 &amp; 0
-\end{array}\right)
-\]</div>
-<blockquote>
-<p>可以看到和 NeRF 中给出的公式是一致的</p>
-</blockquote>
-<p>有了透视投影矩阵 M 之后，我们可以将3D 齐次坐标投影到 NDC 坐标系中：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-&amp;\left(\begin{array}{cccc}
-\frac{n}{r} &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \frac{n}{t} &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; \frac{-(f+n)}{f-n} &amp; \frac{-2 f n}{f-n} \\
-0 &amp; 0 &amp; -1 &amp; 0
-\end{array}\right)\left(\begin{array}{l}
-x \\
-y \\
-z \\
-1
-\end{array}\right)=\left(\begin{array}{c}
-\frac{n}{r} x \\
-\frac{n}{t} y \\
-\frac{-(f+n)}{f-n} z-\frac{-2 f n}{f-n} \\
--z
-\end{array}\right) \\
-&amp; \text { project } \rightarrow\left(\begin{array}{c}
-\frac{n}{r} \frac{x}{-z} \\
-\frac{n}{t} \frac{y}{-z} \\
-\frac{(f+n)}{f-n}-\frac{2 f n}{f-n} \frac{1}{-z}
-\end{array}\right)
-\end{aligned}
-\]</div>
-<p><strong>投影之后得到的点是位于 NDC 空间中的，且原始视锥体已被映射到立方体 <span class="arithmatex">\(\left[-1,1 \right]^3\)</span> 上（因为做了裁剪）</strong></p>
-<p>现在将 3D 空间中的射线 <span class="arithmatex">\(\mathbf{r} = \mathbf{o} + t \mathbf{d}\)</span> 投影到 NDC 空间中，对应为 <span class="arithmatex">\(\mathbf{r}^{\prime} = \mathbf{o}^{\prime} + t^{\prime} \mathbf{d}^{\prime}\)</span> </p>
-<p>将得到的 NDC 空间中的投影点坐标写成这个形式：<span class="arithmatex">\(\left(a_x x / z, a_y y / z, a_z+b_z / z\right)^{\top}\)</span> </p>
-<blockquote>
-<p><em><span class="arithmatex">\(a_{x},a_{y},a_{z},b_{z}\)</span> 都是参数，为了书写表达式方便，后续会代入具体的客观值</em></p>
-</blockquote>
-<p>NDC 空间中光线 <span class="arithmatex">\(\mathbf{r}^{\prime}\)</span> 的参数分量 <span class="arithmatex">\((r_{x},r_{y},r_{z})\)</span> 满足下式：</p>
-<div class="arithmatex">\[
-\left(\begin{array}{c}
-a_x \frac{o_x+t d_x}{o_z+t d_z} \\
-a_y \frac{o_y+t d_y}{o_z+t d_z} \\
-a_z+\frac{b_z}{o_z+t d_z}
-\end{array}\right)=\left(\begin{array}{c}
-o_x^{\prime}+t^{\prime} d_x^{\prime} \\
-o_y^{\prime}+t^{\prime} d_y^{\prime} \\
-o_z^{\prime}+t^{\prime} d_z^{\prime}
-\end{array}\right)
-\]</div>
-<p>其中，<span class="arithmatex">\(\mathbf{r}_{i} = o_{i}+t\textbf{d}_{i},\quad \mathbf{r}^{\prime}_{i} = \mathbf{o}^{\prime}_{i} + t^{\prime} \mathbf{d}^{\prime}_{i}, \quad i=x,y,z\)</span> </p>
-<p>为了消除一个自由度，将 <span class="arithmatex">\(t^{\prime}=0\)</span> 和 <span class="arithmatex">\(t=0\)</span> 映射到同一点，则在 NDC 坐标系下光线中心的坐标为：</p>
-<div class="arithmatex">\[
-\mathbf{o}^{\prime}=\left(\begin{array}{c}
-o_x^{\prime} \\
-o_y^{\prime} \\
-o_z^{\prime}
-\end{array}\right)=\left(\begin{array}{c}
-a_x \frac{o_x}{o_z} \\
-a_y \frac{o_y}{o_z} \\
-a_z+\frac{b_z}{o_z}
-\end{array}\right)
-\]</div>
-<p>将光线中心的坐标代入到之前的表达式中，得到：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\left(\begin{array}{c}
-t^{\prime} d_x^{\prime} \\
-t^{\prime} d_y^{\prime} \\
-t^{\prime} d_z^{\prime}
-\end{array}\right) &amp; =\left(\begin{array}{c}
-a_x \frac{o_x+t d_x}{o_z+t d_z}-a_x \frac{o_x}{o_z} \\
-a_y \frac{o_y+t d_y}{o_z+t d_z}-a_y \frac{o_y}{o_z} \\
-a_z+\frac{b_z}{o_z+t d_z}-a_z-\frac{b_z}{o_z}
-\end{array}\right) \\
-&amp;=\left(\begin{array}{c}
-a_x \frac{t d_z}{o_z+t d_z}\left(\frac{d_x}{d_z}-\frac{o_x}{o_z}\right) \\
-a_y \frac{t d_z}{o_z+t d_z}\left(\frac{d_y}{d_z}-\frac{o_y}{o_z}\right) \\
--b_z \frac{t d_z}{o_z+t d_z} \frac{1}{o_z}
-\end{array}\right)
-\end{aligned}
-\]</div>
-<p>观察三个分量，可以发现 <span class="arithmatex">\(t^{\prime}\)</span> 的表达式如下：</p>
-<div class="arithmatex">\[
-t^{\prime}=\frac{t d_z}{o_z+t d_z}=1-\frac{o_z}{o_z+t d_z}
-\]</div>
-<p>同除 <span class="arithmatex">\(t^{\prime}\)</span> 之后也得到了 <span class="arithmatex">\(\mathbf{d}^{\prime}\)</span> 的表达式，如下：</p>
-<div class="arithmatex">\[
-\mathbf{d}^{\prime}=\left(\begin{array}{c}
-a_x\left(\frac{d_x}{d_z}-\frac{o_x}{o_z}\right) \\
-a_y\left(\frac{d_y}{d_z}-\frac{o_y}{o_z}\right) \\
--b_z \frac{1}{o_z}
-\end{array}\right)
-\]</div>
-<p>在推导的过程中，我们使用的常数最后需要确定下来，如下：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-a_x &amp; =-\frac{n}{r} \\
-a_y &amp; =-\frac{n}{t} \\
-a_z &amp; =\frac{f+n}{f-n} \\
-b_z &amp; =\frac{2 f n}{f-n}
-\end{aligned}
-\]</div>
-<p>基于<strong>标准针孔相机模型</strong>，我们可以将 <span class="arithmatex">\(a_{x},a_{y}\)</span> 的表达式如下参数化：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-&amp; a_x=-\frac{f_{c a m}}{W / 2} \\
-&amp; a_y=-\frac{f_{c a m}}{H / 2}
-\end{aligned}
-\]</div>
-<ul>
-<li><span class="arithmatex">\(W\)</span> 和 <span class="arithmatex">\(H\)</span> 是<strong>以像素为单位的图像的宽度和高度</strong></li>
-<li><span class="arithmatex">\(f_{cam}\)</span> 是<strong>相机的焦距</strong></li>
-</ul>
-<p>在实际的场景捕获中，假设远场的边界为无穷大，基于这样的假设，<span class="arithmatex">\(a_{z}\)</span> 和 <span class="arithmatex">\(b_{z}\)</span> 的表达式如下：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-a_z &amp; =1 \\
-b_z &amp; =2 n
-\end{aligned}
-\]</div>
-<p>最后，代入上述常量参数，我们最后求得的 NDC 座标系下的光线坐标为：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-&amp; \mathbf{o}^{\prime}=\left(\begin{array}{c}
--\frac{f_{c a m}}{W / 2} \frac{o_x}{o_z} \\
--\frac{f_{c a m}}{H / 2} \frac{o_y}{o_z} \\
-1+\frac{2 n}{o_z}
-\end{array}\right) \\
-&amp; \mathbf{d}^{\prime}=\left(\begin{array}{c}
--\frac{f_{c a m}}{W / 2}\left(\frac{d_x}{d_z}-\frac{o_x}{o_z}\right) \\
--\frac{f_{c a m}}{H / 2}\left(\frac{d_y}{d_z}-\frac{o_y}{o_z}\right) \\
--2 n \frac{1}{o_z}
-\end{array}\right)
-\end{aligned}
-\]</div>
-<p>至此，我们完成了 NDF 坐标系下光线坐标的推导
-整个过程中，需要理清楚各个坐标系之间的几何关系，以及哪些量是常量，哪些量是变量参数</p>
-<details class="tip" open="open">
-<summary>Supplementary materials</summary>
-<p><strong>一点补充：</strong></p>
-<p>NeRF 的原文中还提到了一个细节：在将光线转换到 NDC 坐标系之前，将 <span class="arithmatex">\(\mathbf{o}\)</span> 做了偏移，移动到了射线与 <span class="arithmatex">\(z=-n\)</span> 的<strong>近平面的交点处</strong>，这样的好处是，当光线转换到 NDC 坐标系之后，可以在 <span class="arithmatex">\([0,1]\)</span> <strong>区间内线性采样</strong> <span class="arithmatex">\(t^{\prime}\)</span>，以便在原始的 3D 空间中获得从 <span class="arithmatex">\(n\)</span> 到 <span class="arithmatex">\(\infty\)</span> 的<strong>视差线性采样</strong></p>
-<p>具体取值如下：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\mathbf{o}_{n} = \mathbf{o} + t_{n} \mathbf{d} \\
-t_{n} = \frac{n+o_{z}}{d_{z}}
-\end{aligned}
-\]</div>
-</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年8月9日 15:31:03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月14日 11:50:34</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年4月11日 18:16:30</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月14日 11:50:34</span>
       
     
   </small>
@@ -4358,7 +3782,7 @@ t_{n} = \frac{n+o_{z}}{d_{z}}
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../note/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 论文笔记" rel="prev">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 论文阅读" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4368,20 +3792,20 @@ t_{n} = \frac{n+o_{z}}{d_{z}}
                 上一页
               </span>
               <div class="md-ellipsis">
-                论文笔记
+                论文阅读
               </div>
             </div>
           </a>
         
         
           
-          <a href="../code/" class="md-footer__link md-footer__link--next" aria-label="下一页: 代码学习" rel="next">
+          <a href="../../learning_research/" class="md-footer__link md-footer__link--next" aria-label="下一页: 科研经验" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                代码学习
+                科研经验
               </div>
             </div>
             <div class="md-footer__button md-icon">
