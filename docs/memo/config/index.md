@@ -31,7 +31,7 @@ comments: false
 
     | &nbsp; | **环境搭建** | &nbsp; |
     | :---- | :----: | :---- |
-    | [:fontawesome-brands-windows: Windows](config/win/index.md) | [:fontawesome-brands-apple: Mac](config/mac/index.md) | [:fontawesome-brands-linux: Linux](config/linux/index.md) |
+    | [:fontawesome-brands-windows: Windows](./win/index.md) | [:fontawesome-brands-apple: Mac](./mac/index.md) | [:fontawesome-brands-linux: Linux](./linux/index.md) |
 
     </div>
 

@@ -28,11 +28,11 @@ comments: false
 
     <div style="text-align: center" markdown="1">
 
-    | &nbsp; | **编程语言** | &nbsp; |
-    | :---- | :---- | :---- |
-    | [:simple-cplusplus: C++](pl/cpp/index.md) | [:simple-python: Python](pl/python/index.md) | [:simple-go: Go](pl/go/index.md) |
-    | [:simple-rust: Rust](pl/rust/index.md) | [:simple-julia: Julia](pl/julia/index.md) | [:simple-lua: Lua](pl/lua/index.md) |
-    | [:simple-taichilang: Taichi](pl/taichi/index.md)|  |  |
+    | &nbsp;                                          |                  **编程语言**               | &nbsp;                             |
+    |:------------------------------------------------|:--------------------------------------------|:-----------------------------------|
+    | [:simple-cplusplus: C++](./cpp/index.md)        | [:simple-python: Python](./python/index.md) | [:simple-go: Go](./go/index.md)    |
+    | [:simple-rust: Rust](./rust/index.md)           | [:simple-julia: Julia](./julia/index.md)    | [:simple-lua: Lua](./lua/index.md) |
+    | [:simple-taichilang: Taichi](./taichi/index.md) |                                             |                                    |
 
     </div>
 
