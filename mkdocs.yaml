@@ -7,7 +7,7 @@ repo_name: cxzhou35/notebook
 repo_url: https://github.com/cxzhou35/notebook/
 edit_uri: tree/main/docs/
 
-copyright: Copyright &copy; 2022-2023 <a href="https://github.com/cxzhou35" target="_blank" rel="noopener">Zicx</a>
+copyright: Copyright &copy; 2023-2024 <a href="https://github.com/cxzhou35" target="_blank" rel="noopener">Zicx</a>
 
 nav:
   - "主页":
@@ -77,7 +77,7 @@ nav:
               - memo/tool/matlab/index.md
           - "Conda":
               - memo/tool/conda/index.md
-          - "Pytorch":
+          - "PyTorch":
               - memo/tool/pytorch/index.md
           - "Markdown":
               - memo/tool/markdown/index.md
@@ -87,6 +87,8 @@ nav:
               - memo/tool/ffmpeg/index.md
       - "编程语言":
           - memo/pl/index.md
+          - "C":
+              - memo/pl/c/index.md
           - "C++":
               - memo/pl/cpp/index.md
           - "Python":
@@ -172,18 +174,18 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
-    - content.code.annotate
-    - content.code.copy
-    - content.action.edit
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.indexes
-    - navigation.top
-    - navigation.footer
-    - search.highlight
+    - toc.follow
     - search.share
     - search.suggest
-    - toc.follow
+    - search.highlight
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
   custom_dir: overrides
 
 plugins:
@@ -209,23 +211,23 @@ plugins:
 markdown_extensions:
   - toc:
       permalink: true # link for each title
-  - admonition
   - abbr
-  - attr_list
-  - def_list
-  - tables
-  - footnotes
   - meta
+  - tables
+  - def_list
+  - footnotes
+  - attr_list
+  - admonition
   - md_in_html
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.snippets
-  - pymdownx.details
-  - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.mark
-  - pymdownx.smartsymbols
+  - pymdownx.caret
   - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.smartsymbols
   - pymdownx.magiclink:
       repo_url_shortener: true
       repo_url_shorthand: true
@@ -283,13 +285,10 @@ extra_css:
   - _css/card.css
 
 extra_javascript:
-  # mermaid support
-  # - https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js
-
   # katex support
   - _js/katex.js
   - https://cdn.tonycrane.cc/utils/katex.min.js
 
   # table sort support
-  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - _js/tablesort.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
