@@ -71,7 +71,7 @@ nav:
               - memo/tool/latex/index.md
           - "NumPy":
               - memo/tool/numpy/index.md
-          - "Neoim":
+          - "Neovim":
               - memo/tool/nvim/index.md
           - "MATLAB":
               - memo/tool/matlab/index.md

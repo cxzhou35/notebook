@@ -5,7 +5,7 @@ comments: true
 # Pytorch
 
 !!! abstract "Abstract"
-    最近在复现论文，在这里记录一些 Pytorch 相关的内容以及一些有用的 tricks
+    最近在复现论文，在这里记录一些Pytorch相关的内容以及一些有用的tricks
 
     - 官方教程：[Pytorch Tutorial](https://pytorch.org/tutorials/)
     - 官方文档：[Pytorch documentation](https://pytorch.org/docs/stable/index.html)
