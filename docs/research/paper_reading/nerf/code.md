@@ -111,7 +111,7 @@
 - fine
     - input: $\sigma$, $RGB_{coarse}$
     - output: $RGB_{fine}$
- 
+
 <figure markdown>
   ![](./assets/2023-04-11-18-10-20.png){ width="550" }
   <figcaption>Fig1. MLP architecture of NeRF</figcaption>

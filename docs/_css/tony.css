@@ -222,3 +222,39 @@ p {
 .markdown-source-view.mod-cm6 .cm-content > * {
   margin: auto auto !important;
 }
+
+.toc-tag {
+  background-color: #3f6ec6b0;
+  border-radius: 3px;
+  font-size: 80%;
+  padding: 3px;
+}
+
+.toc-tag-classnotes {
+  background-color: #e6ad5bb0;
+}
+
+.toc-tag-classnotes::before {
+  content: "课程笔记";
+}
+
+.toc-tag-reports {
+  background-color: #3f6ec6b0;
+}
+
+.toc-tag-reports::before {
+  content: "实验报告";
+}
+
+.reference ol {
+  counter-reset: li;
+}
+.reference li {
+  padding-left: 0.7em;
+  counter-increment: li;
+  word-break: break-all;
+}
+.reference li::marker {
+  content: "[" counter(li) "]";
+  font-size: 0.8em;
+}

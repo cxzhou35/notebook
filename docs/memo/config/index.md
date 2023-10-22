@@ -29,8 +29,8 @@ comments: false
 
     <div style="text-align: center" markdown="1">
 
-    | &nbsp; | **环境搭建** | &nbsp; |
-    | :---- | :----: | :---- |
+    | &nbsp;                                                 |                   **环境搭建**                   | &nbsp;                                               |
+    |:-------------------------------------------------------|:------------------------------------------------:|:-----------------------------------------------------|
     | [:fontawesome-brands-windows: Windows](./win/index.md) | [:fontawesome-brands-apple: Mac](./mac/index.md) | [:fontawesome-brands-linux: Linux](./linux/index.md) |
 
     </div>
@@ -38,4 +38,3 @@ comments: false
     ---
 
     > ***Icon Source***: [mkdocs-material-icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)
-

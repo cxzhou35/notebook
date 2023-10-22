@@ -4,7 +4,7 @@
     NeRF 论文的阅读笔记
 
     :octicons-cross-reference-16: 参考资料
-    
+
     - https://yconquesty.github.io/blog/ml/nerf/
 
     <p align="right">-- By @Zicx</p>

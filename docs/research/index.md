@@ -11,6 +11,4 @@ comments: false
 
     - [论文阅读](./paper_reading/)
 
-    - [科研经验](./learning_research/) 
-
-
+    - [科研经验](./learning_research/)

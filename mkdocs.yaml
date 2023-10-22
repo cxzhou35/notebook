@@ -61,6 +61,8 @@ nav:
           - memo/tool/index.md
           - "Git":
               - memo/tool/git/index.md
+          - "VSCode":
+              - memo/tool/vscode/index.md
           - "Shell":
               - memo/tool/shell/index.md
           - "CMake":
@@ -283,6 +285,7 @@ extra_css:
   - _css/flink.css
   - _css/tony.css
   - _css/card.css
+  - _css/neoteroi-mkdocs.css
 
 extra_javascript:
   # katex support

@@ -28,7 +28,7 @@ comments: false
 
     <div style="text-align: center" markdown="1">
 
-    | &nbsp;                                          |                  **编程语言**               | &nbsp;                             |
+    | &nbsp;                                          | **编程语言**                                | &nbsp;                             |
     |:------------------------------------------------|:--------------------------------------------|:-----------------------------------|
     | [:simple-cplusplus: C++](./cpp/index.md)        | [:simple-python: Python](./python/index.md) | [:simple-go: Go](./go/index.md)    |
     | [:simple-rust: Rust](./rust/index.md)           | [:simple-julia: Julia](./julia/index.md)    | [:simple-lua: Lua](./lua/index.md) |
