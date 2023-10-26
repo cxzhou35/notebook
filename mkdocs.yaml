@@ -194,6 +194,7 @@ plugins:
   - glightbox
   - tags
   - search
+  - toc
   - statistics:
       page_check_metadata: comments
   - git-revision-date-localized:
