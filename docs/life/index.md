@@ -7,10 +7,9 @@ comments: false
 
 !!! info "Info"
 
-    记录生活，涵盖以下内容：
+    记录一下生活 :)
 
-    - [影视](./film/)
+    - [影视](./film/index.md)
 
-    - [阅读](./reading/) 
-
+    - [阅读](./reading/index.md) 
 
