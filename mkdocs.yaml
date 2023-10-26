@@ -300,4 +300,4 @@ extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
 
   # comments
-  - _js/scheme.js
+  # - _js/scheme.js
