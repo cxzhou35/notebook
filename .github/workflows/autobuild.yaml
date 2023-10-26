@@ -22,5 +22,10 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-statistics-plugin
+      - run: pip install mkdocs-heti-plugin
       - run: pip install mkdocs-git-revision-date-localized-plugin
+      - run: git clone https://github.com/TonyCrane/mkdocs-toolchain.git
+      - run: cd mkdocs-toolchain/mkdocs-toc-plugin
+      - run: pip install .
+      - run: cd ../..
       - run: mkdocs gh-deploy --force
