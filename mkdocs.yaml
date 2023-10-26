@@ -196,7 +196,7 @@ plugins:
   - search
   - heti:
       disable_serve: false
-  - toc
+  # - toc
   - statistics:
       page_check_metadata: comments
   - git-revision-date-localized:
