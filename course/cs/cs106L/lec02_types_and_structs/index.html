@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-
 <html class="no-js" lang="zh">
 <head>
 <meta charset="utf-8"/>
@@ -11,10 +9,12 @@
 <link href="../lec01_intro/" rel="prev"/>
 <link href="../../cs231n/" rel="next"/>
 <link href="../../../../paw.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.4.6" name="generator"/>
 <title>类型和结构 - Zicx 的笔记本</title>
-<link href="../../../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.35e1ed30.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
+<link href="../../../../css/toc_extra.css" rel="stylesheet"/>
+<link href="../../../../css/heti.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
@@ -26,18 +26,18 @@
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-02XSVD1LHD"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-02XSVD1LHD",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-02XSVD1LHD",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-            html.glightbox-open { overflow: initial; height: 100%; }
-            .gslide-title { margin-top: 0px; user-select: text; }
-            .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: white; }
-            
-                .gscrollbar-fixer { padding-right: 15px; }
-                .gdesc-inner { font-size: 0.75rem; }
-                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -74,11 +74,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -120,7 +120,7 @@
 <div class="md-header__source">
 <a class="md-source" data-md-component="source" href="https://github.com/cxzhou35/notebook/" title="前往仓库">
 <div class="md-source__icon md-icon">
-<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
     cxzhou35/notebook
@@ -131,37 +131,67 @@
 </header>
 <div class="md-container" data-md-component="container">
 <nav aria-label="标签" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
+<div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../..">
-        主页
-      </a>
+          
+  
+    
+  
+  主页
+
+        </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../../">
-        课程笔记
-      </a>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../">
+          
+  
+    
+  
+  课程笔记
+
+        </a>
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../../memo/">
-        备忘录
-      </a>
+          
+  
+    
+  
+  备忘录
+
+        </a>
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../../research/">
-        科研
-      </a>
+          
+  
+    
+  
+  科研
+
+        </a>
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../../life/">
-        生活
-      </a>
+          
+  
+    
+  
+  生活
+
+        </a>
 </li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../../others/">
-        杂项
-      </a>
+          
+  
+    
+  
+  杂项
+
+        </a>
 </li>
 </ul>
 </div>
@@ -181,7 +211,7 @@
 <div class="md-nav__source">
 <a class="md-source" data-md-component="source" href="https://github.com/cxzhou35/notebook/" title="前往仓库">
 <div class="md-source__icon md-icon">
-<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
     cxzhou35/notebook
@@ -189,89 +219,115 @@
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../..">主页</a>
-<label for="__nav_1">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    主页
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="主页" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
-          主页
-        </label>
+            主页
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../diss/">
-        讨论区
-      </a>
+<span class="md-ellipsis">
+    讨论区
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../update/">
-        近期更新
-      </a>
+<span class="md-ellipsis">
+    近期更新
+  </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../">课程笔记</a>
-<label for="__nav_2">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../">
+<span class="md-ellipsis">
+    课程笔记
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="课程笔记" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
-          课程笔记
-        </label>
+            课程笔记
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../">计算机科学</a>
-<label for="__nav_2_2">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    计算机科学
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="计算机科学" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
-          计算机科学
-        </label>
+            计算机科学
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_2" id="__nav_2_2_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../">CS106L</a>
-<label for="__nav_2_2_2">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    CS106L
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="CS106L" class="md-nav" data-md-level="3">
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_2_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_2">
 <span class="md-nav__icon md-icon"></span>
-          CS106L
-        </label>
+            CS106L
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../lec01_intro/">
-        课程介绍
-      </a>
+<span class="md-ellipsis">
+    课程介绍
+  </span>
+</a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          类型和结构
-          <span class="md-nav__icon md-icon"></span>
+<span class="md-ellipsis">
+    类型和结构
+  </span>
+<span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        类型和结构
-      </a>
+<span class="md-ellipsis">
+    类型和结构
+  </span>
+</a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
 <span class="md-nav__icon md-icon"></span>
@@ -315,112 +371,144 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../cs231n/">CS231n</a>
-<label for="__nav_2_2_3">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../cs231n/">
+<span class="md-ellipsis">
+    CS231n
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="CS231n" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_3_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_3">
 <span class="md-nav__icon md-icon"></span>
-          CS231n
-        </label>
+            CS231n
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../cs231n/lec01_introduction_overview/">
-        课程介绍
-      </a>
+<span class="md-ellipsis">
+    课程介绍
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../cs231n/lec02_image_classification/">
-        图像分类任务
-      </a>
+<span class="md-ellipsis">
+    图像分类任务
+  </span>
+</a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_4" id="__nav_2_2_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../dlsys/">Deep Learning Systems</a>
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../dlsys/">
+<span class="md-ellipsis">
+    Deep Learning Systems
+  </span>
+</a>
 </div>
-<nav aria-label="Deep Learning Systems" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_4_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_4">
 <span class="md-nav__icon md-icon"></span>
-          Deep Learning Systems
-        </label>
+            Deep Learning Systems
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_5" id="__nav_2_2_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../ds/">数据结构与算法</a>
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../ds/">
+<span class="md-ellipsis">
+    数据结构与算法
+  </span>
+</a>
 </div>
-<nav aria-label="数据结构与算法" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_5_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_5">
 <span class="md-nav__icon md-icon"></span>
-          数据结构与算法
-        </label>
+            数据结构与算法
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_6" id="__nav_2_2_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../icv/">计算机视觉导论</a>
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../icv/">
+<span class="md-ellipsis">
+    计算机视觉导论
+  </span>
+</a>
 </div>
-<nav aria-label="计算机视觉导论" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_6_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_6">
 <span class="md-nav__icon md-icon"></span>
-          计算机视觉导论
-        </label>
+            计算机视觉导论
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_7" id="__nav_2_2_7" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../na/">数值分析</a>
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../na/">
+<span class="md-ellipsis">
+    数值分析
+  </span>
+</a>
 </div>
-<nav aria-label="数值分析" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_7_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_7">
 <span class="md-nav__icon md-icon"></span>
-          数值分析
-        </label>
+            数值分析
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_8" id="__nav_2_2_8" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../oop/">面向对象编程</a>
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../oop/">
+<span class="md-ellipsis">
+    面向对象编程
+  </span>
+</a>
 </div>
-<nav aria-label="面向对象编程" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_8_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_8">
 <span class="md-nav__icon md-icon"></span>
-          面向对象编程
-        </label>
+            面向对象编程
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_9" id="__nav_2_2_9" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../os/">操作系统</a>
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../os/">
+<span class="md-ellipsis">
+    操作系统
+  </span>
+</a>
 </div>
-<nav aria-label="操作系统" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_9_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_9">
 <span class="md-nav__icon md-icon"></span>
-          操作系统
-        </label>
+            操作系统
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -429,29 +517,37 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../opt/">光电</a>
-<label for="__nav_2_3">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../opt/">
+<span class="md-ellipsis">
+    光电
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="光电" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_3">
 <span class="md-nav__icon md-icon"></span>
-          光电
-        </label>
+            光电
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" id="__nav_2_3_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../opt/optoelec/">光电子学</a>
+<input class="md-nav__toggle md-toggle" id="__nav_2_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../opt/optoelec/">
+<span class="md-ellipsis">
+    光电子学
+  </span>
+</a>
 </div>
-<nav aria-label="光电子学" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_2_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_3_2">
 <span class="md-nav__icon md-icon"></span>
-          光电子学
-        </label>
+            光电子学
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -460,15 +556,19 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" id="__nav_2_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../math/">数学</a>
+<input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../math/">
+<span class="md-ellipsis">
+    数学
+  </span>
+</a>
 </div>
-<nav aria-label="数学" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_4">
 <span class="md-nav__icon md-icon"></span>
-          数学
-        </label>
+            数学
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -476,226 +576,290 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/">备忘录</a>
-<label for="__nav_3">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/">
+<span class="md-ellipsis">
+    备忘录
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="备忘录" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
-          备忘录
-        </label>
+            备忘录
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/">常用工具</a>
-<label for="__nav_3_2">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/">
+<span class="md-ellipsis">
+    常用工具
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="常用工具" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
-          常用工具
-        </label>
+            常用工具
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" id="__nav_3_2_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/git/">Git</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/git/">
+<span class="md-ellipsis">
+    Git
+  </span>
+</a>
 </div>
-<nav aria-label="Git" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_2_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_2">
 <span class="md-nav__icon md-icon"></span>
-          Git
-        </label>
+            Git
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" id="__nav_3_2_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/vscode/">VSCode</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/vscode/">
+<span class="md-ellipsis">
+    VSCode
+  </span>
+</a>
 </div>
-<nav aria-label="VSCode" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_3_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_3">
 <span class="md-nav__icon md-icon"></span>
-          VSCode
-        </label>
+            VSCode
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_4" id="__nav_3_2_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/shell/">Shell</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/shell/">
+<span class="md-ellipsis">
+    Shell
+  </span>
+</a>
 </div>
-<nav aria-label="Shell" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_4_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_4">
 <span class="md-nav__icon md-icon"></span>
-          Shell
-        </label>
+            Shell
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_5" id="__nav_3_2_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/cmake/">CMake</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/cmake/">
+<span class="md-ellipsis">
+    CMake
+  </span>
+</a>
 </div>
-<nav aria-label="CMake" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_5_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_5">
 <span class="md-nav__icon md-icon"></span>
-          CMake
-        </label>
+            CMake
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_6" id="__nav_3_2_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/docker/">Docker</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/docker/">
+<span class="md-ellipsis">
+    Docker
+  </span>
+</a>
 </div>
-<nav aria-label="Docker" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_6_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_6">
 <span class="md-nav__icon md-icon"></span>
-          Docker
-        </label>
+            Docker
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_7" id="__nav_3_2_7" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/latex/">LaTeX</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/latex/">
+<span class="md-ellipsis">
+    LaTeX
+  </span>
+</a>
 </div>
-<nav aria-label="LaTeX" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_7_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_7">
 <span class="md-nav__icon md-icon"></span>
-          LaTeX
-        </label>
+            LaTeX
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_8" id="__nav_3_2_8" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/numpy/">NumPy</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/numpy/">
+<span class="md-ellipsis">
+    NumPy
+  </span>
+</a>
 </div>
-<nav aria-label="NumPy" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_8_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_8">
 <span class="md-nav__icon md-icon"></span>
-          NumPy
-        </label>
+            NumPy
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_9" id="__nav_3_2_9" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/nvim/">Neovim</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/nvim/">
+<span class="md-ellipsis">
+    Neovim
+  </span>
+</a>
 </div>
-<nav aria-label="Neovim" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_9_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_9">
 <span class="md-nav__icon md-icon"></span>
-          Neovim
-        </label>
+            Neovim
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_10" id="__nav_3_2_10" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/matlab/">MATLAB</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_10" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/matlab/">
+<span class="md-ellipsis">
+    MATLAB
+  </span>
+</a>
 </div>
-<nav aria-label="MATLAB" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_10_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_10">
 <span class="md-nav__icon md-icon"></span>
-          MATLAB
-        </label>
+            MATLAB
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_11" id="__nav_3_2_11" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/conda/">Conda</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_11" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/conda/">
+<span class="md-ellipsis">
+    Conda
+  </span>
+</a>
 </div>
-<nav aria-label="Conda" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_11_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_11">
 <span class="md-nav__icon md-icon"></span>
-          Conda
-        </label>
+            Conda
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_12" id="__nav_3_2_12" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/pytorch/">PyTorch</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_12" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/pytorch/">
+<span class="md-ellipsis">
+    PyTorch
+  </span>
+</a>
 </div>
-<nav aria-label="PyTorch" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_12_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_12">
 <span class="md-nav__icon md-icon"></span>
-          PyTorch
-        </label>
+            PyTorch
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_13" id="__nav_3_2_13" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/markdown/">Markdown</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_13" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/markdown/">
+<span class="md-ellipsis">
+    Markdown
+  </span>
+</a>
 </div>
-<nav aria-label="Markdown" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_13_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_13">
 <span class="md-nav__icon md-icon"></span>
-          Markdown
-        </label>
+            Markdown
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_14" id="__nav_3_2_14" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/tmux/">Tmux</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_14" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/tmux/">
+<span class="md-ellipsis">
+    Tmux
+  </span>
+</a>
 </div>
-<nav aria-label="Tmux" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_14_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_14">
 <span class="md-nav__icon md-icon"></span>
-          Tmux
-        </label>
+            Tmux
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_15" id="__nav_3_2_15" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/tool/ffmpeg/">FFmpeg</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_15" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/tool/ffmpeg/">
+<span class="md-ellipsis">
+    FFmpeg
+  </span>
+</a>
 </div>
-<nav aria-label="FFmpeg" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_15_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_15">
 <span class="md-nav__icon md-icon"></span>
-          FFmpeg
-        </label>
+            FFmpeg
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -704,155 +868,201 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" id="__nav_3_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/">编程语言</a>
-<label for="__nav_3_3">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/">
+<span class="md-ellipsis">
+    编程语言
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="编程语言" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
-          编程语言
-        </label>
+            编程语言
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" id="__nav_3_3_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/c/">C</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/c/">
+<span class="md-ellipsis">
+    C
+  </span>
+</a>
 </div>
-<nav aria-label="C" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_2_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_2">
 <span class="md-nav__icon md-icon"></span>
-          C
-        </label>
+            C
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_3" id="__nav_3_3_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/cpp/">C++</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/cpp/">
+<span class="md-ellipsis">
+    C++
+  </span>
+</a>
 </div>
-<nav aria-label="C++" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_3_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_3">
 <span class="md-nav__icon md-icon"></span>
-          C++
-        </label>
+            C++
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_4" id="__nav_3_3_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/python/">Python</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/python/">
+<span class="md-ellipsis">
+    Python
+  </span>
+</a>
 </div>
-<nav aria-label="Python" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_4_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_4">
 <span class="md-nav__icon md-icon"></span>
-          Python
-        </label>
+            Python
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_5" id="__nav_3_3_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/go/">Go</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/go/">
+<span class="md-ellipsis">
+    Go
+  </span>
+</a>
 </div>
-<nav aria-label="Go" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_5_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_5">
 <span class="md-nav__icon md-icon"></span>
-          Go
-        </label>
+            Go
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_6" id="__nav_3_3_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/rust/">Rust</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/rust/">
+<span class="md-ellipsis">
+    Rust
+  </span>
+</a>
 </div>
-<nav aria-label="Rust" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_6_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_6">
 <span class="md-nav__icon md-icon"></span>
-          Rust
-        </label>
+            Rust
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_7" id="__nav_3_3_7" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/julia/">Julia</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/julia/">
+<span class="md-ellipsis">
+    Julia
+  </span>
+</a>
 </div>
-<nav aria-label="Julia" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_7_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_7">
 <span class="md-nav__icon md-icon"></span>
-          Julia
-        </label>
+            Julia
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_8" id="__nav_3_3_8" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/lua/">Lua</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/lua/">
+<span class="md-ellipsis">
+    Lua
+  </span>
+</a>
 </div>
-<nav aria-label="Lua" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_8_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_8">
 <span class="md-nav__icon md-icon"></span>
-          Lua
-        </label>
+            Lua
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_9" id="__nav_3_3_9" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/pl/taichi/">Taichi</a>
-<label for="__nav_3_3_9">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/pl/taichi/">
+<span class="md-ellipsis">
+    Taichi
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_3_9" id="__nav_3_3_9_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Taichi" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_9_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_3_9">
 <span class="md-nav__icon md-icon"></span>
-          Taichi
-        </label>
+            Taichi
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../memo/pl/taichi/01_intro/">
-        Introduction
-      </a>
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../memo/pl/taichi/02_kernel_and_function/">
-        Kernels &amp; Functions
-      </a>
+<span class="md-ellipsis">
+    Kernels &amp; Functions
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../memo/pl/taichi/03_type_system/">
-        Type System
-      </a>
+<span class="md-ellipsis">
+    Type System
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../memo/pl/taichi/04_data_container/">
-        Data Containers
-      </a>
+<span class="md-ellipsis">
+    Data Containers
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../memo/pl/taichi/05_differentiable_programming/">
-        Differentiable Programming
-      </a>
+<span class="md-ellipsis">
+    Differentiable Programming
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -861,43 +1071,55 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/config/">环境搭建</a>
-<label for="__nav_3_4">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/config/">
+<span class="md-ellipsis">
+    环境搭建
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="环境搭建" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
-          环境搭建
-        </label>
+            环境搭建
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2" id="__nav_3_4_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/config/win/">Windows</a>
-<label for="__nav_3_4_2">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/config/win/">
+<span class="md-ellipsis">
+    Windows
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Windows" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_2_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_4_2">
 <span class="md-nav__icon md-icon"></span>
-          Windows
-        </label>
+            Windows
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_2_2" id="__nav_3_4_2_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/config/win/scoop/">Scoop</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_4_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/config/win/scoop/">
+<span class="md-ellipsis">
+    Scoop
+  </span>
+</a>
 </div>
-<nav aria-label="Scoop" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_2_2_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_3_4_2_2">
 <span class="md-nav__icon md-icon"></span>
-          Scoop
-        </label>
+            Scoop
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -906,29 +1128,37 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_3" id="__nav_3_4_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/config/mac/">Mac</a>
-<label for="__nav_3_4_3">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/config/mac/">
+<span class="md-ellipsis">
+    Mac
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="Mac" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_3_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_4_3">
 <span class="md-nav__icon md-icon"></span>
-          Mac
-        </label>
+            Mac
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_3_2" id="__nav_3_4_3_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/config/mac/homebrew/">Homebrew</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_4_3_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/config/mac/homebrew/">
+<span class="md-ellipsis">
+    Homebrew
+  </span>
+</a>
 </div>
-<nav aria-label="Homebrew" class="md-nav" data-md-level="4">
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_3_2_label" class="md-nav" data-md-level="4">
 <label class="md-nav__title" for="__nav_3_4_3_2">
 <span class="md-nav__icon md-icon"></span>
-          Homebrew
-        </label>
+            Homebrew
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -937,15 +1167,19 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4_4" id="__nav_3_4_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../memo/config/linux/">Linux</a>
+<input class="md-nav__toggle md-toggle" id="__nav_3_4_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../memo/config/linux/">
+<span class="md-ellipsis">
+    Linux
+  </span>
+</a>
 </div>
-<nav aria-label="Linux" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_4_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_4_4">
 <span class="md-nav__icon md-icon"></span>
-          Linux
-        </label>
+            Linux
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -956,62 +1190,80 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../research/">科研</a>
-<label for="__nav_4">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../research/">
+<span class="md-ellipsis">
+    科研
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="科研" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
-          科研
-        </label>
+            科研
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../research/paper_reading/">论文阅读</a>
-<label for="__nav_4_2">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../research/paper_reading/">
+<span class="md-ellipsis">
+    论文阅读
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="论文阅读" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_4_2">
 <span class="md-nav__icon md-icon"></span>
-          论文阅读
-        </label>
+            论文阅读
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" id="__nav_4_2_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../research/paper_reading/nerf/">NeRF</a>
-<label for="__nav_4_2_2">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../research/paper_reading/nerf/">
+<span class="md-ellipsis">
+    NeRF
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="NeRF" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_2_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_4_2_2">
 <span class="md-nav__icon md-icon"></span>
-          NeRF
-        </label>
+            NeRF
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../research/paper_reading/nerf/note/">
-        论文笔记
-      </a>
+<span class="md-ellipsis">
+    论文笔记
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../research/paper_reading/nerf/math/">
-        数学推导
-      </a>
+<span class="md-ellipsis">
+    数学推导
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../../research/paper_reading/nerf/code/">
-        代码学习
-      </a>
+<span class="md-ellipsis">
+    代码学习
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -1020,15 +1272,19 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../research/learning_research/">科研经验</a>
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../research/learning_research/">
+<span class="md-ellipsis">
+    科研经验
+  </span>
+</a>
 </div>
-<nav aria-label="科研经验" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
-          科研经验
-        </label>
+            科研经验
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -1036,44 +1292,56 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../life/">生活</a>
-<label for="__nav_5">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../life/">
+<span class="md-ellipsis">
+    生活
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-label="生活" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
-          生活
-        </label>
+            生活
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../life/film/">影视</a>
+<input class="md-nav__toggle md-toggle" id="__nav_5_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../life/film/">
+<span class="md-ellipsis">
+    影视
+  </span>
+</a>
 </div>
-<nav aria-label="影视" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_5_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_2">
 <span class="md-nav__icon md-icon"></span>
-          影视
-        </label>
+            影视
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../life/reading/">阅读</a>
+<input class="md-nav__toggle md-toggle" id="__nav_5_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../life/reading/">
+<span class="md-ellipsis">
+    阅读
+  </span>
+</a>
 </div>
-<nav aria-label="阅读" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_5_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_3">
 <span class="md-nav__icon md-icon"></span>
-          阅读
-        </label>
+            阅读
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -1081,16 +1349,20 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../../others/">杂项</a>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../../others/">
+<span class="md-ellipsis">
+    杂项
+  </span>
+</a>
 </div>
-<nav aria-label="杂项" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
-          杂项
-        </label>
+            杂项
+          </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 </ul>
 </nav>
@@ -1149,30 +1421,30 @@
 <a class="md-content__button md-icon" href="https://github.com/cxzhou35/notebook/tree/main/docs/course/cs/cs106L/lec02_types_and_structs.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1 id="_1">类型和结构<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<div style="margin-top: -30px; font-size: 0.60em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"></path></svg></span> 约 495 个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> 62 行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"></path></svg></span> 预计阅读时间 2 分钟</p>
+<h1 id="_1">类型和结构<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>495<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></svg></span> <span>62<span class="heti-spacing"> </span></span>行代码 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>2<span class="heti-spacing"> </span></span>分钟</p>
 </div>
-<h2 id="c">C++ 基础类型<a class="headerlink" href="#c" title="Permanent link">¶</a></h2>
+<h2 id="c"><span>C++<span class="heti-spacing"> </span></span>基础类型<a class="headerlink" href="#c" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">//32 bits</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'F'</span><span class="p">;</span><span class="w"> </span><span class="c1">//8 bits (usually)</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">decimalVal1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span><span class="w"> </span><span class="c1">//32 bits (usually)</span>
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kt">double</span><span class="w"> </span><span class="n">decimalVal2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span><span class="w"> </span><span class="c1">//64 bits (usually)</span>
 <a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kt">bool</span><span class="w"> </span><span class="n">bVal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span><span class="c1">//1 bit</span>
 </code></pre></div>
-<p>字符串类型:
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1"> // need `string` library</span>
+<p>字符串类型<span><span class="heti-spacing"> </span>:</span>
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="c1"> // need `string` library</span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Sarah"</span><span class="p">;</span><span class="w"> </span><span class="c1">// double quotes means string</span>
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">// index into a string and get a character</span>
 <a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kt">char</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// 'a'</span>
-</code></pre></div></p>
-<h2 id="_2">动态类型和静态类型<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>C++ 是一种<strong>静态类型语言</strong></p>
+</code></pre></div>
+<h2 id="_2">动态类型和静态类型<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p><span>C++<span class="heti-spacing"> </span></span>是一种<strong>静态类型语言</strong></p>
 <ul>
-<li><strong>静态类型</strong>: 具有命名(变量，函数等)的内容在运行时之前都具有明确类型 (C++)</li>
-<li><strong>动态类型</strong>: 具有命名(变量，函数等)的内容<strong>在运行时</strong>根据当前值被指定一个类型 (Python)</li>
-<li><strong>运行时</strong>: 从程序开始运行到终止的时期 (如果是需要编译的语言, 则在编译期之后)</li>
+<li><strong>静态类型</strong><span>:<span class="heti-spacing"> </span></span>具有命名<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>变量，函数等<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>的内容在运行时之前都具有明确类型<span><span class="heti-spacing"> </span>(C++)</span></li>
+<li><strong>动态类型</strong><span>:<span class="heti-spacing"> </span></span>具有命名<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>变量，函数等<span class="heti-skip"><span class="heti-spacing"> </span>)<span class="heti-spacing"> </span></span>的内容<strong>在运行时</strong>根据当前值被指定一个类型<span><span class="heti-spacing"> </span>(Python)</span></li>
+<li><strong>运行时</strong><span>:<span class="heti-spacing"> </span></span>从程序开始运行到终止的时期<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>如果是需要编译的语言<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>则在编译期之后<span><span class="heti-spacing"> </span>)</span></li>
 </ul>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># CRASH during runtime, can’t divide a string</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">def</span> <span class="nf">div_3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -1189,8 +1461,8 @@
 <blockquote>
 <p>静态类型有助于我们在代码运行之前发现和解决错误。</p>
 </blockquote>
-<h2 id="_3">重载<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>定义两个具有相同名称但不同类型的内容(运算符, 函数等), 之后的课程会重点讲解</p>
+<h2 id="_3">重载<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<p>定义两个具有相同名称但不同类型的内容<span class="heti-skip"><span class="heti-spacing"> </span>(<span class="heti-spacing"> </span></span>运算符<span class="heti-skip"><span class="heti-spacing"> </span>,<span class="heti-spacing"> </span></span>函数等<span class="heti-skip"><span class="heti-spacing"> </span>),<span class="heti-spacing"> </span></span>之后的课程会重点讲解</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">half</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="err">“</span><span class="mi">1</span><span class="err">”</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
 <a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
@@ -1202,7 +1474,7 @@
 <a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="struct">Struct<a class="headerlink" href="#struct" title="Permanent link">¶</a></h2>
-<p><code>struct</code>: 一种由用户自定义的可用数据类型，允许存储不同类型的数据项，是一种将不同类型变量组合在一起的方式</p>
+<p><code>struct</code><span>:<span class="heti-spacing"> </span></span>一种由用户自定义的可用数据类型，允许存储不同类型的数据项，是一种将不同类型变量组合在一起的方式</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="c1">// these are called fields</span>
 <a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="w"> </span><span class="c1">// separate these by semicolons</span>
@@ -1221,7 +1493,7 @@
 <a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="pair">Pair<a class="headerlink" href="#pair" title="Permanent link">¶</a></h2>
-<p><code>std::pair</code>: STL 内置的一种 <code>struct</code>，由两个 fields 组成，可以是任何类型</p>
+<p><code>std::pair</code><span>: STL<span class="heti-spacing"> </span></span>内置的一种 <code>struct</code>，由两个<span class="heti-skip"><span class="heti-spacing"> </span>fields<span class="heti-spacing"> </span></span>组成，可以是任何类型</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// The fields in std::pairs are named `first` and `second`</span>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1">// initialize</span>
 <a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numSuffix</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"st"</span><span class="p">};</span>
@@ -1239,27 +1511,27 @@
 <a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">suffix</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">"st"</span><span class="p">);</span>
 <a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">suffix</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </code></pre></div>
-<p>可以使用另一个函数 <code>std::tie(arg1, arg2)</code> 来接收一个 <code>pair</code>，在 c++17 中，引入了一个新的特性叫<strong>结构化绑定(Structured Bindings)</strong>，可以帮助我们简化代码</p>
+<p>可以使用另一个函数 <code>std::tie(arg1, arg2)</code> 来接收一个 <code>pair</code>，在<span class="heti-skip"><span class="heti-spacing"> </span>c++17<span class="heti-spacing"> </span></span>中，引入了一个新的特性叫<strong>结构化绑定<span><span class="heti-spacing"> </span>(Structured Bindings)</span></strong>，可以帮助我们简化代码</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">// more efficient way in c++17</span>
 <a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="mf">3.4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="auto">Auto<a class="headerlink" href="#auto" title="Permanent link">¶</a></h2>
-<p><code>auto</code>: C++ 中的一个关键字，可以做类型自动推导，主要用于两种情况</p>
+<p><code>auto</code><span>: C++<span class="heti-spacing"> </span></span>中的一个关键字，可以做类型自动推导，主要用于两种情况</p>
 <ul>
 <li>声明变量时根据初始化表达式自动推断该变量的类型</li>
 <li>声明函数时函数返回值的占位符</li>
 </ul>
-<p><strong>什么时候应该使用 auto?</strong></p>
+<p><strong>什么时候应该使用<span><span class="heti-spacing"> </span>auto?</span></strong></p>
 <ul>
-<li>你不需要在意是什么类型 (iterators)</li>
-<li>它的类型在上下文中很明确 (templates)</li>
-<li>你不知道具体是什么类型 (lambdas)</li>
+<li>你不需要在意是什么类型<span><span class="heti-spacing"> </span>(iterators)</span></li>
+<li>它的类型在上下文中很明确<span><span class="heti-spacing"> </span>(templates)</span></li>
+<li>你不知道具体是什么类型<span><span class="heti-spacing"> </span>(lambdas)</span></li>
 <li>不要将它用于返回类型，这会让人很迷惑，像下面的代码一样
     <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">spliceString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
 </code></pre></div></li>
 </ul>
 <blockquote>
-<p>使用 auto 并不意味着变量没有类型，该变量的类型是由<strong>编译器自动推导</strong>的</p>
+<p>使用<span class="heti-skip"><span class="heti-spacing"> </span>auto<span class="heti-spacing"> </span></span>并不意味着变量没有类型，该变量的类型是由<strong>编译器自动推导</strong>的</p>
 </blockquote>
 <hr/>
 <div class="md-source-file">
@@ -1274,66 +1546,66 @@
 </div>
 <h2 id="__comments">评论</h2>
 <!-- Insert generated snippet here -->
-<script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOI0PNYc4CTvN5" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="cxzhou35/notebook" data-repo-id="R_kgDOI0PNYQ" data-strict="0" data-theme="light" src="https://giscus.app/client.js">
-</script>
+<script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOI0PNYc4CTvN5" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="cxzhou35/notebook" data-repo-id="R_kgDOI0PNYQ" data-strict="0" data-theme="light" src="https://giscus.app/client.js"></script>
 <!-- Synchronize Giscus theme with palette -->
 <script>
-    var giscus = document.querySelector("script[src*=giscus]")
+  var giscus = document.querySelector("script[src*=giscus]");
 
-    /* Set palette on initial load */
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = "light"
-      giscus.setAttribute("data-theme", theme) 
-    }
+  /* Set palette on initial load */
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = "light";
+    giscus.setAttribute("data-theme", theme);
+  }
 
-    /* Register event handlers after documented loaded */
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "default" ? "light" : "noborder_dark"
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme =
+          palette.color.scheme === "default" ? "light" : "noborder_dark";
 
-          /* Instruct Giscus to change theme */
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app",
+        );
+      }
+    });
+  });
+</script>
 </article>
 </div>
 </div>
-<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
-            回到页面顶部
-          </a>
+  回到页面顶部
+</button>
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 课程介绍" class="md-footer__link md-footer__link--prev" href="../lec01_intro/" rel="prev">
+<a aria-label="上一页: 课程介绍" class="md-footer__link md-footer__link--prev" href="../lec01_intro/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
 <div class="md-footer__title">
-<div class="md-ellipsis">
 <span class="md-footer__direction">
-                  上一页
-                </span>
+                上一页
+              </span>
+<div class="md-ellipsis">
                 课程介绍
               </div>
 </div>
 </a>
-<a aria-label="下一页: CS231n: Deep Learning for Computer Vision" class="md-footer__link md-footer__link--next" href="../../cs231n/" rel="next">
+<a aria-label="下一页: CS231n: Deep Learning for Computer Vision" class="md-footer__link md-footer__link--next" href="../../cs231n/">
 <div class="md-footer__title">
-<div class="md-ellipsis">
 <span class="md-footer__direction">
-                  下一页
-                </span>
+                下一页
+              </span>
+<div class="md-ellipsis">
                 CS231n: Deep Learning for Computer Vision
               </div>
 </div>
@@ -1357,19 +1629,19 @@
 </div>
 <div class="md-social">
 <a class="md-social__link" href="https://github.com/cxzhou35" rel="noopener" target="_blank" title="Github">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </a>
 <a class="md-social__link" href="https://telegram.me/cxzhou35" rel="noopener" target="_blank" title="Telegram">
-<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"></path></svg>
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"></path></svg>
 </a>
 <a class="md-social__link" href="https://twitter.com/cxzhou35" rel="noopener" target="_blank" title="Twitter">
-<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
 </a>
 <a class="md-social__link" href="https://zicx.top/" rel="noopener" target="_blank" title="Blog">
-<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64zm128 352c0 35.3-28.7 64-64 64S0 451.3 0 416s28.7-64 64-64 64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg>
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64zm0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0zm32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg>
 </a>
 <a class="md-social__link" href="https://zicx.top/home/" rel="noopener" target="_blank" title="Home">
-<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"></path></svg>
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"></path></svg>
 </a>
 </div>
 </div>
@@ -1379,11 +1651,12 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["toc.follow", "search.share", "search.suggest", "search.highlight", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../../assets/javascripts/bundle.51d95adb.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["toc.follow", "search.share", "search.suggest", "search.highlight", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../../assets/javascripts/bundle.aecac24b.min.js"></script>
 <script src="../../../../_js/katex.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
 <script src="../../../../_js/tablesort.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../../../../_js/scheme.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

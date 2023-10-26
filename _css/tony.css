@@ -38,19 +38,6 @@
   /* code color */
   --md-code-fg-color: #1c113f;
   --md-code-bg-color: #fbfaf5;
-  /* --md-code-hl-color: rgba(255, 255, 0, .5);
-    --md-code-hl-number-color: #d52a2a;
-    --md-code-hl-special-color: #db1457;
-    --md-code-hl-function-color: #a846b9;
-    --md-code-hl-constant-color: #6e59d9;
-    --md-code-hl-keyword-color: #3f6ec6;
-    --md-code-hl-string-color: #1c7d4d;
-    --md-code-hl-name-color: var(--md-code-fg-color);
-    --md-code-hl-operator-color: var(--md-default-fg-color--light);
-    --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
-    --md-code-hl-comment-color: var(--md-default-fg-color--light);
-    --md-code-hl-generic-color: var(--md-default-fg-color--light);
-    --md-code-hl-variable-color: var(--md-default-fg-color--light); */
 
   /* typeset color */
   --md-typeset-color: var(--md-default-fg-color);
@@ -236,14 +223,6 @@ p {
 
 .toc-tag-classnotes::before {
   content: "课程笔记";
-}
-
-.toc-tag-reports {
-  background-color: #3f6ec6b0;
-}
-
-.toc-tag-reports::before {
-  content: "实验报告";
 }
 
 .reference ol {
