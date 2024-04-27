@@ -5,26 +5,26 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Zicx's Notebook." name="description"/>
 <meta content="Zicx" name="author"/>
-<link href="https://zicx.top/notebook/course/cs/na/" rel="canonical"/>
-<link href="../icv/" rel="prev"/>
-<link href="../oop/" rel="next"/>
-<link href="../../../paw.svg" rel="icon"/>
+<link href="https://zicx.top/notebook/life/words/" rel="canonical"/>
+<link href="../reading/" rel="prev"/>
+<link href="../../others/" rel="next"/>
+<link href="../../paw.svg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.4.6" name="generator"/>
-<title>数值分析 - Zicx 的笔记本</title>
-<link href="../../../assets/stylesheets/main.35e1ed30.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
-<link href="../../../css/heti.css" rel="stylesheet"/>
+<title>摘录 - Zicx 的笔记本</title>
+<link href="../../assets/stylesheets/main.35e1ed30.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
+<link href="../../css/heti.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css" rel="stylesheet"/>
 <link href="https://cdn.tonycrane.cc/utils/katex.min.css" rel="stylesheet"/>
-<link href="../../../_css/flink.css" rel="stylesheet"/>
-<link href="../../../_css/tony.css" rel="stylesheet"/>
-<link href="../../../_css/card.css" rel="stylesheet"/>
-<link href="../../../_css/neoteroi-mkdocs.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../_css/flink.css" rel="stylesheet"/>
+<link href="../../_css/tony.css" rel="stylesheet"/>
+<link href="../../_css/card.css" rel="stylesheet"/>
+<link href="../../_css/neoteroi-mkdocs.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-02XSVD1LHD"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-02XSVD1LHD",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-02XSVD1LHD",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -35,7 +35,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -50,7 +50,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="Zicx 的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Zicx 的笔记本">
+<a aria-label="Zicx 的笔记本" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Zicx 的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.103 10.107c0-4.244 3.445-7.607 7.733-7.607 3.19 0 5.912 1.858 7.099 4.563l.01.022.001.006C21.348 7.345 24 10.095 24 13.536 24 17.148 21.076 20 17.431 20H5.017C2.23 20 0 17.83 0 15.06a4.899 4.899 0 0 1 3.112-4.581 7.696 7.696 0 0 1-.009-.372ZM10.836 4c-3.485 0-6.233 2.717-6.233 6.107 0 .284.022.602.052.756a.75.75 0 0 1-.552.869c-1.52.385-2.603 1.712-2.603 3.328 0 1.917 1.532 3.44 3.517 3.44h12.414c2.843 0 5.069-2.206 5.069-4.964 0-2.759-2.226-4.965-5.069-4.965a.75.75 0 0 1-.696-.47l-.179-.446C15.606 5.5 13.424 4 10.836 4Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -66,7 +66,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              数值分析
+              摘录
             
           </span>
 </div>
@@ -133,7 +133,7 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
           
   
     
@@ -142,8 +142,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../../">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../course/">
           
   
     
@@ -153,7 +153,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../memo/">
+<a class="md-tabs__link" href="../../memo/">
           
   
     
@@ -163,7 +163,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../research/">
+<a class="md-tabs__link" href="../../research/">
           
   
     
@@ -172,8 +172,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../life/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
           
   
     
@@ -183,7 +183,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../others/">
+<a class="md-tabs__link" href="../../others/">
           
   
     
@@ -202,7 +202,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Zicx 的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Zicx 的笔记本">
+<a aria-label="Zicx 的笔记本" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Zicx 的笔记本">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.103 10.107c0-4.244 3.445-7.607 7.733-7.607 3.19 0 5.912 1.858 7.099 4.563l.01.022.001.006C21.348 7.345 24 10.095 24 13.536 24 17.148 21.076 20 17.431 20H5.017C2.23 20 0 17.83 0 15.06a4.899 4.899 0 0 1 3.112-4.581 7.696 7.696 0 0 1-.009-.372ZM10.836 4c-3.485 0-6.233 2.717-6.233 6.107 0 .284.022.602.052.756a.75.75 0 0 1-.552.869c-1.52.385-2.603 1.712-2.603 3.328 0 1.917 1.532 3.44 3.517 3.44h12.414c2.843 0 5.069-2.206 5.069-4.964 0-2.759-2.226-4.965-5.069-4.965a.75.75 0 0 1-.696-.47l-.179-.446C15.606 5.5 13.424 4 10.836 4Z"></path></svg>
 </a>
     Zicx 的笔记本
@@ -221,7 +221,7 @@
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
 <span class="md-ellipsis">
     主页
   </span>
@@ -237,14 +237,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../diss/">
+<a class="md-nav__link" href="../../diss/">
 <span class="md-ellipsis">
     讨论区
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../update/">
+<a class="md-nav__link" href="../../update/">
 <span class="md-ellipsis">
     近期更新
   </span>
@@ -253,10 +253,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../">
+<a class="md-nav__link" href="../../course/">
 <span class="md-ellipsis">
     课程笔记
   </span>
@@ -265,16 +265,16 @@
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             课程笔记
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
+<a class="md-nav__link" href="../../course/cs/">
 <span class="md-ellipsis">
     计算机科学
   </span>
@@ -283,7 +283,7 @@
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_2">
 <span class="md-nav__icon md-icon"></span>
             计算机科学
@@ -292,7 +292,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../cs106L/">
+<a class="md-nav__link" href="../../course/cs/cs106L/">
 <span class="md-ellipsis">
     CS106L
   </span>
@@ -308,14 +308,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cs106L/lec01_intro/">
+<a class="md-nav__link" href="../../course/cs/cs106L/lec01_intro/">
 <span class="md-ellipsis">
     课程介绍
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cs106L/lec02_types_and_structs/">
+<a class="md-nav__link" href="../../course/cs/cs106L/lec02_types_and_structs/">
 <span class="md-ellipsis">
     类型和结构
   </span>
@@ -327,7 +327,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../cs231n/">
+<a class="md-nav__link" href="../../course/cs/cs231n/">
 <span class="md-ellipsis">
     CS231n
   </span>
@@ -343,14 +343,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cs231n/lec01_introduction_overview/">
+<a class="md-nav__link" href="../../course/cs/cs231n/lec01_introduction_overview/">
 <span class="md-ellipsis">
     课程介绍
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cs231n/lec02_image_classification/">
+<a class="md-nav__link" href="../../course/cs/cs231n/lec02_image_classification/">
 <span class="md-ellipsis">
     图像分类任务
   </span>
@@ -362,7 +362,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../dlsys/">
+<a class="md-nav__link" href="../../course/cs/dlsys/">
 <span class="md-ellipsis">
     Deep Learning Systems
   </span>
@@ -380,7 +380,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../ds/">
+<a class="md-nav__link" href="../../course/cs/ds/">
 <span class="md-ellipsis">
     数据结构与算法
   </span>
@@ -398,7 +398,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../icv/">
+<a class="md-nav__link" href="../../course/cs/icv/">
 <span class="md-ellipsis">
     计算机视觉导论
   </span>
@@ -413,16 +413,16 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2_7" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link md-nav__link--active" href="./">
+<a class="md-nav__link" href="../../course/cs/na/">
 <span class="md-ellipsis">
     数值分析
   </span>
 </a>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_2_2_7_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_7_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_2_2_7">
 <span class="md-nav__icon md-icon"></span>
             数值分析
@@ -434,7 +434,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_8" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../oop/">
+<a class="md-nav__link" href="../../course/cs/oop/">
 <span class="md-ellipsis">
     面向对象编程
   </span>
@@ -452,7 +452,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_2_9" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../os/">
+<a class="md-nav__link" href="../../course/cs/os/">
 <span class="md-ellipsis">
     操作系统
   </span>
@@ -473,7 +473,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../opt/">
+<a class="md-nav__link" href="../../course/opt/">
 <span class="md-ellipsis">
     光电
   </span>
@@ -491,7 +491,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../opt/optoelec/">
+<a class="md-nav__link" href="../../course/opt/optoelec/">
 <span class="md-ellipsis">
     光电子学
   </span>
@@ -512,7 +512,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../math/">
+<a class="md-nav__link" href="../../course/math/">
 <span class="md-ellipsis">
     数学
   </span>
@@ -533,7 +533,7 @@
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/">
+<a class="md-nav__link" href="../../memo/">
 <span class="md-ellipsis">
     备忘录
   </span>
@@ -551,7 +551,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/">
+<a class="md-nav__link" href="../../memo/tool/">
 <span class="md-ellipsis">
     常用工具
   </span>
@@ -569,7 +569,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/git/">
+<a class="md-nav__link" href="../../memo/tool/git/">
 <span class="md-ellipsis">
     Git
   </span>
@@ -587,7 +587,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/github/">
+<a class="md-nav__link" href="../../memo/tool/github/">
 <span class="md-ellipsis">
     Github
   </span>
@@ -605,7 +605,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/vscode/">
+<a class="md-nav__link" href="../../memo/tool/vscode/">
 <span class="md-ellipsis">
     VSCode
   </span>
@@ -623,7 +623,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/shell/">
+<a class="md-nav__link" href="../../memo/tool/shell/">
 <span class="md-ellipsis">
     Shell
   </span>
@@ -641,7 +641,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/cmake/">
+<a class="md-nav__link" href="../../memo/tool/cmake/">
 <span class="md-ellipsis">
     CMake
   </span>
@@ -659,7 +659,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_7" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/docker/">
+<a class="md-nav__link" href="../../memo/tool/docker/">
 <span class="md-ellipsis">
     Docker
   </span>
@@ -677,7 +677,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_8" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/latex/">
+<a class="md-nav__link" href="../../memo/tool/latex/">
 <span class="md-ellipsis">
     LaTeX
   </span>
@@ -695,7 +695,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_9" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/numpy/">
+<a class="md-nav__link" href="../../memo/tool/numpy/">
 <span class="md-ellipsis">
     NumPy
   </span>
@@ -713,7 +713,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_10" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/nvim/">
+<a class="md-nav__link" href="../../memo/tool/nvim/">
 <span class="md-ellipsis">
     Neovim
   </span>
@@ -731,7 +731,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_11" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/matlab/">
+<a class="md-nav__link" href="../../memo/tool/matlab/">
 <span class="md-ellipsis">
     MATLAB
   </span>
@@ -749,7 +749,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_12" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/conda/">
+<a class="md-nav__link" href="../../memo/tool/conda/">
 <span class="md-ellipsis">
     Conda
   </span>
@@ -767,7 +767,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_13" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/pytorch/">
+<a class="md-nav__link" href="../../memo/tool/pytorch/">
 <span class="md-ellipsis">
     PyTorch
   </span>
@@ -785,7 +785,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_14" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/markdown/">
+<a class="md-nav__link" href="../../memo/tool/markdown/">
 <span class="md-ellipsis">
     Markdown
   </span>
@@ -803,7 +803,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_15" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/tmux/">
+<a class="md-nav__link" href="../../memo/tool/tmux/">
 <span class="md-ellipsis">
     Tmux
   </span>
@@ -821,7 +821,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2_16" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/tool/ffmpeg/">
+<a class="md-nav__link" href="../../memo/tool/ffmpeg/">
 <span class="md-ellipsis">
     FFmpeg
   </span>
@@ -842,7 +842,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/">
+<a class="md-nav__link" href="../../memo/pl/">
 <span class="md-ellipsis">
     编程语言
   </span>
@@ -860,7 +860,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/c/">
+<a class="md-nav__link" href="../../memo/pl/c/">
 <span class="md-ellipsis">
     C
   </span>
@@ -878,7 +878,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/cpp/">
+<a class="md-nav__link" href="../../memo/pl/cpp/">
 <span class="md-ellipsis">
     C++
   </span>
@@ -896,7 +896,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/python/">
+<a class="md-nav__link" href="../../memo/pl/python/">
 <span class="md-ellipsis">
     Python
   </span>
@@ -914,7 +914,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/go/">
+<a class="md-nav__link" href="../../memo/pl/go/">
 <span class="md-ellipsis">
     Go
   </span>
@@ -932,7 +932,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/rust/">
+<a class="md-nav__link" href="../../memo/pl/rust/">
 <span class="md-ellipsis">
     Rust
   </span>
@@ -950,7 +950,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_7" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/julia/">
+<a class="md-nav__link" href="../../memo/pl/julia/">
 <span class="md-ellipsis">
     Julia
   </span>
@@ -968,7 +968,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_8" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/lua/">
+<a class="md-nav__link" href="../../memo/pl/lua/">
 <span class="md-ellipsis">
     Lua
   </span>
@@ -986,7 +986,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3_9" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/pl/taichi/">
+<a class="md-nav__link" href="../../memo/pl/taichi/">
 <span class="md-ellipsis">
     Taichi
   </span>
@@ -1002,35 +1002,35 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../memo/pl/taichi/01_intro/">
+<a class="md-nav__link" href="../../memo/pl/taichi/01_intro/">
 <span class="md-ellipsis">
     Introduction
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../memo/pl/taichi/02_kernel_and_function/">
+<a class="md-nav__link" href="../../memo/pl/taichi/02_kernel_and_function/">
 <span class="md-ellipsis">
     Kernels &amp; Functions
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../memo/pl/taichi/03_type_system/">
+<a class="md-nav__link" href="../../memo/pl/taichi/03_type_system/">
 <span class="md-ellipsis">
     Type System
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../memo/pl/taichi/04_data_container/">
+<a class="md-nav__link" href="../../memo/pl/taichi/04_data_container/">
 <span class="md-ellipsis">
     Data Containers
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../memo/pl/taichi/05_differentiable_programming/">
+<a class="md-nav__link" href="../../memo/pl/taichi/05_differentiable_programming/">
 <span class="md-ellipsis">
     Differentiable Programming
   </span>
@@ -1045,7 +1045,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/config/">
+<a class="md-nav__link" href="../../memo/config/">
 <span class="md-ellipsis">
     系统搭建
   </span>
@@ -1063,7 +1063,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/config/win/">
+<a class="md-nav__link" href="../../memo/config/win/">
 <span class="md-ellipsis">
     Windows
   </span>
@@ -1081,7 +1081,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/config/win/scoop/">
+<a class="md-nav__link" href="../../memo/config/win/scoop/">
 <span class="md-ellipsis">
     Scoop
   </span>
@@ -1102,7 +1102,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/config/mac/">
+<a class="md-nav__link" href="../../memo/config/mac/">
 <span class="md-ellipsis">
     Mac
   </span>
@@ -1120,7 +1120,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4_3_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/config/mac/homebrew/">
+<a class="md-nav__link" href="../../memo/config/mac/homebrew/">
 <span class="md-ellipsis">
     Homebrew
   </span>
@@ -1141,7 +1141,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../memo/config/linux/">
+<a class="md-nav__link" href="../../memo/config/linux/">
 <span class="md-ellipsis">
     Linux
   </span>
@@ -1165,7 +1165,7 @@
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../research/">
+<a class="md-nav__link" href="../../research/">
 <span class="md-ellipsis">
     科研
   </span>
@@ -1183,7 +1183,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../research/paper_reading/">
+<a class="md-nav__link" href="../../research/paper_reading/">
 <span class="md-ellipsis">
     论文阅读
   </span>
@@ -1201,7 +1201,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_2_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../research/paper_reading/nerf/">
+<a class="md-nav__link" href="../../research/paper_reading/nerf/">
 <span class="md-ellipsis">
     NeRF
   </span>
@@ -1217,21 +1217,21 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../research/paper_reading/nerf/note/">
+<a class="md-nav__link" href="../../research/paper_reading/nerf/note/">
 <span class="md-ellipsis">
     论文笔记
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../research/paper_reading/nerf/math/">
+<a class="md-nav__link" href="../../research/paper_reading/nerf/math/">
 <span class="md-ellipsis">
     数学推导
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../research/paper_reading/nerf/code/">
+<a class="md-nav__link" href="../../research/paper_reading/nerf/code/">
 <span class="md-ellipsis">
     代码学习
   </span>
@@ -1246,7 +1246,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../research/learning_research/">
+<a class="md-nav__link" href="../../research/learning_research/">
 <span class="md-ellipsis">
     科研经验
   </span>
@@ -1264,10 +1264,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../life/">
+<a class="md-nav__link" href="../">
 <span class="md-ellipsis">
     生活
   </span>
@@ -1276,7 +1276,7 @@
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
             生活
@@ -1285,7 +1285,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5_2" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../life/film/">
+<a class="md-nav__link" href="../film/">
 <span class="md-ellipsis">
     影视
   </span>
@@ -1303,7 +1303,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5_3" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../life/reading/">
+<a class="md-nav__link" href="../reading/">
 <span class="md-ellipsis">
     阅读
   </span>
@@ -1318,16 +1318,16 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../life/words/">
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     摘录
   </span>
 </a>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_5_4">
 <span class="md-nav__icon md-icon"></span>
             摘录
@@ -1342,7 +1342,7 @@
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../../../others/">
+<a class="md-nav__link" href="../../others/">
 <span class="md-ellipsis">
     杂项
   </span>
@@ -1366,38 +1366,60 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#table-of-contents">
-    Table of Contents
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/cxzhou35/notebook/tree/main/docs/course/cs/na/index.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/cxzhou35/notebook/tree/main/docs/life/words/index.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1 id="_1">数值分析<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
-<p>TODO</p>
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">¶</a></h2>
+<h1 id="_1">摘录<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>随手摘录一些有趣和有价值的内容<span><span class="heti-spacing"> </span>:)</span></p>
+</div>
+<details class="example">
+<summary>Template</summary>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"></path></svg></span> date  
+<span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224 256a128 128 0 1 0 0-256 128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h293.1c-3.1-8.8-3.7-18.4-1.4-27.8l15-60.1c2.8-11.3 8.6-21.5 16.8-29.7l40.3-40.3c-32.1-31-75.7-50.1-123.9-50.1h-91.3zm435.5-68.3c-15.6-15.6-40.9-15.6-56.6 0l-29.4 29.4 71 71 29.4-29.4c15.6-15.6 15.6-40.9 0-56.6l-14.4-14.4zM375.9 417c-4.1 4.1-7 9.2-8.4 14.9l-15 60.1c-1.4 5.5.2 11.2 4.2 15.2s9.7 5.6 15.2 4.2l60.1-15c5.6-1.4 10.8-4.3 14.9-8.4l129.2-129.3-71-71L375.9 417z"></path></svg></span> author  
+<span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></span> <a href="url">source type</a>  
+<span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"></path></svg></span> #tag  </p>
+<blockquote>
+<p>placeholder</p>
+</blockquote>
+<p>Source code:
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>???+ quote "Title"
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    :material-calendar: date &amp;nbsp;
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    :fontawesome-solid-user-pen: author &amp;nbsp;
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    :octicons-link-16: [<span class="nt">source type</span>](<span class="na">url</span>) &amp;nbsp;
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    :octicons-tag-16: <span class="ni">#tag</span> &amp;nbsp;
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">    &gt; </span><span class="ge">placeholder</span>
+</code></pre></div>
+</details>
+<details class="quote" open="open">
+<summary>My strategy to survive the generative AI era as an indie developer</summary>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"></path></svg></span> 2024-04-26  
+<span class="twemoji"><svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224 256a128 128 0 1 0 0-256 128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h293.1c-3.1-8.8-3.7-18.4-1.4-27.8l15-60.1c2.8-11.3 8.6-21.5 16.8-29.7l40.3-40.3c-32.1-31-75.7-50.1-123.9-50.1h-91.3zm435.5-68.3c-15.6-15.6-40.9-15.6-56.6 0l-29.4 29.4 71 71 29.4-29.4c15.6-15.6 15.6-40.9 0-56.6l-14.4-14.4zM375.9 417c-4.1 4.1-7 9.2-8.4 14.9l-15 60.1c-1.4 5.5.2 11.2 4.2 15.2s9.7 5.6 15.2 4.2l60.1-15c5.6-1.4 10.8-4.3 14.9-8.4l129.2-129.3-71-71L375.9 417z"></path></svg></span> Takuya Matsuyama  
+<span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></span> <a href="https://www.devas.life/im-trying-to-sell-my-productive-vibes/">Blog</a>  
+<span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"></path></svg></span> #tech  </p>
+<blockquote>
+<p>Learning, coding, and creating can often be solitary pursuits. We all need something to motivate and encourage us through the loneliness and lethargy, to start and continue working. </p>
+<p>While AI is becoming increasingly proficient in handling functional aspects, dealing with emotional aspects is still a long way off, given their complexity, which even humans struggle to manage. </p>
+<p>I always make sure to subtly incorporate air between the body and the clothing. In other words, there is a 'space' in my clothes. It's like the space you find 'between the lines' in a written text. Unfortunately, this aesthetic of space is unique to Japan. It might be an aesthetic we should take pride in. ---- Yohji Yamamoto</p>
+</blockquote>
+</details>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年2月25日 18:27:17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月27日 16:54:15</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年1月21日 20:26:24</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月27日 16:54:15</span>
 </small>
 </div>
 </article>
@@ -1410,7 +1432,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 计算机视觉导论" class="md-footer__link md-footer__link--prev" href="../icv/">
+<a aria-label="上一页: 阅读" class="md-footer__link md-footer__link--prev" href="../reading/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -1419,17 +1441,17 @@
                 上一页
               </span>
 <div class="md-ellipsis">
-                计算机视觉导论
+                阅读
               </div>
 </div>
 </a>
-<a aria-label="下一页: 面向对象编程" class="md-footer__link md-footer__link--next" href="../oop/">
+<a aria-label="下一页: 杂项" class="md-footer__link md-footer__link--next" href="../../others/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 下一页
               </span>
 <div class="md-ellipsis">
-                面向对象编程
+                杂项
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -1474,11 +1496,11 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["toc.follow", "search.share", "search.suggest", "search.highlight", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
-<script src="../../../_js/katex.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "search.share", "search.suggest", "search.highlight", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexes", "navigation.tracking", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+<script src="../../_js/katex.js"></script>
 <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
-<script src="../../../_js/tablesort.js"></script>
+<script src="../../_js/tablesort.js"></script>
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
