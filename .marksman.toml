@@ -1,0 +1,16 @@
+
+[core]
+markdown.file_extensions = ["md", "markdown"]
+text_sync = "full"
+
+[code_action]
+toc.enable = false # Enable/disable "Table of Contents" code action
+create_missing_file.enable = true
+
+[completion]
+# The style of wiki links completion.
+# Other values include: 
+# * "file-stem" to complete using file name without an extension,
+# * "file-path-stem" same as above but using wil path.
+wiki.style = "title-slug"
+wiki.style = "title-slug"

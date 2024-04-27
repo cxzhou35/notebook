@@ -3,7 +3,7 @@ statistics: false
 comments: false
 ---
 
-# 环境搭建
+# 系统搭建
 
 !!! note ""
     <br>
@@ -26,10 +26,9 @@ comments: false
 
 ???+ abstract "Overview"
 
-
     <div style="text-align: center" markdown="1">
 
-    | &nbsp;                                                 |                   **环境搭建**                   | &nbsp;                                               |
+    | &nbsp;                                                 |                   **系统搭建**                   | &nbsp;                                               |
     |:-------------------------------------------------------|:------------------------------------------------:|:-----------------------------------------------------|
     | [:fontawesome-brands-windows: Windows](./win/index.md) | [:fontawesome-brands-apple: Mac](./mac/index.md) | [:fontawesome-brands-linux: Linux](./linux/index.md) |
 

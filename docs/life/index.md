@@ -13,3 +13,4 @@ comments: false
 
     - [阅读](./reading/index.md) 
 
+    - [摘录](./words/index.md)

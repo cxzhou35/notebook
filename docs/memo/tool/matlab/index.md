@@ -5,10 +5,9 @@ comments: true
 # MATLAB
 
 !!! abstract "Abstract"
-    上信号课的时候正好需要用到 MATLAB，顺手在这里记一些东西<br>
-    基本都是根据官方文档和老师提供的一些资料来写的
+    信号课的时候正好需要用到 MATLAB，在这里记一些内容<br>
 
-    官方文档在这里：
+    官方文档：
 
     - [English](https://www.mathworks.com/help/matlab/)
     - [Cninese](https://ww2.mathworks.cn/help/matlab/)

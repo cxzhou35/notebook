@@ -61,6 +61,8 @@ nav:
           - memo/tool/index.md
           - "Git":
               - memo/tool/git/index.md
+          - "Github":
+              - memo/tool/github/index.md
           - "VSCode":
               - memo/tool/vscode/index.md
           - "Shell":
@@ -110,7 +112,7 @@ nav:
               - "Type System": memo/pl/taichi/03_type_system.md
               - "Data Containers": memo/pl/taichi/04_data_container.md
               - "Differentiable Programming": memo/pl/taichi/05_differentiable_programming.md
-      - "环境搭建":
+      - "系统搭建":
           - memo/config/index.md
           - "Windows":
               - memo/config/win/index.md
@@ -140,6 +142,8 @@ nav:
           - life/film/index.md
       - "阅读":
           - life/reading/index.md
+      - "摘录":
+          - life/words/index.md
   - "杂项":
       - others/index.md
 
@@ -153,19 +157,6 @@ theme:
     view: material/file-eye-outline
     logo: octicons/cloud-24
     repo: fontawesome/brands/git-alt
-    # admonition:
-    #   info: fontawesome/solid/anchor
-    #   note: fontawesome/solid/pen-nib
-    #   abstract: fontawesome/solid/list
-    #   tip: fontawesome/solid/lightbulb
-    #   success: fontawesome/solid/check
-    #   question: fontawesome/solid/circle-question
-    #   warning: fontawesome/solid/triangle-exclamation
-    #   failure: material/alien
-    #   danger: fontawesome/solid/virus
-    #   bug: fontawesome/solid/robot
-    #   example: fontawesome/solid/flask
-    #   quote: fontawesome/solid/quote-left
   palette:
     - scheme: default
       toggle:

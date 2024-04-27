@@ -2,27 +2,27 @@
 comments: true
 ---
 
-# Pytorch
+# PyTorch
 
 !!! abstract "Abstract"
-    最近在复现论文，在这里记录一些Pytorch相关的内容以及一些有用的tricks
+    记录一些 PyTorch 相关的内容以及一些有用的 tricks
 
-    - 官方教程：[Pytorch Tutorial](https://pytorch.org/tutorials/)
-    - 官方文档：[Pytorch documentation](https://pytorch.org/docs/stable/index.html)
-    - Cheet Sheet: [Pytorch Cheet Sheet](https://pytorch.org/tutorials/beginner/ptcheat.html)
+    - [PyTorch Tutorial](https://pytorch.org/tutorials/)
+    - [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
+    - [PyTorch Cheet Sheet](https://pytorch.org/tutorials/beginner/ptcheat.html)
 
 ## 安装
 
-推荐使用 Anaconda/Miniconda 创建虚拟环境安装 Pytorch
+推荐使用 Anaconda/Miniconda 创建虚拟环境安装 PyTorch
 
-> 如果你需要使用 CPU 版本的 Pytorch，那么以下的复杂步骤都不需要做，只需要运行以下两条指令中的一条即可安装
+> 如果你只需要使用 CPU 版本的 PyTorch，那么后续的复杂步骤都不需要做，只需要运行以下两条指令中的一条即可
 >
 > ```sh
 > pip3 install torch torchvision torchaudio               # pip
 > conda install pytorch torchvision torchaudio cpuonly    # conda
 > ```
 
-正确的安装流程如下:
+GPU 版本的 PyTorch 的安装流程如下:
 
 - 在终端输入`nvidia-smi`查看 NVIDIA 驱动的版本和支持的 CUDA 的最高版本
 
@@ -31,7 +31,7 @@ comments: true
   <figcaption></figcaption>
 </figure>
 
-- 在终端输入`nvcc -V`查看本机安装的 CUDA 版本，如果提示该命令不存在，则需要去 [NVIDIA 官网](https://developer.nvidia.com/cuda-downloads) 下载 CUDA
+- 在终端输入 `nvcc -V` 查看本机安装的 CUDA 版本，如果提示该命令不存在，则需要去 [NVIDIA 官网](https://developer.nvidia.com/cuda-downloads) 下载 CUDA
 
   ```sh
   $ nvcc -V
@@ -44,13 +44,13 @@ comments: true
 
 - 安装对应 CUDA 版本的 cudnn，官方下载地址为 [cudnn download](https://developer.nvidia.com/rdp/cudnn-download)
 - 下载 Anaconda/Miniconda，创建一个环境（e.g. pytorch)，<br>Conda 的配置和使用可以参考 [Conda 备忘录](../conda/index.md)
-- 在 [Pytoch 官方](https://pytorch.org/get-started/locally/) 找到对应平台和 CUDA 版本的安装指令(e.g. cuda11.1)
+- 在 [PyToch 官网](https://pytorch.org/get-started/locally/) 找到对应平台和 CUDA 版本的安装指令(e.g. cuda11.1)
 
 ```sh
 conda install pytorch torchvision torchaudio pytorch-cuda=11.2 -c pytorch -c nvidia
 ```
 
-- 安装完 Pytorch 后我们需要检验安装是否成功，且版本是否正确
+- 安装完 PyTorch 后我们需要检验安装是否成功，且 `CUDA DEVICE` 是否可用
 
 ```py
 >>> import torch
@@ -65,9 +65,9 @@ True
 True
 ```
 
-如果执行上述指令看到的结果一致，那么 Pytorch 的安装已经成功了
+如果执行上述指令看到的结果一致，那么 PyTorch 已经成功安装
 
-最后可以安装一些深度学习常用的 Python 包
+最后可以安装一些深度学习常用的 Package
 
 ```
 pyyaml
@@ -83,11 +83,15 @@ scipy
 
 ## 基本语法
 
+TODO: placeholder
+
 ## 常用模块
+
+TODO: placeholder
 
 ## TensorBoard
 
-现在推荐使用的是 lanpa 大佬开发的[tensorboardX](https://github.com/lanpa/tensorboardX)，这是一个完全支持 PyTorch 的 tensorboard 工具包，从而让 PyTorch 很好地调用 tensorboard 的数据可视化工具来监控神经网络训练的过程。
+现在推荐使用的是 lanpa 大佬开发的[tensorboardX](https://github.com/lanpa/tensorboardX)，一个完全支持 PyTorch 的 tensorboard 工具包，从而让 PyTorch 很好地调用 tensorboard 的数据可视化工具来监视神经网络训练的过程
 
 >官方文档：[tensorboardX’s documentation](https://tensorboardx.readthedocs.io/en/latest/index.html)
 >
@@ -101,7 +105,7 @@ pip install tensorboardX
 
 ### 使用
 
-我们需要用到 tensorboardX 中的一个类，叫做`SummaryWriter`
+需要用到 tensorboardX 中一个名为 `SummaryWriter` 的类
 
 #### 初始化
 
@@ -126,7 +130,7 @@ writer.add_scalar(tag, scalar_value, global_step=None, walltime=None)
 
 > 需要注意，这里的 scalar_value 必须为 **float** 类型，如果是 scalar tensor，则需要调用`tensor.item()`方法获取其数值
 
-我们一般会使用`add_scalar`方法来记录训练过程的 loss、accuracy、learning rate 等数值的变化，直观地监控训练过程
+一般会使用`add_scalar`方法来记录训练过程的 loss、accuracy、learning rate 等参数的变化，直观地监视训练过程
 
 ```py
 writer.add_scalar('Train/Loss', loss.data[0], niter)
@@ -135,7 +139,7 @@ writer.add_scalar('Test/Accu', correct/total, niter)
 
 #### 运行图
 
-我们可以使用`add_graph`方法来添加一个运行图，可视化一个神经网络
+可以使用`add_graph`方法来添加一个运行图，可视化一个神经网络
 
 ```py
 writer.add_graph(model, input_to_model=None, verbose=False, **kwargs)
@@ -146,7 +150,7 @@ writer.add_graph(model, input_to_model=None, verbose=False, **kwargs)
 
 #### 添加图片
 
-我们可以使用`add_image`方法来可视化一张图片
+可以使用`add_image`方法可视化图片
 
 ```py
 writer.add_image(tag, img_tensor, global_step=None, walltime=None, dataformats='CHW')
@@ -159,7 +163,7 @@ writer.add_image(tag, img_tensor, global_step=None, walltime=None, dataformats='
 
 #### 嵌入向量
 
-我们可以使用`add_embedding`方法在二维或三维空间可视化 embedding 向量
+可以使用`add_embedding`方法在二维或三维空间中可视化 embedding 向量
 
 ```py
 writer.add_embedding(mat, metadata=None, label_img=None, global_step=None, tag='default', metadata_header=None)
@@ -184,6 +188,6 @@ writer.close()
 在命令行中运行以下指令即可打开 tensorboard
 
 ```sh
-# --port 可以指定打开的端口
-tensorboard --logdir=logs --port=6007
+# --port 指定打开的端口
+tensorboard --logdir=dir_name --port=6007
 ```
