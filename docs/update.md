@@ -9,10 +9,12 @@ comments: false
     - 受课题组学长的启发，希望督促自己日常整理积累一些学习经验和科研经验，方便自己回顾，不定期的会更新
     > 学长分享的科研经验很有价值，推荐大家看一看: https://github.com/pengsida/learning_research
 
+    - 备忘录会不断完善，最近更新了 [conda](memo/tool/conda/index.md)/[pytorch](memo/tool/pytorch/index.md)
+
     - 课程相关的内容会慢慢从本地迁移过来，敬请期待~
 
 !!! abstract "近期做的一些事情"
 
-    - 马上要读研究生了，想利用这段时间学习一些新的知识，目前想学一点cg的内容(games101 & games103)，然后学一下blender、Unity、UE5之后都用的到
+    - 马上要读研究生了，想利用这段时间学习一些新的知识，目前想学一点 CG 的内容(games101 & games103)，然后学一下 blender/UE5
 
     - 提高自己的英语能力，重点想提高听说能力<br>如果有好的建议和方法可以给我留言，联系方式在网站主页的右下角。
