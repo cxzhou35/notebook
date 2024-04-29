@@ -10,7 +10,7 @@
 <link href="../../linux/" rel="next"/>
 <link href="../../../../paw.svg" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.4.6" name="generator"/>
-<title>Index - Zicx 的笔记本</title>
+<title>Homrebrew - Zicx 的笔记本</title>
 <link href="../../../../assets/stylesheets/main.35e1ed30.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
 <link href="../../../../css/heti.css" rel="stylesheet"/>
@@ -42,6 +42,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#homrebrew">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -63,7 +66,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Index
+              Homrebrew
             
           </span>
 </div>
@@ -1363,6 +1366,32 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    安装
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    基本配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    常用命令
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+    Troubleshooting
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -1372,51 +1401,35 @@
 <a class="md-content__button md-icon" href="https://github.com/cxzhou35/notebook/tree/main/docs/memo/config/mac/homebrew/index.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>Index</h1>
+<h1 id="homrebrew">Homrebrew<a class="headerlink" href="#homrebrew" title="Permanent link">¶</a></h1>
+<h2 id="_1">安装<a class="headerlink" href="#_1" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_2">基本配置<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="_3">常用命令<a class="headerlink" href="#_3" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h2>
+<details class="tip">
+<summary>Fix cleanup old kegs</summary>
+<p>问题描述：<br/>
+当执行 <code>brew cleanup --prune=all</code> 时，可能会出现如下错误：</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>Error:<span class="w"> </span>Could<span class="w"> </span>not<span class="w"> </span>cleanup<span class="w"> </span>old<span class="w"> </span>kegs!<span class="w"> </span>Fix<span class="w"> </span>your<span class="w"> </span>permissions<span class="w"> </span>on:<span class="w"> </span>somedir
+</code></pre></div>
+<p>原因：<br/>
+<code>brew</code> 会删除旧的版本，但是由于权限问题，无法删除</p>
+<p>解决方法：<br/>
+修改目录权限
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span><span class="s2">"</span><span class="nv">$USER</span><span class="s2">"</span>:admin<span class="w"> </span>somedir
+</code></pre></div>
+</details>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年1月29日 13:39:17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月29日 21:43:54</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年1月21日 20:26:24</span>
 </small>
 </div>
-<h2 id="__comments">评论</h2>
-<!-- Insert generated snippet here -->
-<script async="" crossorigin="anonymous" data-category="Announcements" data-category-id="DIC_kwDOI0PNYc4CTvN5" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="cxzhou35/notebook" data-repo-id="R_kgDOI0PNYQ" data-strict="0" data-theme="light" src="https://giscus.app/client.js"></script>
-<!-- Synchronize Giscus theme with palette -->
-<script>
-  var giscus = document.querySelector("script[src*=giscus]");
-
-  /* Set palette on initial load */
-  var palette = __md_get("__palette");
-  if (palette && typeof palette.color === "object") {
-    var theme = "light";
-    giscus.setAttribute("data-theme", theme);
-  }
-
-  /* Register event handlers after documented loaded */
-  document.addEventListener("DOMContentLoaded", function () {
-    var ref = document.querySelector("[data-md-component=palette]");
-    ref.addEventListener("change", function () {
-      var palette = __md_get("__palette");
-      if (palette && typeof palette.color === "object") {
-        var theme =
-          palette.color.scheme === "default" ? "light" : "noborder_dark";
-
-        /* Instruct Giscus to change theme */
-        var frame = document.querySelector(".giscus-frame");
-        frame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme } } },
-          "https://giscus.app",
-        );
-      }
-    });
-  });
-</script>
 </article>
 </div>
 </div>
