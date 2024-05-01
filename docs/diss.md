@@ -7,7 +7,7 @@ nostatistics: true
 # 欢迎来到讨论区!
 
 !!! info "Introduction"
-    由于一直找不到比较好用的跨平台笔记软件，最后还是选择了用 [Mkdocs](https://www.mkdocs.org/) 来搭建在线笔记本。希望可以和更多人一起分享知识！可以在评论区留下你的足迹 👣👣
+    一直找不到比较好用的跨平台笔记软件，在大家的推荐下选择用 [Mkdocs](https://www.mkdocs.org/) 来搭建在线笔记本。希望能和更多人一起分享知识！可以在评论区留下你的足迹 👣👣
 
 !!! summary "Friends"
 
