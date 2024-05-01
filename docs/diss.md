@@ -43,6 +43,16 @@ nostatistics: true
         </a>
     </div>
 
+    <div class="flink-list-item">
+        <a href="https://note.jiepeng.tech" title="Jiepeng's notebook" target="_blank">
+            <div class="flink-item-icon">
+                <img src="../_assets/avatars/jiepeng.jpg" alt="qaqdev">
+            </div>
+            <div class="flink-item-name">Jiepeng's notebook</div>
+            <div class="flink-item-desc">很厉害的工高学弟</div>
+        </a>
+    </div>
+
     </div>
 
 > 欢迎友链！
