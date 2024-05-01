@@ -19,7 +19,7 @@ nostatistics: true
                 <img src="../_assets/avatars/isshiki.png" alt="Isshiki修">
             </div>
             <div class="flink-item-name heti-skip">Isshiki修's Notebook</div>
-            <div class="flink-item-desc">一色修嘿嘿</div>
+            <div class="flink-item-desc">超强一色修嘿嘿</div>
         </a>
     </div>
 
@@ -36,10 +36,10 @@ nostatistics: true
     <div class="flink-list-item">
         <a href="https://oneko.zone/" title="Oneko Zone" target="_blank">
             <div class="flink-item-icon">
-                <img src="../_assets/avatars/czl.png" alt="qaqdev">
+                <img src="../_assets/avatars/oneko.png" alt="qaqdev">
             </div>
             <div class="flink-item-name">Oneko Zone</div>
-            <div class="flink-item-desc">可爱猫猫</div>
+            <div class="flink-item-desc">可爱猫猫捏</div>
         </a>
     </div>
 
