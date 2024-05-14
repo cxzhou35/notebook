@@ -51,5 +51,5 @@ comments: false
     >
     > What’s worse is that the cask repository is enabled by default, newbies who think the apps they installed is FLOSS and trustworthy may actually install an app bundled with telemetry/tracking, and even trojan horse that tries to hack your mac in the way we mentioned in the previous part.
 
-    > *Frome me: As a computer science student, I think the awareness of privacy and security is very important. But homebrew is really convenient and useful for me. It's a trade-off between efficiency and security.*
+    > *From me: As a computer science student, I think the awareness of privacy and security is very important. But homebrew is really convenient and useful for me. It's a trade-off between efficiency and security.*
 
