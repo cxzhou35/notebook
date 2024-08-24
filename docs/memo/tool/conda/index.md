@@ -19,7 +19,6 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh # 下
 chmod +x Miniconda3-latest-Linux-x86_64.sh # 添加可执行权限
 
 ./Miniconda3-latest-Linux-x86_64.sh # 安装
-
 ```
 
 安装完成之后，需要在 `~/.zshrc` 或 `~/.bashrc` 中写入 Conda 的环境变量
@@ -85,6 +84,14 @@ brew install --cask miniconda
 - `conda env export > environment.yaml`: 导出当前环境的配置，文件名可以自定义
 - `conda env create -f environment.yml`: 根据配置文件创建新的环境
 
+### 5. 环境打包
+
+推荐使用[conda-pack](https://conda.github.io/conda-pack/)来打包环境
+
+- 安装：`conda install conda-pack` or `pip install conda-pack`
+- 打包环境：`conda pack -n env_name [-o pack_name.tar.gz]`
+- 安装环境：`cd conda_env_path & tar -xzf pack_name.tar.gz -C env_name`
+
 ## 常用配置
 
 Windows 系统的 Conda 配置文件位于`C:\Users\username\.condarc`，Linux 或者 Mac 系统 Conda 的配置文件位于`~/.condarc`或`~/.conda/.condarc`，也可以使用`conda config --set ...`指令来添加或更改对应的设置，可以在配置文件中**修改下载源**从而加快下载的速度
@@ -96,16 +103,19 @@ report_errors: true
 auto_activate_base: false
 ssl_verify: true
 show_channel_urls: true
+channels:
+  - defaults
 default_channels:
   - https://mirrors.zju.edu.cn/anaconda/pkgs/main
   - https://mirrors.zju.edu.cn/anaconda/pkgs/r
   - https://mirrors.zju.edu.cn/anaconda/pkgs/msys2
 custom_channels:
-  conda-forge: https://mirrors.zju.edu.cn/anaconda/cloud
-  msys2: https://mirrors.zju.edu.cn/anaconda/cloud
-  bioconda: https://mirrors.zju.edu.cn/anaconda/cloud
-  menpo: https://mirrors.zju.edu.cn/anaconda/cloud
-  pytorch: https://mirrors.zju.edu.cn/anaconda/cloud
-  pytorch-lts: https://mirrors.zju.edu.cn/anaconda/cloud
-  simpleitk: https://mirrors.zju.edu.cn/anaconda/cloud
+  - conda-forge: https://mirrors.zju.edu.cn/anaconda/cloud
+  - msys2: https://mirrors.zju.edu.cn/anaconda/cloud
+  - bioconda: https://mirrors.zju.edu.cn/anaconda/cloud
+  - menpo: https://mirrors.zju.edu.cn/anaconda/cloud
+  - pytorch: https://mirrors.zju.edu.cn/anaconda/cloud
+  - pytorch-lts: https://mirrors.zju.edu.cn/anaconda/cloud
+  - simpleitk: https://mirrors.zju.edu.cn/anaconda/cloud
+  - nvidia: https://mirrors.zju.edu.cn/anaconda-r
 ```
