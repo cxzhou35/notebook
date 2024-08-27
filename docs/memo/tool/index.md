@@ -30,11 +30,11 @@ comments: false
 
     | &nbsp;                                            | **常用工具**                                           | &nbsp;                                      |
     |:--------------------------------------------------|:-------------------------------------------------------|:--------------------------------------------|
-    | [:simple-git: Git](./git/index.md)                | [:simple-powershell: Shell](./shell/index.md)          | [:simple-cmake: CMake](./cmake/index.md)    |
+    | [:simple-git: Git](./git/index.md)                | [:simple-zsh: Shell](./shell/index.md)          | [:simple-cmake: CMake](./cmake/index.md)    |
     | [:simple-markdown: Markdown](./markdown/index.md) | [:simple-docker: Docker](./docker/index.md)            | [:simple-latex: LaTeX](./latex/index.md)    |
     | [:simple-matrix: MATLAB](./matlab/index.md)       | [:simple-numpy: NumPy](./numpy/index.md)               | [:simple-neovim: Neovim](./nvim/index.md)   |
     | [:simple-anaconda: Conda](./conda/index.md)       | [:simple-tmux: Tmux](./tmux/index.md)                  | [:simple-ffmpeg: FFmpeg](./ffmpeg/index.md) |
-    | [:simple-pytorch: Pytorch](./pytorch/index.md)    | [:simple-visualstudiocode: VScode](./pytorch/index.md) | [:simple-github: Github](./github/index.md) |
+    | [:simple-pytorch: Pytorch](./pytorch/index.md)    | [:material-microsoft-visual-studio-code: VScode](./pytorch/index.md) | [:simple-github: Github](./github/index.md) |
 
     </div>
 
