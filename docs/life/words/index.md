@@ -53,3 +53,21 @@ comments: false
 
     > *From me: As a computer science student, I think the awareness of privacy and security is very important. But homebrew is really convenient and useful for me. It's a trade-off between efficiency and security.*
 
+???+ quote "Why I Learned Vim"
+    :material-calendar: 2024-08-24 &nbsp;
+    :fontawesome-solid-user-pen: Steve Simkins &nbsp;
+    :octicons-link-16: [Blog](https://stevedylan.dev/posts/why-i-learned-vim/) &nbsp;
+    :octicons-tag-16: #tech #vim &nbsp;
+
+    > The goal of this post is not to convince you that you should learn Vim, but show you why I personally use it and why I think thousands of other developers enjoy it as well. **In the end you should use what works best for you, but also keep an open mind to the possibilities.**
+
+???+ quote "A Terminal Based Workflow"
+    :material-calendar: 2024-08-24 &nbsp;
+    :fontawesome-solid-user-pen: Steve Simkins &nbsp;
+    :octicons-link-16: [Blog](https://stevedylan.dev/posts/a-terminal-based-workflow/) &nbsp;
+    :octicons-tag-16: #tech #workflow &nbsp;
+
+    > This is the flexibility of a terminal based workflow that is hard to replicate on something like VSCode or Zed. It’s not even an editor issue in my opinion: ***it’s a development environment issue.***
+    > 
+    > In my previous post about learning Vim, I posed the question if you yourself should learn it. Again I think that’s perhaps the wrong question. Instead you should ask yourself **“How well do I know my development environment?”** If you’re happy with running the basic tools in your terminal and switching back and forth between a terminal window and VSCode that’s fine, do what works best for you.
+
