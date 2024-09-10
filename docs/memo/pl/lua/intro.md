@@ -5,15 +5,17 @@ comments: true
 
 # Introduction to Lua Language
 
+## Introduction
+
 - Lua 是一种脚本语言，类似Python、Perl、Ruby等
-- Lua 也可以作为一种数据描述语言，类似JSON、XML等
-- Lua 还可以作为一种扩展语言，用于多语言开发
+- 也可以作为一种数据描述语言，类似JSON、XML等
+- 可以作为一种扩展语言，用于多语言开发
 
 ## Application
 
-- Lua 最常用于游戏开发中，比如作为游戏引擎的脚本语言，或者作为游戏服务器的脚本语言
-- Lua 也可以用于嵌入式开发，比如用于Logitech keyboards
-- Lua 也常作为一些软件的配置语言，比如TeX和Vim
+- 最常用于游戏开发中，比如作为游戏引擎的脚本语言，或者作为游戏服务器的脚本语言
+- 可以用于嵌入式开发，比如用于Logitech keyboards
+- 常作为一些软件的配置语言，比如TeX和Vim
 
 ## Why use Lua
 
