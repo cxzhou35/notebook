@@ -105,6 +105,8 @@ nav:
               - memo/pl/julia/index.md
           - "Lua":
               - memo/pl/lua/index.md
+              - "Introduction": memo/pl/lua/intro.md
+              - "Setup": memo/pl/lua/setup.md
           - "Taichi":
               - memo/pl/taichi/index.md
               - "Introduction": memo/pl/taichi/01_intro.md
