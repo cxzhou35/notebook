@@ -4,7 +4,7 @@ comments: true
 
 # Introduction
 
-Taichi是一门应用于特定领域的编程语言，专为高性能，并行计算而设计，内嵌在Python中
+Taichi是一门应用于特定领域的编程语言，专为高性能，并行计算而设计，内嵌在Python语言中
 
 Taichi有以下特性：
 

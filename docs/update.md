@@ -11,10 +11,11 @@ comments: false
 
     - 备忘录会不断完善，最近更新了 [conda](memo/tool/conda/index.md)/[pytorch](memo/tool/pytorch/index.md)
 
-    - 课程相关的内容会慢慢从本地迁移过来，敬请期待~
+    - 课程相关的内容会慢慢从本地迁移过来，随缘更~
 
 !!! abstract "近期做的一些事情"
 
-    - 马上要读研究生了，想利用这段时间学习一些新的知识，目前想学一点 CG 的内容(games101 & games103)，然后学一下 blender/UE5
-
+    - 想学一点 Graphics 的内容(课程主要看 games101 & games103)，然后学一下 blender/UE5
+    - 学习Lua语言和Neovim的插件开发
+    - 学习Taichi，真的不想写CUDA了 :(
     - 提高自己的英语能力，重点想提高听说能力<br>如果有好的建议和方法可以给我留言，联系方式在网站主页的右下角。
