@@ -22,7 +22,7 @@ Taichi中的`ti.types`模块定义了所有Taichi支持的数据类型，这些�
 - 基本类型包括常用的数值数据类型，比如`ti.i32(int32)`, `ti.u8(uint8)`,和`ti.f64(float64)`
 - 复合类型包括类似数组或类似结构的数据类型，这些类型由多个成员组成，这些成员可以是基本类型，也可以是其他复合类型，比如`ti.types.matrix`, `ti.types.ndarray`, 和`ti.types.struct`
 
-## 基本类型
+## 基本类型(Primitive types)
 
 用`i`表示有符号整数，`u`表示无符号整数，`f`表示浮点数，后面跟的位数可以是8，16，32，64，最常用的两种基本类型为
 
@@ -72,6 +72,8 @@ x = ti.field(ti.f64, 5)
 ### 显式类型转换
 
 可以用`ti.cast()`函将给定值转换为特定的目标类型
+
+在compile time对某个变量强制赋予某个类型，以免implicit casting / type inference造成的类型错误
 
 ```python
 @ti.kernel
@@ -138,7 +140,7 @@ def foo():
 
 由此可见，**初始化时的变量类型**决定了隐式类型转换的结果
 
-## 复合类型
+## 复合类型(Compound types)
 
 ### 矩阵和向量
 
@@ -247,3 +249,5 @@ Taichi中有很多初始化struct或者dataclass的方式，除了直接调用�
         v = ti.cast(u, ti.i32)  # ti.Vector([2, 4])
     ```
 
+> Taichi中能做type annotation的地方尽量都做type annotation，并且不要写得太像python（例如让解释器进行自动类型转换），该手动强制类型转换的地方尽量手动转：<br>
+> （1）隐式类型转换经常出问题<br>（2）不出问题也有可能因为损失精度而在编译阶段报一堆烦人的warnings

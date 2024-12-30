@@ -117,6 +117,16 @@ Taichi kernel最多允许有一个返回值，返回值类型可以是`scalar`, 
     kernel_2()  # Prints 2
     ```
 
+Taichi kernel 的要求总结如下：
+
+- kernel函数的参数必须有显式的type annotation
+- 不能在其他kernel或者Taichi function中调用，只能在Python-scope中调用
+- 只能有一个return语句
+- 只能返回一个变量（不像python可以pack成一个tuple）
+- 返回变量的元素个数不要超过30（?）
+- kernel函数的输入变量有大小限制
+- kernel函数会将全局变量视为常量（不当指针）
+
 ## Taichi function
 
 Taichi function是kernel的基本单位，只能从Taichi kernel或另一个Taichi function中被调用
