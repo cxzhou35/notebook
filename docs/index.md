@@ -14,7 +14,7 @@ statistics: true
     - :fontawesome-solid-rss:: **[https://zicx.top](https://zicx.top)**
     - :fontawesome-solid-house:: **[https://zicx.top/home](https://zicx.top/home)**
     - :material-home-search:: **[https://zicx.top/startpage](https://zicx.top/startpage)**
-    - :material-email-multiple:: **[mailto:zjajzcx3566@gmail.com](mailto:zjajzcx3566@gmail.com)**
+    - :material-email-multiple:: **[mailto:cxzhou35@zju.edu.cn](mailto:cxzhou35@zju.edu.)**
 
 <figure markdown="span">
   ![Homepage Wallpaper Dark Mode](./home/wallpaper_dark.png#only-dark){ width="900" }
