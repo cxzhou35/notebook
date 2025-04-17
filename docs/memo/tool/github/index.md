@@ -7,13 +7,13 @@ comments: true
 !!! abstract "Abstract"
     记录一些 Github 相关的内容
 
-## 基本使用
+## Basic
 
 TODO
 
-## 常用片段
+## Code snippets
 
-### Blockquote
+### Github callouts
 
 ```markdown
 > [!NOTE]  
