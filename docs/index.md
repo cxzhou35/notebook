@@ -11,8 +11,8 @@ statistics: true
     <center><img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="75"></center>
 
 !!! info "Contact Me"
-    - :fontawesome-solid-house:: **[https://zicx.top/home](https://zicx.top)**
-    - :fontawesome-solid-rss:: **[https://zicx.top](https://blog.zicx.top)**
+    - :fontawesome-solid-house:: **[https://zicx.top](https://zicx.top)**
+    - :fontawesome-solid-rss:: **[https://blog.zicx.top](https://blog.zicx.top)**
     - :material-home-search:: **[https://zicx.top/startpage](https://zicx.top/startpage)**
     - :material-email-multiple:: **[mailto:cxzhou35@zju.edu.cn](mailto:cxzhou35@zju.edu.)**
 
