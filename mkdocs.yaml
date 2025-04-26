@@ -1,6 +1,6 @@
 site_name: Zicx 的笔记本
 site_author: Zicx
-site_url: "https://zicx.top/notebook"
+site_url: "https://note.zicx.top/"
 site_description: Zicx's Notebook.
 
 repo_name: cxzhou35/notebook
@@ -270,10 +270,10 @@ extra:
       link: https://twitter.com/cxzhou35
       name: Twitter
     - icon: fontawesome/solid/rss
-      link: https://zicx.top/
+      link: https://blog.zicx.top
       name: Blog
     - icon: fontawesome/solid/house
-      link: https://zicx.top/home/
+      link: https://zicx.top
       name: Home
 
 extra_css:
