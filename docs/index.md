@@ -11,10 +11,10 @@ statistics: true
     <center><img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="75"></center>
 
 !!! info "Contact Me"
-    - :fontawesome-solid-house:: **[https://zicx.top](https://zicx.top)**
-    - :fontawesome-solid-rss:: **[https://blog.zicx.top](https://blog.zicx.top)**
-    - :material-home-search:: **[https://zicx.top/startpage](https://zicx.top/startpage)**
-    - :material-email-multiple:: **[mailto:cxzhou35@zju.edu.cn](mailto:cxzhou35@zju.edu.)**
+    - :fontawesome-solid-house:: **[zicx.top](https://zicx.top)**
+    - :fontawesome-solid-rss:: **[blog.zicx.top](https://blog.zicx.top)**
+    - :material-home-search:: **[zicx.top/startpage](https://zicx.top/startpage)**
+    - :material-email-multiple:: **[cxzhou35@zju.edu.cn](mailto:cxzhou35@zju.edu.cn)**
 
 <figure markdown="span">
   ![Homepage Wallpaper Dark Mode](./home/wallpaper_dark.png#only-dark){ width="900" }
