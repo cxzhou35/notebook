@@ -10,11 +10,11 @@ statistics: true
     <div style="font-size:7px;font-weight:bold"><center>Words：{{words}} </center></div>
     <center><img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="75"></center>
 
-!!! info "Contact Me"
-    - Homepage :fontawesome-solid-house:: **[zicx.top](https://zicx.top/)**
-    - Blogs :fontawesome-solid-rss:: **[blog.zicx.top](https://blog.zicx.top/)**
-    - Startpage :material-home-search:: **[start.zicx.top](https://start.zicx.top/)**
-    - Contact :material-email-multiple:: **[cxzhou35[at]zju.edu.cn](mailto:cxzhou35@zju.edu.cn)**
+!!! info "Find me on"
+    - :fontawesome-solid-house:: **[zicx.top](https://zicx.top/)**
+    - :fontawesome-solid-rss:: **[blog.zicx.top](https://blog.zicx.top/)**
+    - :material-home-search:: **[start.zicx.top](https://start.zicx.top/)**
+    - :material-email-multiple:: **[cxzhou35[at]zju.edu.cn](mailto:cxzhou35@zju.edu.cn)**
 
 <figure markdown="span">
   ![Homepage Wallpaper Dark Mode](./home/wallpaper_dark.png#only-dark){ width="900" }
