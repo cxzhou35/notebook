@@ -2,7 +2,7 @@
 comments: false
 ---
 
-# Introduction to Flow Matching and Diffusion Models
+# MIT 6.S184: Introduction to Flow Matching and Diffusion Models
 
 !!! abstract "Abstract"
     - Website: [:fontawesome-solid-house: Latest version](https://diffusion.csail.mit.edu/)
