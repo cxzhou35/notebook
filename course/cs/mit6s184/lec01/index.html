@@ -1499,7 +1499,7 @@
 </a>
 <h1>生成和流</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1167<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>8<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>4<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1412<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>8<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>5<span class="heti-spacing"> </span></span>分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
@@ -1543,7 +1543,7 @@
 <li>形式化地说，<span>ODE<span class="heti-spacing"> </span></span>可以表示为：</li>
 </ul>
 <div class="arithmatex">\[
-\frac{d}{dt}X_t = u_{t}(X_t) \text{ with initial condition } X_0 = x_0
+\frac{\mathrm{d}}{\mathrm{d}t}X_t = u_{t}(X_t) \text{ with initial condition } X_0 = x_0
 \]</div>
 </li>
 <li>
@@ -1552,8 +1552,8 @@
 </ul>
 <p>它们之间的关系是：</p>
 <pre class="mermaid"><code>graph LR
-    VF[Vector Field] --&gt;|defines| ODE[Ordinary Differential Equation]
-    ODE --&gt;|has solution| T[Trajectory]
+    VF[Vector Fields] --&gt;|defines| ODEs[Ordinary Differential Equations]
+    ODEs --&gt;|has solution| T[Trajectory]
     T --&gt;|is one path in| F[Flow]
     VF --&gt;|induces| F</code></pre>
 <p>通过一个简单的例子来理解<span><span class="heti-spacing"> </span>Flow model:</span></p>
@@ -1571,10 +1571,10 @@
 <p><strong>Stochastic Differential Equation (SDE)</strong>:</p>
 <ul>
 <li>描述了点<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(X_t\)</span><span class="heti-spacing"> </span></span>随时间<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t\)</span><span class="heti-spacing"> </span></span>的随机运动，其中每个时刻的运动速度由向量场<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(u_t(x)\)</span><span class="heti-spacing"> </span></span>和扩散系数<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma_{t}\)</span><span class="heti-spacing"> </span></span>决定。</li>
-<li><span>SDE<span class="heti-spacing"> </span></span>可以表示为：<span>ODE +<span class="heti-spacing"> </span></span>随机噪声<span><span class="heti-spacing"> </span>(Stochastic Noise)</span></li>
+<li><span>SDE<span class="heti-spacing"> </span></span>可以表示为：<span>ODE +<span class="heti-spacing"> </span></span>随机噪声<span><span class="heti-spacing"> </span>(Stochastic Noise)</span>，当<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\sigma_{t} = 0\)</span><span class="heti-spacing"> </span></span>时，<span>SDE<span class="heti-spacing"> </span></span>就是<span><span class="heti-spacing"> </span>ODE</span>，<span>diffusion model<span class="heti-spacing"> </span></span>变成了<span><span class="heti-spacing"> </span>flow model.</span></li>
 </ul>
 <div class="arithmatex">\[
-dX_t = u_{t}(X_t)dt + \sigma_{t}dW_t \text{ with initial condition } X_0 = x_0
+\mathrm{d} X_t = u_{t}(X_t)\mathrm{d} t + \sigma_{t}\mathrm{d} W_t \text{ with initial condition } X_0 = x_0
 \]</div>
 </li>
 <li>
@@ -1590,18 +1590,37 @@ dX_t = u_{t}(X_t)dt + \sigma_{t}dW_t \text{ with initial condition } X_0 = x_0
 <li><span class="arithmatex">\(W_{t+s} - W_s \sim \mathcal{N}(0, t)\)</span></li>
 </ul>
 </li>
+<li>这个过程又叫做 <strong><span>Wiener<span class="heti-spacing"> </span></span>过程<span><span class="heti-spacing"> </span>(Wiener Process)</span></strong>.</li>
 </ul>
 </li>
 </ul>
-<p>我们可以将<span class="heti-skip"><span class="heti-spacing"> </span>SDE<span class="heti-spacing"> </span></span>改写成微分形式：</p>
+<div class="admonition note">
+<p class="admonition-title">Why use SDEs instead of ODEs?</p>
+<p>因为我们真实世界充满了随机性，而<span class="heti-skip"><span class="heti-spacing"> </span>SDE<span class="heti-spacing"> </span></span>是一个随机过程，具有更强的表达能力，可以捕捉到数据分布中的随机性和不确定性。</p>
+</div>
+<p>我们可以将<span class="heti-skip"><span class="heti-spacing"> </span>SDE<span class="heti-spacing"> </span></span>从微分形式改写成：</p>
 <div class="arithmatex">\[
-X_{t+h} = X_t + h u_{t}(X_t) + \sigma_{t} \left(W_{t+h} - W_t\right) + h R_t(h)
+X_{t+h}=X_t+\underbrace{hu_t(X_t)}_{\text{deterministic}}+\sigma_t\underbrace{(W_{t+h}-W_t)}_{\text{stochastic}}+\underbrace{hR_t(h)}_{\mathrm{error~term}}
 \]</div>
 <ul>
 <li>其中的<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(R_t(h)\)</span><span class="heti-spacing"> </span></span>是一个一阶小量（小于<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(h\)</span><span class="heti-spacing"> </span></span>的高阶项<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span class="arithmatex">\(\lim_{h \to 0} R_t(h) = 0\)</span>.</li>
-<li>利用布朗运动的独立增量性质，我们将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(W_{t+h} - W_t\)</span><span class="heti-spacing"> </span></span>视为一个独立的随机变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\epsilon \sim \mathcal{N}(0, hI_{d})\)</span><span class="heti-spacing"> </span></span>的函数。</li>
-<li>上面的式子可以改写成<span><span class="heti-spacing"> </span><span class="arithmatex">\(X_{t+h} = X_t + h u_{t}(X_t) + \sigma_{t} \sqrt{h} \epsilon\)</span></span>，这就是常见的<span class="heti-skip"><span class="heti-spacing"> </span>diffusion model<span class="heti-spacing"> </span></span>的形式。</li>
+<li>利用布朗运动的独立增量性质，我们将<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(W_{t+h} - W_t\)</span><span class="heti-spacing"> </span></span>视为一个独立随机变量<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\epsilon_t \sim \mathcal{N}(0, hI_{d})\)</span><span class="heti-spacing"> </span></span>的函数。</li>
+<li>省略误差项后，上面的表达式可以写成<span><span class="heti-spacing"> </span><span class="arithmatex">\(X_{t+h} = X_t + h u_{t}(X_t) + \sigma_{t} \sqrt{h} \epsilon_t\)</span></span>，这就是常见的<span class="heti-skip"><span class="heti-spacing"> </span>diffusion model<span class="heti-spacing"> </span></span>的形式。</li>
 </ul>
+<div class="admonition example">
+<p class="admonition-title">Example: Ornstein-Uhlenbeck(OU) Process</p>
+<ul>
+<li>这是一个经典的<span><span class="heti-spacing"> </span>SDE</span>，表达式为：</li>
+</ul>
+<div class="arithmatex">\[
+\mathrm{d} X_t = - \theta X_t \mathrm{d}t + \sigma \mathrm{d} W_t
+\]</div>
+<ul>
+<li>线性偏移系数：<span class="arithmatex">\(u_t(x) = -\theta x\)</span>.</li>
+<li>线性扩散系数：<span class="arithmatex">\(\sigma_t = \sigma\)</span>.</li>
+<li>这个过程在<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(t \to \infty\)</span><span class="heti-spacing"> </span></span>时收敛到一个高斯分布<span><span class="heti-spacing"> </span><span class="arithmatex">\(\mathcal{N}(0, \sigma^2)\)</span>.</span></li>
+</ul>
+</div>
 <p>和<span class="heti-skip"><span class="heti-spacing"> </span>Flow model<span class="heti-spacing"> </span></span>一样，我们利用神经网络来学习向量场<span><span class="heti-spacing"> </span><span class="arithmatex">\(u_{t}(X_t)\)</span></span>，并通过<span class="heti-skip"><span class="heti-spacing"> </span>SDE<span class="heti-spacing"> </span></span>来进行采样：</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/algorithm_diffusion.png"><img alt="algorithm_diffusion" src="../assets/algorithm_diffusion.png" width="80%"/></a></p>
 <div class="grid">
@@ -1611,7 +1630,7 @@ X_{t+h} = X_t + h u_{t}(X_t) + \sigma_{t} \left(W_{t+h} - W_t\right) + h R_t(h)
 <li>Random init: <span class="arithmatex">\(X_0 \sim p_{init}\)</span></li>
 <li>Vector field (by a neural network): <span class="arithmatex">\(u^{\theta}_{t}(x)\)</span></li>
 <li>Diffusion coefficient: <span class="arithmatex">\(\sigma_{t}\)</span></li>
-<li>SDE: <span class="arithmatex">\(d X_t = u^{\theta}_{t}(X_t)dt + \sigma_{t}dW_t\)</span></li>
+<li>SDE: <span class="arithmatex">\(\mathrm{d} X_t = u^{\theta}_{t}(X_t)\mathrm{d}t + \sigma_{t}\mathrm{d} W_t\)</span></li>
 <li>Goal: <span class="arithmatex">\(X_T \sim p_{data}\)</span></li>
 </ol>
 </div>
@@ -1621,15 +1640,15 @@ X_{t+h} = X_t + h u_{t}(X_t) + \sigma_{t} \left(W_{t+h} - W_t\right) + h R_t(h)
 </div>
 <h2 id="qa">Q&amp;A<a class="headerlink" href="#qa" title="Permanent link">¶</a></h2>
 <details class="question">
-<summary>Why we choose Brownian motion?</summary>
-<p>Think about that</p>
+<summary>Why we choose Brownian motion as the stochastic process?</summary>
+<p>可以用其他的随机过程，比如<span class="heti-skip"><span class="heti-spacing"> </span>Levy<span class="heti-spacing"> </span></span>过程，但是<span class="heti-skip"><span class="heti-spacing"> </span>Brownian motion<span class="heti-spacing"> </span></span>是最简单的随机过程，具有一些很好的性质，比如增量的独立性和高斯分布，容易实现和计算。</p>
 </details>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年5月12日 17:09:27">2025年5月12日 17:09:27</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年5月13日 19:25:47">2025年5月13日 19:25:47</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
