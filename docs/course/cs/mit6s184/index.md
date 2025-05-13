@@ -24,6 +24,6 @@ comments: false
 - [ ] [Lecture 4: Building an Image Generator](./lec04.md)
 
 ### Labs
-- [ ] [Lab1: Working with SDEs](https://drive.google.com/file/d/1kT_epFEuPD_uAHzKVWufovMf5Ro0lER1/view?usp=sharing)
+- [x] [Lab1: Working with SDEs](https://github.com/cxzhou35/mit6s184/blob/main/labs/lab1.ipynb)
 - [ ] [Lab2: Flow Matching and Score Matching](https://drive.google.com/file/d/1Su2zbsubk0GB7obELDLpD7vHmE2huW-_/view?usp=sharing)
 - [ ] [Lab3: Conditional Image Generation](https://drive.google.com/file/d/1crSvL3ongtw0H0qO1DhnfQHW-biTasGb/view?usp=sharing)
