@@ -52,7 +52,7 @@ comments: true
     - 形式化地说，ODE 可以表示为：
 
     $$
-    \frac{d}{dt}X_t = u_{t}(X_t) \text{ with initial condition } X_0 = x_0
+    \frac{\mathrm{d}}{\mathrm{d}t}X_t = u_{t}(X_t) \text{ with initial condition } X_0 = x_0
     $$
 
 - **流(Flow)**: 表示在给定初始条件 $x_0$ 下，上述 ODE 方程的解的集合，$\left(X_0, t\right) \rightarrow \phi_t(x_0)$.
@@ -61,8 +61,8 @@ comments: true
 
 ```mermaid
 graph LR
-    VF[Vector Field] -->|defines| ODE[Ordinary Differential Equation]
-    ODE -->|has solution| T[Trajectory]
+    VF[Vector Fields] -->|defines| ODEs[Ordinary Differential Equations]
+    ODEs -->|has solution| T[Trajectory]
     T -->|is one path in| F[Flow]
     VF -->|induces| F
 ```
@@ -86,10 +86,10 @@ graph LR
 - **扩散系数(Diffusion Coefficient)**：描述了随机过程的扩散程度，$t \sim \sigma_{t}, \  \sigma_{t} \geqslant 0$.
 - **Stochastic Differential Equation (SDE)**:
     - 描述了点 $X_t$ 随时间 $t$ 的随机运动，其中每个时刻的运动速度由向量场 $u_t(x)$ 和扩散系数 $\sigma_{t}$ 决定。
-    - SDE 可以表示为：ODE + 随机噪声(Stochastic Noise)
+    - SDE 可以表示为：ODE + 随机噪声(Stochastic Noise)，当 $\sigma_{t} = 0$ 时，SDE 就是 ODE，diffusion model 变成了 flow model.
 
     $$
-    dX_t = u_{t}(X_t)dt + \sigma_{t}dW_t \text{ with initial condition } X_0 = x_0
+    \mathrm{d} X_t = u_{t}(X_t)\mathrm{d} t + \sigma_{t}\mathrm{d} W_t \text{ with initial condition } X_0 = x_0
     $$
 
 - **布朗运动(Brownian Motion)**：原指悬浮在介质中的粒子的随机运动，这里指随机噪声 $W_t \in \R^d$，它是一个随机过程，具有以下性质：
@@ -99,16 +99,31 @@ graph LR
         - $W_{t+s} - W_s$ 和 $W_s$ 独立
     - $W_t$ 的增量服从正态分布(Gaussian Increments)：
         - $W_{t+s} - W_s \sim \mathcal{N}(0, t)$
+    - 这个过程又叫做 **Wiener 过程(Wiener Process)**.
 
-我们可以将 SDE 改写成微分形式：
+!!! note "Why use SDEs instead of ODEs?"
+    因为我们真实世界充满了随机性，而 SDE 是一个随机过程，具有更强的表达能力，可以捕捉到数据分布中的随机性和不确定性。
+
+我们可以将 SDE 从微分形式改写成：
 
 $$
-X_{t+h} = X_t + h u_{t}(X_t) + \sigma_{t} \left(W_{t+h} - W_t\right) + h R_t(h)
+X_{t+h}=X_t+\underbrace{hu_t(X_t)}_{\text{deterministic}}+\sigma_t\underbrace{(W_{t+h}-W_t)}_{\text{stochastic}}+\underbrace{hR_t(h)}_{\mathrm{error~term}}
 $$
 
 - 其中的 $R_t(h)$ 是一个一阶小量（小于 $h$ 的高阶项），$\lim_{h \to 0} R_t(h) = 0$.
-- 利用布朗运动的独立增量性质，我们将 $W_{t+h} - W_t$ 视为一个独立的随机变量 $\epsilon \sim \mathcal{N}(0, hI_{d})$的函数。
-- 上面的式子可以改写成 $X_{t+h} = X_t + h u_{t}(X_t) + \sigma_{t} \sqrt{h} \epsilon$，这就是常见的diffusion model 的形式。
+- 利用布朗运动的独立增量性质，我们将 $W_{t+h} - W_t$ 视为一个独立随机变量 $\epsilon_t \sim \mathcal{N}(0, hI_{d})$的函数。
+- 省略误差项后，上面的表达式可以写成 $X_{t+h} = X_t + h u_{t}(X_t) + \sigma_{t} \sqrt{h} \epsilon_t$，这就是常见的diffusion model 的形式。
+
+!!! example "Example: Ornstein-Uhlenbeck(OU) Process"
+    - 这是一个经典的 SDE，表达式为：
+
+    $$
+    \mathrm{d} X_t = - \theta X_t \mathrm{d}t + \sigma \mathrm{d} W_t
+    $$
+
+    - 线性偏移系数：$u_t(x) = -\theta x$.
+    - 线性扩散系数：$\sigma_t = \sigma$.
+    - 这个过程在 $t \to \infty$ 时收敛到一个高斯分布 $\mathcal{N}(0, \sigma^2)$.
 
 和 Flow model 一样，我们利用神经网络来学习向量场 $u_{t}(X_t)$，并通过 SDE 来进行采样：
 
@@ -121,7 +136,7 @@ $$
 1. Random init: $X_0 \sim p_{init}$
 2. Vector field (by a neural network): $u^{\theta}_{t}(x)$
 3. Diffusion coefficient: $\sigma_{t}$
-4. SDE: $d X_t = u^{\theta}_{t}(X_t)dt + \sigma_{t}dW_t$
+4. SDE: $\mathrm{d} X_t = u^{\theta}_{t}(X_t)\mathrm{d}t + \sigma_{t}\mathrm{d} W_t$
 5. Goal: $X_T \sim p_{data}$
 </div>
 
@@ -131,5 +146,5 @@ $$
 </div>
 
 ## Q&A
-??? question "Why we choose Brownian motion?"
-    Think about that
+??? question "Why we choose Brownian motion as the stochastic process?"
+    可以用其他的随机过程，比如 Levy 过程，但是 Brownian motion 是最简单的随机过程，具有一些很好的性质，比如增量的独立性和高斯分布，容易实现和计算。
