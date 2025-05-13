@@ -240,6 +240,9 @@ extra:
     provider: google
     property: G-02XSVD1LHD
   social:
+    - icon: material/email
+      like: cxzhou35@zju.edu.cn
+      name: Mail
     - icon: fontawesome/brands/github
       link: https://github.com/cxzhou35
       name: Github
