@@ -17,12 +17,12 @@ comments: true
 ## Training Target
 
 构建了一个生成模型后，我们需要训练它从而使其能够生成合理的样本。
-在上节课中，我们提到 flow/diffusion model 中只有 Vector Fields $u_t(X_t)$ 是用神经网络来学习的，因此我们的训练其实就是优化这个网络。
-首先我们需要定义一个**训练目标(Training Target)**，最简单的做法是最小化均方误差(Mean Squared Error, MSE)，即最小化生成的矢量场和真实的矢量场之间的误差：
+在上节课中，我们提到 flow/diffusion model 中只有 Vector Fields $u_t^{\theta}(X_t)$ 是有参数的，因此我们的训练其实就是优化这个网络的参数。
+首先我们需要定义一个**训练目标(Training Target)**，最简单的做法是最小化均方误差(Mean Squared Error, MSE)：
 
 $$\boxed{L(\theta)=\|u_t^\theta(x)-u_t^{\mathrm{target}}(x)\|^2}$$
 
-但是这个损失函数中的真实矢量场是未知的，我们能够得到的只有一些采样的真实样本 $x \sim p_{\mathrm{data}}$，
+但是这个损失函数中的真实矢量场 $u_t^{\mathrm{target}}(x)$ 是未知的，我们只能通过采样得到一些真实样本 $x \sim p_{\mathrm{data}}$，
 需要通过这些样本来 formulate $u_t^{\mathrm{target}}(x)$，这也是这一节课的重点: **How to formulate $u_t^{\mathrm{target}}(x)$?**
 
 ### Probability Path
@@ -48,19 +48,21 @@ $$\boxed{L(\theta)=\|u_t^\theta(x)-u_t^{\mathrm{target}}(x)\|^2}$$
     - $p_t(x) = \int p_t(x | z) p_{data}(z) dz$
     - $p_0(x) = p_{init}, \quad p_1(x) = p_{data}$
 
-每一个 CPP 都可以推导出一个 MPP，这个过程叫做 **边际化(Marginalization)**，其实就是遍历所有的 $z$.
+!!! example "Example: Gaussian Probability Path"
 
-!!! example "Gaussian Probability Path"
+    $p_t(\cdot | z) = \mathcal{N}(\alpha_t z, \beta_t^2 I_d), \quad \alpha_t = t, \beta_t = 1-t$
 
-    $p_t(\cdot | z) = \mathcal{N}(\alpha_t z, \beta_t^2 I_d), \quad \alpha_t = t, \beta_t = \sqrt{1-t}$
-
-    $\alpha_t$ 和 $\beta_t$ 是 **"noise scheduler"** 函数，用于控制噪声的强度和数据分布的形状。
+    $\alpha_t$ 和 $\beta_t$ 是 **noise scheduler** 函数，用于控制噪声的强度和数据分布的形状。
 
 通过可视化理解概率路径：
 ![](assets/probability_path_vis.png){width=80%}
 
 - 红色的范围表示初始分布，蓝色的范围表示数据分布
 - 条件概率路径最后会收敛到一个点上，而边际概率路径则会收敛到一个分布上
+
+!!! note "Marginalization trick"
+
+    每一个 Conditional Object 都可以推导出一个 Marginal Object，其中的 Object 可以是 PP 或 VF，这个过程叫做 **边际化(Marginalization)**，其实就是遍历所有的 $z \sim p_\mathrm{data}$.
 
 ### Conditional and Marginal Vector Fields
 
@@ -136,7 +138,7 @@ $$
 s_t(x) = \nabla_x \log p_t(x) = \int \nabla_x log p_t(x|z) \frac{p_t(x|z)p_{\mathrm{data}}(z)}{p_t(x)}\mathrm{d}z
 $$
 
-!!! example "Gaussian Score Function"
+!!! example "Example: Gaussian Score Function"
     $s_t(x) = \nabla_x \log p_t(x | z) = - \frac{x - \alpha_t z}{\beta_t^2} = - \frac{1}{\beta_t^2} (x - \alpha_t z)$
 
 
@@ -163,12 +165,10 @@ $$
 
 ## Summary
 
-<div class="grid" markdown>
-<div markdown>
-![](assets/conditional_summary.png)
-</div>
+=== "Conditional"
 
-<div markdown>
-![](assets/marginal_summary.png){width=98%}
-</div>
-</div>
+    ![](assets/conditional_summary.png){width=90%}
+
+=== "Marginal"
+
+    ![](assets/marginal_summary.png){width=90%}
