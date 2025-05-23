@@ -34,9 +34,9 @@ comments: true
 
 $$\boxed{L_{\mathbf{FM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x) - u_t^{\mathrm{target}}(x)\|^2 \right]}$$
 
-在上节课中，我们提到这个损失函数是 intractable 的，而遍历所有的样本 $z$ 也是不现实的，但是有一个很关键的 insight 是：
-**$L_{\mathbf{FM}}$ 和 $L_{\mathbf{CFM}}$ 只相差一个常数**，而且这个常数 $C$ 与训练参数 $\theta$ 无关，所以最小化后者同样可以达到训练目的。
-证明过程在[课程笔记 Theorem 18](https://diffusion.csail.mit.edu/docs/lecture-notes.pdf#page=24.11)中。
+在上节课中，我们提到这个损失函数是 intractable 的，而遍历所有的样本 $z$ 也是不现实的，但是有一个很关键的 insight:
+**$L_{\mathbf{FM}}$ 和 $L_{\mathbf{CFM}}$ 只相差一个常数 $C$**，而且这个常数 $C$ 与训练参数 $\theta$ 无关，所以最小化后者同样可以达到训练目的。
+证明过程在[课程笔记 Theorem 18](https://diffusion.csail.mit.edu/docs/lecture-notes.pdf#page=24.11) 中。
 
 Conditional Flow Matching Loss:
 
@@ -44,12 +44,27 @@ $$\boxed{L_{\mathbf{CFM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x
 
 ### Training Algorithm
 
-![](assets/training_algorithm_cfm.png)
+![](assets/training_algorithm_cfm.png){width=90%}
 
-??? example "Example: Gaussian CondOT Probability Path"
+???+ example "Example: Gaussian CondOT Flow Matching"
 
-    以高斯分布为例，
-    $u_t^{\mathrm{target}}(x | z) = \left(\dot{\alpha_t} - \frac{\dot{\beta_t}}{\beta_t} \right) z + \frac{\dot{\beta_t}}{\beta_t} x, \alpha_t = t, \beta_t = 1-t$
+    高斯条件概率路径和向量场:
+    $u_t^{\mathrm{target}}(x | z) = \left(\dot{\alpha_t} - \frac{\dot{\beta_t}}{\beta_t} \right) z + \frac{\dot{\beta_t}}{\beta_t} x, x = \alpha_t z + \beta_t \epsilon, \epsilon \sim \mathcal{N}(0, I_d)$
+
+    高斯条件流匹配损失函数:
+
+    $$
+    \begin{gathered}
+    \mathcal{L}_{\mathrm{CFM}}(\theta)=\mathbb{E}_{t\sim\mathrm{Unif},z\sim p_{\mathrm{data}},x\sim\mathcal{N}(\alpha_tz,\beta_t^2I_d)}[\|u_t^\theta(x)-\left(\dot{\alpha}_t-\frac{\dot{\beta}_t}{\beta_t}\alpha_t\right)z-\frac{\dot{\beta}_t}{\beta_t}x\|^2] \\
+    = \mathbb{E}_{t\sim\mathrm{Unif},z\sim p_\mathrm{data},\epsilon\sim\mathcal{N}(0,I_d)}[\|u_t^\theta(\alpha_tz+\beta_t\epsilon)-(\dot{\alpha}_tz+\dot{\beta}_t\epsilon)\|^2]
+    \end{gathered}
+    $$
+
+    使用标准噪声规划器: $\alpha_t = t, \beta_t = 1-t$
+
+    $$
+    \mathcal{L}_{\mathrm{CFM}}(\theta)=\mathbb{E}_{t\sim\mathrm{Unif},z\sim p_\mathrm{data},\epsilon\sim\mathcal{N}(0,I_d)}[\|u_t^\theta(t \cdot z + (1-t) \cdot \epsilon)-(z - \epsilon)\|^2]
+    $$
 
     <div class="grid" markdown>
 
@@ -59,12 +74,25 @@ $$\boxed{L_{\mathbf{CFM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x
 
     </div>
 
+    :material-code-json: 训练的 PyTorch 代码:
+
+    ```python
+    t = torch.rand(batch_size) # 1. sample t from uniform distribution
+    z = data_loader.sample(batch_size) # 2. sample z from data distribution
+    e = torch.randn(batch_size) # 3. sample noise epsilon from standard normal distribution
+    x = model(t * z + (1 - t) * e, t) # 4. get predicted values from our network u_t(x)
+    target = z - e # 5. get target values
+    loss = torch.mean((x - target) ** 2) # 6. compute loss
+    loss.backward() # 7. backpropagate gradients
+    optimizer.step() # 8. update parameters for our network u_t(x)
+    ```
+
     > Meta MovieGen 和 Stable Diffusion 3 都用了这个训练算法。
 
 ## Score Matching
 
-边际得分函数(Marginal Score Function, MSF) 允许将 ODE 扩展为具有任意扩散系数的 SDE.
-不同于 Flow Matching，这里我们的网络 $s_t^{\theta}(x)$ 是一个得分函数(Score Function)，而不是一个向量场。
+**边际得分函数(Marginal Score Function, MSF)** 允许将 ODE 扩展为具有任意扩散系数的 SDE.
+不同于 Flow Matching，这里我们的网络 $s_t^{\theta}(x)$ 是近似一个目标得分函数(Score Function)，而不是一个向量场。
 
 
 $$
@@ -80,7 +108,7 @@ $$
 
 $$\boxed{L_{\mathbf{SM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|s_t^{\theta}(x) - \nabla_x \log p_t(x)\|^2 \right]}$$
 
-Denoising Score Matching Loss:
+Conditional Score Matching Loss:
 
 $$\boxed{L_{\mathbf{DSM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|s_t^{\theta}(x) - \nabla_x \log p_t(x | z)\|^2 \right]}$$
 
@@ -88,13 +116,15 @@ $$\boxed{L_{\mathbf{DSM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|s_t^{\theta}(x
 
 ### Training Algorithm
 
-![](assets/training_algorithm_fm.png)
+![](assets/training_algorithm_sm.png){width=90%}
 
 ??? example "Example: Denoising Score Matching for Gaussian Probability Path"
 
     以高斯分布为例：
 
     $$\nabla\log p_t(x|z)=-\frac{x-\alpha_tz}{\beta_t^2}, \epsilon\sim\mathcal{N}(0,I_d) \\ \Rightarrow x=\alpha_tz+\beta_t\epsilon\sim\mathcal{N}(\alpha_tz,\beta_t^2I_d)$$
+
+    Denoising Score Matching Loss:
 
     $$\mathcal{L}_\mathrm{dsm}(\theta)= \mathbb{E}_{t\sim\mathrm{Unif},z\sim p_{\mathrm{data}},\epsilon\sim\mathcal{N}(0,I_{d})}[\|s_{t}^{\theta}(\alpha_{t}z+\beta_{t}\epsilon)+\frac{\epsilon}{\beta_{t}}\|^{2}]$$
 
@@ -114,12 +144,19 @@ $$
 \end{aligned}
 $$
 
+Gaussian Probability Path:
+
+$$
+X_0 \sim p_{\mathrm{init}},\quad\mathrm{d}X_t=\left[\left(\beta_t^2\frac{\dot{\alpha}_t}{\alpha_t}-\dot{\beta}_t\beta_t+\frac{\sigma_t^2}{2}\right)s_t^\theta(x)+\frac{\dot{\alpha}_t}{\alpha_t}x\right]\mathrm{d}t+\sigma_t\mathrm{d}W_t
+$$
+
 ## Denoising Diffusion Models
 
-**去噪扩散模型(Denoising Diffusion Models, DDMs)** 是一种基于扩散模型的生成模型，我们一般直接把它叫做 diffusion model.<br>
+**去噪扩散模型(Denoising Diffusion Models, DDMs)** 是一种基于扩散模型的生成模型，我们一般直接把它叫做 diffusion model.
+去噪扩散模型仅适用于高斯初始分布 $p_{\mathrm{init}} = \mathcal{N}(0, I_d)$ 和高斯概率路径。<br>
 **Denoising Diffusion Models = Diffusion Models with Gaussian Probability Path**.
 
-DDM 有很多很好的性质，它的向量场和得分函数都是 $x$ 和 $z$ 的加权和，且是线性的，所以可以转换向量场和得分函数。
+DDMs 有很多很好的性质，它的向量场和得分函数都是 $x$ 和 $z$ 的加权和，且是线性的，所以可以转换向量场和得分函数。
 
 $$
 u_t^{\mathrm{target}}(x|z)=\left(\dot{\alpha}_t-\frac{\dot{\beta}_t}{\beta_t}\alpha_t\right)z+\frac{\dot{\beta}_t}{\beta_t}x, \quad \nabla\log p_t(x|z)=-\frac{x-\alpha_tz}{\beta_t^2}

@@ -17,7 +17,7 @@ comments: true
 ## Training Target
 
 构建了一个生成模型后，我们需要训练它从而使其能够生成合理的样本。
-在上节课中，我们提到 flow/diffusion model 中只有 Vector Fields $u_t^{\theta}(X_t)$ 是有参数的，因此我们的训练其实就是优化这个网络的参数。
+在上节课中，我们提到 flow/diffusion model 中只有 Vector Fields $u_t^{\theta}(X_t)$ 是有学习参数的，因此我们的训练其实就是优化这个网络的参数。
 首先我们需要定义一个**训练目标(Training Target)**，最简单的做法是最小化均方误差(Mean Squared Error, MSE)：
 
 $$\boxed{L(\theta)=\|u_t^\theta(x)-u_t^{\mathrm{target}}(x)\|^2}$$
@@ -35,11 +35,11 @@ $$\boxed{L(\theta)=\|u_t^\theta(x)-u_t^{\mathrm{target}}(x)\|^2}$$
     - **Conditional**: Per single data point，考虑单点
     - **Marginal**: Across distribution of data points，让单点数据随机化，考虑分布，是我们最后想要的
 
-**概率路径(Probability Path, PP)**: 从噪声分布到样本数据分布的插值路径
+**概率路径(Probability Path, PP)**: 从噪声分布到样本数据分布的插值分布路径
 
 - **条件概率路径(Conditional Probability Path, CPP)**: $p_t(\cdot | z)$
     - interpolation between $p_{init}$ and a data point $z$
-    - $p_t(\cdot | z)$ 是一个 $\R^d$ 上的分布
+    - $p_t(\cdot | z)$ 是 $\R^d$ 上的一组分布
     - $p_0(\cdot | z) = p_{\mathrm{init}}, \quad p_1(\cdot | z) = \delta_z$，其中的 $\delta_z$ 是 Dirac delta function.
 
 - **边际概率路径(Marginal Probability Pathm, MPP)**: $p_t(x)$
@@ -161,6 +161,14 @@ $$
 
 </div>
 </div>
+
+### Langevin Dynamics
+
+**朗格文动力学(Langevin Dynamics)** 是福克-普朗克方程在概率路径为静止时的一个特例。
+
+$$
+\mathrm{d}X_t = \frac{\sigma_t^2}{2} \nabla \log p_t(X_t) \mathrm{d}t + \sigma_t \mathrm{d}W_t
+$$
 
 
 ## Summary
