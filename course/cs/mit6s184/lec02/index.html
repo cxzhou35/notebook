@@ -522,6 +522,14 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lec04/">
+<span class="md-ellipsis">
+    Lec04-图像生成器
+    
+  </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -1557,7 +1565,7 @@
 </a>
 <h1><span>Lec02-<span class="heti-spacing"> </span></span>构建训练目标</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1753<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>6<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>分钟</p>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约<span class="heti-skip"><span class="heti-spacing"> </span>1765<span class="heti-spacing"> </span></span>个字 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> <span>6<span class="heti-spacing"> </span></span>张图片 <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间<span class="heti-skip"><span class="heti-spacing"> </span>6<span class="heti-spacing"> </span></span>分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
@@ -1573,7 +1581,9 @@
 </ul>
 </div>
 <h2 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/recap.png"><img alt="recap" src="../assets/recap.png" width="90%"/></a></p>
+<figure>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/recap.png"><img align="center" alt="" src="../assets/recap.png" width="90%"/></a>
+</figure>
 <h2 id="training-target">Training Target<a class="headerlink" href="#training-target" title="Permanent link">¶</a></h2>
 <p>构建了一个生成模型后，我们需要训练它从而使其能够生成合理的样本。
 在上节课中，我们提到 flow/diffusion model 中只有 Vector Fields <span class="arithmatex">\(u_t^{\theta}(X_t)\)</span> 是有学习参数的，因此我们的训练其实就是优化这个网络的参数。
@@ -1616,8 +1626,10 @@
 <p><span class="arithmatex">\(p_t(\cdot | z) = \mathcal{N}(\alpha_t z, \beta_t^2 I_d), \quad \alpha_t = t, \beta_t = 1-t\)</span></p>
 <p><span><span class="arithmatex">\(\alpha_t\)</span><span class="heti-spacing"> </span></span>和<span class="heti-skip"><span class="heti-spacing"> </span><span class="arithmatex">\(\beta_t\)</span><span class="heti-spacing"> </span></span>是 <strong>noise scheduler</strong> 函数，用于控制噪声的强度和数据分布的形状。</p>
 </div>
-<p>通过可视化理解概率路径：
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/probability_path_vis.png"><img alt="" src="../assets/probability_path_vis.png" width="80%"/></a></p>
+<p>通过可视化理解概率路径：</p>
+<figure>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/probability_path_vis.png"><img align="center" alt="" src="../assets/probability_path_vis.png" width="80%"/></a>
+</figure>
 <ul>
 <li>红色的范围表示初始分布，蓝色的范围表示数据分布</li>
 <li>条件概率路径最后会收敛到一个点上，而边际概率路径则会收敛到一个分布上</li>
@@ -1656,7 +1668,9 @@ X_0 \sim p_{init}, \quad \frac{\mathrm{d}}{\mathrm{d}t} X_t = u_{t}^{\text{targe
 <p>散度的定义： <span class="arithmatex">\(div(v) = \nabla \cdot v = \displaystyle\sum_{i=1}^d \frac{\partial v_i}{\partial x_i}\)</span></p>
 </div>
 <div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/continuity_equation.png"><img alt="" src="../assets/continuity_equation.png" width="70%"/></a></p>
+<figure>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/continuity_equation.png"><img align="center" alt="" src="../assets/continuity_equation.png" width="70%"/></a>
+</figure>
 </div>
 </div>
 <div class="admonition note">
@@ -1692,7 +1706,9 @@ s_t(x) = \nabla_x \log p_t(x) = \int \nabla_x log p_t(x|z) \frac{p_t(x|z)p_{\mat
 \]</div>
 </div>
 <div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/fp_equation.png"><img alt="" src="../assets/fp_equation.png" width="70%"/></a></p>
+<figure>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/fp_equation.png"><img align="center" alt="" src="../assets/fp_equation.png" width="70%"/></a>
+</figure>
 </div>
 </div>
 <h3 id="langevin-dynamics">Langevin Dynamics<a class="headerlink" href="#langevin-dynamics" title="Permanent link">¶</a></h3>
@@ -1704,10 +1720,14 @@ s_t(x) = \nabla_x \log p_t(x) = \int \nabla_x log p_t(x|z) \frac{p_t(x|z)p_{\mat
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Conditional</label><label for="__tabbed_1_2">Marginal</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/conditional_summary.png"><img alt="" src="../assets/conditional_summary.png" width="90%"/></a></p>
+<p><figure markdown="span">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/conditional_summary.png"><img align="center" alt="" src="../assets/conditional_summary.png" width="90%"/></a>
+</figure></p>
 </div>
 <div class="tabbed-block">
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/marginal_summary.png"><img alt="" src="../assets/marginal_summary.png" width="90%"/></a></p>
+<p><figure markdown="span">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="../assets/marginal_summary.png"><img align="center" alt="" src="../assets/marginal_summary.png" width="90%"/></a>
+</figure></p>
 </div>
 </div>
 </div>
@@ -1716,13 +1736,13 @@ s_t(x) = \nabla_x \log p_t(x) = \int \nabla_x log p_t(x|z) \frac{p_t(x|z)p_{\mat
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年5月23日 15:54:19">2025年5月23日 15:54:19</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年5月29日 19:11:41 CST">2025年5月29日 19:11:41</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年5月12日 17:09:27">2025年5月12日 17:09:27</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年5月12日 17:09:27 CST">2025年5月12日 17:09:27</span>
 </span>
 </aside>
 <h2 id="__comments">评论</h2>
