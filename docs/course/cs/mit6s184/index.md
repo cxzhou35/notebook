@@ -21,15 +21,15 @@ comments: false
 - [x] [Lecture 1: Flow and Diffusion Models](./lec01.md)
 - [x] [Lecture 2: Constructing a Training Target](./lec02.md)
 - [x] [Lecture 3: Training Flow and Diffusion Models](./lec03.md)
-- [ ] [Lecture 4: Building an Image Generator](./lec04.md)
+- [x] [Lecture 4: Building an Image Generator](./lec04.md)
 
 ### Labs
 - [x] [Lab1: Working with SDEs](https://github.com/cxzhou35/mit6s184/blob/main/labs/lab1.ipynb)
 - [x] [Lab2: Flow Matching and Score Matching](https://drive.google.com/file/d/1Su2zbsubk0GB7obELDLpD7vHmE2huW-_/view?usp=sharing)
-- [ ] [Lab3: Conditional Image Generation](https://drive.google.com/file/d/1crSvL3ongtw0H0qO1DhnfQHW-biTasGb/view?usp=sharing)
-
-<!-- center the image -->
+- [x] [Lab3: Conditional Image Generation](https://drive.google.com/file/d/1crSvL3ongtw0H0qO1DhnfQHW-biTasGb/view?usp=sharing)
 
 ## Recap
-![structure](assets/structure.png)
-*Credit: [Flow Matching and Diffusion Deep Dive @Medium](https://medium.com/@hasfuraa/flow-matching-and-diffusion-deep-dive-b080f7782654)*
+<figure markdown="span">
+    ![](assets/structure.png){ width=80% align="center" }
+    <figcaption>Credit: [Flow Matching and Diffusion Deep Dive @Medium](https://medium.com/@hasfuraa/flow-matching-and-diffusion-deep-dive-b080f7782654)</figcaption>
+</figure>

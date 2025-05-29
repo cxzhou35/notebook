@@ -12,7 +12,9 @@ comments: true
 
 ## Recap
 
-![recap](assets/recap.png){width=90%}
+<figure markdown="span">
+    ![](assets/recap.png){ width=90% align="center" }
+</figure>
 
 ## Training Target
 
@@ -55,7 +57,10 @@ $$\boxed{L(\theta)=\|u_t^\theta(x)-u_t^{\mathrm{target}}(x)\|^2}$$
     $\alpha_t$ 和 $\beta_t$ 是 **noise scheduler** 函数，用于控制噪声的强度和数据分布的形状。
 
 通过可视化理解概率路径：
-![](assets/probability_path_vis.png){width=80%}
+
+<figure markdown="span">
+    ![](assets/probability_path_vis.png){ width=80% align="center" }
+</figure>
 
 - 红色的范围表示初始分布，蓝色的范围表示数据分布
 - 条件概率路径最后会收敛到一个点上，而边际概率路径则会收敛到一个分布上
@@ -110,7 +115,10 @@ $$
 </div>
 
 <div markdown>
-![](assets/continuity_equation.png){width=70%}
+
+<figure markdown="span">
+    ![](assets/continuity_equation.png){ width=70% align="center" }
+</figure>
 
 </div>
 </div>
@@ -157,7 +165,10 @@ $$
 </div>
 
 <div markdown>
-![](assets/fp_equation.png){width=70%}
+
+<figure markdown="span">
+    ![](assets/fp_equation.png){ width=70% align="center" }
+</figure>
 
 </div>
 </div>
@@ -175,8 +186,12 @@ $$
 
 === "Conditional"
 
-    ![](assets/conditional_summary.png){width=90%}
+    <figure markdown="span">
+        ![](assets/conditional_summary.png){ width=90% align="center" }
+    </figure>
 
 === "Marginal"
 
-    ![](assets/marginal_summary.png){width=90%}
+    <figure markdown="span">
+        ![](assets/marginal_summary.png){ width=90% align="center" }
+    </figure>

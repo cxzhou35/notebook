@@ -33,6 +33,7 @@ nav:
               - "Lec01-生成和流": course/cs/mit6s184/lec01.md
               - "Lec02-构建训练目标": course/cs/mit6s184/lec02.md
               - "Lec03-训练生成模型": course/cs/mit6s184/lec03.md
+              - "Lec04-图像生成器": course/cs/mit6s184/lec04.md
       - "光电":
           - course/opt/index.md
       - "数学":

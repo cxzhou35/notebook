@@ -14,11 +14,15 @@ comments: true
 
 === "Conditional"
 
-    ![](assets/conditional_summary.png){width=90%}
+    <figure markdown="span">
+        ![](assets/conditional_summary.png){ width=90% align="center" }
+    </figure>
 
 === "Marginal"
 
-    ![](assets/marginal_summary.png){width=90%}
+    <figure markdown="span">
+        ![](assets/marginal_summary.png){ width=90% align="center" }
+    </figure>
 
 ## Flow Matching
 
@@ -44,7 +48,9 @@ $$\boxed{L_{\mathbf{CFM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x
 
 ### Training Algorithm
 
-![](assets/training_algorithm_cfm.png){width=90%}
+<figure markdown="span">
+    ![](assets/training_algorithm_cfm.png){ width=90% align="center" }
+</figure>
 
 ???+ example "Example: Gaussian CondOT Flow Matching"
 
@@ -68,9 +74,9 @@ $$\boxed{L_{\mathbf{CFM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x
 
     <div class="grid" markdown>
 
-    ![](assets/training_algorithm_condot.png){width=120%}
+    ![](assets/training_algorithm_condot.png){ width=100% align="center" }
 
-    ![](assets/example_condot.png){width=70%}
+    ![](assets/example_condot.png){ width=72% align="center" }
 
     </div>
 
@@ -87,7 +93,8 @@ $$\boxed{L_{\mathbf{CFM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x
     optimizer.step() # 8. update parameters for our network u_t(x)
     ```
 
-    > Meta MovieGen 和 Stable Diffusion 3 都用了这个训练算法。
+    > [Meta MovieGen](https://ai.meta.com/research/movie-gen/) 和 [Stable Diffusion 3](https://stability.ai/news/stable-diffusion-3) 都用了这个训练算法。
+
 
 ## Score Matching
 
@@ -112,11 +119,13 @@ Conditional Score Matching Loss:
 
 $$\boxed{L_{\mathbf{DSM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|s_t^{\theta}(x) - \nabla_x \log p_t(x | z)\|^2 \right]}$$
 
-在这里我们同样可以证明，$L_{\mathbf{SM}}$ 和 $L_{\mathbf{DSM}}$ 只相差一个常数，所以最小化后者同样可以达到训练目的。
+在这里我们同样可以证明，$L_{\mathbf{SM}}$ 和 $L_{\mathbf{CSM}}$ 只相差一个常数，所以最小化后者同样可以达到训练目的。
 
 ### Training Algorithm
 
-![](assets/training_algorithm_sm.png){width=90%}
+<figure markdown="span">
+    ![](assets/training_algorithm_sm.png){ width=90% align="center" }
+</figure>
 
 ??? example "Example: Denoising Score Matching for Gaussian Probability Path"
 
@@ -128,7 +137,11 @@ $$\boxed{L_{\mathbf{DSM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|s_t^{\theta}(x
 
     $$\mathcal{L}_\mathrm{dsm}(\theta)= \mathbb{E}_{t\sim\mathrm{Unif},z\sim p_{\mathrm{data}},\epsilon\sim\mathcal{N}(0,I_{d})}[\|s_{t}^{\theta}(\alpha_{t}z+\beta_{t}\epsilon)+\frac{\epsilon}{\beta_{t}}\|^{2}]$$
 
-    ![](assets/example_dsm_gs.png)
+    Training Algorithm:
+
+    <figure markdown="span">
+        ![](assets/example_dsm_gs.png){ width=70% align="center" }
+    </figure>
 
 
 现在，我们已经设计好了训练算法，训练后可以用 diffusion model 来生成样本了。
@@ -144,23 +157,21 @@ $$
 \end{aligned}
 $$
 
-Gaussian Probability Path:
-
-$$
-X_0 \sim p_{\mathrm{init}},\quad\mathrm{d}X_t=\left[\left(\beta_t^2\frac{\dot{\alpha}_t}{\alpha_t}-\dot{\beta}_t\beta_t+\frac{\sigma_t^2}{2}\right)s_t^\theta(x)+\frac{\dot{\alpha}_t}{\alpha_t}x\right]\mathrm{d}t+\sigma_t\mathrm{d}W_t
-$$
-
 ## Denoising Diffusion Models
 
 **去噪扩散模型(Denoising Diffusion Models, DDMs)** 是一种基于扩散模型的生成模型，我们一般直接把它叫做 diffusion model.
 去噪扩散模型仅适用于高斯初始分布 $p_{\mathrm{init}} = \mathcal{N}(0, I_d)$ 和高斯概率路径。<br>
 **Denoising Diffusion Models = Diffusion Models with Gaussian Probability Path**.
 
-DDMs 有很多很好的性质，它的向量场和得分函数都是 $x$ 和 $z$ 的加权和，且是线性的，所以可以转换向量场和得分函数。
+DDMs 有很多很好的性质，它的向量场和得分函数都是 $x$ 和 $z$ 的加权和，且是线性的，所以可以相互转换。
 
 $$
 u_t^{\mathrm{target}}(x|z)=\left(\dot{\alpha}_t-\frac{\dot{\beta}_t}{\beta_t}\alpha_t\right)z+\frac{\dot{\beta}_t}{\beta_t}x, \quad \nabla\log p_t(x|z)=-\frac{x-\alpha_tz}{\beta_t^2}
 $$
 
-还可以将得分函数的神经网络转换为向量场的神经网络后训练：$u_t^\theta=\left(\beta_t^2\frac{\dot{\alpha}_t}{\alpha_t}-\dot{\beta}_t\beta_t\right)s_t^\theta(x)+\frac{\dot{\alpha}_t}{\alpha_t}x$<br>
-因此我们不需要训两个神经网络，最早的 diffusion model 只训练了一个得分函数的神经网络。
+于是可以将得分函数的神经网络转换为向量场的神经网络后训练：$u_t^\theta=\left(\beta_t^2\frac{\dot{\alpha}_t}{\alpha_t}-\dot{\beta}_t\beta_t\right)s_t^\theta(x)+\frac{\dot{\alpha}_t}{\alpha_t}x$<br>
+因此我们不需要分别训两个神经网络，最早的 diffusion model 只用 Score Matching 训练了一个得分函数的神经网络。
+
+$$
+X_0 \sim p_{\mathrm{init}},\quad\mathrm{d}X_t=\left[\left(\beta_t^2\frac{\dot{\alpha}_t}{\alpha_t}-\dot{\beta}_t\beta_t+\frac{\sigma_t^2}{2}\right)s_t^\theta(x)+\frac{\dot{\alpha}_t}{\alpha_t}x\right]\mathrm{d}t+\sigma_t\mathrm{d}W_t
+$$

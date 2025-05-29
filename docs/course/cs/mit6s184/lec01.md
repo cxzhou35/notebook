@@ -10,9 +10,11 @@ comments: true
         - [:octicons-cross-reference-16: Flow Matching Guide and Code by Meta](https://arxiv.org/pdf/2412.06264)
         - [:octicons-cross-reference-16: Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/)
 
-
 ## Course Overview
-![class_overview](assets/overview.png){width=90%}
+
+<figure markdown="span">
+    ![](assets/overview.png){ width=90% align="center" }
+</figure>
 
 ## What is Generation
 
@@ -20,7 +22,9 @@ comments: true
 
 接下来，如何判断模型生成的结果是不是我们想要的呢，比如输入一个 prompt - *"A picture of a dog"*，模型可能会生成以下四个结果：
 
-![dog_image](assets/dog_image.png)
+<figure markdown="span">
+    ![](assets/dog_image.png){ width=90% align="center" }
+</figure>
 
 我们人类有认知的先验，对于这些生成结果可以很快地判断出它们的合理性和相关性。但是对于模型来说，并没有这样的先验知识，因此我们需要formalize这个过程，从而让模型学会判断生成结果的合理性。
 最简单的做法就是用**概率(Probability)**来表示结果的好坏，概率越高的图像表明生成越合理，质量越好。
@@ -29,7 +33,9 @@ comments: true
 
 **生成(Genetation)**可以看作是从一个**数据分布(Data Distribution)** $p_\mathrm{data}$ 中**采样(Sampling)** $z$的过程。
 
-![sampling](assets/sampling.png)
+<figure markdown="span">
+    ![](assets/sampling.png){ width=90% align="center" }
+</figure>
 
 一个训练用的数据集由来自数据分布的有限数量的样本组成：$\{z_1, z_2, \ldots, z_N\} \sim p_\mathrm{data}$.
 
@@ -37,7 +43,10 @@ comments: true
 我们可以将其表示为 $z \sim p_\mathrm{data}(\cdot|y)$.
 
 **生成模型(Generative Model)**将来自初始分布 $p_\mathrm{init}$（如高斯分布）的样本转换为数据分布 $p_\mathrm{data}$ 中的样本：
-![generative_model](assets/generative_model.png)
+
+<figure markdown="span">
+    ![](assets/generative_model.png){ width=90% align="center" }
+</figure>
 
 ## Flow and Diffusion Models
 
@@ -76,13 +85,17 @@ graph LR
 
 通过一个简单的例子来理解 Flow model:
 
-![flow_example](assets/flow_example.png){width=80%}
+<figure markdown="span">
+    ![](assets/flow_example.png){ width=80% align="center" }
+</figure>
 
 不同的初始条件 $x_0$ 会产生不同的轨迹 $X_t$，而这些轨迹构成的集合就是流 $F$.
 
 当 ODE 没有 closed form 的解析解时，我们需要使用数值方法来近似求解，比如 **欧拉法(Euler Method)**：
 
-![algorithm_flow](assets/algorithm_flow.png){width=80%}
+<figure markdown="span">
+    ![](assets/algorithm_flow.png){ width=80% align="center" }
+</figure>
 
 ### Diffusion Models
 
@@ -134,7 +147,9 @@ $$
 
 和 Flow model 一样，我们利用神经网络来学习向量场 $u_{t}(X_t)$，并通过 SDE 来进行采样：
 
-![algorithm_diffusion](assets/algorithm_diffusion.png){width=80%}
+<figure markdown="span">
+    ![](assets/algorithm_diffusion.png){ width=80% align="center" }
+</figure>
 
 <div class="grid" markdown>
 <div markdown>
@@ -148,11 +163,14 @@ $$
 </div>
 
 <div markdown>
-![toy_demo_flow](assets/toy_demo_flow.png){width=90%}
+<figure markdown="span">
+    ![](assets/toy_demo_flow.png){ width=95% align="center" }
+</figure>
 </div>
 </div>
 
 ## Q&A
+
 ??? question "Why we choose Brownian motion as the stochastic process?"
 
     可以用其他的随机过程，比如 Levy 过程，但是 Brownian motion 是最简单的随机过程，具有一些很好的性质，比如增量的独立性和高斯分布，容易实现和计算。
