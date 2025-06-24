@@ -175,37 +175,3 @@ $$
 $$
 X_0 \sim p_{\mathrm{init}},\quad\mathrm{d}X_t=\left[\left(\beta_t^2\frac{\dot{\alpha}_t}{\alpha_t}-\dot{\beta}_t\beta_t+\frac{\sigma_t^2}{2}\right)s_t^\theta(x)+\frac{\dot{\alpha}_t}{\alpha_t}x\right]\mathrm{d}t+\sigma_t\mathrm{d}W_t
 $$
-
-## Updates
-
-### MeanFlow Model
-
-!!! note "MeanFlow Model"
-
-    - Paper: [:simple-arxiv: 2505.13447](https://arxiv.org/abs/2505.13447)
-    - Video: [:fontawesome-solid-video: One Step, Big Leap](https://www.youtube.com/watch?v=swKdn-qT47Q)
-
-<figure markdown="span">
-    ![](assets/meanflow.png){ width=60% align="center" }
-    <figcaption>MeanFlow Model</figcaption>
-</figure>
-
-何恺明的新工作，提出了一种名为 **MeanFlow** 的生成模型框架，目标是实现高效的**one-step** 图像生成。
-MeanFlow 的核心思想是引入并建模 **平均速度（average velocity）**的概念，论文从平均速度的定义出发，推导出了一个关键的 **MeanFlow 恒等式（MeanFlow Identity）**，它描述了平均速度与瞬时速度及其时间导数之间的关系。
-论文训练一个神经网络来直接预测这个平均速度场，并使用 MeanFlow 恒等式作为 training target.
-
-<div class="grid" markdown>
-<div markdown>
-<figure markdown="span">
-    ![](assets/meanflow_identity.png){ width=100% align="center" }
-    <figcaption>MeanFlow Identity</figcaption>
-</figure>
-</div>
-
-<div markdown>
-<figure markdown="span">
-    ![](assets/meanflow_sampling.png){ width=90% align="center" }
-    <figcaption>MeanFlow Sampling Algorithm</figcaption>
-</figure>
-</div>
-</div>
