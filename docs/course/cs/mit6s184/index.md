@@ -5,17 +5,24 @@ comments: false
 # MIT 6.S184: Introduction to Flow Matching and Diffusion Models
 
 !!! abstract "Abstract"
+    :octicons-star-16: **[Latest updates](#updates) related to this course can be found at the bottom of this page.**
+
     - Website: [:fontawesome-solid-house: Latest version](https://diffusion.csail.mit.edu/)
     - Labs: [:fontawesome-brands-github: Zicx's repo (2025 Spring)](https://github.com/cxzhou35/mit6s184)
-    > Learning Process:
+    > My learning steps:
     >
-    > 1) Watch the lecture videos, take notes based on the slides.
-    >
-    > 2) Complete the lab assignments (notebooks) for the corresponding lecture.
-    >
-    > 3) Refine the notes based on the lecture notes.
+    > 1. Review lecture videos and capture key insights from the slides.
+    > 2. Apply theoretical concepts by completing the corresponding lab assignments.
+    > 3. Consolidate learning by refining personal notes against the provided lecture notes.
 
 ## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+    - [Lecture Notes](#lecture-notes)
+    - [Labs](#labs)
+    - [Course Recap](#recap)
+    - [Resources](#resources)
+- [Updates](#updates)
 
 ### Lecture Notes
 
@@ -30,20 +37,32 @@ comments: false
 - [x] [Lab2: Flow Matching and Score Matching](https://github.com/cxzhou35/mit6s184/blob/main/labs/lab_two.ipynb)
 - [x] [Lab3: Conditional Image Generation](https://github.com/cxzhou35/mit6s184/blob/main/labs/lab_three.ipynb)
 
-## Recap
+### Recap
 <figure markdown="span">
     ![](assets/structure.png){ width=80% align="center" }
     <figcaption>Credit: [Flow Matching and Diffusion Deep Dive @Medium](https://medium.com/@hasfuraa/flow-matching-and-diffusion-deep-dive-b080f7782654)</figcaption>
 </figure>
 
+### Resources
+
+- [:octicons-rss-16: Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/)
+- [:octicons-rss-16: An introduction to flow matching by Cambridge Machine Learning Group](https://mlg.eng.cam.ac.uk/blog/2024/01/20/flow-matching.html)
+  > 这篇博客讲的很细致，从 CNF 到 Flow Matching 的推导过程都很清晰，作图赏心悦目👇.
+  > <figure markdown="span">
+  >   ![](assets/blog_fm_example2.png){ width="90%" align="center" }
+  > </figure>
+- [:fontawesome-brands-github: facebookresearch/flow_matching](https://github.com/facebookresearch/flow_matching): FM 的作者团队实现的 Flow Matching 代码库
+- [:fontawesome-brands-github: atong01/conditional-flow-matching](https://github.com/atong01/conditional-flow-matching): Conditional Flow Matching 代码库
+- [:fontawesome-brands-github: haidog-yaqub/MeanFlow](https://github.com/haidog-yaqub/MeanFlow): 非官方实现的 MeanFlow 代码库
+
 ## Updates
 
 ### MeanFlow Model
 
-??? note "Introduction"
+??? note "️Detailed Introduction"
 
-    - Paper: [:simple-arxiv: 2505.13447](https://arxiv.org/abs/2505.13447)
-    - Video: [:fontawesome-solid-video: One Step, Big Leap](https://www.youtube.com/watch?v=swKdn-qT47Q)
+    - Paper: [:simple-arxiv: 2505.13447 - arXiv](https://arxiv.org/abs/2505.13447)
+    - Video: [:fontawesome-solid-video: One Step, Big Leap - YouTube](https://www.youtube.com/watch?v=swKdn-qT47Q)
 
     <figure markdown="span">
         ![](assets/meanflow.png){ width=70% align="center" }
@@ -66,7 +85,7 @@ comments: false
 
 ### Diffusion Meets Flow Matching
 
-!!! note "Introduction"
+??? note "️Detailed Introduction"
 
     - Blog: [:octicons-rss-16: Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/)
 
