@@ -54,6 +54,8 @@ $$\boxed{L_{\mathbf{CFM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x
 
 ???+ example "Example: Gaussian CondOT Flow Matching"
 
+    > CondOT: Conditional Optimal Transport, 条件最优传输
+
     高斯条件概率路径和向量场:
     $u_t^{\mathrm{target}}(x | z) = \left(\dot{\alpha_t} - \frac{\dot{\beta_t}}{\beta_t} \right) z + \frac{\dot{\beta_t}}{\beta_t} x, x = \alpha_t z + \beta_t \epsilon, \epsilon \sim \mathcal{N}(0, I_d)$
 
