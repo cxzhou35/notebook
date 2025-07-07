@@ -45,12 +45,17 @@ comments: false
 
 ### Resources
 
+> Continuously updated resources related to Flow Matching and Diffusion Models.
+
+- [:simple-googleslides: Towards End-to-End Generative Modeling](https://people.csail.mit.edu/kaiming/cvpr25talk/cvpr2025_meanflow_kaiming.pdf): Talk by Kaiming He, CVPR 2025 Workshop
+- [:material-video: Flow Matching for Generative Modeling](https://neurips.cc/virtual/2024/tutorial/99531): NeurIPS 2024 Tutorial
 - [:octicons-rss-16: Diffusion Meets Flow Matching: Two Sides of the Same Coin](https://diffusionflow.github.io/)
 - [:octicons-rss-16: An introduction to flow matching by Cambridge Machine Learning Group](https://mlg.eng.cam.ac.uk/blog/2024/01/20/flow-matching.html)
   > 这篇博客讲的很细致，从 CNF 到 Flow Matching 的推导过程都很清晰，作图赏心悦目👇.
   > <figure markdown="span">
   >   ![](assets/blog_fm_example2.png){ width="90%" align="center" }
   > </figure>
+- [:simple-zhihu: 深入解析Flow Matching技术](https://zhuanlan.zhihu.com/p/685921518)
 - [:fontawesome-brands-github: facebookresearch/flow_matching](https://github.com/facebookresearch/flow_matching): FM 的作者团队实现的 Flow Matching 代码库
 - [:fontawesome-brands-github: atong01/conditional-flow-matching](https://github.com/atong01/conditional-flow-matching): Conditional Flow Matching 代码库
 - [:fontawesome-brands-github: haidog-yaqub/MeanFlow](https://github.com/haidog-yaqub/MeanFlow): 非官方实现的 MeanFlow 代码库
