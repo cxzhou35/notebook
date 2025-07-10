@@ -68,7 +68,7 @@ $$\boxed{L_{\mathbf{CFM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x
     \end{gathered}
     $$
 
-    使用标准噪声规划器: $\alpha_t = t, \beta_t = 1-t$
+    使用标准线性噪声调度器: $\alpha_t = t, \beta_t = 1-t$
 
     $$
     \mathcal{L}_{\mathrm{CFM}}(\theta)=\mathbb{E}_{t\sim\mathrm{Unif},z\sim p_\mathrm{data},\epsilon\sim\mathcal{N}(0,I_d)}[\|u_t^\theta(t \cdot z + (1-t) \cdot \epsilon)-(z - \epsilon)\|^2]
@@ -88,9 +88,9 @@ $$\boxed{L_{\mathbf{CFM}}(\theta) = \mathbb{E}_{t, x, z} \left[ \|u_t^{\theta}(x
     t = torch.rand(batch_size) # 1. sample t from uniform distribution
     z = data_loader.sample(batch_size) # 2. sample z from data distribution
     e = torch.randn(batch_size) # 3. sample noise epsilon from standard normal distribution
-    x = model(t * z + (1 - t) * e, t) # 4. get predicted values from our network u_t(x)
-    target = z - e # 5. get target values
-    loss = torch.mean((x - target) ** 2) # 6. compute loss
+    pred_u = model(t * z + (1 - t) * e, t) # 4. get predicted vector field from our network u_t(x)
+    target_u = z - e # 5. get target vector field
+    loss = torch.mean((pred_u - target_u) ** 2) # 6. compute loss
     loss.backward() # 7. backpropagate gradients
     optimizer.step() # 8. update parameters for our network u_t(x)
     ```
@@ -177,3 +177,45 @@ $$
 $$
 X_0 \sim p_{\mathrm{init}},\quad\mathrm{d}X_t=\left[\left(\beta_t^2\frac{\dot{\alpha}_t}{\alpha_t}-\dot{\beta}_t\beta_t+\frac{\sigma_t^2}{2}\right)s_t^\theta(x)+\frac{\dot{\alpha}_t}{\alpha_t}x\right]\mathrm{d}t+\sigma_t\mathrm{d}W_t
 $$
+
+## Diffusion with Conditional Flow Matching
+
+在 [CondOT Flow Matching](#training-algorithm) 的例子中，我们通过 OT 将条件概率路径设置成连接两个分布采样点的直线：
+
+$$
+p_t(x|x_1)=N(x|t x_1, (1-t)^2 I_d) \\
+x=t x_1 + (1-t) \epsilon, \epsilon \sim \mathcal{N}(0, I_d)
+$$
+
+在 Diffusion 中，更一般的高斯条件概率路径为：
+
+$$
+p_t(x|x_1)=N(x|\mu_t(x_1), \sigma_t(x_1)^2 I_d) \\
+$$
+
+其中 $\mu_t(x_1)$ 和 $\sigma_t(x_1)$ 是表示高斯分布的均值和方差的函数。
+
+
+通过求解以下的 ODE 方程可以得到条件向量场 $u_t(x|x_1)$:
+
+$$
+\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d}t} \psi_t(x) & = u_t (\psi_t(x)|x_1) \\
+\end{aligned}
+$$
+
+该向量场的解析解为：
+
+$$
+u_t(x|x_1)=\frac{\sigma^{\prime}_t(x_1)}{\sigma_t(x_1)}(x-\mu_t(x_1))+\mu^{\prime}_t(x_1)
+$$
+
+于是，根据不同的微分函数来 $\mu_t(x_1)$ 和 $\sigma_t(x_1)$ 我们可以得到不同的条件向量场 $u_t(x|x_1)$，**注意这里的 condition 也可以是 $(x_0, x_1)$ 的 pair**.
+
+- Diffusion conditional Vector Fields:
+    - Variance Exploding Schedule (VE): $\mu_t(x_1) = x_1, \sigma_t(x_1) = \sigma_{1-t}$.
+    - Variance Preserving Schedule (VP): $\mu_t(x_1) = \alpha_{1-t}x_1, \sigma_t(x_1) = \sqrt{1 - \alpha_{1-t}^2}$.
+- Optimal Transport conditional Vector Fields (CondOT, most common flow matching schedule)
+    - $\mu_t(x_1) = t x_1, \sigma_t(x_1) = 1 - (1 - \sigma_{min})t$.
+
+将 Diffusion 和 Flow Matching 训练目标结合起来优化，相比于现有方法，训练更加稳定。

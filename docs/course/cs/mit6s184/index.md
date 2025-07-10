@@ -17,12 +17,15 @@ comments: false
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
+- [MIT 6.S184: Introduction to Flow Matching and Diffusion Models](#mit-6s184-introduction-to-flow-matching-and-diffusion-models)
+  - [Table of Contents](#table-of-contents)
     - [Lecture Notes](#lecture-notes)
     - [Labs](#labs)
-    - [Course Recap](#recap)
+    - [Recap](#recap)
     - [Resources](#resources)
-- [Updates](#updates)
+  - [Updates](#updates)
+    - [MeanFlow Model](#meanflow-model)
+    - [Diffusion Meets Flow Matching](#diffusion-meets-flow-matching)
 
 ### Lecture Notes
 
@@ -115,7 +118,7 @@ comments: false
 
     > Flow matching weighting == diffusion weighting of $\mathbf{v}$-MSE loss + cosine noise schedule.
 
-    **权重函数（Weighting Function）** 是损失函数中最重要的部分，它平衡了图像、视频和音频等感知数据中高频与低频成分的重要性，FM 中的权重函数与 Diffusion 中常见的 $\mathbf{v}$-MSE 损失函数中的权重函数相同。
+    **权重函数（Weighting Function）** 是损失函数中最重要的部分，它平衡了图像、视频和音频等感知数据中高频与低频成分的重要性，FM 的权重函数与 Diffusion 常见的 $\mathbf{v}$-MSE 损失函数中的权重函数相同。
 
     Takeaways: Gaussian Flow Matching 为该领域带来了两种新模型规范
 
