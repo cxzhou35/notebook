@@ -8,7 +8,7 @@ statistics: false
 !!! abstract "Abstract"
     记录一些 Conda 相关的内容
 
-## 安装
+## Installation
 
 以 [Miniconda](https://docs.conda.io/en/latest/miniconda.html) 为例，Anaconda 的安装步骤差不多，但是 Miniconda 要更精简一些
 

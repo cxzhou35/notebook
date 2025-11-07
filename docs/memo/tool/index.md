@@ -35,6 +35,7 @@ comments: false
     | [:simple-matrix: MATLAB](./matlab/index.md)       | [:simple-numpy: NumPy](./numpy/index.md)               | [:simple-neovim: Neovim](./nvim/index.md)   |
     | [:simple-anaconda: Conda](./conda/index.md)       | [:simple-tmux: Tmux](./tmux/index.md)                  | [:simple-ffmpeg: FFmpeg](./ffmpeg/index.md) |
     | [:simple-pytorch: Pytorch](./pytorch/index.md)    | [:material-microsoft-visual-studio-code: VScode](./pytorch/index.md) | [:simple-github: Github](./github/index.md) |
+    | [:simple-uv: UV](./uv/index.md)                   |  |  |
 
     </div>
 
